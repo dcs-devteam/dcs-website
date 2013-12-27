@@ -10,7 +10,13 @@
       parent::__construct();
     }
 
+    protected function _determine_route() {
+      $route['controller'] = $this->uri->rsegment(1);
+      $route['action'] = $this->uri->rsegment(2);
+      $this->load->vars($route);
+    }
+
   }
 
 // End of file DCS_Controller.php
-// Location: ./application/controllers/DCS_Controller.php
+// Location: ./application/core/DCS_Controller.php
