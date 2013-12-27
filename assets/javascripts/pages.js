@@ -42,9 +42,11 @@ var bash = {
   messageIndex: 0,
   timer: null,
   history: null,
+  command: null,
   latestMessage: null,
   initialize: function() {
     bash.history = $('#bash .history');
+    bash.command = $('#bash .command');
     bash.log(bash.messages[bash.messageIndex]);
   },
   log: function(data) {
@@ -77,5 +79,8 @@ var bash = {
   },
   enableInput: function() {
     $('#bash .input').removeClass('hidden').find('.command').focus();
+    $(document).click(function() {
+      bash.command.focus();
+    });
   }
 };
