@@ -140,7 +140,6 @@
   position: absolute;
   top: 12%;
   right: 0;
-  padding: 0 20px;
   overflow: hidden;
 }
 
@@ -149,6 +148,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  padding-right: 50px;
 }
 
 .pages.parking #bash .history p {

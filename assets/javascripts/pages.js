@@ -31,10 +31,12 @@ var parking = {
     bash.enableInput();
   },
   sendPollAnswer: function(answer) {
+    bash.disableInput();
     bash.startProgress(0);
     console.log('sending poll answer: ' + answer);
     setTimeout(function() {
       bash.stopProgress();
+      bash.enableInput();
     }, 2000);
   }
 };
@@ -88,7 +90,7 @@ var bash = {
   },
   enableInput: function() {
     $('#bash .input').removeClass('hidden').find('.command').focus();
-    $('#bash .input .command').on('keydown', function(e) {
+    bash.input.on('keydown', function(e) {
       if (e.keyCode == 13) {
         e.preventDefault();
         var input = bash.input.val();
@@ -107,7 +109,14 @@ var bash = {
           bash.log({message: 'Sending poll answer', callback: function() {
             parking.sendPollAnswer(input);
           }});
-          $('#bash .input .command').data('mode', 'command');
+          bash.input.data('mode', 'command');
+          $('#bash .input span').text('$');
+        }
+      } else if (e.keyCode == 27) {
+        if (bash.input.data('mode') == 'command') {
+          bash.input.val('');
+        } else {
+          bash.input.data('mode', 'command').val('');
           $('#bash .input span').text('$');
         }
       }
@@ -116,11 +125,16 @@ var bash = {
       bash.input.focus();
     });
   },
+  disableInput: function() {
+    $('#bash .input').addClass('hidden');
+    bash.input.off('keydown');
+    $(document).off('mouseup');
+  },
   commands: {
     poll: function() {
       bash.log('<span class="blue">$</span> poll');
       bash.log('<span class="yellow">' + poll.message + '</span>');
-      $('#bash .input .command').data('mode', 'poll');
+      bash.input.data('mode', 'poll');
       $('#bash .input span').text(':');
     },
     help: function() {
