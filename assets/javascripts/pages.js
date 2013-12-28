@@ -71,6 +71,29 @@ var parking = {
       }
       bash.enableInput();
     }, 5000);
+  },
+  authenticateDeveloper: function(username, password) {
+    bash.disableInput();
+    bash.log('Authenticating');
+    bash.startProgress(0);
+    $.ajax({
+      url: BASE_URL + "index.php/developer/authenticate",
+      type: 'POST',
+      data: {username: username, password: password},
+      success: function(data) {
+        bash.stopProgress();
+        if (data == 'true') {
+          bash.log('<span class="green">Authentication successful</span>');
+          bash.log('Redirecting to developer page');
+          bash.startProgress(0);
+          location.href = BASE_URL + 'index.php/developer/index';
+        } else {
+          bash.log('<span class="red">Authentication failed</span>');
+        }
+        bash.enableInput();
+        bash.setMode('command');
+      }
+    });
   }
 };
 
@@ -125,6 +148,7 @@ var bash = {
     bash.input.data('mode', mode);
     if (mode == 'command') {
       $('#bash .input span').text('$');
+      $('#bash .input .developer').remove();
     } else {
       $('#bash .input span').text(':');
     }
@@ -169,12 +193,15 @@ var bash = {
           } else {
             bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
           }
+        } else if (bash.input.data('mode') == 'dev-username') {
+          bash.log('<span class="blue">:</span> ' + input);
+          $('#bash .input .developer').data('username', input).removeClass('hidden').focus();
+          bash.input.addClass('hidden');
+          bash.log('<span class="yellow">Enter developer password</span>');
+          bash.setMode('dev-password');
         }
       } else if (e.keyCode == 27) {
-        bash.input.val('');
-        if (bash.input.data('mode') != 'command') {
-          bash.setMode('command');
-        }
+        bash.setMode('command');
       } else if (e.keyCode == 40 && bash.input.data('mode') == 'log' && parking.logHistoryIndex < parking.logHistory.length) {
         bash.log(parking.logHistory[parking.logHistoryIndex++]);
       } else if (e.keyCode == 38 && bash.input.data('mode') == 'log' && parking.logHistoryIndex > parking.maxLogs) {
@@ -222,10 +249,22 @@ var bash = {
     },
     dev: function() {
       bash.log('<span class="blue">$</span> dev');
-      bash.log({message: 'Connecting to developers page', callback: function() {
-        bash.startProgress(0);
-      }});
-      location.href = BASE_URL + "index.php/developer/sign_in";
+      var developerLogin = $('<input type="password" class="developer password hidden" />');
+      $('#bash .input').append(developerLogin);
+      developerLogin.on('keydown', function(e) {
+        if (e.keyCode == 13 || e.keyCode == 27) {
+          e.preventDefault();
+          if (e.keyCode == 13) {
+            bash.log('<span class="blue">:</span> [HIDDEN]');
+            parking.authenticateDeveloper(developerLogin.data('username'), developerLogin.val());
+          }
+          developerLogin.remove();
+          bash.input.removeClass('hidden').focus();
+          bash.setMode('command');
+        }
+      });
+      bash.log('<span class="yellow">Enter developer username</span>');
+      bash.setMode('dev-username');
     }
   }
 };

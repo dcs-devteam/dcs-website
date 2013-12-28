@@ -8,9 +8,7 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods = array(
-        'GET' => array('parking')
-      );
+      $this->request_methods['GET'] = array('parking');
 
       $this->_check_request_method();
       $this->load->helper('application_helper');
