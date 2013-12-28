@@ -149,6 +149,22 @@ var bash = {
           }
           bash.input.data('mode', 'command');
           $('#bash .input span').text('$');
+        } else if (bash.input.data('mode') == 'exit') {
+          bash.log('<span class="blue">:</span> ' + input);
+          if (input == 'yes') {
+            bash.log('<span class="red">Okay :(</span>');
+            bash.input.data('mode', 'command');
+            $('#bash .input span').text('$');
+            setTimeout(function() {
+              window.close();
+            }, 1000);
+          } else if (input == 'no') {
+            bash.log('<span class="green">Yey! :)</span>');
+            bash.input.data('mode', 'command');
+            $('#bash .input span').text('$');
+          } else {
+            bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
+          }
         }
       } else if (e.keyCode == 27) {
         if (bash.input.data('mode') == 'command') {
@@ -197,6 +213,12 @@ var bash = {
       bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;- show development log history');
       bash.log('<span class="green">help</span>&nbsp;&nbsp;- show this help message');
       bash.log('<span class="green">exit</span>&nbsp;&nbsp;- leave this page');
+    },
+    exit: function() {
+      bash.log('<span class="blue">$</span> exit');
+      bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
+      bash.input.data('mode', 'exit');
+      $('#bash .input span').text(':');
     }
   }
 };
