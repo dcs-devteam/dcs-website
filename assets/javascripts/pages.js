@@ -17,6 +17,7 @@ var parking = {
     bash.startProgress(5, function() {
       bash.log({message: 'Website Status: Under Construction'});
       bash.log(bash.messages[++bash.messageIndex]);
+      $('#meta .loader').fadeIn(1000).removeClass('hidden');
     });
   },
   retrieveConstructionProgress: function() {
@@ -25,8 +26,9 @@ var parking = {
       bash.stopProgress(function() {
         bash.log({message: 'Construction Progress: 12%'});
         bash.log(bash.messages[++bash.messageIndex]);
+        $('#meta .loader p').fadeIn(1000).removeClass('hidden');
       });
-    }, 6000);
+    }, 3000);
   },
   receiveFeatureRequests: function() {
     bash.enableInput();
@@ -68,7 +70,7 @@ var bash = {
       } else {
         bash.latestMessage.text(bash.latestMessage.text() + '.');
       }
-    }, 1000);
+    }, 500);
   },
   stopProgress: function(callback) {
     clearInterval(bash.timer);
@@ -79,7 +81,7 @@ var bash = {
   },
   enableInput: function() {
     $('#bash .input').removeClass('hidden').find('.command').focus();
-    $(document).click(function() {
+    $(document).on('mouseup', function() {
       bash.command.focus();
     });
   }

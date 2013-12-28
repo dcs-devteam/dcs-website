@@ -1,5 +1,6 @@
 /*** LOCAL COMMONS ***/
 .pages.parking #main-body,
+.pages.parking #bash,
 .pages.parking #bash .input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -21,18 +22,124 @@
   min-height: 100%;
   background-color: #222222;
   position: relative;
+  overflow: hidden;
+}
+
+.pages.parking #meta {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.pages.parking #meta .loader {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.pages.parking #meta .loader h1 {
+  font: normal 4rem/240px "Lato Hairline";
+  color: #cccccc;
+  text-align: center;
+  text-indent: -5px;
+}
+
+.pages.parking #meta .loader p {
+  width: 100%;
+  position: absolute;
+  top: 138px;
+  font: normal 1.3rem "Consolas";
+  color: #cccccc;
+  text-align: center;
+}
+
+.pages.parking #meta .spinner {
+  position: absolute;
+  border: 1px dashed #cccccc;
+  border-radius: 50%;
+}
+
+.pages.parking #meta .spinner.clockwise {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-left: none;
+  border-right: none;
+  -webkit-animation: rotate-clockwise 10s infinite linear;
+  -moz-animation: rotate-clockwise 10s infinite linear;
+  -o-animation: rotate-clockwise 10s infinite linear;
+  -ms-animation: rotate-clockwise 10s infinite linear;
+  animation: rotate-clockwise 10s infinite linear;
+}
+
+.pages.parking #meta .spinner.counterclockwise {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top: none;
+  border-bottom: none;
+  -webkit-animation: rotate-counterclockwise 3s infinite linear;
+  -moz-animation: rotate-counterclockwise 3s infinite linear;
+  -o-animation: rotate-counterclockwise 3s infinite linear;
+  -ms-animation: rotate-counterclockwise 3s infinite linear;
+  animation: rotate-counterclockwise 3s infinite linear;
+}
+
+.pages.parking #spinner-1:before, 
+.pages.parking #spinner-1:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #222222;
+  border: 1px dashed #cccccc;
+  border-radius: 50%;
+}
+
+.pages.parking #spinner-1:before {
+  top: 112px;
+  left: -8px;
+}
+
+.pages.parking #spinner-1:after {
+  top: 160px;
+  left: 2px;
+}
+
+.pages.parking #spinner-2:before, 
+.pages.parking #spinner-2:after {
+  content: "";
+  position: absolute;
+  top: 106px;
+  width: 50px;
+  border-top: 1px dashed #cccccc;
+}
+
+.pages.parking #spinner-2:before {
+  left: -32px;
+}
+
+.pages.parking #spinner-2:after {
+  right: -32px;
 }
 
 .pages.parking #bash {
+  width: 50%;
   position: absolute;
-  bottom: 100px;
-  left: 50%;
-  width: 60%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  right: 0;
+  bottom: 12%;
+  padding: 0 20px;
 }
 
 .pages.parking #bash .history p {
