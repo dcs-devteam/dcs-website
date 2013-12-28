@@ -10,8 +10,12 @@
       parent::__construct();
       $this->request_methods['GET'] = array('index');
       $this->request_methods['POST'] = array('authenticate');
+      $this->required_validations = array(
+        'index' => 'current_developer'
+      );
 
       $this->_check_request_method();
+      $this->_check_required_validation();
       $this->load->model('developer_model', 'developer');
       $this->load->helper('application_helper');
     }
