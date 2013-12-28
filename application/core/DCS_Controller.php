@@ -8,12 +8,24 @@
 
     public function __construct() {
       parent::__construct();
+      $this->request_methods = array(
+        'GET' => array(),
+        'POST' => array()
+      );
+
+      $this->_determine_route();
     }
 
     protected function _determine_route() {
-      $route['controller'] = $this->uri->rsegment(1);
-      $route['action'] = $this->uri->rsegment(2);
-      $this->load->vars($route);
+      $this->route['controller'] = $this->uri->rsegment(1);
+      $this->route['action'] = $this->uri->rsegment(2);
+      $this->load->vars($this->route);
+    }
+
+    protected function _check_request_method() {
+      if (!in_array($this->route['action'], $this->request_methods[$_SERVER['REQUEST_METHOD']])) {
+        show_404($this->route['controller'] . '/' . $this->route['action'] . ' with method ' . $_SERVER['REQUEST_METHOD'] . ' not found.');
+      }
     }
 
   }

@@ -4,6 +4,7 @@
   <?php $this->load->view('partials/head'); ?>
   <title>Department of Computer Science</title>
   <script>
+    var BASE_URL = '<?= base_url(); ?>';
     var websiteStatus = 'Under Construction';
     var constructionProgress = '12%';
     var poll = {

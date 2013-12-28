@@ -219,6 +219,13 @@ var bash = {
       bash.log('<span class="blue">$</span> exit');
       bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
       bash.setMode('exit');
+    },
+    dev: function() {
+      bash.log('<span class="blue">$</span> dev');
+      bash.log({message: 'Connecting to developers page', callback: function() {
+        bash.startProgress(0);
+      }});
+      location.href = BASE_URL + "index.php/developer/sign_in";
     }
   }
 };
