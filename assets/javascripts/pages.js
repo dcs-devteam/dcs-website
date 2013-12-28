@@ -8,6 +8,9 @@ $(document).ready(function() {
 
 /*** PARKING PAGE ***/
 var parking = {
+  logHistory: null,
+  logHistoryIndex: 0,
+  maxLogs: 0,
   initialize: function() {
     if ($('body').hasClass('parking')) {
       bash.initialize();
@@ -38,6 +41,37 @@ var parking = {
       bash.stopProgress();
       bash.enableInput();
     }, 2000);
+  },
+  retrieveLogHistory: function() {
+    bash.disableInput();
+    bash.startProgress(0);
+    setTimeout(function() {
+      bash.stopProgress();
+      parking.logHistory = [
+        'escape key clears buffer and returns to command mode',
+        'implemented poll command in bash',
+        'spinning thing in parking page',
+        'refocus bash input field on click outside',
+        'bash in parking page',
+        'initial app configurations',
+        'dcs website - initial commit'
+      ];
+      parking.logHistoryIndex = 0;
+      parking.maxLogs = Math.floor($('#bash').outerHeight() / 15) - 1;
+      if (parking.logHistory.length <= parking.maxLogs) {
+        for (var i = 0; i < parking.logHistory.length; i++) {
+          bash.log(parking.logHistory[i]);
+        }
+      } else {
+        bash.history.html('');
+        while (parking.logHistoryIndex < parking.maxLogs) {
+          bash.log(parking.logHistory[parking.logHistoryIndex++]);
+        }
+        bash.input.data('mode', 'log');
+        $('#bash .input span').text(':');
+      }
+      bash.enableInput();
+    }, 5000);
   }
 };
 
@@ -106,9 +140,13 @@ var bash = {
           }
         } else if (bash.input.data('mode') == 'poll') {
           bash.log('<span class="blue">:</span> ' + input);
-          bash.log({message: 'Sending poll answer', callback: function() {
-            parking.sendPollAnswer(input);
-          }});
+          if (input.length > 0) {
+            bash.log({message: 'Sending poll answer', callback: function() {
+              parking.sendPollAnswer(input);
+            }});
+          } else {
+            bash.log('You do not have an answer');
+          }
           bash.input.data('mode', 'command');
           $('#bash .input span').text('$');
         }
@@ -118,6 +156,15 @@ var bash = {
         } else {
           bash.input.data('mode', 'command').val('');
           $('#bash .input span').text('$');
+        }
+      } else if (e.keyCode == 40 && bash.input.data('mode') == 'log' && parking.logHistoryIndex < parking.logHistory.length) {
+        bash.log(parking.logHistory[parking.logHistoryIndex++]);
+      } else if (e.keyCode == 38 && bash.input.data('mode') == 'log' && parking.logHistoryIndex > parking.maxLogs) {
+        bash.history.find('p').last().remove();
+        parking.logHistoryIndex--;
+      } else {
+        if (bash.input.data('mode') == 'log') {
+          e.preventDefault();
         }
       }
     });
@@ -137,14 +184,19 @@ var bash = {
       bash.input.data('mode', 'poll');
       $('#bash .input span').text(':');
     },
+    log: function() {
+      bash.log('<span class="blue">$</span> log');
+      bash.log({message: 'Retrieving development log history', callback: parking.retrieveLogHistory});
+    },
     help: function() {
       bash.log('<span class="blue">$</span> help');
-      bash.log('<span class="green">poll</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- show current poll question');
-      bash.log('<span class="green">share-fb</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- share this page on facebook');
-      bash.log('<span class="green">share-twitter</span>&nbsp;- share this page on twitter');
-      bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- show development log history');
-      bash.log('<span class="green">help</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- show this help message');
-      bash.log('<span class="green">exit</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- leave this page');
+      bash.log('<span class="green">poll</span>&nbsp;&nbsp;- show current poll question');
+      bash.log('<span class="green">like</span>&nbsp;&nbsp;- like our facebook page');
+      bash.log('<span class="green">share</span>&nbsp;- share this page on facebook');
+      bash.log('<span class="green">tweet</span>&nbsp;- share this page on twitter');
+      bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;- show development log history');
+      bash.log('<span class="green">help</span>&nbsp;&nbsp;- show this help message');
+      bash.log('<span class="green">exit</span>&nbsp;&nbsp;- leave this page');
     }
   }
 };
