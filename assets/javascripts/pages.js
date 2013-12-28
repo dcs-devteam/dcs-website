@@ -14,24 +14,28 @@ var parking = {
     }
   },
   retrieveWebsiteStatus: function() {
-    bash.startProgress(5, function() {
-      bash.log({message: 'Website Status: Under Construction'});
+    bash.startProgress(3, function() {
+      bash.log('Website Status: <span class="yellow">' + websiteStatus + '</span>');
       bash.log(bash.messages[++bash.messageIndex]);
       $('#meta .loader').fadeIn(1000).removeClass('hidden');
     });
   },
   retrieveConstructionProgress: function() {
-    bash.startProgress(0);
-    setTimeout(function() {
-      bash.stopProgress(function() {
-        bash.log({message: 'Construction Progress: 12%'});
-        bash.log(bash.messages[++bash.messageIndex]);
-        $('#meta .loader p').fadeIn(1000).removeClass('hidden');
-      });
-    }, 3000);
+    bash.startProgress(3, function() {
+      bash.log('Construction Progress: <span class="yellow">' + constructionProgress + '</span>');
+      bash.log(bash.messages[++bash.messageIndex]);
+      $('#meta .loader p').fadeIn(1000).removeClass('hidden');
+    });
   },
-  receiveFeatureRequests: function() {
+  enableBash: function() {
     bash.enableInput();
+  },
+  sendPollAnswer: function(answer) {
+    bash.startProgress(0);
+    console.log('sending poll answer: ' + answer);
+    setTimeout(function() {
+      bash.stopProgress();
+    }, 2000);
   }
 };
 
@@ -39,19 +43,22 @@ var bash = {
   messages: [
     {message: 'Retrieving website status', callback: parking.retrieveWebsiteStatus},
     {message: 'Retrieving construction progress', callback: parking.retrieveConstructionProgress},
-    {message: 'What features do you want to see in our website?', callback: parking.receiveFeatureRequests}
+    {message: 'Type <span class="green">help</span> to list available commands', callback: parking.enableBash}
   ],
   messageIndex: 0,
   timer: null,
   history: null,
-  command: null,
+  input: null,
   latestMessage: null,
   initialize: function() {
     bash.history = $('#bash .history');
-    bash.command = $('#bash .command');
+    bash.input = $('#bash .command');
     bash.log(bash.messages[bash.messageIndex]);
   },
   log: function(data) {
+    if (typeof data == 'string') {
+      data = {message: data};
+    }
     bash.latestMessage = $('<p>' + data.message + '</p>');
     bash.history.append(bash.latestMessage);
     if (data.hasOwnProperty('callback') && typeof data.callback == 'function') {
@@ -63,7 +70,7 @@ var bash = {
     bash.timer = setInterval(function() {
       if (duration > 0 && time-- == 0) {
         clearInterval(bash.timer);
-        bash.latestMessage.text(bash.latestMessage.text() + 'done');
+        bash.latestMessage.html(bash.latestMessage.html() + '<span class="green">done</span>');
         if (callback && typeof callback == 'function') {
           callback();
         }
@@ -74,15 +81,56 @@ var bash = {
   },
   stopProgress: function(callback) {
     clearInterval(bash.timer);
-    bash.latestMessage.text(bash.latestMessage.text() + 'done');
+    bash.latestMessage.html(bash.latestMessage.html() + '<span class="green">done</span>');
     if (callback && typeof callback == 'function') {
       callback();
     }
   },
   enableInput: function() {
     $('#bash .input').removeClass('hidden').find('.command').focus();
-    $(document).on('mouseup', function() {
-      bash.command.focus();
+    $('#bash .input .command').on('keydown', function(e) {
+      if (e.keyCode == 13) {
+        e.preventDefault();
+        var input = bash.input.val();
+        bash.input.val('');
+        if (bash.input.data('mode') == 'command') {
+          if (input.length == 0) {
+            bash.log('<span class="blue">$</span>');
+          } else if (bash.commands.hasOwnProperty(input)) {
+            bash.commands[input]();
+          } else {
+            bash.log('<span class="blue">$</span> ' + input);
+            bash.log('<span class="red">\'' + input + '\' - invalid command</span>');
+          }
+        } else if (bash.input.data('mode') == 'poll') {
+          bash.log('<span class="blue">:</span> ' + input);
+          bash.log({message: 'Sending poll answer', callback: function() {
+            parking.sendPollAnswer(input);
+          }});
+          $('#bash .input .command').data('mode', 'command');
+          $('#bash .input span').text('$');
+        }
+      }
     });
+    $(document).on('mouseup', function() {
+      bash.input.focus();
+    });
+  },
+  commands: {
+    poll: function() {
+      bash.log('<span class="blue">$</span> poll');
+      bash.log('<span class="yellow">' + poll.message + '</span>');
+      $('#bash .input .command').data('mode', 'poll');
+      $('#bash .input span').text(':');
+    },
+    help: function() {
+      bash.log('<span class="blue">$</span> help');
+      bash.log('<span class="green">poll</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- show current poll question');
+      bash.log('<span class="green">share-fb</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- share this page on facebook');
+      bash.log('<span class="green">share-twitter</span>&nbsp;- share this page on twitter');
+      bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- show development log history');
+      bash.log('<span class="green">help</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- show this help message');
+      bash.log('<span class="green">exit</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- leave this page');
+    }
   }
 };

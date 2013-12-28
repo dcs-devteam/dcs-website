@@ -136,15 +136,40 @@
 
 .pages.parking #bash {
   width: 50%;
+  height: 76%;
   position: absolute;
+  top: 12%;
   right: 0;
-  bottom: 12%;
   padding: 0 20px;
+  overflow: hidden;
+}
+
+.pages.parking #bash .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .pages.parking #bash .history p {
   font: normal 1.3rem "Consolas";
   color: #cccccc;
+}
+
+.pages.parking #bash .history p span.green {
+  color: #349B34;
+}
+
+.pages.parking #bash .history p span.red {
+  color: #A13936;
+}
+
+.pages.parking #bash .history p span.blue {
+  color: #2E7688;
+}
+
+.pages.parking #bash .history p span.yellow {
+  color: #9EA036;
 }
 
 .pages.parking #bash .input {
@@ -156,7 +181,7 @@
   top: 0;
   left: 0;
   font: normal 1.3rem "Consolas";
-  color: #cccccc;
+  color: #2E7688;
 }
 
 .pages.parking #bash .command {
