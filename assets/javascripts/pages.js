@@ -67,8 +67,7 @@ var parking = {
         while (parking.logHistoryIndex < parking.maxLogs) {
           bash.log(parking.logHistory[parking.logHistoryIndex++]);
         }
-        bash.input.data('mode', 'log');
-        $('#bash .input span').text(':');
+        bash.setMode('log');
       }
       bash.enableInput();
     }, 5000);
@@ -122,6 +121,14 @@ var bash = {
       callback();
     }
   },
+  setMode: function(mode) {
+    bash.input.data('mode', mode);
+    if (mode == 'command') {
+      $('#bash .input span').text('$');
+    } else {
+      $('#bash .input span').text(':');
+    }
+  },
   enableInput: function() {
     $('#bash .input').removeClass('hidden').find('.command').focus();
     bash.input.on('keydown', function(e) {
@@ -147,31 +154,26 @@ var bash = {
           } else {
             bash.log('You do not have an answer');
           }
-          bash.input.data('mode', 'command');
-          $('#bash .input span').text('$');
+          bash.setMode('command');
         } else if (bash.input.data('mode') == 'exit') {
           bash.log('<span class="blue">:</span> ' + input);
           if (input == 'yes') {
             bash.log('<span class="red">Okay :(</span>');
-            bash.input.data('mode', 'command');
-            $('#bash .input span').text('$');
+            bash.setMode('command');
             setTimeout(function() {
               window.close();
             }, 1000);
           } else if (input == 'no') {
             bash.log('<span class="green">Yey! :)</span>');
-            bash.input.data('mode', 'command');
-            $('#bash .input span').text('$');
+            bash.setMode('command');
           } else {
             bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
           }
         }
       } else if (e.keyCode == 27) {
-        if (bash.input.data('mode') == 'command') {
-          bash.input.val('');
-        } else {
-          bash.input.data('mode', 'command').val('');
-          $('#bash .input span').text('$');
+        bash.input.val('');
+        if (bash.input.data('mode') != 'command') {
+          bash.setMode('command');
         }
       } else if (e.keyCode == 40 && bash.input.data('mode') == 'log' && parking.logHistoryIndex < parking.logHistory.length) {
         bash.log(parking.logHistory[parking.logHistoryIndex++]);
@@ -197,8 +199,7 @@ var bash = {
     poll: function() {
       bash.log('<span class="blue">$</span> poll');
       bash.log('<span class="yellow">' + poll.message + '</span>');
-      bash.input.data('mode', 'poll');
-      $('#bash .input span').text(':');
+      bash.setMode('poll');
     },
     log: function() {
       bash.log('<span class="blue">$</span> log');
@@ -217,8 +218,7 @@ var bash = {
     exit: function() {
       bash.log('<span class="blue">$</span> exit');
       bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
-      bash.input.data('mode', 'exit');
-      $('#bash .input span').text(':');
+      bash.setMode('exit');
     }
   }
 };
