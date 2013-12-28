@@ -8,8 +8,8 @@
     var websiteStatus = 'Under Construction';
     var constructionProgress = '12%';
     var poll = {
-      id: 1,
-      message: 'What features do you want to see in our website?'
+      id: '<?= $poll->id; ?>',
+      message: '<?= $poll->question; ?>'
     };
   </script>
 </head>

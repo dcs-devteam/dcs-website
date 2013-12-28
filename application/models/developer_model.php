@@ -18,5 +18,5 @@
 
   }
 
-// End of file developer.php
-// Location: ./application/controllers/developer.php
+// End of file developer_model.php
+// Location: ./application/models/developer_model.php

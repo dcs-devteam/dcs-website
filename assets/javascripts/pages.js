@@ -36,11 +36,15 @@ var parking = {
   sendPollAnswer: function(answer) {
     bash.disableInput();
     bash.startProgress(0);
-    console.log('sending poll answer: ' + answer);
-    setTimeout(function() {
-      bash.stopProgress();
-      bash.enableInput();
-    }, 2000);
+    $.ajax({
+      url: BASE_URL + 'index.php/polls/answer',
+      type: 'POST',
+      data: {id: poll.id, answer: answer},
+      success: function() {
+        bash.stopProgress();
+        bash.enableInput();
+      }
+    });
   },
   retrieveLogHistory: function() {
     bash.disableInput();
@@ -171,9 +175,9 @@ var bash = {
           }
         } else if (bash.input.data('mode') == 'poll') {
           bash.log('<span class="blue">:</span> ' + input);
-          if (input.length > 0) {
+          if (input.trim().length > 0) {
             bash.log({message: 'Sending poll answer', callback: function() {
-              parking.sendPollAnswer(input);
+              parking.sendPollAnswer(input.trim());
             }});
           } else {
             bash.log('You do not have an answer');
