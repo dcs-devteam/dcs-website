@@ -35,10 +35,12 @@ body.developer .right {
 
 body.developer .left {
   left: 0;
+  padding-right: 10px
 }
 
 body.developer .right {
   right: 0;
+  padding-left: 10px;
 }
 
 body.developer section {
@@ -47,6 +49,10 @@ body.developer section {
   border-radius: 3px;
   overflow: hidden;
   margin-bottom: 20px;
+}
+
+body.developer section:last-child {
+  margin-bottom: 0;
 }
 
 body.developer section h3 {
@@ -97,8 +103,8 @@ body.developer section form {
   margin-bottom: 10px;
 }
 
-body.developer section form input[type="text"],
-body.developer section form input[type="password"] {
+body.developer section input[type="text"],
+body.developer section input[type="password"] {
   float: left;
   width: 44%;
   font: normal 1.3rem "Consolas";
@@ -109,8 +115,8 @@ body.developer section form input[type="password"] {
   outline: none;
 }
 
-body.developer section form input[type="text"]:focus,
-body.developer section form input[type="password"]:focus {
+body.developer section input[type="text"]:focus,
+body.developer section input[type="password"]:focus {
   border-color: #666666;
 }
 
@@ -189,4 +195,12 @@ body.developer #developers .item .actions {
 
 body.developer #developers .item.edit .actions {
   width: 10%;
+}
+
+body.developer #polls input[type="text"] {
+  width: 89%;
+}
+
+body.developer #polls .item label {
+  width: 88%;
 }

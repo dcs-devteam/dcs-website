@@ -20,6 +20,7 @@
       $this->_check_required_validation();
       $this->load->model('developer_model', 'developer');
       $this->load->model('meta_model', 'meta');
+      $this->load->model('poll_model', 'poll');
       $this->load->helper('application_helper');
     }
 
@@ -38,6 +39,7 @@
     public function index() {
       $data['metas'] = $this->meta->all();
       $data['developers'] = $this->developer->all();
+      $data['polls'] = $this->poll->all();
       $this->load->view('developer/index', $data);
     }
 

@@ -59,7 +59,25 @@
       </section>
     </div>
 
-    <div class="right"></div>
+    <div class="right">
+      <section id="polls">
+        <h3>Polls</h3>
+        <input type="button" value="Add New" class="button green" data-behavior="create-item" />
+        <input type="button" value="Cancel" class="button red hidden" data-behavior="cancel-creation" />
+        <?= form_open('polls/create', array('class' => 'clearfix hidden')); ?>
+          <input type="text" name="question" placeholder="poll question" required />
+          <input type="submit" value="Save" class="button green" />
+        <?= form_close(); ?>
+        <?php foreach ($polls as $poll): ?>
+          <div class="item clearfix">
+            <label><?= $poll->question; ?></label>
+            <div class="actions">
+              <?= anchor('polls/delete/' . $poll->id, 'Delete'); ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </section>
+    </div>
   </div>
 </body>
 </html>

@@ -17,6 +17,32 @@
       $this->db->insert('poll_answers', $poll_answer);
     }
 
+    public function all() {
+      $this->db->order_by('created_at', 'DESC');
+      $results = $this->db->get('polls');
+      return $results->result();
+    }
+
+    public function find($id) {
+      $this->db->where('id', $id);
+      $result = $this->db->get('polls');
+      return $result->row();
+    }
+
+    public function create($poll) {
+      $this->db->insert('polls', $poll);
+    }
+
+    public function delete($id) {
+      if ($this->find($id)) {
+        $this->db->where('id', $id);
+        $this->db->delete('polls');
+        return array('success' => true, 'message' => 'Poll message successfully deleted.');
+      } else {
+        return array('success' => false, 'message' => 'Poll question not found.');
+      }
+    }
+
   }
 
 // End of file poll_model.php
