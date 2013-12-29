@@ -1,0 +1,184 @@
+/*** LOCAL COMMONS ***/
+body.developer #main-body,
+body.developer .left,
+body.developer .right,
+body.developer section form input[type="text"],
+body.developer section form input[type="password"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+body.developer {
+  background: #ffffff url("../images/background.png") center center no-repeat;
+  background-size: cover;
+}
+
+body.developer #main-body {
+  width: 95%;
+  min-height: 100%;
+  background-color: #222222;
+  position: relative;
+}
+
+body.developer .left,
+body.developer .right {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+}
+
+body.developer .left {
+  left: 0;
+}
+
+body.developer .right {
+  right: 0;
+}
+
+body.developer section {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+body.developer section h3 {
+  display: inline-block;
+  font: normal 1.8rem "Open Sans Light";
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+body.developer section .button {
+  float: right;
+  font: normal 1.1rem "Open Sans";
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  -o-transition: background-color 300ms ease;
+  -ms-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+}
+
+body.developer section .button.green {
+  background-color: #258125;
+}
+
+body.developer section .button.green:hover,
+body.developer section .button.green:focus {
+  background-color: #2C9A2C;
+}
+
+body.developer section .button.red {
+  background-color: #8C2B28;
+}
+
+body.developer section .button.red:hover,
+body.developer section .button.red:focus {
+  background-color: #A83330;
+}
+
+body.developer section form {
+  margin-bottom: 10px;
+}
+
+body.developer section form input[type="text"],
+body.developer section form input[type="password"] {
+  float: left;
+  width: 44%;
+  font: normal 1.3rem "Consolas";
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  margin-right: 1%;
+  outline: none;
+}
+
+body.developer section form input[type="text"]:focus,
+body.developer section form input[type="password"]:focus {
+  border-color: #666666;
+}
+
+body.developer section form .button {
+  width: 10%;
+  padding: 6px 10px;
+}
+
+body.developer #metas .item {
+  padding: 7px 12px;
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+body.developer #metas .item:nth-of-type(even) {
+  background-color: #e3e3e3;
+}
+
+body.developer #metas .item label,
+body.developer #metas .item p {
+  float: left;
+  width: 45%;
+  font: normal 1.5rem "Consolas";
+  color: #333333;
+  text-align: left;
+}
+
+body.developer #metas .item.edit label,
+body.developer #metas .item.edit p {
+  margin-top: 4px;
+}
+
+body.developer #metas .item form {
+  float: left;
+  width: 45%;
+  margin: 0;
+}
+
+body.developer #metas .item input[type="text"],
+body.developer #metas .item input[type="password"] {
+  width: 69%;
+}
+
+body.developer #metas .item .button {
+  float: none;
+  width: 20%;
+}
+
+body.developer #metas .item .actions {
+  float: right;
+  width: 10%;
+  text-align: right;
+  margin-top: 1px;
+}
+
+body.developer #metas .item.edit .actions {
+  margin-top: 5px;
+}
+
+body.developer #metas .item .actions a {
+  font: normal 1.1rem "Open Sans";
+  color: #258125;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+}
+
+body.developer #metas .item .actions a:hover,
+body.developer #metas .item .actions a:focus {
+  color: #1EB01E;
+}

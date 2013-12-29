@@ -17,6 +17,7 @@
       $this->_check_request_method();
       $this->_check_required_validation();
       $this->load->model('developer_model', 'developer');
+      $this->load->model('meta_model', 'meta');
       $this->load->helper('application_helper');
     }
 
@@ -33,7 +34,8 @@
     }
 
     public function index() {
-      $this->load->view('developer/index');
+      $data['metas'] = $this->meta->all();
+      $this->load->view('developer/index', $data);
     }
 
   }
