@@ -24,7 +24,7 @@ var metas = {
       var item = $(this).closest('.item').addClass('edit');
       var value = $(this).closest('.actions').siblings('p');
       var form = $('<form action="' + BASE_URL + 'index.php/metas/update" method="POST"> \
-                      <input type="text" name="value" value="' + value.text() + '" /> \
+                      <input type="text" name="value" value="' + value.text() + '" required /> \
                       <input type="hidden" name="property" value="' + item.data('property') + '" /> \
                       <input type="submit" value="Save" class="button green" /> \
                     </form>');
@@ -47,7 +47,7 @@ var developers = {
       e.preventDefault();
       var item = $(this).closest('.item').addClass('edit');
       var form = $('<form action="' + BASE_URL + 'index.php/developer/update" method="POST"> \
-                      <input type="password" name="password" /> \
+                      <input type="password" name="password" required /> \
                       <input type="submit" value="Save" class="button green" /> \
                     </form>');
       $(this).closest('.actions').before(form);
