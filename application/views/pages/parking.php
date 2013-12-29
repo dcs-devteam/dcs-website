@@ -5,9 +5,9 @@
   <title>Department of Computer Science</title>
   <script>
     var BASE_URL = '<?= base_url(); ?>';
-    var websiteStatus = 'Under Construction';
-    var constructionProgress = '12%';
-    var authenticatedDeveloper = '<?= $developer ? $developer : ''; ?>';
+    var websiteStatus = '<?= $meta["website_status"]->value; ?>';
+    var constructionProgress = '<?= $meta["website_completion"]->value; ?>';
+    var authenticatedDeveloper = '<?= $developer ? $developer : ""; ?>';
     <?php if ($poll): ?>
       var poll = {
         id: '<?= $poll->id; ?>',
@@ -22,7 +22,7 @@
     <section id="meta">
       <div class="loader hidden">
         <h1>DCS</h1>
-        <p class="hidden">12%</p>
+        <p class="hidden"><?= $meta['website_completion']->value; ?></p>
         <div class="spinner clockwise" id="spinner-1"></div>
         <div class="spinner counterclockwise" id="spinner-2"></div>
       </div>
