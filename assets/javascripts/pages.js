@@ -229,8 +229,12 @@ var bash = {
   commands: {
     poll: function() {
       bash.log('<span class="blue">$</span> poll');
-      bash.log('<span class="yellow">' + poll.message + '</span>');
-      bash.setMode('poll');
+      if (window.hasOwnProperty('poll')) {
+        bash.log('<span class="yellow">' + poll.message + '</span>');
+        bash.setMode('poll');
+      } else {
+        bash.log('<span class="red">We currently don\'t have a poll message</span>');
+      }
     },
     log: function() {
       bash.log('<span class="blue">$</span> log');

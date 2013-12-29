@@ -8,10 +8,12 @@
     var websiteStatus = 'Under Construction';
     var constructionProgress = '12%';
     var authenticatedDeveloper = '<?= $developer ? $developer : ''; ?>';
-    var poll = {
-      id: '<?= $poll->id; ?>',
-      message: '<?= $poll->question; ?>'
-    };
+    <?php if ($poll): ?>
+      var poll = {
+        id: '<?= $poll->id; ?>',
+        message: '<?= $poll->question; ?>'
+      };
+    <?php endif; ?>
   </script>
 </head>
 
