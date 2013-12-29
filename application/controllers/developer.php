@@ -9,9 +9,11 @@
     public function __construct() {
       parent::__construct();
       $this->request_methods['GET'] = array('index');
-      $this->request_methods['POST'] = array('authenticate');
+      $this->request_methods['POST'] = array('authenticate', 'create', 'update');
       $this->required_validations = array(
-        'index' => 'developer'
+        'index' => 'developer',
+        'create' => 'developer',
+        'update' => 'developer'
       );
 
       $this->_check_request_method();
@@ -25,7 +27,7 @@
       $username = $_POST['username'];
       $password = $_POST['password'];
       $result = $this->developer->authenticate($username, $password);
-      if (count($result) == 1) {
+      if ($result) {
         $this->session->set_userdata('developer', $result->username);
         echo 'true';
       } else {
@@ -35,7 +37,27 @@
 
     public function index() {
       $data['metas'] = $this->meta->all();
+      $data['developers'] = $this->developer->all();
       $this->load->view('developer/index', $data);
+    }
+
+    public function create() {
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      $result = $this->developer->create(array('username' => $username, 'password' => $password));
+      if ($result['success']) {
+        $this->session->set_flashdata('notice', $result['message']);
+      } else {
+        $this->session->set_flashdata('alert', $result['message']);
+      }
+      redirect('developer/index');
+    }
+
+    public function update() {
+      $password = $_POST['password'];
+      $this->developer->update(array('username' => $this->session->userdata('developer'), 'password' => $password));
+      $this->session->set_flashdata('notice', 'Password successfully updated.');
+      redirect('developer/index');
     }
 
   }

@@ -22,9 +22,9 @@
         <input type="button" value="Add New" class="button green" data-behavior="create-item" />
         <input type="button" value="Cancel" class="button red hidden" data-behavior="cancel-creation" />
         <?= form_open('metas/create', array('class' => 'clearfix hidden')); ?>
-            <input type="text" name="property" placeholder="property" required />
-            <input type="text" name="value" placeholder="value" required />
-            <input type="submit" value="Save" class="button green" />
+          <input type="text" name="property" placeholder="property" required />
+          <input type="text" name="value" placeholder="value" required />
+          <input type="submit" value="Save" class="button green" />
         <?= form_close(); ?>
         <?php foreach ($metas as $meta): ?>
           <div class="item clearfix" data-property="<?= $meta->property; ?>">
@@ -33,6 +33,27 @@
             <div class="actions">
               <a href="#" data-behavior="edit-meta">Edit</a>
             </div>
+          </div>
+        <?php endforeach; ?>
+      </section>
+
+      <section id="developers">
+        <h3>Developers</h3>
+        <input type="button" value="Add New" class="button green" data-behavior="create-item" />
+        <input type="button" value="Cancel" class="button red hidden" data-behavior="cancel-creation" />
+        <?= form_open('developer/create', array('class' => 'clearfix hidden')); ?>
+          <input type="text" name="username" placeholder="username" required />
+          <input type="password" name="password" placeholder="password" required />
+          <input type="submit" value="Save" class="button green" />
+        <?= form_close(); ?>
+        <?php foreach ($developers as $developer): ?>
+          <div class="item clearfix">
+            <label><?= $developer->username; ?></label>
+            <?php if ($developer->username == $this->session->userdata('developer')): ?>
+              <div class="actions">
+                <a href="#" data-behavior="change-password">Change Password</a>
+              </div>
+            <?php endif; ?>
           </div>
         <?php endforeach; ?>
       </section>

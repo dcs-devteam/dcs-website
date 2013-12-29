@@ -46,6 +46,7 @@ body.developer section {
   background-color: #ffffff;
   border-radius: 3px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 body.developer section h3 {
@@ -104,7 +105,6 @@ body.developer section form input[type="password"] {
   padding: 5px;
   margin: 0;
   border: 1px solid #aaaaaa;
-  border-radius: 3px;
   margin-right: 1%;
   outline: none;
 }
@@ -119,18 +119,18 @@ body.developer section form .button {
   padding: 6px 10px;
 }
 
-body.developer #metas .item {
+body.developer .item {
   padding: 7px 12px;
   background-color: #eeeeee;
   overflow: hidden;
 }
 
-body.developer #metas .item:nth-of-type(even) {
+body.developer .item:nth-of-type(even) {
   background-color: #e3e3e3;
 }
 
-body.developer #metas .item label,
-body.developer #metas .item p {
+body.developer .item label,
+body.developer .item p {
   float: left;
   width: 45%;
   font: normal 1.5rem "Consolas";
@@ -138,39 +138,39 @@ body.developer #metas .item p {
   text-align: left;
 }
 
-body.developer #metas .item.edit label,
-body.developer #metas .item.edit p {
+body.developer .item.edit label,
+body.developer .item.edit p {
   margin-top: 4px;
 }
 
-body.developer #metas .item form {
+body.developer .item form {
   float: left;
   width: 45%;
   margin: 0;
 }
 
-body.developer #metas .item input[type="text"],
-body.developer #metas .item input[type="password"] {
+body.developer .item input[type="text"],
+body.developer .item input[type="password"] {
   width: 69%;
 }
 
-body.developer #metas .item .button {
+body.developer .item .button {
   float: none;
   width: 20%;
 }
 
-body.developer #metas .item .actions {
+body.developer .item .actions {
   float: right;
   width: 10%;
   text-align: right;
   margin-top: 1px;
 }
 
-body.developer #metas .item.edit .actions {
+body.developer .item.edit .actions {
   margin-top: 5px;
 }
 
-body.developer #metas .item .actions a {
+body.developer .item .actions a {
   font: normal 1.1rem "Open Sans";
   color: #258125;
   text-decoration: none;
@@ -178,7 +178,15 @@ body.developer #metas .item .actions a {
   outline: none;
 }
 
-body.developer #metas .item .actions a:hover,
-body.developer #metas .item .actions a:focus {
+body.developer .item .actions a:hover,
+body.developer .item .actions a:focus {
   color: #1EB01E;
+}
+
+body.developer #developers .item .actions {
+  width: 50%;
+}
+
+body.developer #developers .item.edit .actions {
+  width: 10%;
 }
