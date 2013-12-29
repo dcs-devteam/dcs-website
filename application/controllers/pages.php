@@ -16,6 +16,7 @@
     }
 
     public function parking() {
+      $data['developer'] = $this->session->userdata('developer');
       $data['poll'] = $this->poll->latest();
       $this->load->view('pages/parking', $data);
     }

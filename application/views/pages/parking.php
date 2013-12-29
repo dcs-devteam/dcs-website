@@ -7,6 +7,7 @@
     var BASE_URL = '<?= base_url(); ?>';
     var websiteStatus = 'Under Construction';
     var constructionProgress = '12%';
+    var authenticatedDeveloper = '<?= $developer ? $developer : ''; ?>';
     var poll = {
       id: '<?= $poll->id; ?>',
       message: '<?= $poll->question; ?>'

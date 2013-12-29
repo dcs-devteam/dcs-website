@@ -11,7 +11,7 @@
       $this->request_methods['GET'] = array('index');
       $this->request_methods['POST'] = array('authenticate');
       $this->required_validations = array(
-        'index' => 'current_developer'
+        'index' => 'developer'
       );
 
       $this->_check_request_method();
@@ -25,7 +25,7 @@
       $password = $_POST['password'];
       $result = $this->developer->authenticate($username, $password);
       if (count($result) == 1) {
-        $this->session->set_userdata('current_developer', $result->username);
+        $this->session->set_userdata('developer', $result->username);
         echo 'true';
       } else {
         echo 'false';

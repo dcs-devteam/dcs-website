@@ -253,22 +253,29 @@ var bash = {
     },
     dev: function() {
       bash.log('<span class="blue">$</span> dev');
-      var developerLogin = $('<input type="password" class="developer password hidden" />');
-      $('#bash .input').append(developerLogin);
-      developerLogin.on('keydown', function(e) {
-        if (e.keyCode == 13 || e.keyCode == 27) {
-          e.preventDefault();
-          if (e.keyCode == 13) {
-            bash.log('<span class="blue">:</span> [HIDDEN]');
-            parking.authenticateDeveloper(developerLogin.data('username'), developerLogin.val());
+      if (authenticatedDeveloper.length == 0) {
+        var developerLogin = $('<input type="password" class="developer password hidden" />');
+        $('#bash .input').append(developerLogin);
+        developerLogin.on('keydown', function(e) {
+          if (e.keyCode == 13 || e.keyCode == 27) {
+            e.preventDefault();
+            if (e.keyCode == 13) {
+              bash.log('<span class="blue">:</span> [HIDDEN]');
+              parking.authenticateDeveloper(developerLogin.data('username'), developerLogin.val());
+            }
+            developerLogin.remove();
+            bash.input.removeClass('hidden').focus();
+            bash.setMode('command');
           }
-          developerLogin.remove();
-          bash.input.removeClass('hidden').focus();
-          bash.setMode('command');
-        }
-      });
-      bash.log('<span class="yellow">Enter developer username</span>');
-      bash.setMode('dev-username');
+        });
+        bash.log('<span class="yellow">Enter developer username</span>');
+        bash.setMode('dev-username');
+      } else {
+        bash.log('Current Developer: <span class="yellow">' + authenticatedDeveloper + '</span>');
+        bash.log('Redirecting to developer page');
+        bash.startProgress(0);
+        location.href = BASE_URL + 'index.php/developer/index';
+      }
     }
   }
 };
