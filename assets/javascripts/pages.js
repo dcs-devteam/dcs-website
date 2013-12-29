@@ -255,8 +255,8 @@ var bash = {
       bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
       bash.setMode('exit');
     },
-    dev: function() {
-      bash.log('<span class="blue">$</span> dev');
+    'dev login': function() {
+      bash.log('<span class="blue">$</span> dev login');
       if (authenticatedDeveloper.length == 0) {
         var developerLogin = $('<input type="password" class="developer password hidden" />');
         $('#bash .input').append(developerLogin);
@@ -279,6 +279,27 @@ var bash = {
         bash.log('Redirecting to developer page');
         bash.startProgress(0);
         location.href = BASE_URL + 'index.php/developer/index';
+      }
+    },
+    'dev logout': function() {
+      bash.log('<span class="blue">$</span> dev logout');
+      if (authenticatedDeveloper.length == 0) {
+        bash.log('<span class="red">No developer currently logged in</span>');
+      } else {
+        bash.log('Current Developer: <span class="yellow">' + authenticatedDeveloper + '</span>');
+        bash.log('Signing out');
+        bash.startProgress(0);
+        bash.disableInput();
+        $.ajax({
+          url: BASE_URL + 'index.php/developer/sign_out',
+          type: 'POST',
+          success: function() {
+            bash.stopProgress();
+            bash.log('<span class="green">Developer signed out</span>');
+            bash.enableInput();
+            authenticatedDeveloper = '';
+          }
+        });
       }
     }
   }

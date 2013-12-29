@@ -9,11 +9,12 @@
     public function __construct() {
       parent::__construct();
       $this->request_methods['GET'] = array('index');
-      $this->request_methods['POST'] = array('authenticate', 'create', 'update');
+      $this->request_methods['POST'] = array('authenticate', 'create', 'update', 'sign_out');
       $this->required_validations = array(
         'index' => 'developer',
         'create' => 'developer',
-        'update' => 'developer'
+        'update' => 'developer',
+        'sign_out' => 'developer'
       );
 
       $this->_check_request_method();
@@ -60,6 +61,10 @@
       $this->developer->update(array('username' => $this->session->userdata('developer'), 'password' => $password));
       $this->session->set_flashdata('notice', 'Password successfully updated.');
       redirect('developer/index');
+    }
+
+    public function sign_out() {
+      $this->session->sess_destroy();
     }
 
   }
