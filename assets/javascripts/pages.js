@@ -149,7 +149,7 @@ var bash = {
     }
   },
   setMode: function(mode) {
-    bash.input.data('mode', mode);
+    bash.input.data('mode', mode).val('');
     if (mode == 'command') {
       $('#bash .input span').text('$');
       $('#bash .input .developer').remove();
