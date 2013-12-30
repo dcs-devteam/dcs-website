@@ -263,7 +263,6 @@ var bash = {
       bash.log('<span class="blue">$</span> help');
       bash.log('<span class="green">poll</span>&nbsp;&nbsp;- show current poll question');
       bash.log('<span class="green">share</span>&nbsp;- share this page on facebook');
-      bash.log('<span class="green">tweet</span>&nbsp;- share this page on twitter');
       bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;- show development log history');
       bash.log('<span class="green">help</span>&nbsp;&nbsp;- show this help message');
       bash.log('<span class="green">exit</span>&nbsp;&nbsp;- leave this page');

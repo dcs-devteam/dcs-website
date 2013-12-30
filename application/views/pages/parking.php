@@ -19,19 +19,6 @@
 
 <body class="<?= body_classes($controller, $action); ?>">
   <div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({appId: '577948072287644'});
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/all.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
 
   <div id="main-body">
     <section id="meta">
@@ -53,5 +40,7 @@
       </div>
     </section>
   </div>
+
+  <?php $this->load->view('partials/api'); ?>
 </body>
 </html>
