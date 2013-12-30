@@ -60,5 +60,35 @@ var developers = {
       item.find('form').remove();
       $(this).text('Change Password').attr('data-behavior', 'change-password');
     });
+
+    $('#polls').delegate(' .item:not(.selected)', 'click', function() {
+      developers.showPollAnswers($(this));
+    });
+    $('#polls .answers [data-behavior="close-answers"]').on('click', function() {
+      $('#main-body .left').removeClass('shrink');
+      $('#main-body .right').removeClass('expand');
+      $('.item.selected').removeClass('selected');
+      $('#polls .answers p').remove();
+    });
+  },
+  showPollAnswers: function(item) {
+    $('#main-body .left').addClass('shrink');
+    $('#main-body .right').addClass('expand');
+    $('#polls .answers p').remove();
+    $('.item.selected').removeClass('selected');
+    item.addClass('selected');
+    var answers = $('#polls .answers');
+    $.ajax({
+      url: BASE_URL + 'index.php/polls/answers',
+      type: 'POST',
+      data: {id: item.data('id')},
+      success: function(data) {
+        data = JSON.parse(data);
+        for (var i = 0; i < data.length; i++) {
+          var answer = $('<p>' + data[i].answer + '</p>');
+          answers.append(answer);
+        }
+      }
+    });
   }
 };

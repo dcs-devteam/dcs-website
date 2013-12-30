@@ -3,12 +3,33 @@ body.developer #main-body,
 body.developer .left,
 body.developer .right,
 body.developer section form input[type="text"],
-body.developer section form input[type="password"] {
+body.developer section form input[type="password"],
+body.developer #polls .content,
+body.developer #polls .answers {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body.developer .left,
+body.developer .right,
+body.developer #polls .content {
+  -webkit-transition: width 300ms ease;
+  -moz-transition: width 300ms ease;
+  -o-transition: width 300ms ease;
+  -ms-transition: width 300ms ease;
+  transition: width 300ms ease;
+}
+
+body.developer section .button,
+body.developer .item {
+  -webkit-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  -o-transition: background-color 300ms ease;
+  -ms-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
 }
 
 
@@ -43,6 +64,14 @@ body.developer .right {
   padding-left: 10px;
 }
 
+body.developer .left.shrink {
+  width: 35%;
+}
+
+body.developer .right.expand {
+  width: 65%;
+}
+
 body.developer section {
   padding: 10px;
   background-color: #ffffff;
@@ -74,11 +103,6 @@ body.developer section .button {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   outline: none;
-  -webkit-transition: background-color 300ms ease;
-  -moz-transition: background-color 300ms ease;
-  -o-transition: background-color 300ms ease;
-  -ms-transition: background-color 300ms ease;
-  transition: background-color 300ms ease;
 }
 
 body.developer section .button.green {
@@ -197,8 +221,60 @@ body.developer #developers .item.edit .actions {
   width: 10%;
 }
 
+body.developer #polls {
+  position: relative;
+}
+
+body.developer #polls .content {
+  float: left;
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+body.developer .right.expand #polls .content {
+  width: 50%;
+}
+
+body.developer #polls .answers {
+  float: right;
+  width: 50%;
+  margin-left: -1000px;
+  padding-left: 10px;
+}
+
+body.developer #polls .answers .button {
+  margin-bottom: 11px;
+}
+
+body.developer #polls .answers p {
+  font: normal 1.5rem "Consolas";
+  color: #333333;
+  padding: 7px 12px;
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+body.developer #polls .answers p:nth-of-type(even) {
+  background-color: #e3e3e3;
+}
+
 body.developer #polls input[type="text"] {
   width: 89%;
+}
+
+body.developer #polls .item, 
+body.developer #polls .item * {
+  cursor: pointer;
+}
+
+body.developer #polls .item:hover {
+  background-color: #ffffff;
+}
+
+body.developer #polls .item.selected {
+  background-color: #CBEFCB;
 }
 
 body.developer #polls .item label {

@@ -9,9 +9,10 @@
     public function __construct() {
       parent::__construct();
       $this->request_methods['GET'] = array('delete');
-      $this->request_methods['POST'] = array('answer', 'create');
+      $this->request_methods['POST'] = array('answer', 'answers', 'create');
       $this->required_validations = array(
-        'create' => 'developer'
+        'create' => 'developer',
+        'answers' => 'developer'
       );
 
       $this->_check_request_method();
@@ -24,6 +25,12 @@
       $poll_id = $_POST['id'];
       $answer = $_POST['answer'];
       $this->poll->answer(array('poll_id' => $poll_id, 'answer' => $answer));
+    }
+
+    public function answers() {
+      $poll_id = $_POST['id'];
+      $answers = $this->poll->answers($poll_id);
+      echo json_encode($answers);
     }
 
     public function create() {

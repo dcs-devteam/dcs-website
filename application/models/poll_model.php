@@ -17,6 +17,13 @@
       $this->db->insert('poll_answers', $poll_answer);
     }
 
+    public function answers($id) {
+      $this->db->where('poll_id', $id);
+      $this->db->order_by('created_at', 'DESC');
+      $results = $this->db->get('poll_answers');
+      return $results->result();
+    }
+
     public function all() {
       $this->db->order_by('created_at', 'DESC');
       $results = $this->db->get('polls');
