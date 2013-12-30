@@ -86,14 +86,14 @@ body.developer section:last-child {
 
 body.developer section h3 {
   display: inline-block;
-  font: normal 1.8rem "Open Sans Light";
+  font: normal 1.8rem "Open Sans Light", "OpenSansLight";
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 body.developer section .button {
   float: right;
-  font: normal 1.1rem "Open Sans";
+  font: normal 1.1rem "Open Sans", "OpenSansRegular";
   color: #ffffff;
   text-transform: uppercase;
   padding: 4px 10px;
@@ -131,7 +131,7 @@ body.developer section input[type="text"],
 body.developer section input[type="password"] {
   float: left;
   width: 44%;
-  font: normal 1.3rem "Consolas";
+  font: normal 1.3rem "Consolas", "ConsolasRegular";
   padding: 5px;
   margin: 0;
   border: 1px solid #aaaaaa;
@@ -163,7 +163,7 @@ body.developer .item label,
 body.developer .item p {
   float: left;
   width: 45%;
-  font: normal 1.5rem "Consolas";
+  font: normal 1.5rem "Consolas", "ConsolasRegular";
   color: #333333;
   text-align: left;
 }
@@ -201,7 +201,7 @@ body.developer .item.edit .actions {
 }
 
 body.developer .item .actions a {
-  font: normal 1.1rem "Open Sans";
+  font: normal 1.1rem "Open Sans", "OpenSansRegular";
   color: #258125;
   text-decoration: none;
   text-transform: uppercase;
@@ -249,7 +249,7 @@ body.developer #polls .answers .button {
 }
 
 body.developer #polls .answers p {
-  font: normal 1.5rem "Consolas";
+  font: normal 1.5rem "Consolas", "ConsolasRegular";
   color: #333333;
   padding: 7px 12px;
   background-color: #eeeeee;

@@ -21,7 +21,7 @@ p.notification {
   top: -50px;
   left: 50%;
   z-index: 10;
-  font: normal 1.4rem "Open Sans";
+  font: normal 1.4rem "Open Sans", "OpenSansRegular";
   color: #ffffff;
   padding: 7px 15px;
   border: 1px solid;
