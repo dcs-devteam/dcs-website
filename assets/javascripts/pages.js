@@ -185,7 +185,8 @@ var bash = {
             bash.log('<span class="red">Okay :(</span>');
             bash.setMode('command');
             setTimeout(function() {
-              window.close();
+              top.open('', '_self');
+              top.close();
             }, 1000);
           } else if (input == 'no') {
             bash.log('<span class="green">Yey! :)</span>');
