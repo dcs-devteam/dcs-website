@@ -262,7 +262,6 @@ var bash = {
     help: function() {
       bash.log('<span class="blue">$</span> help');
       bash.log('<span class="green">poll</span>&nbsp;&nbsp;- show current poll question');
-      bash.log('<span class="green">like</span>&nbsp;&nbsp;- like our facebook page');
       bash.log('<span class="green">share</span>&nbsp;- share this page on facebook');
       bash.log('<span class="green">tweet</span>&nbsp;- share this page on twitter');
       bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;- show development log history');
