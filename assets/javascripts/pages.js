@@ -49,32 +49,28 @@ var parking = {
   retrieveLogHistory: function() {
     bash.disableInput();
     bash.startProgress(0);
-    setTimeout(function() {
-      bash.stopProgress();
-      parking.logHistory = [
-        'escape key clears buffer and returns to command mode',
-        'implemented poll command in bash',
-        'spinning thing in parking page',
-        'refocus bash input field on click outside',
-        'bash in parking page',
-        'initial app configurations',
-        'dcs website - initial commit'
-      ];
-      parking.logHistoryIndex = 0;
-      parking.maxLogs = Math.floor($('#bash').outerHeight() / 15) - 1;
-      if (parking.logHistory.length <= parking.maxLogs) {
-        for (var i = 0; i < parking.logHistory.length; i++) {
-          bash.log(parking.logHistory[i]);
+    $.ajax({
+      url: 'https://api.github.com/repos/dcs-web-team/dcs-website/commits',
+      type: 'GET',
+      success: function(data) {
+        bash.stopProgress();
+        parking.logHistory = data;
+        parking.logHistoryIndex = 0;
+        parking.maxLogs = Math.floor($('#bash').outerHeight() / 15) - 1;
+        if (parking.logHistory.length <= parking.maxLogs) {
+          for (var i = 0; i < parking.logHistory.length; i++) {
+            bash.log(parking.logHistory[i].commit.message);
+          }
+        } else {
+          bash.history.html('');
+          while (parking.logHistoryIndex < parking.maxLogs) {
+            bash.log(parking.logHistory[parking.logHistoryIndex++].commit.message);
+          }
+          bash.setMode('log');
         }
-      } else {
-        bash.history.html('');
-        while (parking.logHistoryIndex < parking.maxLogs) {
-          bash.log(parking.logHistory[parking.logHistoryIndex++]);
-        }
-        bash.setMode('log');
+        bash.enableInput();
       }
-      bash.enableInput();
-    }, 5000);
+    });
   },
   authenticateDeveloper: function(username, password) {
     bash.disableInput();
@@ -207,7 +203,7 @@ var bash = {
       } else if (e.keyCode == 27) {
         bash.setMode('command');
       } else if (e.keyCode == 40 && bash.input.data('mode') == 'log' && parking.logHistoryIndex < parking.logHistory.length) {
-        bash.log(parking.logHistory[parking.logHistoryIndex++]);
+        bash.log(parking.logHistory[parking.logHistoryIndex++].commit.message);
       } else if (e.keyCode == 38 && bash.input.data('mode') == 'log' && parking.logHistoryIndex > parking.maxLogs) {
         bash.history.find('p').last().remove();
         parking.logHistoryIndex--;
