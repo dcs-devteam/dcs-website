@@ -239,6 +239,7 @@ var bash = {
     share: function() {
       bash.log('<span class="blue">$</span> share');
       bash.log('Connecting to Facebook...');
+      bash.disableInput();
       FB.ui({
         method: 'feed',
         name: 'DCS Website',
@@ -253,6 +254,7 @@ var bash = {
         } else {
           bash.log('<span class="red">Something went wrong while sharing this page</span>');
         }
+        bash.enableInput();
       });
     },
     log: function() {
