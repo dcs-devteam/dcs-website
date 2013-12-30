@@ -25,7 +25,7 @@ var parking = {
   },
   retrieveConstructionProgress: function() {
     bash.startProgress(3, function() {
-      bash.log('Construction Progress: <span class="yellow">' + constructionProgress + '</span>');
+      bash.log('Website Completion: <span class="yellow">' + websiteCompletion + '</span>');
       bash.log(bash.messages[++bash.messageIndex]);
       $('#meta .loader p').fadeIn(1000).removeClass('hidden');
     });
@@ -162,7 +162,7 @@ var bash = {
     bash.input.on('keydown', function(e) {
       if (e.keyCode == 13) {
         e.preventDefault();
-        var input = bash.input.val();
+        var input = bash.input.val().trim();
         bash.input.val('');
         if (bash.input.data('mode') == 'command') {
           if (input.length == 0) {

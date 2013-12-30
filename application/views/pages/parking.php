@@ -6,7 +6,7 @@
   <script>
     var BASE_URL = '<?= base_url(); ?>';
     var websiteStatus = '<?= $meta["website_status"]->value; ?>';
-    var constructionProgress = '<?= $meta["website_completion"]->value; ?>';
+    var websiteCompletion = '<?= $meta["website_completion"]->value; ?>';
     var authenticatedDeveloper = '<?= $developer ? $developer : ""; ?>';
     <?php if ($poll): ?>
       var poll = {
