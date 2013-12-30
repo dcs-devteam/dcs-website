@@ -236,6 +236,25 @@ var bash = {
         bash.log('<span class="red">We currently don\'t have a poll message</span>');
       }
     },
+    share: function() {
+      bash.log('<span class="blue">$</span> share');
+      bash.log('Connecting to Facebook...');
+      FB.ui({
+        method: 'feed',
+        name: 'DCS Website',
+        caption: 'Official Website of UP Cebu\'s Department of Computer Science',
+        link: BASE_URL,
+        picture: BASE_URL + 'assets/images/logo-placeholder.png'
+      }, 
+      function(response) {
+        $('#bash .history p').last().html($('#bash .history p').last().html() + '<span class="green">done</span>');
+        if (response && response.post_id) {
+          bash.log('<span class="green">Thank you for sharing this page</span>');
+        } else {
+          bash.log('<span class="red">Something went wrong while sharing this page</span>');
+        }
+      });
+    },
     log: function() {
       bash.log('<span class="blue">$</span> log');
       bash.log({message: 'Retrieving development log history', callback: parking.retrieveLogHistory});
