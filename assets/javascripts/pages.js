@@ -320,3 +320,28 @@ var bash = {
     }
   }
 };
+
+var secrets = {
+  extend: function(name, callback) {
+    bash.commands[name] = callback;
+  },
+  log: function(message) {
+    bash.log(message);
+  },
+  waiter: {
+    start: function() {
+      bash.startProgress(0);
+    },
+    stop: function() {
+      bash.stopProgress();
+    }
+  },
+  input: {
+    enable: function() {
+      bash.enableInput();
+    },
+    disable: function() {
+      bash.disableInput();
+    }
+  }
+};
