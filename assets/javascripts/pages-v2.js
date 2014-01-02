@@ -143,8 +143,8 @@ var bash = {
   commands: {
     poll: function() {
       if (DCS.poll) {
-        bash.log('<span class="yellow">' + DCS.poll.message + '</span>');
         bash.switch('poll');
+        bash.log('<span class="yellow">' + DCS.poll.message + '</span>');
         bash.listen('buffer-submitted-poll-mode', function(e) {
           if (e.originalEvent.input.length > 0) {
             bash.log('Sending poll answer');
@@ -205,12 +205,12 @@ var bash = {
               bash.log(data[i].commit.message);
             }
           } else {
+            bash.switch('log');
+            bash.input.deactivate();
             bash.history.html('');
             for (var i = 0; i < max; i++) {
               bash.log(data[i].commit.message);
             }
-            bash.switch('log');
-            bash.input.deactivate();
             (function(data, max) {
               var index = max;
               bash.listen('up-key-pressed-log-mode', function() {
@@ -236,6 +236,25 @@ var bash = {
       bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;- show development log history');
       bash.log('<span class="green">help</span>&nbsp;&nbsp;- show this help message');
       bash.log('<span class="green">exit</span>&nbsp;&nbsp;- leave this page');
+    },
+    exit: function() {
+      bash.switch('exit');
+      bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
+      bash.listen('buffer-submitted-exit-mode', function(e) {
+        if (e.originalEvent.input == 'yes') {
+          bash.log('<span class="red">Okay :(</span>');
+          setTimeout(function() {
+            top.open('', '_self');
+            top.close();
+          }, 1000);
+          bash.dispatch('command-completed');
+        } else if (e.originalEvent.input == 'no') {
+          bash.log('<span class="green">Yey! :)</span>');
+          bash.dispatch('command-completed');
+        } else {
+          bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
+        }
+      });
     }
   }
 };
