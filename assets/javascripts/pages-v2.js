@@ -46,7 +46,7 @@ var bash = {
         }
       }
     });
-    bash.listen('command-completed', function() {
+    bash.listen(['command-completed', 'command-cancelled'], function() {
       bash.unlisten('buffer-submitted-' + bash.mode + '-mode');
       bash.unlisten('up-key-pressed-' + bash.mode + '-mode');
       bash.unlisten('down-key-pressed-' + bash.mode + '-mode');
@@ -61,12 +61,22 @@ var bash = {
     var event = new Event(name, properties);
     document.dispatchEvent(event);
   },
-  listen: function(event, callback) {
-    $(document).on(event, callback);
+  listen: function(events, callback) {
+    if (typeof events == 'string') {
+      events = [events];
+    }
+    for (var i = 0; i < events.length; i++) {
+      $(document).on(events[i], callback);
+    }
     return bash;
   },
-  unlisten: function(event) {
-    $(document).off(event);
+  unlisten: function(events) {
+    if (typeof events == 'string') {
+      events = [events];
+    }
+    for (var i = 0; i < events.length; i++) {
+      $(document).off(events[i]);
+    }
     return bash;
   },
   activate: function() {
@@ -114,7 +124,7 @@ var bash = {
             bash.dispatch('buffer-submitted-' + bash.mode + '-mode', {input: input});
           }
         } else if (e.keyCode == 27) {
-          bash.switch('command');
+          bash.dispatch('command-cancelled', {mode: bash.mode});
         } else if (e.keyCode == 38) {
           bash.dispatch('up-key-pressed-' + bash.mode + '-mode');
         } else if (e.keyCode == 40) {
@@ -255,6 +265,83 @@ var bash = {
           bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
         }
       });
+    },
+    'dev login': function() {
+      if (DCS.authenticatedDeveloper.length == 0) {
+        bash.switch('dev');
+        var login = $('<input type="password" class="developer password hidden" />');
+        $('#bash .input').append(login);
+        bash.log('<span class="yellow">Enter developer username</span>');
+        bash.listen('buffer-submitted-dev-mode', function(e) {
+          if (e.originalEvent.input.trim().length == 0) {
+            bash.log('<span class="red">You did not provide a username</span>');
+          } else {
+            bash.log('<span class="yellow">Enter developer password</span>');
+            bash.buffer.addClass('hidden');
+            login.removeClass('hidden').focus().on('keydown', function(x) {
+              if (x.keyCode == 13) {
+                login.remove();
+                bash.buffer.removeClass('hidden');
+                bash.input.disable();
+                bash.log('<span class="blue">:</span> [HIDDEN]');
+                bash.log('Authenticating');
+                bash.progress.start();
+                $.ajax({
+                  url: DCS.BASE_URL + 'index.php/developer/authenticate',
+                  type: 'POST',
+                  data: {username: e.originalEvent.input, password: login.val()},
+                  success: function(data) {
+                    bash.progress.stop();
+                    if (data == 'true') {
+                      bash.log('<span class="green">Authentication successfull</span>');
+                      bash.log('Redirecting to developer page');
+                      bash.progress.start();
+                      location.href = DCS.BASE_URL + 'index.php/developer/index';
+                    } else {
+                      bash.log('<span class="red">Authentication failed</span>');
+                    }
+                    bash.input.enable();
+                    bash.dispatch('command-completed');
+                  }
+                });
+              } else if (x.keyCode == 27) {
+                login.remove();
+                bash.buffer.removeClass('hidden').focus();
+                bash.dispatch('command-completed');
+              }
+            });
+          }
+        }).listen('command-cancelled', function(e) {
+          if (e.originalEvent.mode == 'dev') {
+            login.remove();
+          }
+        });
+      } else {
+        bash.log('Current Developer: <span class="yellow">' + DCS.authenticatedDeveloper + '</span>');
+        bash.log('Redirecting to developer page');
+        bash.progress.start();
+        location.href = DCS.BASE_URL + 'index.php/developer/index';
+      }
+    },
+    'dev logout': function() {
+      if (DCS.authenticatedDeveloper.length == 0) {
+        bash.log('<span class="red">No developer currently logged in</span>');
+      } else {
+        bash.log('Current Developer: <span class="yellow">' + DCS.authenticatedDeveloper + '</span>');
+        bash.log('Signing out');
+        bash.progress.start();
+        bash.input.disable();
+        $.ajax({
+          url: DCS.BASE_URL + 'index.php/developer/sign_out',
+          type: 'POST',
+          success: function() {
+            bash.progress.stop();
+            bash.log('<span class="green">Developer signed out</span>');
+            bash.input.enable();
+            DCS.authenticatedDeveloper = '';
+          }
+        });
+      }
     }
   }
 };
