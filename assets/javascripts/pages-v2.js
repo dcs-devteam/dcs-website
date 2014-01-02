@@ -146,6 +146,26 @@ var bash = {
         bash.log('<span class="red">We currently don\'t have a poll message</span>');
       }
     },
+    share: function() {
+      bash.log('Connecting to Facebook...');
+      bash.input.disable();
+      FB.ui({
+        method: 'feed',
+        name: 'DCS Website',
+        caption: 'Official Website of UP Cebu\'s Department of Computer Science',
+        link: DCS.BASE_URL,
+        picture: DCS.BASE_URL + 'assets/images/logo-placeholder.png'
+      },
+      function(response) {
+        bash.progress.stop('fb-share');
+        if (response && response.post_id) {
+          bash.log('<span class="green">Thank you for sharing this page</span>');
+        } else {
+          bash.log('<span class="red">Something went wrong while sharing this page</span>');
+        }
+        bash.input.enable();
+      });
+    },
     help: function() {
       bash.log('<span class="green">poll</span>&nbsp;&nbsp;- show current poll question');
       bash.log('<span class="green">share</span>&nbsp;- share this page on facebook');
