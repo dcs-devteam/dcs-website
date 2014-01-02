@@ -12,7 +12,7 @@ var parking = {
     if ($('body').hasClass('parking')) {
       bash.initialize();
       bash.log('Retrieving website status');
-      bash.progress.start('rws', 3);
+      bash.progress.start(3, 'rws');
       bash.listen('progress-completed-rws', function(e) {
         if (DCS.websiteStatus) {
           bash.log('Website Status: <span class="yellow">' + DCS.websiteStatus + '</span>');
@@ -48,6 +48,8 @@ var bash = {
     });
     bash.listen('command-completed', function() {
       bash.unlisten('buffer-submitted-' + bash.mode + '-mode');
+      bash.unlisten('up-key-pressed-' + bash.mode + '-mode');
+      bash.unlisten('down-key-pressed-' + bash.mode + '-mode');
       bash.switch('command');
     });
   },
@@ -61,9 +63,11 @@ var bash = {
   },
   listen: function(event, callback) {
     $(document).on(event, callback);
+    return bash;
   },
   unlisten: function(event) {
     $(document).off(event);
+    return bash;
   },
   activate: function() {
     bash.log('Type <span class="green">help</span> to list available commands');
@@ -71,41 +75,54 @@ var bash = {
   },
   switch: function(mode) {
     bash.mode = mode;
+    bash.input.activate();
     bash.buffer.val('');
     $('#bash .input span').text((bash.mode == 'command') ? '$' : ':');
     bash.dispatch('mode-switched', {mode: bash.mode});
   },
   progress: {
     timer: null,
-    start: function(id, duration) {
+    start: function(duration, id) {
       bash.progress.timer = setInterval(function() {
         if (duration != undefined && duration-- == 0) {
-          bash.progress.done(id);
+          bash.progress.stop(id);
         } else {
           bash.latest.text(bash.latest.text() + '.');
         }
       }, 500);
     },
     stop: function(id) {
+      clearInterval(bash.progress.timer);
       bash.progress.done(id);
     },
     done: function(id) {
-      clearInterval(bash.progress.timer);
       bash.latest.html(bash.latest.html() + '<span class="green">done</span>');
-      bash.dispatch('progress-completed-' + id);
+      bash.dispatch((id) ? 'progress-completed-' + id : 'progress-completed');
     }
   },
   input: {
+    active: true,
     enable: function() {
       $('#bash .input').removeClass('hidden').find('.command').focus();
       bash.buffer.off('keydown').on('keydown', function(e) {
         if (e.keyCode == 13) {
           e.preventDefault();
-          var input = bash.buffer.val().trim();
-          bash.buffer.val('');
-          bash.log('<span class="blue">' + ((bash.mode == 'command') ? '$' : ':') + '</span> ' + input);
-          bash.dispatch('buffer-submitted', {mode: bash.mode, input: input});
-          bash.dispatch('buffer-submitted-' + bash.mode + '-mode', {input: input});
+          if (bash.input.active) {
+            var input = bash.buffer.val().trim();
+            bash.buffer.val('');
+            bash.log('<span class="blue">' + ((bash.mode == 'command') ? '$' : ':') + '</span> ' + input);
+            bash.dispatch('buffer-submitted-' + bash.mode + '-mode', {input: input});
+          }
+        } else if (e.keyCode == 27) {
+          bash.switch('command');
+        } else if (e.keyCode == 38) {
+          bash.dispatch('up-key-pressed-' + bash.mode + '-mode');
+        } else if (e.keyCode == 40) {
+          bash.dispatch('down-key-pressed-' + bash.mode + '-mode');
+        } else {
+          if (!bash.input.active) {
+            e.preventDefault();
+          }
         }
       });
       $(document).on('mouseup', function() {
@@ -115,6 +132,12 @@ var bash = {
     disable: function() {
       $('#bash .input').addClass('hidden');
       $(document).off('mouseup');
+    },
+    activate: function() {
+      bash.input.active = true;
+    },
+    deactivate: function() {
+      bash.input.active = false;
     }
   },
   commands: {
@@ -126,13 +149,13 @@ var bash = {
           if (e.originalEvent.input.length > 0) {
             bash.log('Sending poll answer');
             bash.input.disable();
-            bash.progress.start('spa');
+            bash.progress.start();
             $.ajax({
               url: DCS.BASE_URL + 'index.php/polls/answer',
               type: 'POST',
               data: {id: DCS.poll.id, answer: e.originalEvent.input},
               success: function() {
-                bash.progress.stop('spa');
+                bash.progress.stop();
                 bash.input.enable();
                 bash.dispatch('command-completed');
               }
@@ -157,13 +180,54 @@ var bash = {
         picture: DCS.BASE_URL + 'assets/images/logo-placeholder.png'
       },
       function(response) {
-        bash.progress.stop('fb-share');
+        bash.progress.done();
         if (response && response.post_id) {
           bash.log('<span class="green">Thank you for sharing this page</span>');
         } else {
           bash.log('<span class="red">Something went wrong while sharing this page</span>');
         }
         bash.input.enable();
+      });
+    },
+    log: function() {
+      bash.log('Retrieving development log history');
+      bash.progress.start();
+      bash.input.disable();
+      $.ajax({
+        url: 'https://api.github.com/repos/dcs-web-team/dcs-website/commits',
+        type: 'GET',
+        success: function(data) {
+          data = JSON.parse(data);
+          bash.progress.stop();
+          var max = Math.floor($('#bash').outerHeight() / 15) - 1;
+          if (data.length <= max) {
+            for (var i = 0; i < data.length; i++) {
+              bash.log(data[i].commit.message);
+            }
+          } else {
+            bash.history.html('');
+            for (var i = 0; i < max; i++) {
+              bash.log(data[i].commit.message);
+            }
+            bash.switch('log');
+            bash.input.deactivate();
+            (function(data, max) {
+              var index = max;
+              bash.listen('up-key-pressed-log-mode', function() {
+                if (index > max) {
+                  bash.latest = bash.latest.prev('p');
+                  bash.latest.next('p').remove();
+                  index--;
+                }
+              }).listen('down-key-pressed-log-mode', function() {
+                if (index < data.length) {
+                  bash.log(data[index++].commit.message);
+                }
+              });
+            })(data, max);
+          }
+          bash.input.enable();
+        }
       });
     },
     help: function() {
