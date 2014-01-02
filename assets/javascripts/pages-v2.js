@@ -346,6 +346,12 @@ var bash = {
   }
 };
 
+var secrets = {
+  extend: function(name, callback) {
+    bash.commands[name] = callback;
+  }
+};
+
 
 
 /*** CUSTOM CLASSES ***/
