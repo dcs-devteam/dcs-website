@@ -3,6 +3,7 @@ $(document).ready(function() {
     forms.initialize();
     metas.initialize();
     developers.initialize();
+    secrets.initialize();
   }
 });
 
@@ -79,7 +80,7 @@ var developers = {
     item.addClass('selected');
     var answers = $('#polls .answers');
     $.ajax({
-      url: BASE_URL + 'index.php/polls/answers',
+      url: DCS.BASE_URL + 'index.php/polls/answers',
       type: 'POST',
       data: {id: item.data('id')},
       success: function(data) {
@@ -89,6 +90,14 @@ var developers = {
           answers.append(answer);
         }
       }
+    });
+  }
+};
+
+var secrets = {
+  initialize: function() {
+    $('#secrets input[type="text"][name="command"]').on('change', function() {
+      $('#secrets input[type="text"][name="script_path"]').val(DCS.BASE_URL + 'assets/' + $(this).val() + '/main.js');
     });
   }
 };

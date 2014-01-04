@@ -44,5 +44,8 @@
   </div>
 
   <?php $this->load->view('partials/api'); ?>
+  <?php foreach ($secrets as $secret): ?>
+    <script src="<?= $secret->script_path; ?>"></script>
+  <?php endforeach; ?>
 </body>
 </html>

@@ -22,6 +22,7 @@
       $this->load->model('developer_model', 'developer');
       $this->load->model('meta_model', 'meta');
       $this->load->model('poll_model', 'poll');
+      $this->load->model('secret_model', 'secret');
       $this->load->helper('application_helper');
     }
 
@@ -41,6 +42,7 @@
       $data['metas'] = $this->meta->all();
       $data['developers'] = $this->developer->all();
       $data['polls'] = $this->poll->all();
+      $data['secrets'] = $this->secret->all();
       $this->load->view('developers/index', $data);
     }
 
@@ -69,5 +71,5 @@
 
   }
 
-// End of file developer.php
-// Location: ./application/controllers/developer.php
+// End of file developers.php
+// Location: ./application/controllers/developers.php

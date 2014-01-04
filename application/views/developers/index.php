@@ -4,7 +4,9 @@
   <?php $this->load->view('partials/head'); ?>
   <title>Department of Computer Science</title>
   <script>
-    var BASE_URL = '<?= base_url(); ?>';
+    var DCS = {
+      BASE_URL: '<?= base_url(); ?>'
+    };
   </script>
 </head>
 
@@ -54,6 +56,26 @@
                 <a href="#" data-behavior="change-password">Change Password</a>
               </div>
             <?php endif; ?>
+          </div>
+        <?php endforeach; ?>
+      </section>
+
+      <section id="secrets">
+        <h3>Secrets</h3>
+        <input type="button" value="Add New" class="button green" data-behavior="create-item" />
+        <input type="button" value="Cancel" class="button red hidden" data-behavior="cancel-creation" />
+        <?= form_open('secrets/create', array('class' => 'clearfix hidden')); ?>
+          <input type="text" name="command" placeholder="command" required />
+          <input type="text" name="script_path" placeholder="script path" required />
+          <input type="submit" value="Save" class="button green" />
+        <?= form_close(); ?>
+        <?php foreach ($secrets as $secret): ?>
+          <div class="item clearfix">
+            <label><?= $secret->command; ?></label>
+            <p><?= ($secret->enabled) ? 'ENABLED' : 'DISABLED'; ?></p>
+            <div class="actions">
+              <?= anchor('secrets/' . (($secret->enabled) ? 'disable' : 'enable') . '/' . $secret->command, ($secret->enabled) ? 'Disable' : 'Enable'); ?>
+            </div>
           </div>
         <?php endforeach; ?>
       </section>
