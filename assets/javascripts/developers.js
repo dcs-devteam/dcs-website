@@ -103,7 +103,7 @@ var developers = {
 var secrets = {
   initialize: function() {
     $('#secrets input[type="text"][name="command"]').on('change', function() {
-      $('#secrets input[type="text"][name="script_path"]').val(DCS.BASE_URL + 'assets/' + $(this).val() + '/main.js');
+      $('#secrets input[type="text"][name="script_path"]').val(DCS.BASE_URL + 'assets/secrets/' + $(this).val() + '/main.js');
     });
   }
 };
