@@ -9,7 +9,7 @@
 </head>
 
 <body class="<?= body_classes($controller, $action); ?>">
-  <div id="main-body">
+  <div id="main-body" class="clearfix">
     <?php if ($this->session->flashdata('notice')): ?>
       <p class="notification notice"><?= $this->session->flashdata('notice'); ?></p>
     <?php elseif ($this->session->flashdata('alert')): ?>

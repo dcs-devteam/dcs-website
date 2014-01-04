@@ -35,7 +35,7 @@ body.developer .item {
 
 
 body.developer {
-  background: #ffffff url("../images/background.png") center center no-repeat;
+  background: #ffffff url("../images/background.png") center center no-repeat fixed;
   background-size: cover;
 }
 
@@ -49,18 +49,16 @@ body.developer #main-body {
 body.developer .left,
 body.developer .right {
   width: 50%;
-  position: absolute;
-  top: 0;
   padding: 20px;
 }
 
 body.developer .left {
-  left: 0;
+  float: left;
   padding-right: 10px
 }
 
 body.developer .right {
-  right: 0;
+  float: right;
   padding-left: 10px;
 }
 
