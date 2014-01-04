@@ -34,6 +34,10 @@ var bash = {
   buffer: null,
   latest: null,
   mode: 'command',
+  past: {
+    index: 0,
+    commands: []
+  },
   initialize: function() {
     bash.history = $('#bash .history');
     bash.buffer = $('#bash .command');
@@ -51,6 +55,21 @@ var bash = {
       bash.unlisten('up-key-pressed-' + bash.mode + '-mode');
       bash.unlisten('down-key-pressed-' + bash.mode + '-mode');
       bash.switch('command');
+    });
+    bash.listen('buffer-submitted-command-mode', function(e) {
+      bash.past.commands.push(e.originalEvent.input);
+      bash.past.index = bash.past.commands.length;
+    });
+    bash.listen('up-key-pressed-command-mode', function() {
+      if (bash.past.index > 0) {
+        console.log('asd');
+        bash.buffer.val(bash.past.commands[--bash.past.index]);
+      }
+    });
+    bash.listen('down-key-pressed-command-mode', function() {
+      if (bash.past.index < bash.past.commands.length) {
+        bash.buffer.val(bash.past.commands[bash.past.index++]);
+      }
     });
   },
   log: function(data) {
