@@ -89,6 +89,14 @@ body.developers section h3 {
   margin-bottom: 10px;
 }
 
+body.developers section h4 {
+  font: normal 1.3rem "Consolas", "ConsolasRegular";
+  color: #333333;
+  text-align: center;
+  background-color: #DFB9BE;
+  padding: 7px 0;
+}
+
 body.developers section .button {
   float: right;
   font: normal 1.1rem "Open Sans", "OpenSansRegular";
@@ -258,6 +266,11 @@ body.developers #polls .answers p:nth-of-type(even) {
   background-color: #e3e3e3;
 }
 
+body.developers #polls .answers .loader {
+  height: 30px;
+  background: transparent url("../images/loader.gif") center center no-repeat;
+}
+
 body.developers #polls input[type="text"] {
   width: 89%;
 }
@@ -268,11 +281,11 @@ body.developers #polls .item * {
 }
 
 body.developers #polls .item:hover {
-  background-color: #ffffff;
+  background-color: #D2F0D2;
 }
 
 body.developers #polls .item.selected {
-  background-color: #CBEFCB;
+  background-color: #AEE6AE;
 }
 
 body.developers #polls .item label {

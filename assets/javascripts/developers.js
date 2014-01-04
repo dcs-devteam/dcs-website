@@ -75,7 +75,8 @@ var developers = {
   showPollAnswers: function(item) {
     $('#main-body .left').addClass('shrink');
     $('#main-body .right').addClass('expand');
-    $('#polls .answers p').remove();
+    $('#polls .answers .loader').removeClass('hidden');
+    $('#polls .answers p, #polls .answers h4').remove();
     $('.item.selected').removeClass('selected');
     item.addClass('selected');
     var answers = $('#polls .answers');
@@ -85,9 +86,14 @@ var developers = {
       data: {id: item.data('id')},
       success: function(data) {
         data = JSON.parse(data);
-        for (var i = 0; i < data.length; i++) {
-          var answer = $('<p>' + data[i].answer + '</p>');
-          answers.append(answer);
+        $('#polls .answers .loader').addClass('hidden');
+        if (data.length == 0) {
+          answers.append('<h4>This question has no answers yet.</h4>');
+        } else {
+          for (var i = 0; i < data.length; i++) {
+            var answer = $('<p>' + data[i].answer + '</p>');
+            answers.append(answer);
+          }
         }
       }
     });

@@ -37,6 +37,9 @@
             </div>
           </div>
         <?php endforeach; ?>
+        <?php if (count($metas) == 0): ?>
+          <h4>Nothing Found</h4>
+        <?php endif; ?>
       </section>
 
       <section id="developers">
@@ -58,6 +61,9 @@
             <?php endif; ?>
           </div>
         <?php endforeach; ?>
+        <?php if (count($developers) == 0): ?>
+          <h4>Nothing Found</h4>
+        <?php endif; ?>
       </section>
 
       <section id="secrets">
@@ -78,6 +84,9 @@
             </div>
           </div>
         <?php endforeach; ?>
+        <?php if (count($secrets) == 0): ?>
+          <h4>Nothing Found</h4>
+        <?php endif; ?>
       </section>
     </div>
 
@@ -99,11 +108,15 @@
               </div>
             </div>
           <?php endforeach; ?>
+          <?php if (count($polls) == 0): ?>
+            <h4>Nothing Found</h4>
+          <?php endif; ?>
         </div>
 
         <div class="answers">
           <input type="button" value="Close" class="button red" data-behavior="close-answers" />
           <div class="clearfix"></div>
+          <div class="loader hidden"></div>
         </div>
       </section>
     </div>
