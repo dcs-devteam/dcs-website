@@ -8,258 +8,238 @@ $(document).ready(function() {
 
 /*** PARKING PAGE ***/
 var parking = {
-  logHistory: null,
-  logHistoryIndex: 0,
-  maxLogs: 0,
   initialize: function() {
     if ($('body').hasClass('parking')) {
       bash.initialize();
+      bash.log('Retrieving website status');
+      bash.progress.start(3, 'rws');
+      bash.listen('progress-completed-rws', function(e) {
+        if (DCS.websiteStatus) {
+          bash.log('Website Status: <span class="yellow">' + DCS.websiteStatus + '</span>');
+          bash.log('Website Completion: ' + ((DCS.websiteCompletion) 
+            ? '<span class="yellow">' + DCS.websiteCompletion + '</span>'
+            : '<span class="red">Unknown</span>'));
+        } else {
+          bash.log('<span class="red">Website status unknown</span>');
+        }
+        $('#meta .loader, #meta .loader p').fadeIn(1000).removeClass('hidden');
+        bash.activate();
+      });
     }
-  },
-  retrieveWebsiteStatus: function() {
-    bash.startProgress(3, function() {
-      bash.log('Website Status: <span class="yellow">' + websiteStatus + '</span>');
-      bash.log(bash.messages[++bash.messageIndex]);
-      $('#meta .loader').fadeIn(1000).removeClass('hidden');
-    });
-  },
-  retrieveConstructionProgress: function() {
-    bash.startProgress(3, function() {
-      bash.log('Website Completion: <span class="yellow">' + websiteCompletion + '</span>');
-      bash.log(bash.messages[++bash.messageIndex]);
-      $('#meta .loader p').fadeIn(1000).removeClass('hidden');
-    });
-  },
-  enableBash: function() {
-    bash.enableInput();
-  },
-  sendPollAnswer: function(answer) {
-    bash.disableInput();
-    bash.startProgress(0);
-    $.ajax({
-      url: BASE_URL + 'index.php/polls/answer',
-      type: 'POST',
-      data: {id: poll.id, answer: answer},
-      success: function() {
-        bash.stopProgress();
-        bash.enableInput();
-      }
-    });
-  },
-  retrieveLogHistory: function() {
-    bash.disableInput();
-    bash.startProgress(0);
-    $.ajax({
-      url: 'https://api.github.com/repos/dcs-web-team/dcs-website/commits',
-      type: 'GET',
-      success: function(data) {
-        bash.stopProgress();
-        parking.logHistory = data;
-        parking.logHistoryIndex = 0;
-        parking.maxLogs = Math.floor($('#bash').outerHeight() / 15) - 1;
-        if (parking.logHistory.length <= parking.maxLogs) {
-          for (var i = 0; i < parking.logHistory.length; i++) {
-            bash.log(parking.logHistory[i].commit.message);
-          }
-        } else {
-          bash.history.html('');
-          while (parking.logHistoryIndex < parking.maxLogs) {
-            bash.log(parking.logHistory[parking.logHistoryIndex++].commit.message);
-          }
-          bash.setMode('log');
-        }
-        bash.enableInput();
-      }
-    });
-  },
-  authenticateDeveloper: function(username, password) {
-    bash.disableInput();
-    bash.log('Authenticating');
-    bash.startProgress(0);
-    $.ajax({
-      url: BASE_URL + "index.php/developer/authenticate",
-      type: 'POST',
-      data: {username: username, password: password},
-      success: function(data) {
-        bash.stopProgress();
-        if (data == 'true') {
-          bash.log('<span class="green">Authentication successful</span>');
-          bash.log('Redirecting to developer page');
-          bash.startProgress(0);
-          location.href = BASE_URL + 'index.php/developer/index';
-        } else {
-          bash.log('<span class="red">Authentication failed</span>');
-        }
-        bash.enableInput();
-        bash.setMode('command');
-      }
-    });
   }
 };
 
 var bash = {
-  messages: [
-    {message: 'Retrieving website status', callback: parking.retrieveWebsiteStatus},
-    {message: 'Retrieving construction progress', callback: parking.retrieveConstructionProgress},
-    {message: 'Type <span class="green">help</span> to list available commands', callback: parking.enableBash}
-  ],
-  messageIndex: 0,
-  timer: null,
   history: null,
-  input: null,
-  latestMessage: null,
+  buffer: null,
+  latest: null,
+  mode: 'command',
   initialize: function() {
     bash.history = $('#bash .history');
-    bash.input = $('#bash .command');
-    bash.log(bash.messages[bash.messageIndex]);
+    bash.buffer = $('#bash .command');
+    bash.listen('buffer-submitted-command-mode', function(e) {
+      if (bash.commands.hasOwnProperty(e.originalEvent.input)) {
+        bash.commands[e.originalEvent.input]();
+      } else {
+        if (e.originalEvent.input.length > 0) {
+          bash.log('<span class="red">\'' + e.originalEvent.input + '\' - unknown command</span>');
+        }
+      }
+    });
+    bash.listen(['command-completed', 'command-cancelled'], function() {
+      bash.unlisten('buffer-submitted-' + bash.mode + '-mode');
+      bash.unlisten('up-key-pressed-' + bash.mode + '-mode');
+      bash.unlisten('down-key-pressed-' + bash.mode + '-mode');
+      bash.switch('command');
+    });
   },
   log: function(data) {
-    if (typeof data == 'string') {
-      data = {message: data};
-    }
-    bash.latestMessage = $('<p>' + data.message + '</p>');
-    bash.history.append(bash.latestMessage);
-    if (data.hasOwnProperty('callback') && typeof data.callback == 'function') {
-      data.callback();
-    }
+    bash.latest = $('<p>' + data + '</p>');
+    bash.history.append(bash.latest);
   },
-  startProgress: function(duration, callback) {
-    var time = duration;
-    bash.timer = setInterval(function() {
-      if (duration > 0 && time-- == 0) {
-        clearInterval(bash.timer);
-        bash.latestMessage.html(bash.latestMessage.html() + '<span class="green">done</span>');
-        if (callback && typeof callback == 'function') {
-          callback();
+  dispatch: function(name, properties) {
+    var event = new Event(name, properties);
+    document.dispatchEvent(event);
+  },
+  listen: function(events, callback) {
+    if (typeof events == 'string') {
+      events = [events];
+    }
+    for (var i = 0; i < events.length; i++) {
+      $(document).on(events[i], callback);
+    }
+    return bash;
+  },
+  unlisten: function(events) {
+    if (typeof events == 'string') {
+      events = [events];
+    }
+    for (var i = 0; i < events.length; i++) {
+      $(document).off(events[i]);
+    }
+    return bash;
+  },
+  activate: function() {
+    bash.log('Type <span class="green">help</span> to list available commands');
+    bash.input.enable();
+  },
+  switch: function(mode) {
+    bash.mode = mode;
+    bash.input.activate();
+    bash.buffer.val('');
+    $('#bash .input span').text((bash.mode == 'command') ? '$' : ':');
+    bash.dispatch('mode-switched', {mode: bash.mode});
+  },
+  progress: {
+    timer: null,
+    start: function(duration, id) {
+      bash.progress.timer = setInterval(function() {
+        if (duration != undefined && duration-- == 0) {
+          bash.progress.stop(id);
+        } else {
+          bash.latest.text(bash.latest.text() + '.');
         }
-      } else {
-        bash.latestMessage.text(bash.latestMessage.text() + '.');
-      }
-    }, 500);
-  },
-  stopProgress: function(callback) {
-    clearInterval(bash.timer);
-    bash.latestMessage.html(bash.latestMessage.html() + '<span class="green">done</span>');
-    if (callback && typeof callback == 'function') {
-      callback();
+      }, 500);
+    },
+    stop: function(id) {
+      clearInterval(bash.progress.timer);
+      bash.progress.done(id);
+    },
+    done: function(id) {
+      bash.latest.html(bash.latest.html() + '<span class="green">done</span>');
+      bash.dispatch((id) ? 'progress-completed-' + id : 'progress-completed');
     }
   },
-  setMode: function(mode) {
-    bash.input.data('mode', mode).val('');
-    if (mode == 'command') {
-      $('#bash .input span').text('$');
-      $('#bash .input .developer').remove();
-    } else {
-      $('#bash .input span').text(':');
-    }
-  },
-  enableInput: function() {
-    $('#bash .input').removeClass('hidden').find('.command').focus();
-    bash.input.on('keydown', function(e) {
-      if (e.keyCode == 13) {
-        e.preventDefault();
-        var input = bash.input.val().trim();
-        bash.input.val('');
-        if (bash.input.data('mode') == 'command') {
-          if (input.length == 0) {
-            bash.log('<span class="blue">$</span>');
-          } else if (bash.commands.hasOwnProperty(input)) {
-            bash.commands[input]();
-          } else {
-            bash.log('<span class="blue">$</span> ' + input);
-            bash.log('<span class="red">\'' + input + '\' - invalid command</span>');
-          }
-        } else if (bash.input.data('mode') == 'poll') {
-          bash.log('<span class="blue">:</span> ' + input);
-          if (input.trim().length > 0) {
-            bash.log({message: 'Sending poll answer', callback: function() {
-              parking.sendPollAnswer(input.trim());
-            }});
-          } else {
-            bash.log('You do not have an answer');
-          }
-          bash.setMode('command');
-        } else if (bash.input.data('mode') == 'exit') {
-          bash.log('<span class="blue">:</span> ' + input);
-          if (input == 'yes') {
-            bash.log('<span class="red">Okay :(</span>');
-            bash.setMode('command');
-            setTimeout(function() {
-              top.open('', '_self');
-              top.close();
-            }, 1000);
-          } else if (input == 'no') {
-            bash.log('<span class="green">Yey! :)</span>');
-            bash.setMode('command');
-          } else {
-            bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
-          }
-        } else if (bash.input.data('mode') == 'dev-username') {
-          bash.log('<span class="blue">:</span> ' + input);
-          $('#bash .input .developer').data('username', input).removeClass('hidden').focus();
-          bash.input.addClass('hidden');
-          bash.log('<span class="yellow">Enter developer password</span>');
-          bash.setMode('dev-password');
-        }
-      } else if (e.keyCode == 27) {
-        bash.setMode('command');
-      } else if (e.keyCode == 40 && bash.input.data('mode') == 'log' && parking.logHistoryIndex < parking.logHistory.length) {
-        bash.log(parking.logHistory[parking.logHistoryIndex++].commit.message);
-      } else if (e.keyCode == 38 && bash.input.data('mode') == 'log' && parking.logHistoryIndex > parking.maxLogs) {
-        bash.history.find('p').last().remove();
-        parking.logHistoryIndex--;
-      } else {
-        if (bash.input.data('mode') == 'log') {
+  input: {
+    active: true,
+    enable: function() {
+      $('#bash .input').removeClass('hidden').find('.command').focus();
+      bash.buffer.off('keydown').on('keydown', function(e) {
+        if (e.keyCode == 13) {
           e.preventDefault();
+          if (bash.input.active) {
+            var input = bash.buffer.val().trim();
+            bash.buffer.val('');
+            bash.log('<span class="blue">' + ((bash.mode == 'command') ? '$' : ':') + '</span> ' + input);
+            bash.dispatch('buffer-submitted-' + bash.mode + '-mode', {input: input});
+          }
+        } else if (e.keyCode == 27) {
+          bash.dispatch('command-cancelled', {mode: bash.mode});
+        } else if (e.keyCode == 38) {
+          bash.dispatch('up-key-pressed-' + bash.mode + '-mode');
+        } else if (e.keyCode == 40) {
+          bash.dispatch('down-key-pressed-' + bash.mode + '-mode');
+        } else {
+          if (!bash.input.active) {
+            e.preventDefault();
+          }
         }
-      }
-    });
-    $(document).on('mouseup', function() {
-      bash.input.focus();
-    });
-  },
-  disableInput: function() {
-    $('#bash .input').addClass('hidden');
-    bash.input.off('keydown');
-    $(document).off('mouseup');
+      });
+      $(document).on('mouseup', function() {
+        bash.buffer.focus();
+      });
+    },
+    disable: function() {
+      $('#bash .input').addClass('hidden');
+      $(document).off('mouseup');
+    },
+    activate: function() {
+      bash.input.active = true;
+    },
+    deactivate: function() {
+      bash.input.active = false;
+    }
   },
   commands: {
     poll: function() {
-      bash.log('<span class="blue">$</span> poll');
-      if (window.hasOwnProperty('poll')) {
-        bash.log('<span class="yellow">' + poll.message + '</span>');
-        bash.setMode('poll');
+      if (DCS.poll) {
+        bash.switch('poll');
+        bash.log('<span class="yellow">' + DCS.poll.message + '</span>');
+        bash.listen('buffer-submitted-poll-mode', function(e) {
+          if (e.originalEvent.input.length > 0) {
+            bash.log('Sending poll answer');
+            bash.input.disable();
+            bash.progress.start();
+            $.ajax({
+              url: DCS.BASE_URL + 'index.php/polls/answer',
+              type: 'POST',
+              data: {id: DCS.poll.id, answer: e.originalEvent.input},
+              success: function() {
+                bash.progress.stop();
+                bash.input.enable();
+                bash.dispatch('command-completed');
+              }
+            });
+          } else {
+            bash.log('<span class="red">You do not have an answer</span>');
+            bash.dispatch('command-completed');
+          }
+        });
       } else {
         bash.log('<span class="red">We currently don\'t have a poll message</span>');
       }
     },
     share: function() {
-      bash.log('<span class="blue">$</span> share');
       bash.log('Connecting to Facebook...');
-      bash.disableInput();
+      bash.input.disable();
       FB.ui({
         method: 'feed',
         name: 'DCS Website',
         caption: 'Official Website of UP Cebu\'s Department of Computer Science',
-        link: BASE_URL,
-        picture: BASE_URL + 'assets/images/logo-placeholder.png'
-      }, 
+        link: DCS.BASE_URL,
+        picture: DCS.BASE_URL + 'assets/images/logo-placeholder.png'
+      },
       function(response) {
-        $('#bash .history p').last().html($('#bash .history p').last().html() + '<span class="green">done</span>');
+        bash.progress.done();
         if (response && response.post_id) {
           bash.log('<span class="green">Thank you for sharing this page</span>');
         } else {
           bash.log('<span class="red">Something went wrong while sharing this page</span>');
         }
-        bash.enableInput();
+        bash.input.enable();
       });
     },
     log: function() {
-      bash.log('<span class="blue">$</span> log');
-      bash.log({message: 'Retrieving development log history', callback: parking.retrieveLogHistory});
+      bash.log('Retrieving development log history');
+      bash.progress.start();
+      bash.input.disable();
+      $.ajax({
+        url: 'https://api.github.com/repos/dcs-web-team/dcs-website/commits',
+        type: 'GET',
+        success: function(data) {
+          bash.progress.stop();
+          var max = Math.floor($('#bash').outerHeight() / 15) - 1;
+          if (data.length <= max) {
+            for (var i = 0; i < data.length; i++) {
+              bash.log(data[i].commit.message);
+            }
+          } else {
+            bash.switch('log');
+            bash.input.deactivate();
+            bash.history.html('');
+            for (var i = 0; i < max; i++) {
+              bash.log(data[i].commit.message);
+            }
+            (function(data, max) {
+              var index = max;
+              bash.listen('up-key-pressed-log-mode', function() {
+                if (index > max) {
+                  bash.latest = bash.latest.prev('p');
+                  bash.latest.next('p').remove();
+                  index--;
+                }
+              }).listen('down-key-pressed-log-mode', function() {
+                if (index < data.length) {
+                  bash.log(data[index++].commit.message);
+                }
+              });
+            })(data, max);
+          }
+          bash.input.enable();
+        }
+      });
     },
     help: function() {
-      bash.log('<span class="blue">$</span> help');
       bash.log('<span class="green">poll</span>&nbsp;&nbsp;- show current poll question');
       bash.log('<span class="green">share</span>&nbsp;- share this page on facebook');
       bash.log('<span class="green">log</span>&nbsp;&nbsp;&nbsp;- show development log history');
@@ -267,53 +247,97 @@ var bash = {
       bash.log('<span class="green">exit</span>&nbsp;&nbsp;- leave this page');
     },
     exit: function() {
-      bash.log('<span class="blue">$</span> exit');
+      bash.switch('exit');
       bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
-      bash.setMode('exit');
+      bash.listen('buffer-submitted-exit-mode', function(e) {
+        if (e.originalEvent.input == 'yes') {
+          bash.log('<span class="red">Okay :(</span>');
+          setTimeout(function() {
+            top.open('', '_self');
+            top.close();
+          }, 1000);
+          bash.dispatch('command-completed');
+        } else if (e.originalEvent.input == 'no') {
+          bash.log('<span class="green">Yey! :)</span>');
+          bash.dispatch('command-completed');
+        } else {
+          bash.log('<span class="yellow">Are you sure you want to exit? (yes/no)</span>');
+        }
+      });
     },
     'dev login': function() {
-      bash.log('<span class="blue">$</span> dev login');
-      if (authenticatedDeveloper.length == 0) {
-        var developerLogin = $('<input type="password" class="developer password hidden" />');
-        $('#bash .input').append(developerLogin);
-        developerLogin.on('keydown', function(e) {
-          if (e.keyCode == 13 || e.keyCode == 27) {
-            e.preventDefault();
-            if (e.keyCode == 13) {
-              bash.log('<span class="blue">:</span> [HIDDEN]');
-              parking.authenticateDeveloper(developerLogin.data('username'), developerLogin.val());
-            }
-            developerLogin.remove();
-            bash.input.removeClass('hidden').focus();
-            bash.setMode('command');
+      if (DCS.authenticatedDeveloper.length == 0) {
+        bash.switch('dev');
+        var login = $('<input type="password" class="developer password hidden" />');
+        $('#bash .input').append(login);
+        bash.log('<span class="yellow">Enter developer username</span>');
+        bash.listen('buffer-submitted-dev-mode', function(e) {
+          if (e.originalEvent.input.trim().length == 0) {
+            bash.log('<span class="red">You did not provide a username</span>');
+          } else {
+            bash.log('<span class="yellow">Enter developer password</span>');
+            bash.buffer.addClass('hidden');
+            login.removeClass('hidden').focus().on('keydown', function(x) {
+              if (x.keyCode == 13) {
+                login.remove();
+                bash.buffer.removeClass('hidden');
+                bash.input.disable();
+                bash.log('<span class="blue">:</span> [HIDDEN]');
+                bash.log('Authenticating');
+                bash.progress.start();
+                $.ajax({
+                  url: DCS.BASE_URL + 'index.php/developer/authenticate',
+                  type: 'POST',
+                  data: {username: e.originalEvent.input, password: login.val()},
+                  success: function(data) {
+                    bash.progress.stop();
+                    if (data == 'true') {
+                      bash.log('<span class="green">Authentication successfull</span>');
+                      bash.log('Redirecting to developer page');
+                      bash.progress.start();
+                      location.href = DCS.BASE_URL + 'index.php/developer/index';
+                    } else {
+                      bash.log('<span class="red">Authentication failed</span>');
+                    }
+                    bash.input.enable();
+                    bash.dispatch('command-completed');
+                  }
+                });
+              } else if (x.keyCode == 27) {
+                login.remove();
+                bash.buffer.removeClass('hidden').focus();
+                bash.dispatch('command-completed');
+              }
+            });
+          }
+        }).listen('command-cancelled', function(e) {
+          if (e.originalEvent.mode == 'dev') {
+            login.remove();
           }
         });
-        bash.log('<span class="yellow">Enter developer username</span>');
-        bash.setMode('dev-username');
       } else {
-        bash.log('Current Developer: <span class="yellow">' + authenticatedDeveloper + '</span>');
+        bash.log('Current Developer: <span class="yellow">' + DCS.authenticatedDeveloper + '</span>');
         bash.log('Redirecting to developer page');
-        bash.startProgress(0);
-        location.href = BASE_URL + 'index.php/developer/index';
+        bash.progress.start();
+        location.href = DCS.BASE_URL + 'index.php/developer/index';
       }
     },
     'dev logout': function() {
-      bash.log('<span class="blue">$</span> dev logout');
-      if (authenticatedDeveloper.length == 0) {
+      if (DCS.authenticatedDeveloper.length == 0) {
         bash.log('<span class="red">No developer currently logged in</span>');
       } else {
-        bash.log('Current Developer: <span class="yellow">' + authenticatedDeveloper + '</span>');
+        bash.log('Current Developer: <span class="yellow">' + DCS.authenticatedDeveloper + '</span>');
         bash.log('Signing out');
-        bash.startProgress(0);
-        bash.disableInput();
+        bash.progress.start();
+        bash.input.disable();
         $.ajax({
-          url: BASE_URL + 'index.php/developer/sign_out',
+          url: DCS.BASE_URL + 'index.php/developer/sign_out',
           type: 'POST',
           success: function() {
-            bash.stopProgress();
+            bash.progress.stop();
             bash.log('<span class="green">Developer signed out</span>');
-            bash.enableInput();
-            authenticatedDeveloper = '';
+            bash.input.enable();
+            DCS.authenticatedDeveloper = '';
           }
         });
       }
@@ -324,24 +348,18 @@ var bash = {
 var secrets = {
   extend: function(name, callback) {
     bash.commands[name] = callback;
-  },
-  log: function(message) {
-    bash.log(message);
-  },
-  waiter: {
-    start: function() {
-      bash.startProgress(0);
-    },
-    stop: function() {
-      bash.stopProgress();
-    }
-  },
-  input: {
-    enable: function() {
-      bash.enableInput();
-    },
-    disable: function() {
-      bash.disableInput();
-    }
   }
 };
+
+
+
+/*** CUSTOM CLASSES ***/
+function Event(name, properties) {
+  var event = new CustomEvent(name);
+  if (properties) {
+    for (property in properties) {
+      event[property] = properties[property];
+    }
+  }
+  return event;
+}
