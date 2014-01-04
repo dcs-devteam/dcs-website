@@ -1,5 +1,5 @@
 _secrets.extend('unicorn', function() {
-  bash.log('Loading unicorn');
+  bash.log('Looking for unicorns');
   bash.progress.start();
   bash.input.disable();
   var stylesheet = $('<link rel="stylesheet" href="' + DCS.BASE_URL + 'assets/secrets/unicorn/unicorn.css" />');
@@ -9,6 +9,7 @@ _secrets.extend('unicorn', function() {
     $('body').append(image);
     image.on('load', function(e) {
       bash.progress.stop();
+      bash.log('Unicorn found!');
       image.css({'top': window.innerHeight / 2 - 200 + 'px'});
       image.addClass('secrets-unicorn-move');
       setTimeout(function() {
