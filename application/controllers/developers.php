@@ -4,7 +4,7 @@
     exit('No direct script access allowed');
   }
 
-  class Developer extends DCS_Controller {
+  class Developers extends DCS_Controller {
 
     public function __construct() {
       parent::__construct();
@@ -41,7 +41,7 @@
       $data['metas'] = $this->meta->all();
       $data['developers'] = $this->developer->all();
       $data['polls'] = $this->poll->all();
-      $this->load->view('developer/index', $data);
+      $this->load->view('developers/index', $data);
     }
 
     public function create() {
@@ -53,14 +53,14 @@
       } else {
         $this->session->set_flashdata('alert', $result['message']);
       }
-      redirect('developer/index');
+      redirect('developers/index');
     }
 
     public function update() {
       $password = $_POST['password'];
       $this->developer->update(array('username' => $this->session->userdata('developer'), 'password' => $password));
       $this->session->set_flashdata('notice', 'Password successfully updated.');
-      redirect('developer/index');
+      redirect('developers/index');
     }
 
     public function sign_out() {

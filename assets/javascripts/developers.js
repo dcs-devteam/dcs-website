@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  if ($('body').hasClass('developer')) {
+  if ($('body').hasClass('developers')) {
     forms.initialize();
     metas.initialize();
     developers.initialize();

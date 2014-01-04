@@ -286,7 +286,7 @@ var bash = {
                 bash.log('Authenticating');
                 bash.progress.start();
                 $.ajax({
-                  url: DCS.BASE_URL + 'index.php/developer/authenticate',
+                  url: DCS.BASE_URL + 'index.php/developers/authenticate',
                   type: 'POST',
                   data: {username: e.originalEvent.input, password: login.val()},
                   success: function(data) {
@@ -295,7 +295,7 @@ var bash = {
                       bash.log('<span class="green">Authentication successfull</span>');
                       bash.log('Redirecting to developer page');
                       bash.progress.start();
-                      location.href = DCS.BASE_URL + 'index.php/developer/index';
+                      location.href = DCS.BASE_URL + 'index.php/developers/index';
                     } else {
                       bash.log('<span class="red">Authentication failed</span>');
                     }
@@ -319,7 +319,7 @@ var bash = {
         bash.log('Current Developer: <span class="yellow">' + DCS.authenticatedDeveloper + '</span>');
         bash.log('Redirecting to developer page');
         bash.progress.start();
-        location.href = DCS.BASE_URL + 'index.php/developer/index';
+        location.href = DCS.BASE_URL + 'index.php/developers/index';
       }
     },
     'dev logout': function() {
@@ -331,7 +331,7 @@ var bash = {
         bash.progress.start();
         bash.input.disable();
         $.ajax({
-          url: DCS.BASE_URL + 'index.php/developer/sign_out',
+          url: DCS.BASE_URL + 'index.php/developers/sign_out',
           type: 'POST',
           success: function() {
             bash.progress.stop();

@@ -41,7 +41,7 @@
         <h3>Developers</h3>
         <input type="button" value="Add New" class="button green" data-behavior="create-item" />
         <input type="button" value="Cancel" class="button red hidden" data-behavior="cancel-creation" />
-        <?= form_open('developer/create', array('class' => 'clearfix hidden')); ?>
+        <?= form_open('developers/create', array('class' => 'clearfix hidden')); ?>
           <input type="text" name="username" placeholder="username" required />
           <input type="password" name="password" placeholder="password" required />
           <input type="submit" value="Save" class="button green" />
