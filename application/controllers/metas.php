@@ -28,7 +28,7 @@
       } else {
         $this->session->set_flashdata('alert', $result['message']);
       }
-      redirect('developer/index');
+      redirect('developers/index');
     }
 
     public function update() {
@@ -40,7 +40,7 @@
       } else {
         $this->session->set_flashdata('alert', $result['message']);
       }
-      redirect('developer/index');
+      redirect('developers/index');
     }
 
   }

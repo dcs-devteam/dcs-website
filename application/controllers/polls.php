@@ -37,7 +37,7 @@
       $question = $_POST['question'];
       $this->poll->create(array('question' => $question));
       $this->session->set_flashdata('notice', 'Poll question successfully saved.');
-      redirect('developer/index');
+      redirect('developers/index');
     }
 
     public function delete($id) {
@@ -47,7 +47,7 @@
       } else {
         $this->session->set_flashdata('alert', $result['message']);
       }
-      redirect('developer/index');
+      redirect('developers/index');
     }
 
   }
