@@ -51,14 +51,19 @@ var bash = {
       }
     });
     bash.listen(['command-completed', 'command-cancelled'], function() {
-      bash.unlisten('buffer-submitted-' + bash.mode + '-mode');
-      bash.unlisten('up-key-pressed-' + bash.mode + '-mode');
-      bash.unlisten('down-key-pressed-' + bash.mode + '-mode');
+      if (bash.mode != 'command') {
+        bash.unlisten('buffer-submitted-' + bash.mode + '-mode');
+        bash.unlisten('up-key-pressed-' + bash.mode + '-mode');
+        bash.unlisten('down-key-pressed-' + bash.mode + '-mode');
+      }
+      bash.past.index = bash.past.commands.length;
       bash.switch('command');
     });
     bash.listen('buffer-submitted-command-mode', function(e) {
-      bash.past.commands.push(e.originalEvent.input);
-      bash.past.index = bash.past.commands.length;
+      if (e.originalEvent.input.length > 0) {
+        bash.past.commands.push(e.originalEvent.input);
+        bash.past.index = bash.past.commands.length;
+      }
     });
     bash.listen('up-key-pressed-command-mode', function() {
       if (bash.past.index > 0) {
