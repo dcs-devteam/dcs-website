@@ -15,6 +15,7 @@
 .pages.parking {
   background: #ffffff url("../images/background.png") center center no-repeat fixed;
   background-size: cover;
+  overflow: hidden;
 }
 
 .pages.parking #main-body {
