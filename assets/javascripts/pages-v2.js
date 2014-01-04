@@ -207,7 +207,6 @@ var bash = {
         url: 'https://api.github.com/repos/dcs-web-team/dcs-website/commits',
         type: 'GET',
         success: function(data) {
-          data = JSON.parse(data);
           bash.progress.stop();
           var max = Math.floor($('#bash').outerHeight() / 15) - 1;
           if (data.length <= max) {
