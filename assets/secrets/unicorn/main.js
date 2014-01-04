@@ -16,7 +16,7 @@ _secrets.extend('unicorn', function() {
         stylesheet.remove();
         image.remove();
         bash.input.enable();
-      }, 3000);
+      }, 2500);
     });
   });
 });
