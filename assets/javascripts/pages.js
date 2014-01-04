@@ -345,7 +345,7 @@ var bash = {
   }
 };
 
-var secrets = {
+var _secrets = {
   extend: function(name, callback) {
     bash.commands[name] = callback;
   }
