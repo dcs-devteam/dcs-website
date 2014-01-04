@@ -5,6 +5,7 @@ $(document).ready(function() {
     developers.initialize();
     polls.initialize();
     secrets.initialize();
+    shortcuts.initialize();
   }
 });
 
@@ -116,6 +117,18 @@ var secrets = {
   initialize: function() {
     $('#secrets input[type="text"][name="command"]').on('change', function() {
       $('#secrets input[type="text"][name="script_path"]').val(DCS.BASE_URL + 'assets/secrets/' + $(this).val() + '/main.js');
+    });
+  }
+};
+
+var shortcuts = {
+  initialize: function() {
+    $(document).on('keydown', function(e) {
+      if (e.keyCode == 72 && e.altKey) {
+        location.href = DCS.BASE_URL;
+      } else if (e.keyCode == 83 && e.altKey) {
+        location.href = DCS.BASE_URL + 'index.php/developers/sign_out';
+      }
     });
   }
 };

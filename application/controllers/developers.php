@@ -8,7 +8,7 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('index');
+      $this->request_methods['GET'] = array('index', 'sign_out');
       $this->request_methods['POST'] = array('authenticate', 'create', 'update', 'sign_out');
       $this->required_validations = array(
         'index' => 'developer',
@@ -67,6 +67,9 @@
 
     public function sign_out() {
       $this->session->sess_destroy();
+      if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        redirect(base_url());
+      }
     }
 
   }

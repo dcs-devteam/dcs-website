@@ -350,7 +350,7 @@ var bash = {
         bash.input.disable();
         $.ajax({
           url: DCS.BASE_URL + 'index.php/developers/sign_out',
-          type: 'POST',
+          type: 'GET',
           success: function() {
             bash.progress.stop();
             bash.log('<span class="green">Developer signed out</span>');
