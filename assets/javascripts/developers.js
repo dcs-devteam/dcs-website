@@ -3,6 +3,7 @@ $(document).ready(function() {
     forms.initialize();
     metas.initialize();
     developers.initialize();
+    polls.initialize();
     secrets.initialize();
   }
 });
@@ -24,7 +25,7 @@ var metas = {
       e.preventDefault();
       var item = $(this).closest('.item').addClass('edit');
       var value = $(this).closest('.actions').siblings('p');
-      var form = $('<form action="' + BASE_URL + 'index.php/metas/update" method="POST"> \
+      var form = $('<form action="' + DCS.BASE_URL + 'index.php/metas/update" method="POST"> \
                       <input type="text" name="value" value="' + value.text() + '" required /> \
                       <input type="hidden" name="property" value="' + item.data('property') + '" /> \
                       <input type="submit" value="Save" class="button green" /> \
@@ -47,7 +48,7 @@ var developers = {
     $('#developers .actions').delegate('[data-behavior="change-password"]', 'click', function(e) {
       e.preventDefault();
       var item = $(this).closest('.item').addClass('edit');
-      var form = $('<form action="' + BASE_URL + 'index.php/developer/update" method="POST"> \
+      var form = $('<form action="' + DCS.BASE_URL + 'index.php/developers/update" method="POST"> \
                       <input type="password" name="password" required /> \
                       <input type="submit" value="Save" class="button green" /> \
                     </form>');
@@ -61,15 +62,26 @@ var developers = {
       item.find('form').remove();
       $(this).text('Change Password').attr('data-behavior', 'change-password');
     });
+  }
+};
 
+var polls = {
+  initialize: function() {
     $('#polls').delegate(' .item:not(.selected)', 'click', function() {
-      developers.showPollAnswers($(this));
+      polls.showPollAnswers($(this));
     });
     $('#polls .answers [data-behavior="close-answers"]').on('click', function() {
       $('#main-body .left').removeClass('shrink');
       $('#main-body .right').removeClass('expand');
       $('.item.selected').removeClass('selected');
       $('#polls .answers p').remove();
+    });
+    $('#polls [data-behavior="delete-poll-question"]').on('click', function(e) {
+      e.stopPropagation();
+      var confirmation = confirm('Are you sure you want to delete this item?');
+      if (!confirmation) {
+        e.preventDefault();
+      }
     });
   },
   showPollAnswers: function(item) {

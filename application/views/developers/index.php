@@ -104,7 +104,7 @@
             <div class="item clearfix" data-id="<?= $poll->id; ?>">
               <label><?= $poll->question; ?></label>
               <div class="actions">
-                <?= anchor('polls/delete/' . $poll->id, 'Delete'); ?>
+                <?= anchor('polls/delete/' . $poll->id, 'Delete', array('data-behavior' => 'delete-poll-question')); ?>
               </div>
             </div>
           <?php endforeach; ?>
