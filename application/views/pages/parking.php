@@ -6,8 +6,8 @@
   <script>
     var DCS = {
       BASE_URL: '<?= base_url(); ?>',
-      websiteStatus: '<?= $meta["website_status"]->value; ?>',
-      websiteCompletion: '<?= $meta["website_completion"]->value; ?>',
+      websiteStatus: '<?= ($meta["website_status"]) ? $meta["website_status"]->value : ""; ?>',
+      websiteCompletion: '<?= ($meta["website_completion"]) ? $meta["website_completion"]->value : ""; ?>',
       authenticatedDeveloper: '<?= $developer ? $developer : ""; ?>'
     };
     <?php if ($poll): ?>
@@ -26,7 +26,7 @@
     <section id="meta">
       <div class="loader hidden">
         <h1>DCS</h1>
-        <p><?= $meta['website_completion']->value; ?></p>
+        <p><?= ($meta['website_completion']) ? $meta['website_completion']->value : ''; ?></p>
         <div class="spinner clockwise" id="spinner-1"></div>
         <div class="spinner counterclockwise" id="spinner-2"></div>
       </div>
