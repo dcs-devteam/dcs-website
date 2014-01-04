@@ -62,7 +62,6 @@ var bash = {
     });
     bash.listen('up-key-pressed-command-mode', function() {
       if (bash.past.index > 0) {
-        console.log('asd');
         bash.buffer.val(bash.past.commands[--bash.past.index]);
       }
     });
