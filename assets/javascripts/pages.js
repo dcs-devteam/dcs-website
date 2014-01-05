@@ -138,7 +138,6 @@ var bash = {
     enable: function() {
       $('#bash .input').removeClass('hidden').find('.command').focus();
       bash.buffer.off('keydown').on('keydown', function(e) {
-        console.log(e);
         if (e.keyCode == 13) {
           e.preventDefault();
           if (bash.input.active) {
@@ -148,11 +147,14 @@ var bash = {
             bash.dispatch('buffer-submitted-' + bash.mode + '-mode', {input: input});
           }
         } else if (e.keyCode == 27 || (e.keyCode == 67 && e.ctrlKey)) {
+          bash.dispatch('command-cancelled-' + bash.mode + '-mode');
           bash.dispatch('command-cancelled', {mode: bash.mode});
         } else if (e.keyCode == 38) {
           bash.dispatch('up-key-pressed-' + bash.mode + '-mode');
         } else if (e.keyCode == 40) {
           bash.dispatch('down-key-pressed-' + bash.mode + '-mode');
+        } else if (!bash.input.active && e.keyCode == 82 && e.ctrlKey) {
+          window.location.reload();
         } else {
           if (!bash.input.active) {
             e.preventDefault();
