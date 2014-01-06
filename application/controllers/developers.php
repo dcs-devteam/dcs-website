@@ -1,9 +1,5 @@
 <?php
 
-  if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-  }
-
   class Developers extends DCS_Controller {
 
     public function __construct() {
@@ -74,5 +70,4 @@
 
   }
 
-// End of file developers.php
-// Location: ./application/controllers/developers.php
+?>

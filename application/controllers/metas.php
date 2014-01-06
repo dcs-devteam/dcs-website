@@ -1,9 +1,5 @@
 <?php
 
-  if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-  }
-
   class Metas extends DCS_Controller {
 
     public function __construct() {
@@ -45,5 +41,4 @@
 
   }
 
-// End of file metas.php
-// Location: ./application/controllers/metas.php
+?>

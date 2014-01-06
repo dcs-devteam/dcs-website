@@ -40,5 +40,4 @@
 
   }
 
-// End of file meta_model.php
-// Location: ./application/models/meta_model.php
+?>

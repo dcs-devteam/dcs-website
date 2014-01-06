@@ -1,9 +1,5 @@
 <?php 
 
-  if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-  }
-
   class Polls extends DCS_Controller {
 
     public function __construct() {
@@ -52,5 +48,4 @@
 
   }
 
-// End of file polls.php
-// Location: ./application/controllers/polls.php
+?>

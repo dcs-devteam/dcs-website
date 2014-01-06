@@ -1,9 +1,5 @@
 <?php 
 
-  if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-  }
-
   class Pages extends DCS_Controller {
 
     public function __construct() {
@@ -28,5 +24,4 @@
 
   }
 
-// End of file pages.php
-// Location: ./application/controllers/pages.php
+?>

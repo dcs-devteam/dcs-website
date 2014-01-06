@@ -46,5 +46,4 @@
 
   }
 
-// End of file developer_model.php
-// Location: ./application/models/developer_model.php
+?>

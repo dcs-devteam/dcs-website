@@ -1,9 +1,5 @@
 <?php
 
-  if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-  }
-
   class Secrets extends DCS_Controller {
 
     public function __construct() {
@@ -45,5 +41,4 @@
 
   }
 
-// End of file secrets.php
-// Location: ./application/controllers/secrets.php
+?>

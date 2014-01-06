@@ -45,5 +45,4 @@
 
   }  
 
-// End of file secret_model.php
-// Location: ./application/models/secret_model.php
+?>

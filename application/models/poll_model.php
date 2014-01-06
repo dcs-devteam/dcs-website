@@ -52,5 +52,4 @@
 
   }
 
-// End of file poll_model.php
-// Location: ./application/models/poll_model.php
+?>
