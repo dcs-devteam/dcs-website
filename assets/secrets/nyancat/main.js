@@ -37,8 +37,8 @@ _secrets.extend('nyancat', function() {
       this.draw = function() {
         this.xpos -= this.speed;
         if (this.xpos <= 0) {
-          this.xpos = getRandomInt(1000, 6000);
-          this.ypos = getRandomInt(32, 468);
+          this.xpos = getRandomInt(canvas.width, canvas.width + 5000);
+          this.ypos = getRandomInt(32, canvas.height - 32);
         }
         ctx.drawImage(this.img, this.xpos, this.ypos);
       }
