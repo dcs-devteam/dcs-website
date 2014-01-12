@@ -1,0 +1,65 @@
+/*** LOCAL COMMONS ***/
+#featured-project .image {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+/*** SIDEBAR PARTIAL ***/
+#main-sidebar section {
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#main-sidebar h1 {
+  font: normal 1.4rem/1 "Open Sans Light";
+  color: #333333;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+}
+
+#featured-project {
+  background-color: #8FE81A;
+}
+
+#featured-project .image {
+  float: left;
+  width: 35%;
+  height: 120px;
+  background: #ffffff center center no-repeat;
+  background-size: cover;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  border: 3px solid #67AA11;
+}
+
+#featured-project figcaption {
+  float: right;
+  width: 60%;
+}
+
+#featured-project h2 {
+  font: normal 1.7rem/1 "Times New Roman";
+  color: #404040;
+  margin-bottom: 7px;
+}
+
+#featured-project p {
+  font: normal 1.4rem/1.2 "Open Sans Light";
+  color: #222222;
+}
+
+#featured-project a:hover .image,
+#featured-project a:focus .image {
+  border-color: #6FB812;
+}
+
+#featured-project a:hover h2,
+#featured-project a:focus h2 {
+  color: #252525;
+}

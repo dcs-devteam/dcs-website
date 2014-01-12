@@ -24,6 +24,8 @@
 
     public function home() {
       $data['page_title'] = 'Department Of Computer Science';
+      $data['main_content'] = '';
+      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 

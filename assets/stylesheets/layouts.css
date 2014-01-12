@@ -1,0 +1,30 @@
+/*** LOCAL COMMONS ***/
+#main-content,
+#main-sidebar,
+#main-sidebar section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  background: #ffffff url("../images/background.png") center center no-repeat;
+  background-size: cover;
+}
+
+#main-content {
+  float: left;
+  width: 75%;
+  height: 100%;
+}
+
+#main-sidebar {
+  float: right;
+  width: 25%;
+  height: 100%;
+  padding: 25px;
+}

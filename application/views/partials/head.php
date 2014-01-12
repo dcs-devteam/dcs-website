@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/application.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/fonts.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/animations.css'; ?>" />
+<link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/layouts.css'; ?>" />
+<link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/partials.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/pages.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/developers.css'; ?>" />
 <script src="<?= base_url() . 'assets/javascripts/jquery.js'; ?>"></script>
