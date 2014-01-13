@@ -10,3 +10,37 @@
     </figure>
   </a>
 </section>
+
+<section id="recent-news">
+  <h1>Recent News</h1>
+  <a href="#">
+    <figure class="clearfix">
+      <div class="news">
+        <div class="date">
+          <div class="group">
+            <span class="day">14</span>
+            <span class="year">2014</span>  
+          </div>
+          <span class="month">F e b</span>          
+        </div>
+        <div class="newsinfo">
+          <h2>News Title</h2>
+          <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia irure in eiusmod ad.</p>
+        </div>
+      </div>
+      <div class="news">
+        <div class="date">
+          <div class="group">
+            <span class="day">14</span>
+            <span class="year">2014</span>  
+          </div>
+          <span class="month">F e b</span>          
+        </div>
+        <div class="newsinfo">
+          <h2>News Title</h2>
+          <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia irure in eiusmod ad.</p>
+        </div>
+      </div>      
+    </figure>
+  </a>
+</section>

@@ -63,3 +63,90 @@
 #featured-project a:focus h2 {
   color: #252525;
 }
+
+#recent-news {
+  background: #F42D1B;
+  margin-top: 10px;
+  padding: 10px 0px 10px 0px !important;    
+}
+
+#recent-news h1 {
+  margin-left: 15px;
+}
+
+#recent-news .news {
+  background: white;
+  width: 98.4%;
+  height: 50px;
+  padding: 0.8%;
+  color: #333333;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;  
+}
+
+#recent-news .news .date {
+  width: 18%;  
+  height:50px;        
+  float: left;
+}
+
+#recent-news .news .date .group {
+  /*width: 76%;*/
+  width: 4rem;
+  height:100%;  
+  float: left;
+}
+
+#recent-news .news .date .group span {
+  width: 100%;
+  float: left;
+  overflow: hidden;    
+}
+
+#recent-news .news .date .group .day {
+  font-size: 35px;
+  font-family: arial;
+  padding: 0px;
+}
+
+#recent-news .news .date .group .year {
+  font-size: 15px;
+  font-family: arial;
+  margin-left: 3px; 
+  margin-top: -5px;
+}
+
+#recent-news .news .date .month {  
+  /*width: 24%;*/
+  width: 0.2rem;
+  border-bottom: 2px solid;
+  height: 100%;
+  font-size: 15px;
+  font-family: consolas;
+  line-height: 14px;
+  text-decoration: none;  
+  letter-spacing: 5px;  
+  display: inline-block;
+  margin-top: 3px;  
+}
+
+#recent-news .news .newsinfo {
+  width: 82%;
+  height: 100%;  
+  display: inline-block;
+  overflow: hidden;
+}
+
+#recent-news .news .newsinfo h2 {
+  font: normal 1.7rem/1 "Times New Roman";
+  color: #404040;
+  margin-bottom: 7px;
+  text-decoration: none;  
+  display: inline-block;
+}
+
+#recent-news .news .newsinfo p {
+  margin-top: -5px;
+  font: normal 1.3rem/1.2 "Open Sans Light";  
+  display: inline-block;  
+}
