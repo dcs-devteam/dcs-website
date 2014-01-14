@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 29, 2013 at 03:22 PM
+-- Generation Time: Jan 12, 2014 at 01:56 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -56,8 +56,8 @@ CREATE TABLE IF NOT EXISTS `metas` (
 --
 
 INSERT INTO `metas` (`property`, `value`, `created_at`) VALUES
-('website completion', '1%', '2013-12-29 21:07:40'),
-('website status', 'Under Construction', '2013-12-29 21:07:26');
+('website completion', '1%', '2014-01-04 15:25:19'),
+('website status', 'Under Construction', '2014-01-04 15:24:55');
 
 -- --------------------------------------------------------
 
@@ -70,12 +70,11 @@ CREATE TABLE IF NOT EXISTS `polls` (
   `question` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `polls`
 --
-
 
 -- --------------------------------------------------------
 
@@ -90,12 +89,36 @@ CREATE TABLE IF NOT EXISTS `poll_answers` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `poll_id` (`poll_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `poll_answers`
 --
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `secrets`
+--
+
+CREATE TABLE IF NOT EXISTS `secrets` (
+  `command` varchar(50) NOT NULL,
+  `script_path` varchar(255) NOT NULL,
+  `enabled` tinyint(1) DEFAULT '1',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`command`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `secrets`
+--
+
+INSERT INTO `secrets` (`command`, `script_path`, `enabled`, `created_at`) VALUES
+('chickens', 'http://localhost/dcs-website/assets/secrets/chickens/main.js', 1, '2014-01-04 18:48:24'),
+('nyancat', 'http://localhost/dcs-website/assets/secrets/nyancat/main.js', 1, '2014-01-11 18:38:01'),
+('today', 'http://localhost/dcs-website/assets/secrets/today/main.js', 1, '2014-01-05 11:54:15'),
+('unicorn', 'http://localhost/dcs-website/assets/secrets/unicorn/main.js', 1, '2014-01-04 18:48:18'),
+('yoda', 'http://localhost/dcs-website/assets/secrets/yoda/main.js', 1, '2014-01-04 20:42:46');
 
 --
 -- Constraints for dumped tables
