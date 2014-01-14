@@ -11,6 +11,7 @@
 
 
 
+/*** DEFAULT lAYOUT ***/
 body {
   background: #ffffff url("../images/background.png") center center no-repeat;
   background-size: cover;
@@ -20,6 +21,72 @@ body {
   float: left;
   width: 75%;
   height: 100%;
+}
+
+#main-header {
+  padding: 25px;
+}
+
+#main-header nav {
+  display: inline-block;
+  width: 130px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#main-header nav p {
+  font: normal 1.4rem "Open Sans";
+  color: #333333;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 3px;
+  position: relative;
+}
+
+#main-header nav p:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 7px;
+  border-top: 6px solid #333333;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+#main-header nav ul {
+  display: none;
+}
+
+#main-header nav ul li:last-of-type a {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#main-header nav a {
+  display: block;
+  font: normal 1.4rem "Open Sans";
+  color: #333333;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  padding: 5px 12px;
+}
+
+#main-header nav a:hover,
+#main-header nav a:focus {
+  background-color: #8FE81A;
+  color: #ffffff;
+}
+
+#main-header nav:hover p {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+#main-header nav:hover ul {
+  display: block;
 }
 
 #main-sidebar {
