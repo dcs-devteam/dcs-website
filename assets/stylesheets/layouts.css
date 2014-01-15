@@ -13,7 +13,7 @@
 
 /*** DEFAULT lAYOUT ***/
 body {
-  background: #ffffff url("../images/background.png") center center no-repeat;
+  background: #ffffff url("../images/background.png") center center no-repeat fixed;
   background-size: cover;
 }
 
