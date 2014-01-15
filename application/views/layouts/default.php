@@ -18,6 +18,7 @@
           <li><a href="#">About</a></li>
         </ul>
       </nav>
+      <a href="#" id="sign-in">Sign In</a>
     </header>
     {main_content}
   </div>
