@@ -385,20 +385,20 @@ var post_it = {
     if ($('.news') != null) {
       var news_height = $('.news').first().outerHeight();    
       var news_number = $('#news-thread').outerHeight() / news_height;            
-      var margin = 0;
-      var seen_number = $('#news-container').outerHeight() / news_height;
-      var cur_news = seen_number;
+      var news_margin = 0;
+      var seen_news = $('#news-container').outerHeight() / news_height;
+      var cur_news = seen_news;
       $('#news-button-down').click(function() {                
         if (cur_news < news_number) {          
-          margin -= news_height;
-          $('#news-thread').css("margin-top", margin);
+          news_margin -= $('.news').first().outerHeight();
+          $('#news-thread').css("margin-top", news_margin);
           cur_news++;
         }
       });
       $('#news-button-up').click(function() {                
-        if (cur_news > seen_number) {
-          margin += news_height;
-          $('#news-thread').css("margin-top", margin);
+        if (cur_news > seen_news) {
+          news_margin += $('.news').first().outerHeight();
+          $('#news-thread').css("margin-top", news_margin);
           cur_news--;
         }
       });
@@ -407,20 +407,20 @@ var post_it = {
     if ($('.event') != null) {
       var events_height = $('.event').first().outerHeight();    
       var events_number = $('#events-thread').outerHeight() / news_height;            
-      var margin = 0;
-      var seen_number = $('#events-container').outerHeight() / news_height;
-      var cur_events = seen_number;
+      var event_margin = 0;
+      var seen_events = $('#events-container').outerHeight() / news_height;
+      var cur_events = seen_events;
       $('#event-button-down').click(function() {                
         if (cur_events < events_number) {          
-          margin -= events_height;
-          $('#events-thread').css("margin-top", margin);
+          event_margin -= $('.event').first().outerHeight();
+          $('#events-thread').css("margin-top", event_margin);
           cur_events++;
         }
       });
       $('#event-button-up').click(function() {                
-        if (cur_events > seen_number) {
-          margin += events_height;
-          $('#events-thread').css("margin-top", margin);
+        if (cur_events > seen_events) {
+          event_margin += $('.event').first().outerHeight();
+          $('#events-thread').css("margin-top", event_margin);
           cur_events--;
         }
       });

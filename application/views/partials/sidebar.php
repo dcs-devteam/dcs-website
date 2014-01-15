@@ -14,22 +14,7 @@
 <section id="recent-news" class="post-it-scroll">
   <h1>Recent News</h1>
     <div id="news-container" class="scroll-container">
-      <div id = "news-thread" class="scroll-thread">
-        <a href="#">
-          <div class="news">
-            <div class="date">
-              <div class="group">
-                <span class="day">14</span>
-                <span class="year">2014</span>  
-              </div>
-              <span class="month">F e b</span>          
-            </div>
-            <div class="newsinfo">
-              <h2>News Title</h2>
-              <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia irure in eiusmod ad.</p>
-            </div>
-          </div>
-        </a>    
+      <div id = "news-thread" class="scroll-thread">      
         <a href="#">
           <div class="news">
             <div class="date">
