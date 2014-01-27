@@ -93,24 +93,6 @@ body {
   display: block;
 }
 
-#sign-in {
-  float: right;
-  font: normal 1.4rem "Open Sans";
-  color: #333333;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: #ffffff;
-  padding: 5px 12px;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-#sign-in:hover,
-#sign-in:focus {
-  background-color: #8FE81A;
-  color: #ffffff;
-}
-
 #main-sidebar {
   float: right;
   width: 25%;
