@@ -1,8 +1,7 @@
 $(document).ready(function() {
   if ($('body').hasClass('pages')) {
     parking.initialize();
-  }  
-  post_it.initialize();  
+  }
 });
 
 
@@ -384,55 +383,6 @@ var _secrets = {
 };
 
 
-
-/*** HOME ***/
-var post_it = {  
-  initialize: function() {
-    if ($('.news') != null) {
-      var news_height = $('.news').first().outerHeight();    
-      var news_number = $('#news-thread').outerHeight() / news_height;            
-      var news_margin = 0;
-      var seen_news = $('#news-container').outerHeight() / news_height;
-      var cur_news = seen_news;
-      $('#news-button-down').click(function() {                
-        if (cur_news < news_number) {          
-          news_margin -= $('.news').first().outerHeight();
-          $('#news-thread').css("margin-top", news_margin);
-          cur_news++;
-        }
-      });
-      $('#news-button-up').click(function() {                
-        if (cur_news > seen_news) {
-          news_margin += $('.news').first().outerHeight();
-          $('#news-thread').css("margin-top", news_margin);
-          cur_news--;
-        }
-      });
-    }
-
-    if ($('.event') != null) {
-      var events_height = $('.event').first().outerHeight();    
-      var events_number = $('#events-thread').outerHeight() / news_height;            
-      var event_margin = 0;
-      var seen_events = $('#events-container').outerHeight() / news_height;
-      var cur_events = seen_events;
-      $('#event-button-down').click(function() {                
-        if (cur_events < events_number) {          
-          event_margin -= $('.event').first().outerHeight();
-          $('#events-thread').css("margin-top", event_margin);
-          cur_events++;
-        }
-      });
-      $('#event-button-up').click(function() {                
-        if (cur_events > seen_events) {
-          event_margin += $('.event').first().outerHeight();
-          $('#events-thread').css("margin-top", event_margin);
-          cur_events--;
-        }
-      });
-    }
-  }
-}
 
 /*** CUSTOM CLASSES ***/
 function Event(name, properties) {

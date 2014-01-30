@@ -1,7 +1,6 @@
 /*** SIDEBAR PARTIAL ***/
 #main-sidebar section {
   padding: 15px;
-  border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
   margin-top: 15px;
@@ -77,7 +76,6 @@
   color: #333333;
   text-decoration: none;
   padding: 7px 7px 7px 50px;
-  border-radius: 2px;
   overflow: hidden;
   outline: none;
   position: relative;

@@ -189,3 +189,36 @@
 .pages.parking #bash .password {
   height: 16px;
 }
+
+
+
+/*** HOME PAGE ***/
+.pages.home .content {
+  padding: 25px;
+}
+
+#home-navigation {
+  width: 225px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 50px 25px;
+}
+
+#home-navigation ul {
+  display: none;
+}
+
+#home-navigation a {
+  display: block;
+  font: normal 1.3rem/1 "Open Sans";
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 5px;
+}
+
+#home-navigation a:hover,
+#home-navigation a:focus {
+  color: #8FE81A;
+}
