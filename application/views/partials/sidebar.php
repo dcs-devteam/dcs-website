@@ -5,13 +5,13 @@
       <div class="image" style="background-image: url('<?= base_url() . 'assets/images/sample-project.jpg' ?>');"></div>
       <figcaption>
         <h2>Project Title</h2>
-        <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia irure in eiusmod ad.</p>
+        <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia.</p>
       </figcaption>
     </figure>
   </a>
 </section>
 
-<section id="recent-news" class="post-it-scroll">
+<!-- <section id="recent-news" class="post-it-scroll">
   <h1>Recent News</h1>
     <div id="news-container" class="scroll-container">
       <div id = "news-thread" class="scroll-thread">      
@@ -157,4 +157,4 @@
       <div id = "event-button-up" class="button">
       </div>
     </div>  
-</section>
+</section> -->

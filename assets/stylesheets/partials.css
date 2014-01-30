@@ -1,31 +1,17 @@
-/*** LOCAL COMMONS ***/
-#featured-project .image {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
-
 /*** SIDEBAR PARTIAL ***/
 #main-sidebar section {
   padding: 15px;
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 
 #main-sidebar h1 {
-  font: normal 1.4rem/1 "Open Sans Light";
-  color: #333333;
+  font: bold 1.2rem/1 "Open Sans";
+  color: #444444;
   text-transform: uppercase;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
   margin-bottom: 12px;
-}
-
-#featured-project {
-  background-color: #8FE81A;
 }
 
 #featured-project .image {
@@ -34,8 +20,28 @@
   height: 120px;
   background: #ffffff center center no-repeat;
   background-size: cover;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-  border: 3px solid #67AA11;
+  overflow: hidden;
+  position: relative;
+}
+
+#featured-project .image:before,
+#featured-project .image:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+}
+
+#featured-project .image:before {
+  top: -8px;
+  left: -8px;
+}
+
+#featured-project .image:after {
+  bottom: -8px;
+  right: -8px;
 }
 
 #featured-project figcaption {
@@ -44,25 +50,26 @@
 }
 
 #featured-project h2 {
-  font: normal 1.7rem/1 "Times New Roman";
-  color: #404040;
+  font: normal 1.4rem/1 "Tahoma";
+  color: #333333;
+  text-transform: uppercase;
   margin-bottom: 7px;
 }
 
 #featured-project p {
-  font: normal 1.4rem/1.2 "Open Sans Light";
+  font: normal 1.4rem/1.25 "Open Sans Light";
   color: #222222;
 }
 
-#featured-project a:hover .image,
-#featured-project a:focus .image {
-  border-color: #6FB812;
-}
 
-#featured-project a:hover h2,
-#featured-project a:focus h2 {
-  color: #252525;
-}
+
+
+
+
+
+
+
+/*
 
 .post-it-scroll {
   margin-top: 10px;
@@ -93,7 +100,7 @@
 .post-it-scroll .scroll-container .scroll-thread .date .group {
   width: 76%;
   max-width: 50px;
-  /*width: 4rem;*/
+  /*width: 4rem;
   height:100%;  
   float: left;
 }
@@ -119,7 +126,7 @@
 
 .post-it-scroll .scroll-container .scroll-thread .date .month {  
   width: 24%;
-  /*width: 0.2rem;*/
+  /*width: 0.2rem;
   border-bottom: 2px solid;
   height: 100%;
   font-size: 15px;
@@ -323,4 +330,4 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: none;
-}
+}*/

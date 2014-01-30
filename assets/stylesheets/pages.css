@@ -1,16 +1,3 @@
-/*** LOCAL COMMONS ***/
-.pages.parking #main-body,
-.pages.parking #bash,
-.pages.parking #bash .input {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-
-
 /*** PARKING PAGE ***/
 .pages.parking {
   background: #ffffff url("../images/background.png") center center no-repeat fixed;
