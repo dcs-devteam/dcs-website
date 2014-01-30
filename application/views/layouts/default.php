@@ -6,7 +6,7 @@
 </head>
 
 <body class="<?= body_classes($controller, $action); ?>">
-  <div id="main-wrapper" class="clearfix">
+  <div id="main-wrapper">
     <div id="main-content">
       <header id="main-header">
         <nav>

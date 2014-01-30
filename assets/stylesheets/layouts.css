@@ -89,6 +89,7 @@ body {
 
 #footer-placeholder {
   height: 40px;
+  clear: both;
 }
 
 #main-footer {
