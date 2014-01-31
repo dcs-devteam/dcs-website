@@ -1,3 +1,4 @@
+<div class="faculty-container">
 <div class="tile-wrapper clearfix">
   <h1>Core Faculty</h1>
   <div class="tile clearfix">
@@ -96,4 +97,5 @@
     </div>
   </div>
   
+</div>
 </div>

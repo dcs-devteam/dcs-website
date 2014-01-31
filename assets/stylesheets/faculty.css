@@ -10,6 +10,9 @@
   box-sizing: border-box;
 }
 
+.faculty-container {
+  background: white;
+}
 .tile-wrapper {
   width: 100%;
   margin-bottom: 20px;  
