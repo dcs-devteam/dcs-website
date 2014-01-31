@@ -1,6 +1,17 @@
-/*** DEFAULT lAYOUT ***/
+/*** DEFAULT LAYOUT ***/
 #main-wrapper {
   min-height: 100%;
   padding-bottom: 40px;
   overflow: auto;
+}
+
+#main-sidebar {
+  float: left;
+  width: 20%;
+  padding-right: 25px;
+}
+
+#main-content {
+  float: right;
+  width: 80%;
 }

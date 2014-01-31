@@ -6,10 +6,11 @@
 </head>
 
 <body class="<?= body_classes($controller, $action); ?>">
-  <?php $this->load->view('partials/header'); ?>
-  <div id="main-wrapper" class="clearfix">
-    <div id="main-content">{main_content}</div>
-    <aside id="main-sidebar">{sidebar_content}</aside>
+  <div id="main-wrapper">
+    <div class="wrapper">
+      <aside id="main-sidebar"><?php $this->load->view('partials/sidebar'); ?></aside>
+      <div id="main-content">{main_content}</div>
+    </div>
   </div>
   <?php $this->load->view('partials/footer'); ?>
 </body>

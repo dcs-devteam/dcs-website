@@ -207,7 +207,7 @@
   float: left;
   width: 225px;
   border-radius: 2px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   padding: 50px 25px;
   margin: 25px;
@@ -223,7 +223,7 @@
   top: 0;
   left: 201px;
   border-radius: 0 2px 2px 0;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   padding: 25px;
 }
@@ -245,7 +245,7 @@
 #home-navigation a {
   display: block;
   font: normal 1.3rem/1 "Open Sans";
-  color: #333333;
+  color: #111111;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -257,7 +257,7 @@
 #home-navigation a:hover,
 #home-navigation a:focus,
 #home-navigation > li:hover > a {
-  color: #8FE81A;
+  color: #ffffff;
 }
 
 #home-navigation > li:hover > ul {
@@ -274,7 +274,7 @@
   padding: 15px;
   border-radius: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
   margin-top: 15px;
 }
 
@@ -288,6 +288,10 @@
   text-transform: uppercase;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
   margin-bottom: 12px;
+}
+
+#spotlight {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #spotlight .image {
@@ -365,7 +369,7 @@
 }
 
 #recent-news a:nth-of-type(odd) {
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #recent-news a:hover:before,

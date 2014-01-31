@@ -1,3 +1,54 @@
+/*** SIDEBAR PARTIAL ***/
+.expandable-menu {
+  margin-top: 50px;
+}
+
+.expandable-menu li {
+  position: relative;
+}
+
+.expandable-menu a,
+.expandable-menu p {
+  display: block;
+  font: normal 1.3rem "Open Sans";
+  color: #333333;
+  text-decoration: none;
+  padding: 4px 3px 4px 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+.expandable-menu a:hover,
+.expandable-menu a:focus,
+.expandable-menu p:hover {
+  background-color: #f5f5f5;
+}
+
+.expandable-menu p:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  border-left: 7px solid #333333;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+.expandable-menu .expanded p:before {
+  border-top: 7px solid #333333;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+.expandable-menu ul {
+  display: none;
+  padding-left: 25px;
+}
+
+
+
 /*** FOOTER PARTIAL ***/
 #footer-placeholder {
   height: 40px;
@@ -13,7 +64,7 @@
 
 #main-footer nav {
   float: left;
-  margin: 10px 0 0 25px;
+  margin-top: 10px;
 }
 
 #main-footer nav a {
@@ -31,7 +82,7 @@
 
 #main-footer .social-networks {
   float: right;
-  margin: 8px 25px 0 0;
+  margin-top: 8px;
 }
 
 #main-footer .social-networks a {
