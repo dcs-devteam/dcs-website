@@ -10,11 +10,10 @@
       </ul>
     </li>
     <li>
-      <a href="#">Academic Programs</a>
+      <?=anchor('/info/academic_programs', 'Academic Programs')?>
       <ul>
-        <li><a href="#">Bachelor of Science</a></li>
-        <li><a href="#">Master of Science</a></li>
-        <li><a href="#">Continuing Education Program</a></li>
+        <li><?=anchor('/info/academic_programs#bs', 'Bachelor of Science')?></li>
+        <li><?=anchor('/info/academic_programs#ms', 'Master of Science')?></li>
       </ul>
     </li>
     <li>
@@ -41,7 +40,7 @@
       </ul>
     </li>
     <li>
-      <a href="#">People</a>
+      <?=anchor('/info/people','People')?>
       <ul>
         <li><?=anchor('/info/people#core_faculty','Core Faculty')?></li>
         <li><?=anchor('/info/people#affiliate_professor','Affiliate Professor')?></li>

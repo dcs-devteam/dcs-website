@@ -4,7 +4,7 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('parking', 'home', 'people', 'department');
+      $this->request_methods['GET'] = array('department', 'people', 'academic_programs');
 
       $this->_check_request_method();
       $this->load->model('meta_model', 'meta');
@@ -16,6 +16,13 @@
     public function department() {
       $data['page_title'] = 'Department Of Computer Science';
       $data['main_content'] = $this->load->view('info/department', array(), true);
+      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
+      $this->parser->parse('layouts/default', $data);
+    }
+
+    public function academic_programs() {
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['main_content'] = $this->load->view('info/academic_programs', array(), true);
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
