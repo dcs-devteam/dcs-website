@@ -1,3 +1,11 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -51,4 +59,15 @@ p.notification.notice {
 p.notification.alert {
   border-color: #722523;
   background-color: #862926;
+}
+
+
+
+/*** PLUGIN OVERRIDES ***/
+.mCSB_scrollTools {
+  width: 6px !important;
+}
+
+.mCSB_container {
+  margin-right: 10px !important;
 }

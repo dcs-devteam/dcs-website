@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <?php $this->load->view('partials/head.php'); ?>
-  <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/session.css'?>">
   <title>Department of Computer Science</title>
 
 </head>

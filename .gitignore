@@ -3,3 +3,6 @@ application/logs/
 
 # ignore the deploy script
 deploy.sh
+
+# ignore vi swp files
+*.swp

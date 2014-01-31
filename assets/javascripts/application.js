@@ -1,6 +1,7 @@
 $(document).ready(function() {
   notifications.initialize();
   textareas.initialize();
+  scrollbars.initialize();
 });
 
 var notifications = {
@@ -17,5 +18,14 @@ var notifications = {
 var textareas = {
   initialize: function() {
     $('textarea').autosize();
+  }
+};
+
+var scrollbars = {
+  initialize: function() {
+    $('.custom-scrollbar').mCustomScrollbar({
+      scrollInertia: 0,
+      theme: 'dark-thick'
+    });
   }
 };
