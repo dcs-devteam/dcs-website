@@ -1,6 +1,7 @@
 /*** SIDEBAR PARTIAL ***/
 #main-sidebar section {
   padding: 15px;
+  border-radius: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
   margin-top: 15px;
