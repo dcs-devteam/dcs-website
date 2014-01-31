@@ -244,7 +244,7 @@
 
 #home-navigation a {
   display: block;
-  font: normal 1.3rem/1 "Open Sans";
+  font: normal 1.3rem/1 "Open Sans", "OpenSansRegular";
   color: #111111;
   text-align: center;
   text-decoration: none;
@@ -283,7 +283,7 @@
 }
 
 .pages.home aside h1 {
-  font: bold 1.2rem/1 "Open Sans";
+  font: bold 1.2rem/1 "Open Sans", "OpenSansRegular";
   color: #444444;
   text-transform: uppercase;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
@@ -337,7 +337,7 @@
 }
 
 #spotlight p {
-  font: normal 1.4rem/1.25 "Open Sans Light";
+  font: normal 1.4rem/1.25 "Open Sans Light", "OpenSansLight";
   color: #222222;
 }
 
@@ -348,7 +348,7 @@
 
 #recent-news a {
   display: block;
-  font: normal 1.5rem/1 "Open Sans Light";
+  font: normal 1.5rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
   text-decoration: none;
   padding: 7px 7px 7px 50px;
@@ -363,7 +363,7 @@
   top: 9px;
   left: 7px;
   width: 43px;
-  font: normal 1.1rem/1 "Open Sans Light";;
+  font: normal 1.1rem/1 "Open Sans Light", "OpenSansLight";
   color: #777777;
   text-transform: uppercase;
 }
