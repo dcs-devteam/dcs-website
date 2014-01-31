@@ -60,3 +60,14 @@ p.notification.alert {
   border-color: #722523;
   background-color: #862926;
 }
+
+
+
+/*** PLUGIN OVERRIDES ***/
+.mCSB_scrollTools {
+  width: 6px !important;
+}
+
+.mCSB_container {
+  margin-right: 10px !important;
+}
