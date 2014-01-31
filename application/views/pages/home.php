@@ -19,7 +19,7 @@
     <li>
       <a href="#">Why UP Cebu DCS?</a>
       <ul>
-        <li><a href="#">Center of Excellence in IT</a></li>
+        <li><a href="#">Center of Excellence in I.T.</a></li>
         <li><a href="#">Research</a></li>
         <li><a href="#">Service to Society</a></li>
         <li><a href="#">National Programming Rank</a></li>
