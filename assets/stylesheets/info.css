@@ -10,12 +10,17 @@ body.info .faculty-container {
   padding: 0px;  
 }
 
-body.info .faculty-container .tile-wrapper {
+body.info .faculty-container .faculty-group {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 20px;  
 }
 
-body.info .faculty-container .tile-wrapper h1 {
+body.info .faculty-container .tile-wrapper {
+  padding-left: 9%;
+  width: 100%;
+}
+
+body.info .faculty-container .faculty-group h1 {
   width: 99%;
   font-family: "open sans light";
   font-size: 2.5rem;
@@ -28,7 +33,7 @@ body.info .faculty-container .tile-wrapper h1 {
 }
 
 body.info .faculty-container .tile-wrapper .tile {
-  width: 48%;
+  width: 20%;
   min-height: 300px;
   border-radius: 3px;   
   vertical-align: top;
@@ -41,7 +46,7 @@ body.info .faculty-container .tile-wrapper .tile {
 }
 
 body.info .faculty-container .tile-wrapper .tile .image {
-  width: 30%;
+  width: 90%;
   height: 140px;
   display: block;
   margin: 0 auto;  
@@ -51,28 +56,25 @@ body.info .faculty-container .tile-wrapper .tile .image {
   border: 3px solid #CCCCCC;
 }
 
-body.info .faculty-container .tile-wrapper .tile .image:after {
-  content: "";  
-}
-
 body.info .faculty-container  .tile-wrapper .tile .information-container {
   width: 100%;
   padding: 10px;  
   margin-top: 10px;
   position: relative;
+  border-top: 1px solid #AA0000;
 }
 
-body.info .faculty-container .tile-wrapper .tile .information-container:before {
+/*body.info .faculty-container .tile-wrapper .tile .information-container:before {
   position: absolute;  
   content: "";
   width: 95%;
   top: -1px;  
   border-top: 1px solid #AA0000;  
-}
+}*/
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field {
   width: 100%;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field h2 {
@@ -85,15 +87,15 @@ body.info .faculty-container .tile-wrapper .tile .information-container .field h
 }
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
-  width: 67%;  
+  width: 100%;  
   font-family: "open sans light";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: inline-block;
-  line-height: 1.7rem;
+  line-height: 1.3rem;
 }
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field li {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 /* academic_programs function*/
@@ -103,8 +105,52 @@ body.info .academic_programs {
   min-height: 637px;
 }
 
+body.info .academic_programs .menu {
+  width: 100%;  
+  padding: 10px;
+  padding-left: 30px;
+  padding-bottom: 2px;
+}
+
+body.info .academic_programs .menu button {
+  width: 50px;
+  font-family: "open sans light";
+  font-size: 1.5rem;
+  border: 1px solid #CCCCCC;
+  margin: 0px;
+  position: relative;
+  background: white;
+}
+
+body.info .academic_programs .menu button:hover {
+  background: #AA0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+body.info .academic_programs .menu .active {
+  position: relative;  
+  background: #AA0000;
+  color: white;
+  border: none;
+  border-radius: 2px 2px 0px 0px;
+}
+
+body.info .academic_programs .menu .active:after {
+  content:"";
+  display: inline-block;
+  width: 100%;
+  background: #AA0000;
+  position: absolute;
+  height: 5px;
+  left: 0px;
+  top:100%;
+}
+
 body.info .academic_programs .program {
   width: 100%;
+  display: none;
 }
 
 body.info .academic_programs .program h1 {
@@ -142,4 +188,93 @@ body.info .academic_programs .program .field p {
   margin-top: 20px;
   text-indent: 30px;
   padding-left: 15px;
+}
+
+body.info .academic_programs #ms {
+  display: none;
+}
+
+body.info .academic_programs #cte {
+  display: none;
+}
+
+/* department function */
+body.info .department {
+  width: 100%;
+}
+
+body.info .department .about-department {
+  width: 100%;    
+}
+
+body.info .department .about-department h1{
+  width: 99%;
+  font-family: "open sans light";
+  font-size: 2.5rem;
+  color: white;
+  background: #AA0000;
+  padding: 1rem;
+  padding-left: 25px;
+  border-radius: 0px 1000px 1000px 0px; 
+}
+
+body.info .department .about-department .content {
+  width: 100%;    
+  padding: 20px;
+  padding-top: 0px;
+  padding-left: 30px;
+}
+
+body.info .department .about-department .content img {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+body.info .department .about-department .content .beside-text {
+  width: 35%;
+  display: inline;
+  margin-left: 18px;
+  vertical-align: top;
+}
+
+body.info .department .about-department .content p {
+  width: 97%;
+  font-family: "arial";
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-top: 20px;
+  text-indent: 30px;
+  padding-left: 15px;
+  list-style: decimal;  
+}
+
+body.info .department .about-department .content .beside-image {
+  width: 60%;  
+  display: inline-block;
+}
+
+body.info .department .about-department .content ul, body.info .department .about-department .content ol {
+  width: 97%;
+  font-family: "arial";
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-top: 20px;
+  padding-left: 32px;
+  list-style: decimal;
+}
+
+body.info .department .about-department .content li {
+  margin-bottom: 10px;
+}
+
+body.info .department .about-department .half {
+  width: 49%;  
+  display: inline-block;
+  vertical-align: top;
+}
+
+body.info .department .about-department #mission {
+  margin-left: 1%;  
 }
