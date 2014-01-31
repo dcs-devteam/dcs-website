@@ -14,6 +14,7 @@
       <ul>
         <li><a href="#">Bachelor of Science</a></li>
         <li><a href="#">Master of Science</a></li>
+        <li><a href="#">Continuing Education Program</a></li>
       </ul>
     </li>
     <li>

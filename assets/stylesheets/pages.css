@@ -193,8 +193,13 @@
 
 
 /*** HOME PAGE ***/
-.pages.home .content {
+.pages.home #main-content {
   padding: 25px;
+  background-color: transparent;
+}
+
+.pages.home #main-header {
+  display: none;
 }
 
 #home-navigation {
