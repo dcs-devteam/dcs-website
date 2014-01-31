@@ -4,13 +4,3 @@
   padding-bottom: 40px;
   overflow: auto;
 }
-
-#main-content {
-  float: left;
-  width: 75%;
-}
-
-#main-sidebar {
-  float: right;
-  width: 25%;
-}

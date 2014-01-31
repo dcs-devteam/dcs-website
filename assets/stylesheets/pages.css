@@ -204,11 +204,13 @@
 }
 
 #home-navigation {
+  float: left;
   width: 225px;
   border-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   padding: 50px 25px;
+  margin: 25px;
 }
 
 #home-navigation > li {
@@ -262,11 +264,13 @@
   display: block;
 }
 
-#main-sidebar {
+.pages.home aside {
+  float: right;
+  width: 25%;
   padding: 25px;
 }
 
-#main-sidebar section {
+.pages.home aside section {
   padding: 15px;
   border-radius: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
@@ -274,11 +278,11 @@
   margin-top: 15px;
 }
 
-#main-sidebar section:first-of-type {
+.pages.home aside section:first-of-type {
   margin-top: 0;
 }
 
-#main-sidebar h1 {
+.pages.home aside h1 {
   font: bold 1.2rem/1 "Open Sans";
   color: #444444;
   text-transform: uppercase;
