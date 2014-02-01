@@ -8,7 +8,7 @@
 <body class="<?= body_classes($controller, $action); ?>">
   <div id="main-wrapper" class="clearfix">
     <form action="#" method="POST" id="login-form">
-      <h1>Department of Computer Science</h1>
+      <h1><?=anchor('pages/home','Department of Computer Science'); ?></h1>
       <div class="field">
         <label>Username</label>
         <input type="text" name="username" id="username-box" class="box">

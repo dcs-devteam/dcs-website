@@ -1,6 +1,6 @@
 <footer id="main-footer" class="clearfix">
   <nav>
-    <a href="#">Home</a>
+    <?=anchor('/pages/home','Home')?>    
     <a href="#">Projects</a>
     <a href="#">Faculty</a>
     <a href="#">Admissions</a>

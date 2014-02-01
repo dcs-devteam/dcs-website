@@ -18,6 +18,11 @@ body.session #login-form h1 {
   margin-bottom: 2rem;
 }
 
+body.session #login-form a {
+  color: #333333;
+  text-decoration: none;
+}
+
 
 body.session #login-form .field {
   display: block;
@@ -36,8 +41,8 @@ body.session #login-form .field label {
 }
 
 body.session #login-form .field .box {
-  width: 220px;
-  height: 2.5rem;
+  width: 230px;
+  height: 35px;
   padding: 0.5rem;
   border-radius: 3px;
   outline: none;
