@@ -1,5 +1,5 @@
-<div class="faculty-container clearfix" id="core_faculty">
-  <div class="tile-wrapper clearfix">
+<div class="faculty-container clearfix">
+  <div class="tile-wrapper clearfix" id="core_faculty">
     <h1>Core Faculty</h1>
     <div class="tile clearfix">
       <div class="image" style="background-image: url('<?= base_url() . 'assets/images/sample-project.jpg' ?>');"></div>

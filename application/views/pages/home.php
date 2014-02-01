@@ -42,11 +42,11 @@
     <li>
       <a href="#">People</a>
       <ul>
-        <li><?=anchor('/people/faculty#core_faculty','Core Faculty')?></li>
-        <li><?=anchor('/people/faculty#affiliate_professor','Affiliate Professor')?></li>
-        <li><?=anchor('/people/faculty#visiting_professor','Visiting Professor')?></li>
-        <li><?=anchor('/people/faculty#lecturers','Lecturers')?></li>
-        <li><?=anchor('/people/faculty#support_staff','Support Staff')?></li>
+        <li><?=anchor('/info/people#core_faculty','Core Faculty')?></li>
+        <li><?=anchor('/info/people#affiliate_professor','Affiliate Professor')?></li>
+        <li><?=anchor('/info/people#visiting_professor','Visiting Professor')?></li>
+        <li><?=anchor('/info/people#lecturers','Lecturers')?></li>
+        <li><?=anchor('/info/people#support_staff','Support Staff')?></li>
       </ul>
     </li>
     <li>

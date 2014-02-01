@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "pages/parking";
+$route['default_controller'] = "pages/home";
 $route['404_override'] = '';
 
 

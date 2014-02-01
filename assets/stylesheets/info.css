@@ -4,12 +4,12 @@ body.people .faculty-container {
   padding: 0px;
 }
 
-body.people .tile-wrapper {
+body.people .faculty-container .tile-wrapper {
   width: 100%;
   padding-bottom: 20px;
 }
 
-body.people .tile-wrapper h1 {
+body.people .faculty-container .tile-wrapper h1 {
   font-family: "open sans light";
   font-size: 2.5rem;
   color: white;
@@ -18,7 +18,7 @@ body.people .tile-wrapper h1 {
   border-radius: 2px;  
 }
 
-body.people .tile-wrapper .tile {
+body.people .faculty-container .tile-wrapper .tile {
   width: 48%;
   min-height: 300px;
   border-radius: 3px;   
@@ -31,7 +31,7 @@ body.people .tile-wrapper .tile {
   box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 }
 
-body.people .tile-wrapper .tile .image {
+body.people .faculty-container .tile-wrapper .tile .image {
   width: 30%;
   height: 140px;
   display: block;
@@ -42,18 +42,18 @@ body.people .tile-wrapper .tile .image {
   border: 3px solid #CCCCCC;
 }
 
-body.people .tile-wrapper .tile .image:after {
+body.people .faculty-container .tile-wrapper .tile .image:after {
   content: "";  
 }
 
-body.people .tile-wrapper .tile .information-container {
+body.people .faculty-container  .tile-wrapper .tile .information-container {
   width: 100%;
   padding: 10px;  
   margin-top: 10px;
   position: relative;
 }
 
-body.people .tile-wrapper .tile .information-container:before {
+body.people .faculty-container .tile-wrapper .tile .information-container:before {
   position: absolute;  
   content: "";
   width: 95%;
@@ -61,12 +61,12 @@ body.people .tile-wrapper .tile .information-container:before {
   border-top: 1px solid #AA0000;  
 }
 
-body.people .tile-wrapper .tile .information-container .field {
+body.people .faculty-container .tile-wrapper .tile .information-container .field {
   width: 100%;
   margin-bottom: 7px;
 }
 
-body.people .tile-wrapper .tile .information-container .field h2 {
+body.people .faculty-container .tile-wrapper .tile .information-container .field h2 {
   width: 30%;
   font-family: "open sans light";
   font-size: 1.4rem;  
@@ -75,7 +75,7 @@ body.people .tile-wrapper .tile .information-container .field h2 {
   margin-left: 1rem;
 }
 
-body.people .tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
+body.people .faculty-container .tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
   width: 67%;  
   font-family: "open sans light";
   font-size: 1.5rem;
@@ -83,6 +83,6 @@ body.people .tile-wrapper .tile .information-container .field p, .tile-wrapper .
   line-height: 1.7rem;
 }
 
-body.people .tile-wrapper .tile .information-container .field li {
+body.people .faculty-container .tile-wrapper .tile .information-container .field li {
   margin-bottom: 5px;
 }
