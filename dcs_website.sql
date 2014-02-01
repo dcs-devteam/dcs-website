@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2014 at 09:01 AM
+-- Generation Time: Feb 01, 2014 at 10:55 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -66,6 +66,24 @@ CREATE TABLE IF NOT EXISTS `developers` (
 
 INSERT INTO `developers` (`username`, `password`) VALUES
 ('admin', '5f4dcc3b5aa765d61d8327deb882cf99');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faculty`
+--
+
+CREATE TABLE IF NOT EXISTS `faculty` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `position` varchar(225) NOT NULL,
+  `key_area_research` varchar(225) NOT NULL,
+  `biography` varchar(225) NOT NULL,
+  `interest` varchar(225) NOT NULL,
+  `last_updated` date NOT NULL,
+  `personal_website` varchar(225) NOT NULL,
+  `prof_pic` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
