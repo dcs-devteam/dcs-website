@@ -23,7 +23,7 @@ body.info .faculty-container .tile-wrapper h1 {
 }
 
 body.info .faculty-container .tile-wrapper .tile {
-  width: 48%;
+  width: 20%;
   min-height: 300px;
   border-radius: 3px;   
   vertical-align: top;
@@ -36,7 +36,7 @@ body.info .faculty-container .tile-wrapper .tile {
 }
 
 body.info .faculty-container .tile-wrapper .tile .image {
-  width: 30%;
+  width: 90%;
   height: 140px;
   display: block;
   margin: 0 auto;  
@@ -46,28 +46,25 @@ body.info .faculty-container .tile-wrapper .tile .image {
   border: 3px solid #CCCCCC;
 }
 
-body.info .faculty-container .tile-wrapper .tile .image:after {
-  content: "";  
-}
-
 body.info .faculty-container  .tile-wrapper .tile .information-container {
   width: 100%;
   padding: 10px;  
   margin-top: 10px;
   position: relative;
+  border-top: 1px solid #AA0000;
 }
 
-body.info .faculty-container .tile-wrapper .tile .information-container:before {
+/*body.info .faculty-container .tile-wrapper .tile .information-container:before {
   position: absolute;  
   content: "";
   width: 95%;
   top: -1px;  
   border-top: 1px solid #AA0000;  
-}
+}*/
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field {
   width: 100%;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field h2 {
@@ -80,15 +77,15 @@ body.info .faculty-container .tile-wrapper .tile .information-container .field h
 }
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
-  width: 67%;  
+  width: 100%;  
   font-family: "open sans light";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: inline-block;
-  line-height: 1.7rem;
+  line-height: 1.3rem;
 }
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field li {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 /* academic_programs function*/
@@ -96,6 +93,46 @@ body.info .academic_programs {
   width: 100%;  
   background: white;
   min-height: 637px;
+}
+
+body.info .academic_programs .menu {
+  width: 100%;  
+  padding: 10px;
+  padding-left: 30px;
+  padding-bottom: 2px;
+}
+
+body.info .academic_programs .menu button {
+  width: 50px;
+  font-family: "open sans light";
+  font-size: 1.5rem;
+  border: 1px solid #CCCCCC;
+  margin: 0px;
+  position: relative;
+}
+
+body.info .academic_programs .menu button:hover {
+  background: #AA0000;
+  color: white;
+  border: none;
+}
+
+body.info .academic_programs .menu .active {
+  position: relative;  
+  background: #AA0000;
+  color: white;
+  border: none;
+}
+
+body.info .academic_programs .menu .active:after {
+  content:"";
+  display: inline-block;
+  width: 100%;
+  background: #AA0000;
+  position: absolute;
+  height: 5px;
+  left: 0px;
+  top:100%;
 }
 
 body.info .academic_programs .program {
@@ -138,3 +175,12 @@ body.info .academic_programs .program .field p {
   text-indent: 30px;
   padding-left: 15px;
 }
+
+body.info .academic_programs #ms {
+  display: none;
+}
+
+body.info .academic_programs #cte {
+  display: none;
+}
+
