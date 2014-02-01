@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2014 at 10:55 AM
+-- Generation Time: Feb 01, 2014 at 11:25 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -103,6 +103,24 @@ CREATE TABLE IF NOT EXISTS `images` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `information`
+--
+
+CREATE TABLE IF NOT EXISTS `information` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `u_id` int(225) NOT NULL,
+  `fname` varchar(225) NOT NULL,
+  `mname` varchar(225) NOT NULL,
+  `lname` varchar(225) NOT NULL,
+  `contact_num` varchar(225) NOT NULL,
+  `email_add` varchar(225) NOT NULL,
+  `address` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `metas`
 --
 
@@ -120,6 +138,21 @@ CREATE TABLE IF NOT EXISTS `metas` (
 INSERT INTO `metas` (`property`, `value`, `created_at`) VALUES
 ('website completion', '1%', '2014-01-04 23:25:19'),
 ('website status', 'Under Construction', '2014-01-04 23:24:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `title` varchar(225) NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `content` text NOT NULL,
+  `u_id` int(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -193,6 +226,19 @@ INSERT INTO `secrets` (`command`, `script_path`, `enabled`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `static_content`
+--
+
+CREATE TABLE IF NOT EXISTS `static_content` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `title` varchar(225) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tags`
 --
 
@@ -211,9 +257,6 @@ CREATE TABLE IF NOT EXISTS `tags` (
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
-  `lastname` varchar(225) NOT NULL,
-  `firstname` varchar(225) NOT NULL,
-  `middlename` varchar(225) NOT NULL,
   `password` varchar(225) NOT NULL,
   `username` varchar(225) NOT NULL,
   `role_id` int(225) NOT NULL,
