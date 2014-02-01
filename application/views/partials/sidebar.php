@@ -1,28 +1,63 @@
-<section id="featured-project">
-  <h1>Featured Project</h1>
-  <a href="#">
-    <figure class="clearfix">
-      <div class="image" style="background-image: url('<?= base_url() . 'assets/images/sample-project.jpg' ?>');"></div>
-      <figcaption>
-        <h2>Project Title</h2>
-        <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia.</p>
-      </figcaption>
-    </figure>
-  </a>
-</section>
-
-<section id="recent-news">
-  <h1>Recent News</h1>
-  <div class="news-thread custom-scrollbar">
-    <?php for ($i = 0; $i < 12; $i++): ?>
-      <a href="#" data-date="jan 21">here goes the news title</a>
-    <?php endfor; ?>
-  </div>
-</section>
-
-<section id="upcoming-events">
-  <h1>Upcoming Events</h1>
-  <div class="events-thread">
-    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=155&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=7kc4vluuqs77ue8onf291kgn68%40group.calendar.google.com&amp;color=%23333333&amp;ctz=Asia%2FManila" style=" border-width:0 " width="258" height="159" frameborder="0" scrolling="no"></iframe>
-  </div>
-</section>
+<ul class="expandable-menu">
+  <li>
+    <p>The Department</p>
+    <ul>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Summary</a></li>
+      <li><a href="#">Vision</a></li>
+      <li><a href="#">Mission</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>Academic Programs</p>
+    <ul>
+      <li><a href="#">Bachelor of Science</a></li>
+      <li><a href="#">Master of Science</a></li>
+      <li><a href="#">Continuing Education Program</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>Why UP Cebu DCS?</p>
+    <ul>
+      <li><a href="#">Center of Excellence in I.T.</a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Service to the Country</a></li>
+      <li><a href="#">National Programming Rank</a></li>
+      <li><a href="#">Industry Partners</a></li>
+      <li><a href="#">Scholarships</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Research Lab News</a></li>
+  <li>
+    <p>Student Highlights</p>
+    <ul>
+      <li><a href="#">ComSci Week</a></li>
+      <li><a href="#">CodeTaBai!</a></li>
+      <li><a href="#">Company Technical Talk</a></li>
+      <li><a href="#">Startup Weekend</a></li>
+      <li><a href="#">Programming Competition</a></li>
+      <li><a href="#">Lecture Series</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>People</p>
+    <ul>
+      <li><a href="#">Core Faculty</a></li>
+      <li><a href="#">Affiliate Professor</a></li>
+      <li><a href="#">Visiting Professor</a></li>
+      <li><a href="#">Lecturers</a></li>
+      <li><a href="#">Support Staff</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>Service to Society</p>
+    <ul>
+      <li><a href="#">Consultancy to LGUs</a></li>
+      <li><a href="#">Trainings</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Alumni Features</a></li>
+  <li><a href="#">Industry Partners</a></li>
+  <li><a href="#">News and Events</a></li>
+  <li><a href="#">Contact Us</a></li>
+</ul>

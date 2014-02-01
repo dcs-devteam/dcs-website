@@ -193,21 +193,24 @@
 
 
 /*** HOME PAGE ***/
+.pages.home {
+  background: #ffffff url("../images/background-1.jpg") center center no-repeat fixed;
+  background-size: cover;
+}
+
 .pages.home #main-content {
   padding: 25px;
   background-color: transparent;
 }
 
-.pages.home #main-header {
-  display: none;
-}
-
 #home-navigation {
+  float: left;
   width: 225px;
   border-radius: 2px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   padding: 50px 25px;
+  margin: 25px;
 }
 
 #home-navigation > li {
@@ -220,7 +223,7 @@
   top: 0;
   left: 201px;
   border-radius: 0 2px 2px 0;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   padding: 25px;
 }
@@ -241,8 +244,8 @@
 
 #home-navigation a {
   display: block;
-  font: normal 1.3rem/1 "Open Sans";
-  color: #333333;
+  font: normal 1.3rem/1 "Open Sans", "OpenSansRegular";
+  color: #111111;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -254,9 +257,133 @@
 #home-navigation a:hover,
 #home-navigation a:focus,
 #home-navigation > li:hover > a {
-  color: #8FE81A;
+  color: #ffffff;
 }
 
 #home-navigation > li:hover > ul {
   display: block;
+}
+
+.pages.home aside {
+  float: right;
+  width: 25%;
+  padding: 25px;
+}
+
+.pages.home aside section {
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 15px;
+}
+
+.pages.home aside section:first-of-type {
+  margin-top: 0;
+}
+
+.pages.home aside h1 {
+  font: bold 1.2rem/1 "Open Sans", "OpenSansRegular";
+  color: #444444;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+}
+
+#spotlight {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#spotlight .image {
+  float: left;
+  width: 35%;
+  height: 120px;
+  background: #ffffff center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#spotlight .image:before,
+#spotlight .image:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+}
+
+#spotlight .image:before {
+  top: -8px;
+  left: -8px;
+}
+
+#spotlight .image:after {
+  bottom: -8px;
+  right: -8px;
+}
+
+#spotlight figcaption {
+  float: right;
+  width: 60%;
+}
+
+#spotlight h2 {
+  font: normal 1.4rem/1 "Tahoma";
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+#spotlight p {
+  font: normal 1.4rem/1.25 "Open Sans Light", "OpenSansLight";
+  color: #222222;
+}
+
+#recent-news .news-thread {
+  max-height: 116px;
+  overflow: hidden;
+}
+
+#recent-news a {
+  display: block;
+  font: normal 1.5rem/1 "Open Sans Light", "OpenSansLight";
+  color: #333333;
+  text-decoration: none;
+  padding: 7px 7px 7px 50px;
+  overflow: hidden;
+  outline: none;
+  position: relative;
+}
+
+#recent-news a:before {
+  content: attr(data-date);
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 43px;
+  font: normal 1.1rem/1 "Open Sans Light", "OpenSansLight";
+  color: #777777;
+  text-transform: uppercase;
+}
+
+#recent-news a:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#recent-news a:hover:before,
+#recent-news a:focus:before {
+  color: #ffffff;
+}
+
+#recent-news a:hover,
+#recent-news a:focus {
+  color: #ffffff;
+  background-color: #8FE81A;
+}
+
+#upcoming-events .events-thread {
+  max-height: 159px;
+  overflow: hidden;
 }
