@@ -1,0 +1,25 @@
+/*** DEFAULT lAYOUT ***/
+body {
+  background: #ffffff url("../images/background-1.jpg") center center no-repeat fixed;
+  background-size: cover;
+}
+
+#main-wrapper {
+  min-height: 100%;
+  padding-bottom: 40px;
+  overflow: auto;
+}
+
+#main-content {
+  float: left;
+  width: 75%;
+  background-color: #ffffff;
+  background-clip: content-box;
+  padding-left: 25px;
+}
+
+#main-sidebar {
+  float: right;
+  width: 25%;
+  padding: 25px;
+}

@@ -1,18 +1,4 @@
-s/*** LOCAL COMMONS ***/
-body.developers #main-body,
-body.developers .left,
-body.developers .right,
-body.developers section form input[type="text"],
-body.developers section form input[type="password"],
-body.developers #polls .content,
-body.developers #polls .answers {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
+/*** LOCAL COMMONS ***/
 body.developers .left,
 body.developers .right,
 body.developers #polls .content {

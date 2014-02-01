@@ -1,0 +1,145 @@
+/*** THE DEPARTMENT PAGE ***/
+
+
+
+
+
+body.info .faculty-container {
+  background: white;
+  margin: 0px;
+  padding: 0px;  
+}
+
+body.info .faculty-container .tile-wrapper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+body.info .faculty-container .tile-wrapper h1 {
+  width: 99%;
+  font-family: "open sans light";
+  font-size: 2.5rem;
+  color: white;
+  background: #AA0000;
+  padding: 1rem;    
+  padding-left: 25px;
+  /*border-radius: 2px;*/
+  border-radius: 0px 1000px 1000px 0px;  
+}
+
+body.info .faculty-container .tile-wrapper .tile {
+  width: 48%;
+  min-height: 300px;
+  border-radius: 3px;   
+  vertical-align: top;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  display: inline-block; 
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+}
+
+body.info .faculty-container .tile-wrapper .tile .image {
+  width: 30%;
+  height: 140px;
+  display: block;
+  margin: 0 auto;  
+  background: #AAAAAA center center no-repeat;
+  background-size: cover;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  border: 3px solid #CCCCCC;
+}
+
+body.info .faculty-container .tile-wrapper .tile .image:after {
+  content: "";  
+}
+
+body.info .faculty-container  .tile-wrapper .tile .information-container {
+  width: 100%;
+  padding: 10px;  
+  margin-top: 10px;
+  position: relative;
+}
+
+body.info .faculty-container .tile-wrapper .tile .information-container:before {
+  position: absolute;  
+  content: "";
+  width: 95%;
+  top: -1px;  
+  border-top: 1px solid #AA0000;  
+}
+
+body.info .faculty-container .tile-wrapper .tile .information-container .field {
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+body.info .faculty-container .tile-wrapper .tile .information-container .field h2 {
+  width: 30%;
+  font-family: "open sans light";
+  font-size: 1.4rem;  
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1rem;
+}
+
+body.info .faculty-container .tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
+  width: 67%;  
+  font-family: "open sans light";
+  font-size: 1.5rem;
+  display: inline-block;
+  line-height: 1.7rem;
+}
+
+body.info .faculty-container .tile-wrapper .tile .information-container .field li {
+  margin-bottom: 5px;
+}
+
+/* academic_programs function*/
+body.info .academic_programs {
+  width: 100%;  
+  background: white;
+  min-height: 637px;
+}
+
+body.info .academic_programs .program {
+  width: 100%;
+}
+
+body.info .academic_programs .program h1 {
+  width: 99%;
+  font-family: "open sans light";
+  font-size: 2.5rem;
+  color: white;
+  background: #AA0000;
+  padding: 1rem;
+  padding-left: 25px;
+  border-radius: 0px 1000px 1000px 0px; 
+}
+
+body.info .academic_programs .program .field {
+  width: 100%;
+  padding: 20px;
+  padding-left: 40px;
+}
+
+body.info .academic_programs .program .field h2 {
+  width: 97%;
+  font-family: "open sans light";
+  font-size: 2rem;
+  border-bottom: 1px solid #AA0000;
+  padding-bottom: 10px;
+  color: #333333;
+  font-weight: bold;
+}
+
+body.info .academic_programs .program .field p {
+  width: 97%;
+  font-family: "arial";
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-top: 20px;
+  text-indent: 30px;
+  padding-left: 15px;
+}

@@ -367,6 +367,11 @@ var bash = {
           }
         });
       }
+    },
+    home: function() {
+      bash.log('Redirecting to home page');
+      bash.progress.start();
+      location.href = DCS.BASE_URL + 'index.php/pages/home';
     }
   }
 };

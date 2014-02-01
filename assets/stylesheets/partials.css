@@ -1,0 +1,179 @@
+/*** HEADER PARTIAL ***/
+#main-header {
+  padding: 25px;
+  border: 1px solid red;
+}
+
+
+
+/*** SIDEBAR PARTIAL ***/
+#main-sidebar section {
+  padding: 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  margin-top: 15px;
+}
+
+#main-sidebar section:first-of-type {
+  margin-top: 0;
+}
+
+#main-sidebar h1 {
+  font: bold 1.2rem/1 "Open Sans";
+  color: #444444;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+}
+
+#featured-project .image {
+  float: left;
+  width: 35%;
+  height: 120px;
+  background: #ffffff center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#featured-project .image:before,
+#featured-project .image:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+}
+
+#featured-project .image:before {
+  top: -8px;
+  left: -8px;
+}
+
+#featured-project .image:after {
+  bottom: -8px;
+  right: -8px;
+}
+
+#featured-project figcaption {
+  float: right;
+  width: 60%;
+}
+
+#featured-project h2 {
+  font: normal 1.4rem/1 "Tahoma";
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+#featured-project p {
+  font: normal 1.4rem/1.25 "Open Sans Light";
+  color: #222222;
+}
+
+#recent-news .news-thread {
+  max-height: 116px;
+  overflow: hidden;
+}
+
+#recent-news a {
+  display: block;
+  font: normal 1.5rem/1 "Open Sans Light";
+  color: #333333;
+  text-decoration: none;
+  padding: 7px 7px 7px 50px;
+  overflow: hidden;
+  outline: none;
+  position: relative;
+}
+
+#recent-news a:before {
+  content: attr(data-date);
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 43px;
+  font: normal 1.1rem/1 "Open Sans Light";;
+  color: #777777;
+  text-transform: uppercase;
+}
+
+#recent-news a:nth-of-type(odd) {
+  background-color: #f0f0f0;
+}
+
+#recent-news a:hover:before,
+#recent-news a:focus:before {
+  color: #ffffff;
+}
+
+#recent-news a:hover,
+#recent-news a:focus {
+  color: #ffffff;
+  background-color: #8FE81A;
+}
+
+#upcoming-events .events-thread {
+  max-height: 159px;
+  overflow: hidden;
+}
+
+
+
+/*** FOOTER PARTIAL ***/
+#footer-placeholder {
+  height: 40px;
+  clear: both;
+}
+
+#main-footer {
+  height: 40px;
+  margin-top: -40px;
+  border-top: 1px solid #570E0E;
+  background-color: #570E0E;
+}
+
+#main-footer nav {
+  float: left;
+  margin: 10px 0 0 25px;
+}
+
+#main-footer nav a {
+  display: inline-block;
+  font: normal 1.3rem "Open Sans Light";
+  color: #eeeeee;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#main-footer nav a:hover,
+#main-footer nav a:focus {
+  color: #8FE81A;
+}
+
+#main-footer .social-networks {
+  float: right;
+  margin: 8px 25px 0 0;
+}
+
+#main-footer .social-networks a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-indent: -1000px;
+  overflow: hidden;
+  margin-left: 2px;
+  background: center center no-repeat;
+  background-size: contain;
+}
+
+#main-footer .social-networks a.facebook {
+  background-image: url("../images/facebook.png");
+}
+
+#main-footer .social-networks a.twitter {
+  background-image: url("../images/twitter.png");
+}
