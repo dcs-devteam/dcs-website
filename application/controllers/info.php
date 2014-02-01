@@ -20,10 +20,10 @@
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function academic_programs() {
+    public function academic_programs($program='bs') {      
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/academic_programs', array(), true);
-      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/academic_programs', array('program'=>$program), true);
+      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);      
       $this->parser->parse('layouts/default', $data);
     }
 

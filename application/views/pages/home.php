@@ -1,19 +1,20 @@
 <div class="content">
   <ul id="home-navigation">
     <li>
-      <a href="#">The Department</a>
+      <?=anchor('/info/department', 'The Department')?>
       <ul>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Summary</a></li>
-        <li><a href="#">Vision</a></li>
-        <li><a href="#">Mission</a></li>
+        <li><?=anchor('/info/department#history', 'History')?></li>
+        <li><?=anchor('/info/department#summary', 'Summary')?></li>
+        <li><?=anchor('/info/department#vision', 'Vision')?></li>
+        <li><?=anchor('/info/department#mission', 'Mission')?></li>
       </ul>
     </li>
     <li>
       <?=anchor('/info/academic_programs', 'Academic Programs')?>
       <ul>
-        <li><?=anchor('/info/academic_programs#bs', 'Bachelor of Science')?></li>
-        <li><?=anchor('/info/academic_programs#ms', 'Master of Science')?></li>
+        <li><?=anchor('/info/academic_programs/bs', 'Bachelor of Science')?></li>
+        <li><?=anchor('/info/academic_programs/ms', 'Master of Science')?></li>
+        <li><?=anchor('/info/academic_programs/cte', 'Continuing Teacher Education')?></li>
       </ul>
     </li>
     <li>
