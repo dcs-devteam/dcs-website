@@ -99,49 +99,6 @@ body.info .academic_programs {
   min-height: 637px;
 }
 
-body.info .academic_programs .menu {
-  width: 100%;  
-  padding: 10px;
-  padding-left: 30px;
-  padding-bottom: 2px;
-}
-
-body.info .academic_programs .menu button {
-  width: 50px;
-  font-family: "Open Sans Light", "OpenSansLight";
-  font-size: 1.5rem;
-  border: 1px solid #CCCCCC;
-  margin: 0px;
-  position: relative;
-  background: white;
-}
-
-body.info .academic_programs .menu button:hover {
-  background: #AA0000;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-body.info .academic_programs .menu .active {
-  position: relative;  
-  background: #AA0000;
-  color: white;
-  border: none;
-  border-radius: 2px 2px 0px 0px;
-}
-
-body.info .academic_programs .menu .active:after {
-  content:"";
-  display: inline-block;
-  width: 100%;
-  background: #AA0000;
-  position: absolute;
-  height: 5px;
-  left: 0px;
-  top:100%;
-}
-
 body.info .academic_programs .program {
   width: 100%;
   display: none;
@@ -176,8 +133,8 @@ body.info .academic_programs .program .field h2 {
 
 body.info .academic_programs .program .field p {
   width: 97%;
-  font-family: "arial";
-  font-size: 1.4rem;
+  font-family: "open sans";
+  font-size: 1.25rem;
   line-height: 1.7rem;
   margin-top: 20px;
   text-indent: 30px;
@@ -235,13 +192,13 @@ body.info .department .about-department .content .beside-text {
 
 body.info .department .about-department .content p {
   width: 97%;
-  font-family: "arial";
-  font-size: 1.4rem;
+  font-family: "open sans";
+  font-size: 1.25rem;
   line-height: 1.7rem;
   margin-top: 20px;
   text-indent: 30px;
   padding-left: 15px;
-  list-style: decimal;  
+  list-style: decimal;
 }
 
 body.info .department .about-department .content .beside-image {
@@ -251,8 +208,8 @@ body.info .department .about-department .content .beside-image {
 
 body.info .department .about-department .content ul, body.info .department .about-department .content ol {
   width: 97%;
-  font-family: "arial";
-  font-size: 1.4rem;
+  font-family: "open sans";
+  font-size: 1.25rem;
   line-height: 1.7rem;
   margin-top: 20px;
   padding-left: 32px;

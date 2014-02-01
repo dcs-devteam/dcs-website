@@ -2,62 +2,62 @@
   <li>
     <p>The Department</p>
     <ul>
-      <li><a href="#">History</a></li>
-      <li><a href="#">Summary</a></li>
-      <li><a href="#">Vision</a></li>
-      <li><a href="#">Mission</a></li>
+      <li><a href="#" data-item="td-history">History</a></li>
+      <li><a href="#" data-item="td-summary">Summary</a></li>
+      <li><a href="#" data-item="td-vision">Vision</a></li>
+      <li><a href="#" data-item="td-mission">Mission</a></li>
     </ul>
   </li>
   <li>
     <p>Academic Programs</p>
     <ul>
-      <li><a href="#">Bachelor of Science</a></li>
-      <li><a href="#">Master of Science</a></li>
-      <li><a href="#">Continuing Education Program</a></li>
+      <li><?=anchor('/info/academic_programs/ap-bachelor-of-science', 'Bachelor of Science', array('data-item'=>'ap-bachelor-of-science'))?></li>
+      <li><?=anchor('/info/academic_programs/ap-master-of-science', 'Master of Science', array('data-item'=>'ap-master-of-science'))?></li>
+      <li><?=anchor('/info/academic_programs/ap-continuing-education-program', 'Continuing Education Program', array('data-item'=>'ap-continuing-education-program'))?></li>
     </ul>
   </li>
   <li>
     <p>Why UP Cebu DCS?</p>
     <ul>
-      <li><a href="#">Center of Excellence in I.T.</a></li>
-      <li><a href="#">Research</a></li>
-      <li><a href="#">Service to the Country</a></li>
-      <li><a href="#">National Programming Rank</a></li>
-      <li><a href="#">Industry Partners</a></li>
-      <li><a href="#">Scholarships</a></li>
+      <li><a href="#" data-item="wupcdcs-mission">Center of Excellence in I.T.</a></li>
+      <li><a href="#" data-item="wupcdcs-research">Research</a></li>
+      <li><a href="#" data-item="wupcdcs-service-to-the-society">Service to the Society</a></li>
+      <li><a href="#" data-item="wupcdcs-national-programming-rank">National Programming Rank</a></li>
+      <li><a href="#" data-item="wupcdcs-industry-partners">Industry Partners</a></li>
+      <li><a href="#" data-item="wupcdcs-scholarships">Scholarships</a></li>
     </ul>
   </li>
-  <li><a href="#">Research Lab News</a></li>
+  <li><a href="#" data-item="research-lab-news">Research Lab News</a></li>
   <li>
     <p>Student Highlights</p>
     <ul>
-      <li><a href="#">ComSci Week</a></li>
-      <li><a href="#">CodeTaBai!</a></li>
-      <li><a href="#">Company Technical Talk</a></li>
-      <li><a href="#">Startup Weekend</a></li>
-      <li><a href="#">Programming Competition</a></li>
-      <li><a href="#">Lecture Series</a></li>
+      <li><a href="#" data-item="sh-comsci-week">ComSci Week</a></li>
+      <li><a href="#" data-item="sh-codetabai">CodeTaBai!</a></li>
+      <li><a href="#" data-item="sh-company-technical-talk">Company Technical Talk</a></li>
+      <li><a href="#" data-item="sh-startup-weekend">Startup Weekend</a></li>
+      <li><a href="#" data-item="sh-programming-competition">Programming Competition</a></li>
+      <li><a href="#" data-item="sh-lecture-series">Lecture Series</a></li>
     </ul>
   </li>
   <li>
     <p>People</p>
     <ul>
-      <li><a href="#">Core Faculty</a></li>
-      <li><a href="#">Affiliate Professor</a></li>
-      <li><a href="#">Visiting Professor</a></li>
-      <li><a href="#">Lecturers</a></li>
-      <li><a href="#">Support Staff</a></li>
+      <li><a href="#" data-item="p-core-faculty">Core Faculty</a></li>
+      <li><a href="#" data-item="p-affiliate-professor">Affiliate Professor</a></li>
+      <li><a href="#" data-item="p-visiting-professor">Visiting Professor</a></li>
+      <li><a href="#" data-item="p-lecturers">Lecturers</a></li>
+      <li><a href="#" data-item="p-support-staff">Support Staff</a></li>
     </ul>
   </li>
   <li>
     <p>Service to Society</p>
     <ul>
-      <li><a href="#">Consultancy to LGUs</a></li>
-      <li><a href="#">Trainings</a></li>
+      <li><a href="#" data-item="sts-consultancy-to-lgus">Consultancy to LGUs</a></li>
+      <li><a href="#" data-item="sts-trainings">Trainings</a></li>
     </ul>
   </li>
-  <li><a href="#">Alumni Features</a></li>
-  <li><a href="#">Industry Partners</a></li>
-  <li><a href="#">News and Events</a></li>
-  <li><a href="#">Contact Us</a></li>
+  <li><a href="#" data-item="alumni-features">Alumni Features</a></li>
+  <li><a href="#" data-item="industry-partners">Industry Partners</a></li>
+  <li><a href="#" data-item="news-and-events">News and Events</a></li>
+  <li><a href="#" data-item="contact-us">Contact Us</a></li>
 </ul>
