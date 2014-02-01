@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-  class Pages extends DCS_Controller {
+  class People extends DCS_Controller {
 
     public function __construct() {
       parent::__construct();
@@ -13,22 +13,12 @@
       $this->load->helper('application_helper');
     }
 
-    public function parking() {
-      $data['meta']['website_status'] = $this->meta->find('website status');
-      $data['meta']['website_completion'] = $this->meta->find('website completion');
-      $data['developer'] = $this->session->userdata('developer');
-      $data['poll'] = $this->poll->latest();
-      $data['secrets'] = $this->secret->enabled();
-      $this->load->view('pages/parking', $data);
-    }
-
-    public function home() {
+    public function faculty() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('pages/home', array(), true);
+      $data['main_content'] = $this->load->view('pages/faculty', array(), true);
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
       $this->parser->parse('layouts/default', $data);
-    }    
-
+    }
   }
 
 ?>

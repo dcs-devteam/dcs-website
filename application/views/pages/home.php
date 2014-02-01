@@ -42,11 +42,11 @@
     <li>
       <a href="#">People</a>
       <ul>
-        <li><a href="#">Core Faculty</a></li>
-        <li><a href="#">Affiliate Professor</a></li>
-        <li><a href="#">Visiting Professor</a></li>
-        <li><a href="#">Lecturers</a></li>
-        <li><a href="#">Support Staff</a></li>
+        <li><?=anchor('/people/faculty#core_faculty','Core Faculty')?></li>
+        <li><?=anchor('/people/faculty#affiliate_professor','Affiliate Professor')?></li>
+        <li><?=anchor('/people/faculty#visiting_professor','Visiting Professor')?></li>
+        <li><?=anchor('/people/faculty#lecturers','Lecturers')?></li>
+        <li><?=anchor('/people/faculty#support_staff','Support Staff')?></li>
       </ul>
     </li>
     <li>

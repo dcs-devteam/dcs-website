@@ -1,24 +1,15 @@
-.tile-wrapper,
-.tile-wrapper h1,
-.tile-wrapper .tile,
-.tile-wrapper .tile .image,
-.tile-wrapper .tile .information-container {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.faculty-container {
+body.people .faculty-container {
   background: white;
-}
-.tile-wrapper {
-  width: 100%;
-  margin-bottom: 20px;  
+  margin: 0px;
+  padding: 0px;
 }
 
-.tile-wrapper h1 {
+body.people .tile-wrapper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+body.people .tile-wrapper h1 {
   font-family: "open sans light";
   font-size: 2.5rem;
   color: white;
@@ -27,7 +18,7 @@
   border-radius: 2px;  
 }
 
-.tile-wrapper .tile {
+body.people .tile-wrapper .tile {
   width: 48%;
   min-height: 300px;
   border-radius: 3px;   
@@ -40,7 +31,7 @@
   box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 }
 
-.tile-wrapper .tile .image {
+body.people .tile-wrapper .tile .image {
   width: 30%;
   height: 140px;
   display: block;
@@ -51,18 +42,18 @@
   border: 3px solid #CCCCCC;
 }
 
-.tile-wrapper .tile .image:after {
+body.people .tile-wrapper .tile .image:after {
   content: "";  
 }
 
-.tile-wrapper .tile .information-container {
+body.people .tile-wrapper .tile .information-container {
   width: 100%;
   padding: 10px;  
   margin-top: 10px;
   position: relative;
 }
 
-.tile-wrapper .tile .information-container:before {
+body.people .tile-wrapper .tile .information-container:before {
   position: absolute;  
   content: "";
   width: 95%;
@@ -70,12 +61,12 @@
   border-top: 1px solid #AA0000;  
 }
 
-.tile-wrapper .tile .information-container .field {
+body.people .tile-wrapper .tile .information-container .field {
   width: 100%;
   margin-bottom: 7px;
 }
 
-.tile-wrapper .tile .information-container .field h2 {
+body.people .tile-wrapper .tile .information-container .field h2 {
   width: 30%;
   font-family: "open sans light";
   font-size: 1.4rem;  
@@ -84,7 +75,7 @@
   margin-left: 1rem;
 }
 
-.tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
+body.people .tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
   width: 67%;  
   font-family: "open sans light";
   font-size: 1.5rem;
@@ -92,6 +83,6 @@
   line-height: 1.7rem;
 }
 
-.tile-wrapper .tile .information-container .field li {
+body.people .tile-wrapper .tile .information-container .field li {
   margin-bottom: 5px;
 }
