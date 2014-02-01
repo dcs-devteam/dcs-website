@@ -151,6 +151,13 @@ body.info .academic_programs .program .field ul {
   padding-left: 15px;
 }
 
+body.info .academic_programs .program .field ul.inner {
+  margin-top: 5px;
+}
+
+body.info .academic_programs .program .field li {
+  margin-top: 5px;
+}
 
 body.info .academic_programs #ms {
   display: none;
