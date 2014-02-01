@@ -1,8 +1,8 @@
 <div class="academic_programs">
   <div class="menu">
-    <button class="active">BS</button>
-    <button>MS</button>
-    <button>CTE</button>
+    <button class="<?=($program == 'bs') ? 'active' : ''?>" id="button-bs">BS</button>
+    <button class="<?=($program == 'ms') ? 'active' : ''?>" id="button-ms">MS</button>
+    <button class="<?=($program == 'cte') ? 'active' : ''?>" id="button-cte">CTE</button>
   </div>
   <div class="program" id="bs">
     <h1>BS Computer Science</h1>
@@ -27,7 +27,7 @@
     </div>
   </div>
   <div class="program" id="cte">
-    <h1>MS Computer Science</h1>
+    <h1>Continuing Teacher Education</h1>
     <div class="field">
       <h2>Admission</h2>
       <p>Lorem ipsum Minim ut fugiat ex laborum in veniam eu enim in commodo anim Excepteur ea elit esse eu sunt ex in culpa eiusmod nulla sed reprehenderit in adipisicing cupidatat anim velit cillum officia ullamco enim est amet laborum ut cillum Duis occaecat ex voluptate amet aute adipisicing mollit aute ullamco qui do proident tempor dolore ex ea ea officia exercitation sit nulla in minim reprehenderit adipisicing labore nisi sed nisi cillum in pariatur occaecat magna id minim qui culpa qui cupidatat deserunt ut in occaecat velit ut aute non sed quis tempor cupidatat deserunt laborum dolor do qui elit nostrud do ut nulla aliquip qui cillum sed ex occaecat dolor ut Ut enim proident ut ea ut laboris qui labore in sint laborum non do et dolor in et quis sit tempor exercitation pariatur est incididunt nulla enim exercitation culpa do irure reprehenderit nulla id nulla eiusmod pariatur dolore enim minim dolore qui deserunt laboris id tempor incididunt ad voluptate ut esse laboris.Lorem ipsum Ex fugiat eiusmod Duis officia nulla incididunt aliquip minim officia incididunt aliquip do voluptate laboris Ut nostrud amet enim tempor.</p>
