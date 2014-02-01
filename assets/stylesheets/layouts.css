@@ -1,25 +1,17 @@
-/*** DEFAULT lAYOUT ***/
-body {
-  background: #ffffff url("../images/background-1.jpg") center center no-repeat fixed;
-  background-size: cover;
-}
-
+/*** DEFAULT LAYOUT ***/
 #main-wrapper {
   min-height: 100%;
   padding-bottom: 40px;
   overflow: auto;
 }
 
-#main-content {
+#main-sidebar {
   float: left;
-  width: 75%;
-  background-color: #ffffff;
-  background-clip: content-box;
-  padding-left: 25px;
+  width: 20%;
+  padding-right: 25px;
 }
 
-#main-sidebar {
+#main-content {
   float: right;
-  width: 25%;
-  padding: 25px;
+  width: 80%;
 }
