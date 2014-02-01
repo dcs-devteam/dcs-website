@@ -141,6 +141,17 @@ body.info .academic_programs .program .field p {
   padding-left: 15px;
 }
 
+body.info .academic_programs .program .field ul {
+  width: 97%;
+  font-family: "open sans";
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: 20px;  
+  margin-left: 30px;
+  padding-left: 15px;
+}
+
+
 body.info .academic_programs #ms {
   display: none;
 }
@@ -212,7 +223,8 @@ body.info .department .about-department .content ul, body.info .department .abou
   font-size: 1.25rem;
   line-height: 1.7rem;
   margin-top: 20px;
-  padding-left: 32px;
+  margin-left: 50px;
+  padding-left: 30px;
   list-style: decimal;
 }
 

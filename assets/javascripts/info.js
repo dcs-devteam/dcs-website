@@ -1,9 +1,11 @@
 $(document).ready(function() {
-  tabs.initialize();
+  if ($('body').hasClass('academic_programs')) {
+    tabs.initialize();
+  }
 });
 
 var tabs = {
-  initialize: function() {    
+  initialize: function() {
     var program = $('#program').val();
     $("#"+program).show();    
     $("[data-item='"+program+"']").parent().parent().show().parent().addClass('expanded');
