@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jan 12, 2014 at 01:56 PM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Host: 127.0.0.1
+-- Generation Time: Feb 01, 2014 at 09:01 AM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -18,6 +19,34 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `dcs_website`
 --
+CREATE DATABASE IF NOT EXISTS `dcs_website` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `dcs_website`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE IF NOT EXISTS `category` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `name` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category_group`
+--
+
+CREATE TABLE IF NOT EXISTS `category_group` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `category_id` int(225) NOT NULL,
+  `name` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `category_id` (`category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -41,6 +70,21 @@ INSERT INTO `developers` (`username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `images`
+--
+
+CREATE TABLE IF NOT EXISTS `images` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `project_id` int(225) NOT NULL,
+  `url` varchar(225) NOT NULL,
+  `alt` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `project_id` (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `metas`
 --
 
@@ -56,8 +100,8 @@ CREATE TABLE IF NOT EXISTS `metas` (
 --
 
 INSERT INTO `metas` (`property`, `value`, `created_at`) VALUES
-('website completion', '1%', '2014-01-04 15:25:19'),
-('website status', 'Under Construction', '2014-01-04 15:24:55');
+('website completion', '1%', '2014-01-04 23:25:19'),
+('website status', 'Under Construction', '2014-01-04 23:24:55');
 
 -- --------------------------------------------------------
 
@@ -71,10 +115,6 @@ CREATE TABLE IF NOT EXISTS `polls` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
-
---
--- Dumping data for table `polls`
---
 
 -- --------------------------------------------------------
 
@@ -91,9 +131,21 @@ CREATE TABLE IF NOT EXISTS `poll_answers` (
   KEY `poll_id` (`poll_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `poll_answers`
+-- Table structure for table `project`
 --
+
+CREATE TABLE IF NOT EXISTS `project` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `title` varchar(225) NOT NULL,
+  `description` text NOT NULL,
+  `status` int(225) NOT NULL,
+  `date_uploaded` date NOT NULL,
+  `link` varchar(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -114,18 +166,64 @@ CREATE TABLE IF NOT EXISTS `secrets` (
 --
 
 INSERT INTO `secrets` (`command`, `script_path`, `enabled`, `created_at`) VALUES
-('chickens', 'http://localhost/dcs-website/assets/secrets/chickens/main.js', 1, '2014-01-04 18:48:24'),
-('nyancat', 'http://localhost/dcs-website/assets/secrets/nyancat/main.js', 1, '2014-01-11 18:38:01'),
-('today', 'http://localhost/dcs-website/assets/secrets/today/main.js', 1, '2014-01-05 11:54:15'),
-('unicorn', 'http://localhost/dcs-website/assets/secrets/unicorn/main.js', 1, '2014-01-04 18:48:18'),
-('yoda', 'http://localhost/dcs-website/assets/secrets/yoda/main.js', 1, '2014-01-04 20:42:46');
+('chickens', 'http://localhost/dcs-website/assets/secrets/chickens/main.js', 1, '2014-01-05 02:48:24'),
+('nyancat', 'http://localhost/dcs-website/assets/secrets/nyancat/main.js', 1, '2014-01-12 02:38:01'),
+('today', 'http://localhost/dcs-website/assets/secrets/today/main.js', 1, '2014-01-05 19:54:15'),
+('unicorn', 'http://localhost/dcs-website/assets/secrets/unicorn/main.js', 1, '2014-01-05 02:48:18'),
+('yoda', 'http://localhost/dcs-website/assets/secrets/yoda/main.js', 1, '2014-01-05 04:42:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tags`
+--
+
+CREATE TABLE IF NOT EXISTS `tags` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `name` varchar(225) NOT NULL,
+  `description` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(225) NOT NULL AUTO_INCREMENT,
+  `lastname` varchar(225) NOT NULL,
+  `firstname` varchar(225) NOT NULL,
+  `middlename` varchar(225) NOT NULL,
+  `password` varchar(225) NOT NULL,
+  `username` varchar(225) NOT NULL,
+  `role_id` int(225) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `category_group`
+--
+ALTER TABLE `category_group`
+  ADD CONSTRAINT `category_group_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `images`
+--
+ALTER TABLE `images`
+  ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `poll_answers`
 --
 ALTER TABLE `poll_answers`
   ADD CONSTRAINT `poll_answers_ibfk_1` FOREIGN KEY (`poll_id`) REFERENCES `polls` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
