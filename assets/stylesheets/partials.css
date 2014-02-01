@@ -10,7 +10,7 @@
 .expandable-menu a,
 .expandable-menu p {
   display: block;
-  font: normal 1.3rem "Open Sans";
+  font: normal 1.3rem "Open Sans", "OpenSanRegular";
   color: #333333;
   text-decoration: none;
   padding: 4px 3px 4px 25px;
@@ -69,7 +69,7 @@
 
 #main-footer nav a {
   display: inline-block;
-  font: normal 1.3rem "Open Sans Light";
+  font: normal 1.3rem "Open Sans Light", "OpenSansLight";
   color: #eeeeee;
   text-decoration: none;
   margin-right: 10px;

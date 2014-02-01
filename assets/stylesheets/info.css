@@ -1,9 +1,3 @@
-/*** THE DEPARTMENT PAGE ***/
-
-
-
-
-
 body.info .faculty-container {
   background: white;
   margin: 0px;
@@ -22,7 +16,7 @@ body.info .faculty-container .tile-wrapper {
 
 body.info .faculty-container .faculty-group h1 {
   width: 99%;
-  font-family: "open sans light";
+  font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
   background: #AA0000;
@@ -79,7 +73,7 @@ body.info .faculty-container .tile-wrapper .tile .information-container .field {
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field h2 {
   width: 30%;
-  font-family: "open sans light";
+  font-family: "Open Sans Light", "OpenSansLight";
   font-size: 1.4rem;  
   display: inline-block;
   vertical-align: top;
@@ -88,7 +82,7 @@ body.info .faculty-container .tile-wrapper .tile .information-container .field h
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field p, .tile-wrapper .tile .information-container .field ul {
   width: 100%;  
-  font-family: "open sans light";
+  font-family: "Open Sans Light", "OpenSansLight";
   font-size: 1.3rem;
   display: inline-block;
   line-height: 1.3rem;
@@ -114,7 +108,7 @@ body.info .academic_programs .menu {
 
 body.info .academic_programs .menu button {
   width: 50px;
-  font-family: "open sans light";
+  font-family: "Open Sans Light", "OpenSansLight";
   font-size: 1.5rem;
   border: 1px solid #CCCCCC;
   margin: 0px;
@@ -155,7 +149,7 @@ body.info .academic_programs .program {
 
 body.info .academic_programs .program h1 {
   width: 99%;
-  font-family: "open sans light";
+  font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
   background: #AA0000;
@@ -172,7 +166,7 @@ body.info .academic_programs .program .field {
 
 body.info .academic_programs .program .field h2 {
   width: 97%;
-  font-family: "open sans light";
+  font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2rem;
   border-bottom: 1px solid #AA0000;
   padding-bottom: 10px;
@@ -209,7 +203,7 @@ body.info .department .about-department {
 
 body.info .department .about-department h1{
   width: 99%;
-  font-family: "open sans light";
+  font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
   background: #AA0000;
