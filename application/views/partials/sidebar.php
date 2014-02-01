@@ -11,9 +11,9 @@
   <li>
     <p>Academic Programs</p>
     <ul>
-      <li><a href="#" data-item="ap-bachelor-of-science">Bachelor of Science</a></li>
-      <li><a href="#" data-item="ap-master-of-science">Master of Science</a></li>
-      <li><a href="#" data-item="ap-continuing-education-program">Continuing Education Program</a></li>
+      <li><?=anchor('/info/academic_programs/ap-bachelor-of-science', 'Bachelor of Science', array('data-item'=>'ap-bachelor-of-science'))?></li>
+      <li><?=anchor('/info/academic_programs/ap-master-of-science', 'Master of Science', array('data-item'=>'ap-master-of-science'))?></li>
+      <li><?=anchor('/info/academic_programs/ap-continuing-education-program', 'Continuing Education Program', array('data-item'=>'ap-continuing-education-program'))?></li>
     </ul>
   </li>
   <li>

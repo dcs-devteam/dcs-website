@@ -3,31 +3,31 @@ $(document).ready(function() {
 });
 
 var tabs = {
-  initialize: function() {
-    if ($('#button-ms').hasClass('active')) {
-      $('#ms').show();
-    } else if ($('#button-cte').hasClass('active')) {
-      $('#cte').show();
-    } else {
-      $('#bs').show();
-    }
-    $('#button-ms').click(function() {
-      $('#ms').show();
-      $('#button-ms').addClass('active');
-      $('#bs, #cte').hide();
-      $('#button-bs, #button-cte').removeClass('active');      
+  initialize: function() {    
+    var program = $('#program').val();
+    $("#"+program).show();    
+    $("[data-item='"+program+"']").parent().parent().show().parent().addClass('expanded');
+    $("[data-item = '"+program+"']").addClass('current');
+    $("[data-item='ap-bachelor-of-science']").click(function(e) {
+      e.preventDefault();
+      $("[data-item='ap-bachelor-of-science']").addClass('current');
+      $("[data-item='ap-master-of-science'], [data-item='ap-continuing-education-program']").removeClass('current');
+      $('#ap-bachelor-of-science').show();
+      $('#ap-master-of-science, #ap-continuing-education-program').hide();
     });
-    $('#button-bs').click(function() {
-      $('#ms, #cte').hide();
-      $('#bs').show();
-      $('#button-bs').addClass('active');      
-      $('#button-cte, #button-ms').removeClass('active');
+    $("[data-item='ap-master-of-science']").click(function(e) {
+      e.preventDefault();
+      $("[data-item='ap-master-of-science']").addClass('current');
+      $("[data-item='ap-bachelor-of-science'], [data-item='ap-continuing-education-program']").removeClass('current');
+      $('#ap-master-of-science').show();
+      $('#ap-bachelor-of-science, #ap-continuing-education-program').hide();
     });
-    $('#button-cte').click(function() {
-      $('#ms, #bs').hide();        
-      $('#button-bs, #button-ms').removeClass('active');
-      $('#cte').show();
-      $('#button-cte').addClass('active');
+    $("[data-item='ap-continuing-education-program']").click(function(e) {
+      e.preventDefault();
+      $("[data-item='ap-continuing-education-program']").addClass('current');
+      $("[data-item='ap-bachelor-of-science'], [data-item='ap-master-of-science']").removeClass('current');
+      $('#ap-continuing-education-program').show();
+      $('#ap-bachelor-of-science, #ap-master-of-science').hide();
     });
   }
 };
