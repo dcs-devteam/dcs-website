@@ -24,6 +24,10 @@
   background-color: #f5f5f5;
 }
 
+.expandable-menu a.current {
+  color: #aa0000;
+}
+
 .expandable-menu p:before {
   content: "";
   position: absolute;
