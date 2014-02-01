@@ -1,3 +1,11 @@
+/*** HEADER PARTIAL ***/
+#main-header {
+  padding: 25px;
+  border: 1px solid red;
+}
+
+
+
 /*** SIDEBAR PARTIAL ***/
 #main-sidebar section {
   padding: 15px;
@@ -124,8 +132,8 @@
 #main-footer {
   height: 40px;
   margin-top: -40px;
-  border-top: 1px solid #222222;
-  background-color: #222222;
+  border-top: 1px solid #570E0E;
+  background-color: #570E0E;
 }
 
 #main-footer nav {

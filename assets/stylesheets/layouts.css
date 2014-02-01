@@ -6,17 +6,20 @@ body {
 
 #main-wrapper {
   min-height: 100%;
+  padding-bottom: 40px;
+  overflow: auto;
 }
 
 #main-content {
   float: left;
   width: 75%;
-  height: 100%;
+  background-color: #ffffff;
+  background-clip: content-box;
+  padding-left: 25px;
 }
 
 #main-sidebar {
   float: right;
   width: 25%;
-  height: 100%;
   padding: 25px;
 }

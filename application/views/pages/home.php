@@ -13,7 +13,7 @@
       <?=anchor('/info/academic_programs', 'Academic Programs')?>
       <ul>
         <li><?=anchor('/info/academic_programs#bs', 'Bachelor of Science')?></li>
-        <li><?=anchor('/info/academic_programs#ms', 'Master of Science')?></li>        
+        <li><?=anchor('/info/academic_programs#ms', 'Master of Science')?></li>
       </ul>
     </li>
     <li>

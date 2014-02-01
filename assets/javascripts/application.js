@@ -1,8 +1,18 @@
 $(document).ready(function() {
+  content.initialize();
   notifications.initialize();
   textareas.initialize();
   scrollbars.initialize();
 });
+
+var content = {
+  initialize: function() {
+    var wrapperHeight = $('#main-wrapper').height();
+    if ($('#main-content').outerHeight() < wrapperHeight) {
+      $('#main-content').css({'min-height': wrapperHeight + 'px'});
+    }
+  }
+};
 
 var notifications = {
   initialize: function() {
