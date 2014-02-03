@@ -7,6 +7,7 @@
 
 <body class="<?= body_classes($controller, $action); ?>">
   <div id="main-wrapper">
+    <?php $this->load->view('partials/header'); ?>
     <div class="wrapper">
       <aside id="main-sidebar"><?php $this->load->view('partials/sidebar'); ?></aside>
       <div id="main-content">{main_content}</div>

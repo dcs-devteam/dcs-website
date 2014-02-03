@@ -58,6 +58,4 @@
   </li>
   <li><a href="#" data-item="alumni-features">Alumni Features</a></li>
   <li><a href="#" data-item="industry-partners">Industry Partners</a></li>
-  <li><a href="#" data-item="news-and-events">News and Events</a></li>
-  <li><a href="#" data-item="contact-us">Contact Us</a></li>
 </ul>
