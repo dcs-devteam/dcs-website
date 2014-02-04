@@ -33,3 +33,9 @@ var tabs = {
     });
   }
 };
+
+var link_id = {
+  initialize: function() {
+    
+  }
+}
