@@ -39,6 +39,16 @@
   background-color: #014421;
 }
 
+#main-header .logos {
+  float: right;
+  margin-top: -25px;
+}
+
+#main-header .logos img {
+  height: 50px;
+  margin-top: 14px;
+}
+
 
 
 /*** SIDEBAR PARTIAL ***/
