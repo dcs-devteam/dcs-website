@@ -47,8 +47,9 @@ var menus = {
 
     $(document).on('scroll', function() {
       if ($(document).scrollTop() > $('#main-sidebar').offset().top) {
-        var top = $(document).scrollTop() - $('#main-sidebar').offset().top;
-        $('#main-sidebar .expandable-menu').css({'top': top + 'px'});
+        $('#main-sidebar .expandable-menu').addClass('sticky');
+      } else {
+        $('#main-sidebar .expandable-menu').removeClass('sticky');
       }
     });
   }

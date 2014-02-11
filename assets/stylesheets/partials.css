@@ -52,12 +52,21 @@
 
 
 /*** SIDEBAR PARTIAL ***/
+#main-sidebar .expandable-menu {
+  width: 218px;
+}
+
 .expandable-menu {
   margin-top: 50px;
   position: absolute;
   top: 0;
   left: 0;
   right: 25px;
+}
+
+.expandable-menu.sticky {
+  position: fixed;
+  left: 5%;
 }
 
 .expandable-menu li {
