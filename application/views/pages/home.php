@@ -29,14 +29,14 @@
         </ul>
       </li>
       <li>
-        <a href="#">Why UP Cebu DCS?</a>
+        <a href="<?= site_url('info/why_upcdcs'); ?>">Why UP Cebu DCS?</a>
         <ul>
-          <li><a href="#">Center of Excellence in I.T.</a></li>
-          <li><a href="#">Research</a></li>
-          <li><a href="#">Service to Society</a></li>
-          <li><a href="#">National Programming Rank</a></li>
-          <li><a href="#">Industry Partners</a></li>
-          <li><a href="#">Scholarships</a></li>
+          <li><a href="<?= site_url('info/why_upcdcs#center-of-excellence-in-it'); ?>">Center of Excellence in I.T.</a></li>
+          <li><a href="<?= site_url('info/why_upcdcs#research'); ?>">Research</a></li>
+          <li><a href="<?= site_url('info/why_upcdcs#service-to-the-society'); ?>">Service to Society</a></li>
+          <li><a href="<?= site_url('info/why_upcdcs#national-programming-rank'); ?>">National Programming Rank</a></li>
+          <li><a href="<?= site_url('info/why_upcdcs#industry-partners'); ?>">Industry Partners</a></li>
+          <li><a href="<?= site_url('info/why_upcdcs#scholarships'); ?>">Scholarships</a></li>
         </ul>
       </li>
       <li><a href="#">Research Lab News</a></li>
