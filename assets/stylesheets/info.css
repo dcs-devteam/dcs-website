@@ -390,3 +390,14 @@ body.info.research_lab_news .other-news time {
   color: #555555;
   margin-top: 3px;
 }
+
+body.info.alumni_features #main-content h1 {
+  margin-bottom: 28px;
+}
+
+body.info.alumni_features #main-content p {
+  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
+  color: #333333;
+  text-indent: 40px;
+  margin-top: 10px;
+}

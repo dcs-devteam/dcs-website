@@ -5,7 +5,7 @@
     public function __construct() {
       parent::__construct();
       $this->request_methods['GET'] = array('department', 'academic_programs', 'why_upcdcs', 
-        'research_lab_news', 'student_highlights', 'people', 'service_to_society');
+        'research_lab_news', 'student_highlights', 'people', 'service_to_society', 'alumni_features');
 
       $this->_check_request_method();
       $this->load->model('meta_model', 'meta');
@@ -53,6 +53,12 @@
     public function service_to_society() {
       $data['page_title'] = 'Department Of Computer Science';
       $data['main_content'] = $this->load->view('info/service_to_society', array(), true);
+      $this->parser->parse('layouts/default', $data);
+    }
+
+    public function alumni_features() {
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['main_content'] = $this->load->view('info/alumni_features', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
   }

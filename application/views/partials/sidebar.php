@@ -59,6 +59,6 @@
       <li><a href="<?= site_url('info/service_to_society#trainings'); ?>" data-item="sts-trainings">Trainings</a></li>
     </ul>
   </li>
-  <li><a href="#" data-item="alumni-features">Alumni Features</a></li>
+  <li><a href="<?= site_url('info/alumni_features'); ?>" data-item="alumni-features">Alumni Features</a></li>
   <li><a href="#" data-item="industry-partners">Industry Partners</a></li>
 </ul>
