@@ -34,12 +34,12 @@
   <li>
     <p>Student Highlights</p>
     <ul>
-      <li><a href="#" data-item="sh-comsci-week">ComSci Week</a></li>
-      <li><a href="#" data-item="sh-codetabai">CodeTaBai!</a></li>
-      <li><a href="#" data-item="sh-company-technical-talk">Company Technical Talk</a></li>
-      <li><a href="#" data-item="sh-startup-weekend">Startup Weekend</a></li>
-      <li><a href="#" data-item="sh-programming-competition">Programming Competition</a></li>
-      <li><a href="#" data-item="sh-lecture-series">Lecture Series</a></li>
+      <li><a href="<?= site_url('info/student_highlights#comsci-week'); ?>" data-item="sh-comsci-week">ComSci Week</a></li>
+      <li><a href="<?= site_url('info/student_highlights#codetabai'); ?>" data-item="sh-codetabai">CodeTaBai!</a></li>
+      <li><a href="<?= site_url('info/student_highlights#company-technical-talk'); ?>" data-item="sh-company-technical-talk">Company Technical Talk</a></li>
+      <li><a href="<?= site_url('info/student_highlights#startup-weekend'); ?>" data-item="sh-startup-weekend">Startup Weekend</a></li>
+      <li><a href="<?= site_url('info/student_highlights#programming-competition'); ?>" data-item="sh-programming-competition">Programming Competition</a></li>
+      <li><a href="<?= site_url('info/student_highlights#lecture-series'); ?>" data-item="sh-lecture-series">Lecture Series</a></li>
     </ul>
   </li>
   <li>

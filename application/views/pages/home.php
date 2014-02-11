@@ -41,14 +41,14 @@
       </li>
       <li><a href="#">Research Lab News</a></li>
       <li>
-        <a href="#">Student Highlights</a>
+        <a href="<?= site_url('info/student_highlights'); ?>">Student Highlights</a>
         <ul>
-          <li><a href="#">ComSci Week</a></li>
-          <li><a href="#">CodeTaBai!</a></li>
-          <li><a href="#">Company Technical Talk</a></li>
-          <li><a href="#">Startup Weekend</a></li>
-          <li><a href="#">Programming Competition</a></li>
-          <li><a href="#">Lecture Series</a></li>
+          <li><a href="<?= site_url('info/student_highlights#comsci-week'); ?>">ComSci Week</a></li>
+          <li><a href="<?= site_url('info/student_highlights#codetabai'); ?>">CodeTaBai!</a></li>
+          <li><a href="<?= site_url('info/student_highlights#company-technical-talk'); ?>">Company Technical Talk</a></li>
+          <li><a href="<?= site_url('info/student_highlights#startup-weekend'); ?>">Startup Weekend</a></li>
+          <li><a href="<?= site_url('info/student_highlights#programming-competition'); ?>">Programming Competition</a></li>
+          <li><a href="<?= site_url('info/student_highlights#lecture-series'); ?>">Lecture Series</a></li>
         </ul>
       </li>
       <li>
