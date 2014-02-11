@@ -7,7 +7,7 @@
 #main-header a {
   float: left;
   width: 20%;
-  font: normal 2.4rem/1 "Open Sans Light";
+  font: normal 2.4rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
   text-decoration: none;
 }

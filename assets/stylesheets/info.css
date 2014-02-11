@@ -298,7 +298,7 @@ body.info .field .value {
 }
 
 body.info h1 {
-  font: normal 2.8rem/1 "Open Sans Light";
+  font: normal 2.8rem/1 "Open Sans Light", "OpenSansLight";
   color: #570E0E;
 }
 
@@ -307,24 +307,24 @@ body.info section {
 }
 
 body.info section h2 {
-  font: normal 2.2rem/1 "Open Sans Light";
+  font: normal 2.2rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
 }
 
 body.info section p {
-  font: normal 1.4rem/1.4 "Open Sans";
+  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
   color: #333333;
   text-indent: 40px;
   margin-top: 10px;
 }
 
 body.info.research_lab_news .latest-news time {
-  font: normal 1.4rem "Open Sans";
+  font: normal 1.4rem "Open Sans", "OpenSansRegular";
   color: #777777;
 }
 
 body.info.research_lab_news .latest-news p {
-  font: normal 1.4rem/1.4 "Open Sans";
+  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
   color: #333333;
   text-indent: 40px;
   margin-top: 10px;
@@ -340,11 +340,12 @@ body.info.research_lab_news .other-news {
 }
 
 body.info.research_lab_news .other-news h2 {
-  font: normal 1.4rem/1 "Open Sans";
+  font: normal 1.4rem/1 "Open Sans", "OpenSansRegular";
   color: #333333;
   text-transform: uppercase;
   padding: 15px 25px;
   background-color: #f3f3f3;
+  border-bottom: 1px solid #dadada;
 }
 
 body.info.research_lab_news .other-news a {
@@ -372,13 +373,13 @@ body.info.research_lab_news .other-news a:focus time {
 
 body.info.research_lab_news .other-news span {
   display: block;
-  font: normal 1.6rem/1 "Open Sans Light";
+  font: normal 1.6rem/1 "Open Sans Light", "OpenSansLight";
   color: #111111;
 }
 
 body.info.research_lab_news .other-news time {
   display: block;
-  font: normal 1.2rem/1 "Open Sans";
+  font: normal 1.2rem/1 "Open Sans", "OpenSansRegular";
   color: #555555;
   margin-top: 3px;
 }
