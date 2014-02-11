@@ -296,3 +296,24 @@ body.info .field .value {
   font-family: 'open sans light';
   font-size: 1.5rem;
 }
+
+body.info .why-upcdcs h1 {
+  font: normal 2.8rem/1 "Open Sans Light";
+  color: #570E0E;
+}
+
+body.info .why-upcdcs section {
+  margin-top: 25px;
+}
+
+body.info .why-upcdcs h2 {
+  font: normal 2.2rem/1 "Open Sans Light";
+  color: #333333;
+}
+
+body.info .why-upcdcs p {
+  font: normal 1.4rem/1.4 "Open Sans";
+  color: #333333;
+  text-indent: 40px;
+  margin-top: 10px;
+}
