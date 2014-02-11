@@ -351,8 +351,10 @@ body.info.research_lab_news .other-news h2 {
 body.info.research_lab_news .other-news a {
   display: block;
   margin: 0;
-  padding: 15px 25px;
+  padding: 15px 25px 15px 22px;
   text-decoration: none;
+  border-left: 3px solid transparent;
+  position: relative;
 }
 
 body.info.research_lab_news .other-news a:nth-of-type(even) {
@@ -361,14 +363,19 @@ body.info.research_lab_news .other-news a:nth-of-type(even) {
 
 body.info.research_lab_news .other-news a:hover,
 body.info.research_lab_news .other-news a:focus {
-  background-color: #014421;
+  border-left: 3px solid #014421;
 }
 
-body.info.research_lab_news .other-news a:hover span,
-body.info.research_lab_news .other-news a:hover time,
-body.info.research_lab_news .other-news a:focus span,
-body.info.research_lab_news .other-news a:focus time {
-  color: #ffffff;
+body.info.research_lab_news .other-news a:hover:before,
+body.info.research_lab_news .other-news a:focus:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-left: 8px solid #014421;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-top: -8px;
 }
 
 body.info.research_lab_news .other-news span {
