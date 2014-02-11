@@ -401,3 +401,24 @@ body.info.alumni_features #main-content p {
   text-indent: 40px;
   margin-top: 10px;
 }
+
+body.info.industry_partners #main-content ul {
+  margin-top: 30px;
+}
+
+body.info.industry_partners #main-content ul li {
+  display: inline-block;
+  width: 150px;
+  height: 75px;
+  background: center center no-repeat;
+  background-size: contain;
+  margin: 0 25px 25px 0;
+}
+
+body.info.industry_partners #main-content ul li[data-logo="google"] {
+  background-image: url("../images/google.png");
+}
+
+body.info.industry_partners #main-content ul li[data-logo="facebook"] {
+  background-image: url("../images/facebook.jpg");
+}

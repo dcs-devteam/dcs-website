@@ -60,5 +60,5 @@
     </ul>
   </li>
   <li><a href="<?= site_url('info/alumni_features'); ?>" data-item="alumni-features">Alumni Features</a></li>
-  <li><a href="#" data-item="industry-partners">Industry Partners</a></li>
+  <li><a href="<?= site_url('info/industry_partners'); ?>" data-item="industry-partners">Industry Partners</a></li>
 </ul>

@@ -4,8 +4,8 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('department', 'academic_programs', 'why_upcdcs', 
-        'research_lab_news', 'student_highlights', 'people', 'service_to_society', 'alumni_features');
+      $this->request_methods['GET'] = array('department', 'academic_programs', 'why_upcdcs', 'research_lab_news', 
+        'student_highlights', 'people', 'service_to_society', 'alumni_features', 'industry_partners');
 
       $this->_check_request_method();
       $this->load->model('meta_model', 'meta');
@@ -59,6 +59,12 @@
     public function alumni_features() {
       $data['page_title'] = 'Department Of Computer Science';
       $data['main_content'] = $this->load->view('info/alumni_features', array(), true);
+      $this->parser->parse('layouts/default', $data);
+    }
+
+    public function industry_partners() {
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['main_content'] = $this->load->view('info/industry_partners', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
   }

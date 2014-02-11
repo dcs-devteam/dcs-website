@@ -69,7 +69,7 @@
         </ul>
       </li>
       <li><a href="<?= site_url('info/alumni_features'); ?>">Alumni Features</a></li>
-      <li><a href="#">Industry Partners</a></li>
+      <li><a href="<?= site_url('info/industry_partners'); ?>">Industry Partners</a></li>
     </ul>
 
     <aside>
