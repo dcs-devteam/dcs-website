@@ -297,21 +297,21 @@ body.info .field .value {
   font-size: 1.5rem;
 }
 
-body.info .why-upcdcs h1 {
+body.info h1 {
   font: normal 2.8rem/1 "Open Sans Light";
   color: #570E0E;
 }
 
-body.info .why-upcdcs section {
+body.info section {
   margin-top: 25px;
 }
 
-body.info .why-upcdcs h2 {
+body.info section h2 {
   font: normal 2.2rem/1 "Open Sans Light";
   color: #333333;
 }
 
-body.info .why-upcdcs p {
+body.info section p {
   font: normal 1.4rem/1.4 "Open Sans";
   color: #333333;
   text-indent: 40px;
