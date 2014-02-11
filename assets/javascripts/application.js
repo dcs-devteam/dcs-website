@@ -44,5 +44,12 @@ var menus = {
         $(this).closest('li').addClass('expanded').find('ul').slideDown(250);
       }
     });
+
+    $(document).on('scroll', function() {
+      if ($(document).scrollTop() > $('#main-sidebar').offset().top) {
+        var top = $(document).scrollTop() - $('#main-sidebar').offset().top;
+        $('#main-sidebar .expandable-menu').css({'top': top + 'px'});
+      }
+    });
   }
 };

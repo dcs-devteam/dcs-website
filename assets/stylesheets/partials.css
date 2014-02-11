@@ -54,6 +54,10 @@
 /*** SIDEBAR PARTIAL ***/
 .expandable-menu {
   margin-top: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 25px;
 }
 
 .expandable-menu li {
