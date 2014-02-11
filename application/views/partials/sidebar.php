@@ -30,7 +30,7 @@
       <li><a href="<?= site_url('info/why_upcdcs#scholarships'); ?>" data-item="wupcdcs-scholarships">Scholarships</a></li>
     </ul>
   </li>
-  <li><a href="#" data-item="research-lab-news">Research Lab News</a></li>
+  <li><a href="<?= site_url('info/research_lab_news'); ?>" data-item="research-lab-news">Research Lab News</a></li>
   <li>
     <p>Student Highlights</p>
     <ul>

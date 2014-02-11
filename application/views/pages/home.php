@@ -39,7 +39,7 @@
           <li><a href="<?= site_url('info/why_upcdcs#scholarships'); ?>">Scholarships</a></li>
         </ul>
       </li>
-      <li><a href="#">Research Lab News</a></li>
+      <li><a href="<?= site_url('info/research_lab_news'); ?>">Research Lab News</a></li>
       <li>
         <a href="<?= site_url('info/student_highlights'); ?>">Student Highlights</a>
         <ul>

@@ -4,7 +4,8 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('department', 'people', 'academic_programs', 'why_upcdcs', 'student_highlights', 'service_to_society');
+      $this->request_methods['GET'] = array('department', 'academic_programs', 'why_upcdcs', 
+        'research_lab_news', 'student_highlights', 'people', 'service_to_society');
 
       $this->_check_request_method();
       $this->load->model('meta_model', 'meta');
@@ -25,21 +26,27 @@
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function people() {
-      $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/people', array(), true);
-      $this->parser->parse('layouts/default', $data);
-    }
-
     public function why_upcdcs() {
       $data['page_title'] = 'Department Of Computer Science';
       $data['main_content'] = $this->load->view('info/why_upcdcs', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
+    public function research_lab_news() {
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['main_content'] = $this->load->view('info/research_lab_news', array(), true);
+      $this->parser->parse('layouts/default', $data);
+    }
+
     public function student_highlights() {
       $data['page_title'] = 'Department Of Computer Science';
       $data['main_content'] = $this->load->view('info/student_highlights', array(), true);
+      $this->parser->parse('layouts/default', $data);
+    }
+
+    public function people() {
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['main_content'] = $this->load->view('info/people', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
