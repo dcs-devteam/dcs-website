@@ -62,16 +62,14 @@
         </ul>
       </li>
       <li>
-        <a href="#">Service to Society</a>
+        <a href="<?= site_url('info/service_to_society'); ?>">Service to Society</a>
         <ul>
-          <li><a href="#">Consultancy to LGUs</a></li>
-          <li><a href="#">Trainings</a></li>
+          <li><a href="<?= site_url('info/service_to_society#consultancy-to-lgus'); ?>">Consultancy to LGUs</a></li>
+          <li><a href="<?= site_url('info/service_to_society#trainings'); ?>">Trainings</a></li>
         </ul>
       </li>
       <li><a href="#">Alumni Features</a></li>
       <li><a href="#">Industry Partners</a></li>
-      <li><a href="#">News and Events</a></li>
-      <li><a href="#">Contact Us</a></li>
     </ul>
 
     <aside>

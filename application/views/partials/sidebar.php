@@ -55,8 +55,8 @@
   <li>
     <p>Service to Society</p>
     <ul>
-      <li><a href="#" data-item="sts-consultancy-to-lgus">Consultancy to LGUs</a></li>
-      <li><a href="#" data-item="sts-trainings">Trainings</a></li>
+      <li><a href="<?= site_url('info/service_to_society#consultancy-to-lgus'); ?>" data-item="sts-consultancy-to-lgus">Consultancy to LGUs</a></li>
+      <li><a href="<?= site_url('info/service_to_society#trainings'); ?>" data-item="sts-trainings">Trainings</a></li>
     </ul>
   </li>
   <li><a href="#" data-item="alumni-features">Alumni Features</a></li>
