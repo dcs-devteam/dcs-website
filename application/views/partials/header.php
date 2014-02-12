@@ -8,5 +8,9 @@
       <a href="#">Events</a>
       <a href="#">Contact Us</a>
     </nav>
+
+    <div class="logos">
+      <img src="<?= base_url() . 'assets/images/up-logo.png'; ?>" />
+    </div>
   </div>
 </div>

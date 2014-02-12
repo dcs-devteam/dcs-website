@@ -9,6 +9,7 @@
   float: left;
   width: 20%;
   padding-right: 25px;
+  position: relative;
 }
 
 #main-content {
