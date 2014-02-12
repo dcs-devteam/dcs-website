@@ -9,7 +9,7 @@
   <div id="main-wrapper" class="clearfix">
     <ul id="home-navigation">
       <li>
-        <a href="#">The Department</a>
+        <?=anchor('/info/department', 'The Department')?>
         <ul>
           <li><a href="#">History</a></li>
           <li><a href="#">Summary</a></li>
@@ -51,11 +51,11 @@
       <li>
         <?=anchor('/info/people','People')?>
         <ul>
-          <li><?=anchor('/info/people#core_faculty','Core Faculty')?></li>
-          <li><?=anchor('/info/people#affiliate_professor','Affiliate Professor')?></li>
-          <li><?=anchor('/info/people#visiting_professor','Visiting Professor')?></li>
+          <li><?=anchor('/info/people#core-faculty','Core Faculty')?></li>
+          <li><?=anchor('/info/people#affiliate-professor','Affiliate Professor')?></li>
+          <li><?=anchor('/info/people#visiting-professor','Visiting Professor')?></li>
           <li><?=anchor('/info/people#lecturers','Lecturers')?></li>
-          <li><?=anchor('/info/people#support_staff','Support Staff')?></li>
+          <li><?=anchor('/info/people#support-staff','Support Staff')?></li>
         </ul>
       </li>
       <li>

@@ -1,6 +1,6 @@
 <div class="faculty-container clearfix">
-  <div class="faculty-group" id="core_faculty">
-    <h1>Core Faculty</h1>
+  <div class="faculty-group" id="core-faculty">
+    <h1>Faculty</h1>
     <div class="tile-wrapper clearfix">
 
       <div class="tile clearfix">
@@ -166,7 +166,7 @@
       </div>
     </div>      
   </div>
-  <div class="faculty-group" id="affiliate_professor">
+  <div class="faculty-group" id="affiliate-professor">
     <h1>Affiliate Professors</h1>
     <div class="tile-wrapper clearfix">
       <div class="tile clearfix">
@@ -252,7 +252,7 @@
     </div>  
   </div>
   
-  <div class="faculty-group" id="visiting_professor">
+  <div class="faculty-group" id="visiting-professor">
     <h1>Visiting Professors</h1>
     <div class="tile-wrapper clearfix">
       <div class="tile clearfix">
@@ -316,7 +316,7 @@
     </div>  
   </div>
 
-  <div class="faculty-group" id="support_staff">
+  <div class="faculty-group" id="support-staff">
     <h1>Support Staff</h1>
     <div class="tile-wrapper clearfix">
       <div class="tile clearfix">

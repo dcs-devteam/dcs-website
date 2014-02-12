@@ -2,10 +2,13 @@
   <li>
     <p>The Department</p>
     <ul>
-      <li><a href="#" data-item="td-history">History</a></li>
-      <li><a href="#" data-item="td-summary">Summary</a></li>
-      <li><a href="#" data-item="td-vision">Vision</a></li>
-      <li><a href="#" data-item="td-mission">Mission</a></li>
+      <li><?=anchor('/info/department#history','History', array('data-item'=>"td-history"))?></li>      
+      <li><?=anchor('/info/department#vission','Vission', array('data-item'=>"td-vission"))?></li>
+      <li><?=anchor('/info/department#mission','Mission', array('data-item'=>"td-mission"))?></li>
+      <li><?=anchor('/info/department#csg','Computer Science Guild', array('data-item'=>"td-csg"))?></li>            
+      <li><?=anchor('/info/department#organizational-overview','Organizational Overview', array('data-item'=>"td-organizational-overview"))?></li>
+      <li><?=anchor('/info/department#web-team','Web Team', array('data-item'=>"td-web-team"))?></li>
+      <li><?=anchor('/info/department#job-openings','Job Openings', array('data-item'=>"td-job-openings"))?></li>
     </ul>
   </li>
   <li>
@@ -42,11 +45,11 @@
   <li>
     <p>People</p>
     <ul>
-      <li><a href="#" data-item="p-core-faculty">Core Faculty</a></li>
-      <li><a href="#" data-item="p-affiliate-professor">Affiliate Professor</a></li>
-      <li><a href="#" data-item="p-visiting-professor">Visiting Professor</a></li>
-      <li><a href="#" data-item="p-lecturers">Lecturers</a></li>
-      <li><a href="#" data-item="p-support-staff">Support Staff</a></li>
+      <li><?=anchor('/info/people#core-faculty', 'Faculty', array('data-item'=>"p-core-faculty"))?></li>
+      <li><?=anchor('/info/people#affiliate-professor', 'Affiliate Professor', array('data-item'=>"p-affiliate-professor"))?></li>
+      <li><?=anchor('/info/people#visiting-professor', 'Visiting Professor', array('data-item'=>"p-visiting-professor"))?></li>
+      <li><?=anchor('/info/people#lecturers', 'Lecturers', array('data-item'=>"p-lecturers"))?></li>
+      <li><?=anchor('/info/people#support-staff', 'Support Staff', array('data-item'=>"p-support-staff"))?></li>          
     </ul>
   </li>
   <li>

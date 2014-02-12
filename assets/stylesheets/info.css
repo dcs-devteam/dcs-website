@@ -245,6 +245,54 @@ body.info .department .about-department .half {
   vertical-align: top;
 }
 
+body.info .department .about-department .half ol {
+  margin-left: 5px;
+}
+
 body.info .department .about-department #mission {
   margin-left: 1%;  
+}
+
+body.info .field {
+  margin: 5px auto;
+  width: 70%;
+  min-height: 20px;
+  clear: both;
+  display: block;  
+}
+
+body.info .field a {
+  text-decoration: none;
+  color: black;
+}
+
+body.info .heading {
+  width: 100%;
+  height: 100%;
+  display: inline-block;   
+  line-height: 20px;
+  font-family: 'open sans light';
+  font-size: 1.7rem;  
+  padding-left: 100px;
+}
+
+body.info .field .title {
+  width: 40%;
+  height: 100%;
+  display: inline-block;  
+  padding-left: 10px;
+  line-height: 20px;
+  font-family: 'open sans light';
+  font-size: 1.3rem;
+  vertical-align: top;
+}
+
+body.info .field .value {
+  width: 55%;
+  height: 100%;
+  display: inline-block;
+  padding-left: 10px;
+  line-height: 20px;
+  font-family: 'open sans light';
+  font-size: 1.5rem;
 }
