@@ -11,10 +11,13 @@
       <li>
         <?=anchor('/info/department', 'The Department')?>
         <ul>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Summary</a></li>
-          <li><a href="#">Vision</a></li>
-          <li><a href="#">Mission</a></li>
+          <li><?=anchor('/info/department#history', 'History')?></li>          
+          <li><?=anchor('/info/department#mission', 'Mission')?></li>
+          <li><?=anchor('/info/department#vission', 'Vission')?></li>
+          <li><?=anchor('/info/department#csg', 'Computer Science Guild')?></li>
+          <li><?=anchor('/info/department#organizational-overview', 'Organizational Overview')?></li>
+          <li><?=anchor('/info/department#web-team', 'Web Team')?></li>
+          <li><?=anchor('/info/department#job-openings', 'Job Openings')?></li>
         </ul>
       </li>
       <li>
