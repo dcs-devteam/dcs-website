@@ -148,7 +148,7 @@ INSERT INTO `metas` (`property`, `value`, `created_at`) VALUES
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(225) NOT NULL AUTO_INCREMENT,
   `title` varchar(225) NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date` datetime NOT NULL,
   `content` text NOT NULL,
   `u_id` int(225) NOT NULL,
   PRIMARY KEY (`id`)
