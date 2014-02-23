@@ -122,20 +122,37 @@
 
 /*** FOOTER PARTIAL ***/
 #footer-placeholder {
-  height: 40px;
+  height: 60px;
   clear: both;
 }
 
 #main-footer {
-  height: 40px;
-  margin-top: -40px;
+  height: 60px;
+  margin-top: -60px;
   border-top: 1px solid #570E0E;
   background-color: #570E0E;
 }
 
+#main-footer a {
+  float: left;
+  font: normal 1.6rem/1 "Open Sans Light", "OpenSansLight";
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#main-footer a span {
+  display: block;
+  font-size: 1.2rem;
+  margin-left: 16px;
+}
+
+#main-footer .wrapper > a {
+  margin-top: 16px;
+}
+
 #main-footer nav {
   float: left;
-  margin-top: 10px;
+  margin: 14px 0 0 50px;
 }
 
 #main-footer nav a {
@@ -148,12 +165,20 @@
 
 #main-footer nav a:hover,
 #main-footer nav a:focus {
-  color: #8FE81A;
+  text-decoration: underline;
+}
+
+#main-footer nav p {
+  float: left;
+  clear: both;
+  font: normal 1.1rem "Open Sans Light", "OpenSansLight";
+  color: #aaaaaa;
+  margin-top: -3px;
 }
 
 #main-footer .social-networks {
   float: right;
-  margin-top: 8px;
+  margin-top: 18px;
 }
 
 #main-footer .social-networks a {
@@ -162,7 +187,7 @@
   height: 24px;
   text-indent: -1000px;
   overflow: hidden;
-  margin-left: 2px;
+  margin-left: 5px;
   background: center center no-repeat;
   background-size: contain;
 }
