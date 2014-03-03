@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/reset.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/application.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/fonts.css'; ?>" />
+<link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/forms.css'; ?>" />
+<link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/buttons.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/animations.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/layouts.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/partials.css'; ?>" />
