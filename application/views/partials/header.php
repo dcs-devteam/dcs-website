@@ -6,6 +6,7 @@
       <a href="#">Projects</a>
       <a href="#">News</a>
       <a href="#">Events</a>
+      <a href="#">Calendar</a>
       <a href="#">Contact Us</a>
     </nav>
 
