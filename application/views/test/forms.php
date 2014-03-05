@@ -25,6 +25,11 @@
     </div>
 
     <div class="field">
+      <label>number</label>
+      <input type="number" />
+    </div>
+
+    <div class="field">
       <label>checkbox</label>
       <label class="checkbox"><input type="checkbox" />checkbox label</label>
       <label class="checkbox"><input type="checkbox" />checkbox label</label>
