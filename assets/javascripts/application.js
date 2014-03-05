@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 var notifications = {
   initialize: function() {
-    if ($('p.notification').length > 0) {
+    if ($('p.notification').length) {
       $('p.notification').addClass('shown');
       setTimeout(function() {
         $('p.notification').removeClass('shown');
@@ -33,7 +33,9 @@ var scrollbars = {
 
 var menus = {
   initialize: function() {
-    menus.expandableMenus();
+    if ($('.expandable-menu').length) {
+      menus.expandableMenus();
+    }
   },
   expandableMenus: function() {
     $('.expandable-menu li p').on('click', function() {
