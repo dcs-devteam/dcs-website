@@ -254,29 +254,41 @@ body.info .department .about-department #mission {
 }
 
 body.info .field {
-  margin: 5px auto;
-  width: 70%;
+  margin: 0px auto;
+  width: 55%;
   min-height: 20px;
   clear: both;
-  display: block;  
+  display: block;
+  padding: 5px;  
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-body.info .field a {
+body.info .department .field:hover {
+  background: #CCCCCC;
+  border-radius: 3px;
+  cursor: pointer;
+}
+body.info .department .field a {
   text-decoration: none;
   color: black;
 }
 
-body.info .heading {
-  width: 100%;
-  height: 100%;
-  display: inline-block;   
-  line-height: 20px;
+body.info .department .heading {
+  margin: 5px auto;
+  width: 60%;
+  min-height: 20px;
+  clear: both;
+  display: block;
+  padding: 5px;
+  padding-left: 20%;
   font-family: 'open sans light';
-  font-size: 1.7rem;  
-  padding-left: 100px;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 
-body.info .field .title {
+
+body.info .department .field .title {
   width: 40%;
   height: 100%;
   display: inline-block;  
@@ -287,7 +299,7 @@ body.info .field .title {
   vertical-align: top;
 }
 
-body.info .field .value {
+body.info .department .field .value {
   width: 55%;
   height: 100%;
   display: inline-block;

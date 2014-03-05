@@ -8,9 +8,9 @@
         'student_highlights', 'people', 'service_to_society', 'alumni_features', 'industry_partners');
 
       $this->_check_request_method();
-      $this->load->model('meta_model', 'meta');
-      $this->load->model('poll_model', 'poll');
-      $this->load->model('secret_model', 'secret');
+      // $this->load->model('meta_model', 'meta');
+      // $this->load->model('poll_model', 'poll');
+      // $this->load->model('secret_model', 'secret');
       $this->load->helper('application_helper');
     }
 

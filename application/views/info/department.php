@@ -32,10 +32,8 @@
   <div class="about-department" id="organizational-overview">
     <h1>Organizational Overview</h1>
     <div class="content">      
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>
-      <div class="field">
-        <div class="heading">Department Structure</div>
-      </div>
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
+      <div class="heading">Department Structure</div>      
       <div class="field">
         <div class="title">Department Chair</div>
         <div class="value">Kurt Junshean Espinosa</div>
@@ -66,18 +64,15 @@
   <div class="about-department" id="csg">
     <h1>Computer Science Guild</h1>
     <div class="content">      
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>
-      <div class="field">
-        <div class="heading">Information</div>
-      </div>
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
+      <div class="heading">Information</div>      
       <div class="field">
         <div class="title">Facebook</div>
         <div class="value"><a href="https://www.facebook.com/groups/112478378841351/">UPCSG (Computer Science Guild)</a></div>
       </div>
-      <br/>
-      <div class="field">
-        <div class="heading">Officers</div>
-      </div>
+      <br/>      
+
+      <div class="heading">Officers</div>      
       <div class="field">
         <div class="title">President</div>
         <div class="value">Mary Louise B. Hermosa</div>
@@ -136,10 +131,8 @@
   <div class="about-department" id="web-team">
     <h1>Web Team</h1>
     <div class="content">      
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>
-      <div class="field">
-        <div class="heading">Team Members</div>
-      </div>
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
+      <div class="heading">Team Members</div>      
       <div class="field">        
         <div class="value">Arnelle Balane</div>
       </div>

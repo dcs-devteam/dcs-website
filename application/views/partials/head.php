@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/partials.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/pages.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/info.css'; ?>" />
+<link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/users.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/developers.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/session.css'; ?>" />
 <script src="<?= base_url() . 'assets/javascripts/jquery.js'; ?>"></script>
