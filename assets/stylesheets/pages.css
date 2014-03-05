@@ -290,6 +290,18 @@
   margin-bottom: 12px;
 }
 
+.pages.home aside h1 a {
+  float: right;
+  font: normal 1.1rem/1 "Open Sans", "OpenSansRegular";
+  color: #555555;
+  text-decoration: none;
+}
+
+.pages.home aside h1 a:hover,
+.pages.home aside h1 a:focus {
+  color: #014421;
+}
+
 #spotlight {
   background-color: rgba(255, 255, 255, 1);
 }
@@ -346,7 +358,7 @@
   overflow: hidden;
 }
 
-#recent-news a {
+#recent-news .news-thread a {
   display: block;
   font: normal 1.5rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
@@ -357,7 +369,7 @@
   position: relative;
 }
 
-#recent-news a:before {
+#recent-news .news-thread a:before {
   content: attr(data-date);
   position: absolute;
   top: 9px;
@@ -368,17 +380,17 @@
   text-transform: uppercase;
 }
 
-#recent-news a:nth-of-type(odd) {
+#recent-news .news-thread a:nth-of-type(odd) {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-#recent-news a:hover:before,
-#recent-news a:focus:before {
+#recent-news .news-thread a:hover:before,
+#recent-news .news-thread a:focus:before {
   color: #ffffff;
 }
 
-#recent-news a:hover,
-#recent-news a:focus {
+#recent-news .news-thread a:hover,
+#recent-news .news-thread a:focus {
   color: #ffffff;
   background-color: #014421;
 }

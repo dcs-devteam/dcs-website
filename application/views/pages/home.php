@@ -87,7 +87,10 @@
       </section>
 
       <section id="recent-news">
-        <h1>Recent News</h1>
+        <h1>
+          Recent News
+          <a href="#">View All</a>
+        </h1>
         <div class="news-thread custom-scrollbar">
           <?php for ($i = 0; $i < 12; $i++): ?>
             <a href="#" data-date="jan 21">here goes the news title</a>
