@@ -10,7 +10,9 @@
     }
 
     public function index() {
-      $this->load->view('calendar/index');
+      $data['page_title'] = 'Department of Computer Science';
+      $data['main_content'] = $this->load->view("calendar/index", array(), true);
+      $this->parser->parse('layouts/full', $data);
     }
 
   }
