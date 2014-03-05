@@ -12,8 +12,8 @@
 
     public function profile() {
       $data['page_title'] = 'Department of Computer Science';
-      $data['main_content'] = $this->load->view("users/profile.php", array(), true);
-      $this->parser->parse('layouts/default', $data);
+      $data['main_content'] = $this->load->view("users/profile", array(), true);
+      $this->parser->parse('layouts/profile', $data);
     }
 
   }
