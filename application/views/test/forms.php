@@ -30,6 +30,11 @@
     </div>
 
     <div class="field">
+      <label>date</label>
+      <input type="date" />
+    </div>
+
+    <div class="field">
       <label>checkbox</label>
       <label class="checkbox"><input type="checkbox" />checkbox label</label>
       <label class="checkbox"><input type="checkbox" />checkbox label</label>
