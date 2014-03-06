@@ -5,15 +5,26 @@
   overflow: auto;
 }
 
-#main-sidebar {
+#main-wrapper.default #main-sidebar {
   float: left;
   width: 20%;
   padding-right: 25px;
   position: relative;
 }
 
-#main-content {
+#main-wrapper.default #main-content {
   float: right;
   width: 80%;
   padding-bottom: 100px;
+}
+
+
+
+/** PROFILE LAYOUT **/
+#main-wrapper.profile #main-header {
+  margin-bottom: 0;
+}
+
+#main-wrapper.profile #main-content {
+  padding-bottom: 20px;
 }
