@@ -44,20 +44,36 @@ var profile = {
 
 var update = {
   prevBackground: null,
+  prevProfpic: null,
   initialize: function(e) {
     $('#new-background-image').click(function(e) {
       e.preventDefault();
       $('[name="background_image"]').click();
-    });   
+    });
+    $('#new-profile-picture').click(function(e) {
+      e.preventDefault();
+      $('[name="profile-picture"]').click();
+    });
     $('[name="background_image"]').change(update.changeBackground);
-    $('#new-profile-picture').change(update.changeProfilePicture);
+    $('[name="profile-picture"]').change(update.changeProfilePicture);
   },
   changeProfilePicture: function(e) {
+    e.preventDefault();
     var reader = new FileReader();    
     reader.onload = function(ee) {      
-      $('#profile-picture').css({'background-image': 'url("' + ee.target.result + '")'});
+      update.prevProfpic = $('#profile-picture').css('background-image');
+      $('#profile-picture').css({'background-image': 'url("' + ee.target.result + '")'});            
+      $('#new-profile-picture').hide();
+      $('#new-profpic-button-container').show();
+      $('#cancel-profile-pic').click(update.cancelProfile);
     }
     reader.readAsDataURL(this.files[0]);    
+  },
+  cancelProfile: function(e) {
+    e.preventDefault();
+    $('#profile-picture').css({'background-image': update.prevProfpic});
+    $('#new-profile-picture').show();
+    $('#new-profpic-button-container').hide();
   },
   changeBackground: function(e) {
     var reader = new FileReader();    

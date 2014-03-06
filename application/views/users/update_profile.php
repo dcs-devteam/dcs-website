@@ -51,11 +51,15 @@
   </section>
   <aside>
     <section id="profile-picture-container">  
-      <div id="profile-picture"></div>
-      <?=form_open_multipart("#","POST");?>
-        <input type="file" id="new-profile-picture">
-        <button id="testing">TEst</button>
-      <?=form_close();?>
+      <div id="profile-picture" style="background: #222222 url('<?=base_url()?>assets/images/eman.jpg') center center no-repeat; background-size:cover;"></div>
+        <?=form_open_multipart("#","POST");?>
+          <input type="file" name="profile-picture">
+          <button id="new-profile-picture" class="button green">CHANGE</button>
+          <div id="new-profpic-button-container">
+            <input type="submit" value="SAVE" class="button green">
+            <button id="cancel-profile-pic" class="button maroon">CANCEL</button>
+          </div>
+        <?=form_close();?>
     </section>    
   </aside>
 </div>
