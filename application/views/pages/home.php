@@ -89,7 +89,7 @@
       <section id="recent-news">
         <h1>
           Recent News
-          <a href="#">View All</a>
+          <a href="<?= site_url('news/index'); ?>">View All</a>
         </h1>
         <div class="news-thread custom-scrollbar">
           <?php for ($i = 0; $i < 12; $i++): ?>
