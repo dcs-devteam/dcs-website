@@ -139,3 +139,25 @@ body.users .user-profile .projects-container h1{
   border-radius: 5px; 
   color: #222222;  
 }
+
+body.users .user-profile  .projects-container .project {
+  border:1px solid red;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+body.users .user-profile .projects-container .project .project-pictures-container {  
+  height: 85%;
+  width: 1500px;
+  border: 1px solid blue;
+}
+
+body.users .user-profile .projects-container .project .project-pictures-container .project-picture {  
+  width: 300px;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  background-size: cover;
+  background-position: center;    
+}

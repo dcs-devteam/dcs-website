@@ -1,6 +1,15 @@
 <div class="user-profile" style="background: #ffffff url('<?=base_url()?>assets/images/background.png') center center no-repeat fixed; background-size:cover;">
   <section class="projects-container">
     <h1>PROJECTS</h1>
+    <div class="project">      
+      <div class="project-pictures-container">
+        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');">
+        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project2.jpg');">
+        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project3.png');">
+      </div>
+      <div>        
+      </div>      
+    </div>    
   </section>
   <aside>  
     <section id="personal-info">  
@@ -26,7 +35,7 @@
         <input type="text" name="subject" placeholder="Subject">
         <label>Message</label>
         <textarea name="message" placeholder="Message"></textarea>
-        <input type="submit" value="SEND" class="button">
+        <input type="submit" value="SEND" class="button maroon">
       </form>
     </section>
   </aside>
