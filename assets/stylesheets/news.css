@@ -1,0 +1,73 @@
+.news.index #main-header {
+  margin-bottom: 0;
+}
+
+.news.index .news-thread .news {
+  float: left;
+  width: 33.33%;
+  height: 150px;
+  padding: 0 0 2px 2px;
+  background: center center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  position: relative;
+  outline: none;
+}
+
+.news.index .news-thread .news:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 0;
+  bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.news.index .news-thread .news .content {
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  right: 0;
+  bottom: 2px;
+  z-index: 1;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: background-color 500ms ease;
+}
+
+.news.index .news-thread .news:hover .content,
+.news.index .news-thread .news:focus .content {
+  background-color: rgba(0, 0, 0, 0.92);
+}
+
+.news.index .news-thread .news p {
+  font: normal 2rem "Open Sans Light";
+  color: #ffffff;
+  text-align: right;
+  height: 85px;
+  overflow: hidden;
+}
+
+.news.index .news-thread .news time {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font: normal 1.1rem "Open Sans Light";
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.news.index .news-thread .news:first-of-type {
+  height: 300px;
+}
+
+.news.index .news-thread .news:first-of-type .content {
+  top: auto;
+}
+
+.news.index .news-thread .news:first-of-type p {
+  height: auto;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
