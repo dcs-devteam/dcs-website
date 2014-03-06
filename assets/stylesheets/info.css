@@ -253,7 +253,7 @@ body.info .department .about-department #mission {
   margin-left: 1%;  
 }
 
-body.info .field {
+body.info .department .field {
   margin: 0px auto;
   width: 55%;
   min-height: 20px;
@@ -265,7 +265,7 @@ body.info .field {
 
 body.info .department .field:hover {
   background: #CCCCCC;
-  border-radius: 3px;
+  border-radius: 1px;
   cursor: pointer;
 }
 body.info .department .field a {
