@@ -8,20 +8,20 @@ body.users .user-profile {
 }
 
 body.users .user-profile .projects-container {
-  width: 64%;
+  width: 70%;
   min-height: 300px;
   display: inline-block;  
   clear:both;  
   position: relative;
   left: 3%;    
-  vertical-align: top;
+  vertical-align: top;  
 }
 
 body.users .user-profile aside {  
   min-height: 100px;  
   position: relative;
-  left: 3%;
-  width: 30%;
+  left: 4%;
+  width: 23%;
   clear: both;
   display: inline-block;  
   vertical-align: top;
@@ -36,6 +36,7 @@ body.users .user-profile aside section {
   box-shadow: 1px 1px 5px 1px #333333;
   -webkit-box-shadow: 1px 1px 5px 1px #333333;
   -moz-box-shadow: 1px 1px 5px 1px #333333;
+  -o-box-shadow: 1px 1px 5px 1px #333333;
 }
 
 body.users .user-profile aside #personal-info #profile-pic {
@@ -50,8 +51,7 @@ body.users .user-profile aside #personal-info #profile-pic span {
   height: 30px;
   margin-top: 170px;
   display: inline-block;  
-  background: rgba(0,0,0,0.5);
-  opacity: 0.5;
+  background: rgba(0,0,0,0.5);  
   padding: 5px;  
 }
 
@@ -62,11 +62,13 @@ body.users .user-profile aside #personal-info #profile-pic span:hover {
 body.users .user-profile aside #personal-info #profile-pic img {  
   height: 20px;
   display: inline-block;
-  margin-left:
+  opacity: 0.5;
 }
 
 body.users .user-profile aside #personal-info #profile-pic img:hover {
   cursor: pointer;
+  opacity: 1px;
+  opacity: 0.9;
 }
 
 
@@ -105,8 +107,7 @@ body.users .user-profile aside #contact-me {
   background: #FFFFFF;
   margin-top: 10px;
   padding: 10px;
-  padding-left: 13px;
-  padding-top: 20px;
+  padding: 25px;
 }
 body.users .user-profile aside #contact-me h1 {
   font-family: 'open sans';
@@ -128,6 +129,7 @@ body.users .user-profile aside #contact-me label {
 body.users .user-profile aside #contact-me input[type='submit'] {      
   margin-top: 5px;
   margin-left: 0px;
+  display: block;
 }
 
 body.users .user-profile .projects-container h1{
@@ -137,20 +139,24 @@ body.users .user-profile .projects-container h1{
   font-family: 'open sans';
   font-size: 2rem;
   border-radius: 5px; 
-  color: #222222;  
+  color: #222222;
+  margin-bottom: 20px;
 }
 
-body.users .user-profile  .projects-container .project {
-  border:1px solid red;
-  width: 300px;
-  height: 300px;
+body.users .user-profile  .projects-container .project {  
+  width: 300px;  
   overflow: hidden;
+  background: #FFFFFF;
+  border-radius: 5px;
 }
 
 body.users .user-profile .projects-container .project .project-pictures-container {  
-  height: 85%;
+  height: 250px;
   width: 1500px;
-  border: 1px solid blue;
+  transition: margin 0.5s;
+  -webkit-transition: margin 0.5s;
+  -moz-transition: margin 0.5s;
+  -o-transition: margin 0.5s;
 }
 
 body.users .user-profile .projects-container .project .project-pictures-container .project-picture {  
@@ -159,5 +165,83 @@ body.users .user-profile .projects-container .project .project-pictures-containe
   display: inline-block;
   float: left;
   background-size: cover;
-  background-position: center;    
+  background-position: center;
+  border-radius: 5px 5px 0px 0px;    
+}
+
+body.users .user-profile .projects-container .project .circles-container {  
+  height: 20px;  
+  position: relative;
+  top:0px;  
+  margin: 0 auto;    
+  padding: 5px;
+}
+
+body.users .user-profile .projects-container .project .circles-container span {
+  border-radius:100px; 
+  width: 10px;
+  height: 10px;
+  background: #FFFFFF;
+  display: inline-block;
+  float: right;
+  margin-right: 5px;
+  border: 1px solid #570E0E;
+  opacity: 0.2;
+}
+
+body.users .user-profile .projects-container .project .circles-container .current {
+  background: #570E0E;  
+}
+
+body.users .user-profile .projects-container .project .circles-container span:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+body.users .user-profile .projects-container .project .project-description {
+  width: 100%;
+  padding: 10px;
+}
+
+body.users .user-profile .projects-container .project .project-description h2 {
+  font-family: 'open sans';
+  font-size: 1.6rem;
+  color: #333333;
+  text-align: center;
+  margin-top: 5px;
+}
+
+body.users .user-profile .projects-container .project .project-description h3 {
+  font-family: 'open sans';
+  font-size: 1.2rem;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #CCCCCC;
+  color: #333333;
+  text-align: center;
+}
+
+body.users .user-profile .projects-container .project .project-description a {
+  text-decoration: none;
+  color: #222222;
+}
+
+body.users .user-profile .projects-container .project .project-description a:hover {
+  color: #000000;
+}
+
+body.users .user-profile .projects-container .project .project-description .underline {
+  text-decoration: underline;
+}
+
+body.users .user-profile .projects-container .project .project-description details {
+  font-family: 'open sans light';
+  font-size: 1.3rem;
+  color: #333333;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+body.users .user-profile .projects-container .project .project-description details summary {
+  outline: none;
 }

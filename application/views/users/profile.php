@@ -3,11 +3,24 @@
     <h1>PROJECTS</h1>
     <div class="project">      
       <div class="project-pictures-container">
-        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');">
-        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project2.jpg');">
-        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project3.png');">
+        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');"></div>
+        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project2.jpg');"></div>
+        <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project3.png');"></div>
       </div>
-      <div>        
+      <div class="circles-container">
+        <span data-number="2"></span>
+        <span data-number="1"></span>
+        <span data-number="0" class="current"></span>            
+      </div>
+      <div class="project-description">
+        <a href="#"><h2>Project Name</h2></a>
+        <h3>By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a></h3>
+        <details>
+          <summary>
+          Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. 
+          </summary>
+          Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.
+        </details>
       </div>      
     </div>    
   </section>

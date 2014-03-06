@@ -18,6 +18,7 @@
 <script src="<?= base_url() . 'assets/javascripts/pages.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/developers.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/info.js'; ?>"></script>
+<script src="<?= base_url() . 'assets/javascripts/users.js'; ?>"></script>
 
 <!-- PLUGINS -->
 <link rel="stylesheet" href="<?= base_url() . 'assets/plugins/custom-scrollbar/jquery.mCustomScrollbar.css'; ?>" />
