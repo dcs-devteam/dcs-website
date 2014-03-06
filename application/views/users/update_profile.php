@@ -33,16 +33,20 @@
       <div class="field">    
         <div class="title"><label>Year</label></div>
         <div class="value"><input type="number" name="year" min="1" max="6"></div>
-      </div><br/>
+      </div>
       <h1>CONTACT DETAILS</h1>
       <div class="field">    
         <div class="title"><label>Facebook</label></div>
         <div class="value"><input type="url" name="facebook" placeholder="Link to your facebook page"></div>
-      </div><br/>
+      </div>
       <div class="field">    
         <div class="title"><label>Twitter</label></div>
         <div class="value"><input type="url" name="facebook" placeholder="Link to your twitter page"></div>
       </div><br/>
+      <div class="field">    
+        <div class="title"></div>
+        <div class="value"><input type="submit" value="UPDATE" class="button green"></div>
+      </div>      
     </form>
   </section>
   <aside>
