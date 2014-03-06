@@ -116,8 +116,9 @@
     <section id="personal-info">  
       <div id="profile-pic" style="background: #222222 url('<?=base_url()?>assets/images/eman.jpg') center center no-repeat; background-size:cover;">
         <span>
-          <img src="<?=base_url()?>assets/images/facebook.png">
-          <img src="<?=base_url()?>assets/images/twitter.png">
+          <a href="#"><img src="<?=base_url()?>assets/images/facebook.png"></a>
+          <a href="#"><img src="<?=base_url()?>assets/images/twitter.png"></a>
+          <a href="<?=site_url()?>/users/update_profile"><h3>UPDATE</h3></a>
         </span>
       </div>
       <div id="profile-info">
