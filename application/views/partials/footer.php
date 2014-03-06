@@ -1,5 +1,5 @@
 <footer id="main-footer" class="clearfix">
-  <div class="wrapper">
+  <div class="wrapper clearfix">
     <a href="<?= site_url('pages/home'); ?>"><span>Department of</span>Computer Science</a>
     <nav>
       <?=anchor('/pages/home','Home')?>    

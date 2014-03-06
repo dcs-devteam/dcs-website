@@ -87,7 +87,10 @@
       </section>
 
       <section id="recent-news">
-        <h1>Recent News</h1>
+        <h1>
+          Recent News
+          <a href="#">View All</a>
+        </h1>
         <div class="news-thread custom-scrollbar">
           <?php for ($i = 0; $i < 12; $i++): ?>
             <a href="#" data-date="jan 21">here goes the news title</a>
@@ -96,7 +99,10 @@
       </section>
 
       <section id="upcoming-events">
-        <h1>Upcoming Events</h1>
+        <h1>
+          Upcoming Events
+          <a href="<?= site_url('calendar/index'); ?>">View Calendar</a>
+        </h1>
         <div class="events-thread">
           <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=155&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=7kc4vluuqs77ue8onf291kgn68%40group.calendar.google.com&amp;color=%23333333&amp;ctz=Asia%2FManila" style=" border-width:0 " width="258" height="159" frameborder="0" scrolling="no"></iframe>
         </div>

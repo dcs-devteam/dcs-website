@@ -70,7 +70,7 @@
 
 #main-header .logos {
   float: right;
-  margin-top: -25px;
+  margin: -20px 0 -5px 0;
 }
 
 #main-header .logos img {
