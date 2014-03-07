@@ -114,7 +114,8 @@ body.users .user-profile aside #personal-info #profile-info h2 {
 body.users .user-profile aside #personal-info #profile-info p {
   font-family: 'open sans light';
   font-size: 1.3rem;
-  text-align: center;
+  text-align: justify;
+  text-indent: 20px;
   color: #555555;
   margin-top: 10px;
   line-height: 2rem;
@@ -199,6 +200,10 @@ body.users .user-profile .projects-container .project .circles-container {
   padding: 5px;
 }
 
+body.users .user-profile .projects-container .project .circles-container:hover span {
+  opacity: 0.9;
+}
+
 body.users .user-profile .projects-container .project .circles-container span {
   border-radius:100px; 
   width: 10px;
@@ -254,6 +259,10 @@ body.users .user-profile .projects-container .project .project-description a:hov
 }
 
 body.users .user-profile .projects-container .project .project-description .underline {
+  /*text-decoration: underline;*/
+}
+
+body.users .user-profile .projects-container .project .project-description .underline:hover {
   text-decoration: underline;
 }
 
@@ -294,15 +303,15 @@ body.users .user-update-profile #background-button-container {
   display: block;
   width: 270px;    
   margin: 20px auto;
-  margin-top: -10px;
-  display: none;  
+  margin-top: -14px;  
+  display: none;
 }
 
 body.users .user-update-profile #personal-info-container {
   width: 35%;  
   position: relative;
   display: inline-block;
-  left: 15%;
+  left: 17%;
   padding: 20px;
   background: #FFFFFF;
   border-radius: 5px;
@@ -342,7 +351,7 @@ body.users .user-update-profile aside {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  left: 17%;
+  left: 18%;
   border-radius: 5px;
   background: #FFFFFF;
   padding-bottom: 20px;
@@ -362,7 +371,7 @@ body.users .user-update-profile aside #new-profile-picture {
 body.users .user-update-profile aside #new-profpic-button-container {
   display: block;  
   width: 145px;
-  margin: 5px auto;
+  margin: 3px auto;
   display: none;
 }
 

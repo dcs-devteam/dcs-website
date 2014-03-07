@@ -12,15 +12,15 @@
       <h1>PERSONAL INFORMATION</h1>
       <div class="field">    
         <div class="title"><label>First Name</label></div>
-        <div class="value"><input type="text" name="firstname"></div>
+        <div class="value"><input type="text" name="firstname" placeholder="First name"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Last Name</label></div>
-        <div class="value"><input type="text" name="lastname"></div>
-      </div>
+        <div class="value"><input type="text" name="lastname" placeholder="Last name"></div>
+      </div>      
       <div class="field">    
         <div class="title"><label>Address</label></div>
-        <div class="value"><input type="text" name="address"></div>
+        <div class="value"><input type="text" name="address" placeholder="Address"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Birthday</label></div>
@@ -28,13 +28,34 @@
       </div>
       <div class="field">    
         <div class="title"><label>Age</label></div>
-        <div class="value"><input type="number" name="age" min="0" max="100"></div>
+        <div class="value"><input type="number" name="age" min="0" max="100" placeholder="Age"></div>
+      </div>
+      <div class="field">    
+        <div class="title"><label>Student Number</label></div>
+        <div class="value"><input type="text" name="student_number" placeholder="xxxx-xxxxx"></div>
+      </div>
+      <div class="field">    
+        <div class="title"><label>Course</label></div>
+        <div class="value">
+          <select name="year" placeholder="Year">
+            <option value="1">BS Computer Science</option>
+            <option value="2">MS Computer Science</option>
+          </select>
+        </div>
       </div>
       <div class="field">    
         <div class="title"><label>Year</label></div>
-        <div class="value"><input type="number" name="year" min="1" max="6"></div>
-      </div>
+        <div class="value"><input type="number" name="year" min="1" max="6" placeholder="Year"></div>
+      </div><br/><br/>
       <h1>CONTACT DETAILS</h1>
+      <div class="field">    
+        <div class="title"><label>Email</label></div>
+        <div class="value"><input type="email" name="email" placeholder="Email address"></div>
+      </div>
+      <div class="field">    
+        <div class="title"><label>Contact #</label></div>
+        <div class="value"><input type="url" name="number" placeholder="Cellphone number"></div>
+      </div>
       <div class="field">    
         <div class="title"><label>Facebook</label></div>
         <div class="value"><input type="url" name="facebook" placeholder="Link to your facebook page"></div>
