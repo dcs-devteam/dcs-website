@@ -150,6 +150,10 @@ body.users .user-profile aside #contact-me input[type='submit'] {
   display: block;
 }
 
+body.users .user-profile aside #contact-me input[type='text'],textarea {
+  width: 100%;
+}
+
 body.users .user-profile .projects-container h1{
   width: 95.5%;
   background: rgba(250,250,250,0.5);  
@@ -344,6 +348,11 @@ body.users .user-update-profile #personal-info-container .field .value {
 body.users .user-update-profile #personal-info-container label {
   font-family: 'open sans';
   font-size: 1.5rem;  
+}
+
+body.users .user-update-profile #personal-info-container .field .value input[type="text"],input[type="url"]
+input[type="email"],input[type="number"],input[type="date"],select {
+  width: 90%;
 }
 
 body.users .user-update-profile aside {
