@@ -350,7 +350,7 @@ body.users .user-update-profile #personal-info-container label {
   font-size: 1.5rem;  
 }
 
-body.users .user-update-profile #personal-info-container .field .value input[type="text"],input[type="url"]
+body.users .user-update-profile #personal-info-container .field .value input[type="text"], input[type="url"],
 input[type="email"],input[type="number"],input[type="date"],select {
   width: 90%;
 }
