@@ -166,7 +166,8 @@ body.users .user-profile .projects-container h1{
 }
 
 body.users .user-profile  .projects-container .project {  
-  width: 300px;  
+  width: 300px;
+  height: 340px;
   overflow: hidden;
   background: #FFFFFF;
   border-radius: 5px;
@@ -174,16 +175,19 @@ body.users .user-profile  .projects-container .project {
   margin: 5px;
   vertical-align: top;
   box-shadow: 0px 0px 5px 1px #444444;
+  overflow: hidden;
+  position: relative;
 }
 
 body.users .user-profile .projects-container .project .project-pictures-container {  
   height: 250px;
   width: 1500px;
   border-radius: 5px 5px 0px 0px;
-  transition: margin 0.5s;
-  -webkit-transition: margin 0.5s;
-  -moz-transition: margin 0.5s;
-  -o-transition: margin 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;  
 }
 
 body.users .user-profile .projects-container .project .project-pictures-container .project-picture {  
@@ -232,6 +236,16 @@ body.users .user-profile .projects-container .project .circles-container span:ho
 body.users .user-profile .projects-container .project .project-description {
   width: 100%;
   padding: 10px;
+  position: absolute;
+  bottom:0px;
+  background: #FFFFFF;
+  max-height: 300px;
+  overflow: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
 }
 
 body.users .user-profile .projects-container .project .project-description h2 {
@@ -275,11 +289,13 @@ body.users .user-profile .projects-container .project .project-description detai
   font-size: 1.3rem;
   color: #333333;
   text-align: justify;
-  margin-top: 10px;
+  margin-top: 10px;  
 }
 
 body.users .user-profile .projects-container .project .project-description details summary {
   outline: none;
+  max-height: 1.3rem;
+  overflow: hidden;
 }
 
 body.users .user-update-profile {
@@ -383,4 +399,3 @@ body.users .user-update-profile aside #new-profpic-button-container {
   margin: 3px auto;
   display: none;
 }
-
