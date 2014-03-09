@@ -40,6 +40,11 @@
     </div>
 
     <div class="field">
+      <label>search</label>
+      <input type="search" />
+    </div>
+
+    <div class="field">
       <label>checkbox</label>
       <label class="checkbox"><input type="checkbox" />checkbox label</label>
       <label class="checkbox"><input type="checkbox" />checkbox label</label>
