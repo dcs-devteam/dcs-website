@@ -356,12 +356,27 @@ body.info section p {
   text-indent: 40px;
 }
 
-body.info.research section img,
-body.info.developer_corner section img,
-body.info.initiatives_and_society section img {
+body.info.research section figure,
+body.info.developer_corner section figure,
+body.info.initiatives_and_society section figure {
   float: left;
   width: 350px;
   margin-right: 15px;
+}
+
+body.info.research section figure img,
+body.info.developer_corner section figure img,
+body.info.initiatives_and_society section figure img {
+  display: block;
+  width: 100%;
+}
+
+body.info.research section figcaption,
+body.info.developer_corner section figcaption,
+body.info.initiatives_and_society section figcaption {
+  font: italic normal 1.4rem/1 "Open Sans", "OpenSansRegular";
+  color: #777777;
+  margin: 10px 0 0 10px;
 }
 
 body.info .campus_activities_container section {  

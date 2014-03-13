@@ -6,7 +6,7 @@
       <a href="<?= site_url('info/department'); ?>">The Department</a>
       <a href="<?= site_url('info/admission#bs-computer-science'); ?>">Admissions</a>
       <a href="<?= site_url('info/faculty'); ?>">People</a>
-      <a href="<?= site_url('info/campus_activities'); ?>">Life@DCS</a>
+      <a href="<?= site_url('info/campus_activities#campus-activities'); ?>">Life@DCS</a>
       <a href="<?= site_url('info/partners'); ?>">Partners</a>
       <p>&copy; UP Cebu DCS. Gorordo Avenue, Lahug, Cebu City, Cebu, Philippines 6000</p>
     </nav>
