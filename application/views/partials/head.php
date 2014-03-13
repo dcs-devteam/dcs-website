@@ -17,6 +17,7 @@
 <script src="<?= base_url() . 'assets/javascripts/jquery.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/application.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/pages.js'; ?>"></script>
+<script src="<?= base_url() . 'assets/javascripts/info.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/developers.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/users.js'; ?>"></script>
 
