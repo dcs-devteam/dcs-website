@@ -356,6 +356,7 @@ body.info section p {
 }
 
 body.info.research section img,
+body.info.developer_corner section img,
 body.info.initiatives_and_society section img {
   float: left;
   width: 350px;
