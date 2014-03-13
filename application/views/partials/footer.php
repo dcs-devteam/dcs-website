@@ -11,8 +11,7 @@
     </nav>
 
     <div class="social-networks">
-      <a href="#" class="facebook">Facebook</a>
-      <a href="#" class="twitter">Twitter</a>
+      <a href="https://www.facebook.com/upcebudcs" target="_blank" class="facebook">Facebook</a>
     </div>
   </div>
 </footer>
