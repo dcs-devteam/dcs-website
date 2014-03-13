@@ -28,7 +28,7 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Research</a>
+        <a href="<?= site_url('info/research'); ?>">Research</a>
         <ul>
           <li><a href="<?= site_url('info/research#bioinformatics'); ?>">Bioinformatics Research Interest Group</a></li>
           <li><a href="<?= site_url('info/research#computer-vision'); ?>">Computer Vision Research Group</a></li>
@@ -57,7 +57,7 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Initiatives and Society</a>
+        <a href="<?= site_url('info/initiatives_and_society'); ?>">Initiatives and Society</a>
         <ul>
           <li><a href="<?= site_url('info/initiatives_and_society#summer-code-camp'); ?>">Summer Code Camp</a></li>
           <li><a href="<?= site_url('info/initiatives_and_society#ict-skills-enhancement-program'); ?>">ICT Skills Enhancement Program</a></li>
@@ -65,7 +65,7 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Partners</a>
+        <a href="<?= site_url('info/partners'); ?>">Partners</a>
         <ul>
           <li><a href="<?= site_url('info/partners#industry'); ?>">Industry</a></li>
           <li><a href="<?= site_url('info/partners#government-agencies'); ?>">Government Agencies</a></li>
