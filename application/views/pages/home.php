@@ -78,12 +78,12 @@
     <aside>
       <section id="spotlight">
         <h1>Spotlight</h1>
-        <a href="#">
+        <a href="https://www.facebook.com/upcebudcs/posts/604998376245695?stream_ref=10" target="_blank">
           <figure class="clearfix">
-            <div class="image" style="background-image: url('<?= base_url() . 'assets/images/sample-project.jpg' ?>');"></div>
+            <div class="image" style="background-image: url('<?= base_url() . 'assets/images/spotlight.jpg' ?>');"></div>
             <figcaption>
-              <h2>Project Title</h2>
-              <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia.</p>
+              <h2>10th NNLPRS</h2>
+              <p>Congratulations to the three 4th year students, Isabella Quijano, Harriet Gonzales and Lemuel Beduya, who presented their paper together with their adviser, Prof. Kurt Junshean Espinosa, at the 10th National Natural Language Processing Research Symposium at De La Salle University last Feb 21-22, 2014.</p>
             </figcaption>
           </figure>
         </a>
