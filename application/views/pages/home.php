@@ -9,7 +9,7 @@
   <div id="main-wrapper" class="clearfix">
     <ul id="home-navigation">
       <li>
-        <a href="<?= site_url('#'); ?>">The Department</a>
+        <a href="<?= site_url('info/department'); ?>">The Department</a>
         <ul>
           <li><a href="<?= site_url('info/department#message-from-the-chair'); ?>">Message from the Chair</a></li>
           <li><a href="<?= site_url('info/department#history'); ?>">History</a></li>
@@ -21,7 +21,7 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Admissions</a>
+        <a href="<?= site_url('info/admission#bs-computer-science'); ?>">Admissions</a>
         <ul>
           <li><a href="<?= site_url('info/admission#bs-computer-science'); ?>">BS Computer Science</a></li>
           <li><a href="<?= site_url('info/admission#ms-computer-science'); ?>">MS Computer Science</a></li>
@@ -40,7 +40,7 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">People</a>
+        <a href="<?= site_url('info/faculty#faculty'); ?>">People</a>
         <ul>
           <li><a href="<?= site_url('info/faculty#faculty'); ?>">Faculty</a></li>
           <!-- <li><a href="<?= site_url('#'); ?>">Alumni</a></li>
@@ -48,12 +48,12 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Life@DCS</a>
+        <a href="<?= site_url('info/developer_corner#developer-corner'); ?>">Life@DCS</a>
         <ul>
           <!-- <li><a href="<?= site_url('#'); ?>">News and Events</a></li>
           <li><a href="<?= site_url('#'); ?>">Lecture Series and Technical Talks</a></li>
           <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li> -->
-          <li><a href="<?= site_url('info/developer_corner#developer-corner'); ?>">Developer Corner</a></li>
+          <li><a href="<?= site_url('info/developer_corner#campus-activities'); ?>">Developer Corner</a></li>
           <li><a href="<?= site_url('info/campus_activities#campus-activities'); ?>">Campus Activities</a></li>
         </ul>
       </li>
