@@ -9,67 +9,70 @@
   <div id="main-wrapper" class="clearfix">
     <ul id="home-navigation">
       <li>
-        <?=anchor('/info/department', 'The Department')?>
+        <a href="<?= site_url('#'); ?>">The Department</a>
         <ul>
-          <li><?=anchor('/info/department#history', 'History')?></li>          
-          <li><?=anchor('/info/department#mission', 'Mission')?></li>
-          <li><?=anchor('/info/department#vission', 'Vission')?></li>
-          <li><?=anchor('/info/department#csg', 'Computer Science Guild')?></li>
-          <li><?=anchor('/info/department#organizational-overview', 'Organizational Overview')?></li>
-          <li><?=anchor('/info/department#web-team', 'Web Team')?></li>
-          <li><?=anchor('/info/department#job-openings', 'Job Openings')?></li>
+          <li><a href="<?= site_url('#'); ?>">Message from the Chair</a></li>
+          <li><a href="<?= site_url('#'); ?>">History</a></li>
+          <li><a href="<?= site_url('#'); ?>">Vision and Mission</a></li>
+          <li><a href="<?= site_url('#'); ?>">Organizational Overview</a></li>
+          <li><a href="<?= site_url('#'); ?>">Job Openings</a></li>
+          <li><a href="<?= site_url('#'); ?>">Contact Us</a></li>
         </ul>
       </li>
       <li>
-        <?=anchor('/info/academic_programs', 'Academic Programs')?>
+        <a href="<?= site_url('#'); ?>">Admissions</a>
         <ul>
-          <li><?=anchor('/info/academic_programs/ap-bachelor-of-science', 'Bachelor of Science')?></li>
-          <li><?=anchor('/info/academic_programs/ap-master-of-science', 'Master of Science')?></li>
-          <li><?=anchor('/info/academic_programs/ap-continuing-education-program', 'Continuing Education Program')?></li>
+          <li><a href="<?= site_url('#'); ?>">BS Computer Science</a></li>
+          <li><a href="<?= site_url('#'); ?>">MS Computer Science</a></li>
+          <li><a href="<?= site_url('#'); ?>">Continuing Professional Education</a></li>
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('info/why_upcdcs'); ?>">Why UP Cebu DCS?</a>
+        <a href="<?= site_url('#'); ?>">Research</a>
         <ul>
-          <li><a href="<?= site_url('info/why_upcdcs#center-of-excellence-in-it'); ?>">Center of Excellence in I.T.</a></li>
-          <li><a href="<?= site_url('info/why_upcdcs#research'); ?>">Research</a></li>
-          <li><a href="<?= site_url('info/why_upcdcs#service-to-the-society'); ?>">Service to Society</a></li>
-          <li><a href="<?= site_url('info/why_upcdcs#national-programming-rank'); ?>">National Programming Rank</a></li>
-          <li><a href="<?= site_url('info/why_upcdcs#industry-partners'); ?>">Industry Partners</a></li>
-          <li><a href="<?= site_url('info/why_upcdcs#scholarships'); ?>">Scholarships</a></li>
-        </ul>
-      </li>
-      <li><a href="<?= site_url('info/research_lab_news'); ?>">Research Lab News</a></li>
-      <li>
-        <a href="<?= site_url('info/student_highlights'); ?>">Student Highlights</a>
-        <ul>
-          <li><a href="<?= site_url('info/student_highlights#comsci-week'); ?>">ComSci Week</a></li>
-          <li><a href="<?= site_url('info/student_highlights#codetabai'); ?>">CodeTaBai!</a></li>
-          <li><a href="<?= site_url('info/student_highlights#company-technical-talk'); ?>">Company Technical Talk</a></li>
-          <li><a href="<?= site_url('info/student_highlights#startup-weekend'); ?>">Startup Weekend</a></li>
-          <li><a href="<?= site_url('info/student_highlights#programming-competition'); ?>">Programming Competition</a></li>
-          <li><a href="<?= site_url('info/student_highlights#lecture-series'); ?>">Lecture Series</a></li>
+          <li><a href="<?= site_url('#'); ?>">Bioinformatics Research Interest Group</a></li>
+          <li><a href="<?= site_url('#'); ?>">Computer Vision Research Group</a></li>
+          <li><a href="<?= site_url('#'); ?>">Software Engineering Research Group</a></li>
+          <li><a href="<?= site_url('#'); ?>">Natural Language Processing Research Group</a></li>
+          <li><a href="<?= site_url('#'); ?>">Machine Learning Research Group</a></li>
+          <li><a href="<?= site_url('#'); ?>">Algorithms and Complexity Reseach Group</a></li>
         </ul>
       </li>
       <li>
-        <?=anchor('/info/people','People')?>
+        <a href="<?= site_url('#'); ?>">People</a>
         <ul>
-          <li><?=anchor('/info/people#core-faculty','Core Faculty')?></li>
-          <li><?=anchor('/info/people#affiliate-professor','Affiliate Professor')?></li>
-          <li><?=anchor('/info/people#visiting-professor','Visiting Professor')?></li>
-          <li><?=anchor('/info/people#lecturers','Lecturers')?></li>
-          <li><?=anchor('/info/people#support-staff','Support Staff')?></li>
+          <li><a href="<?= site_url('#'); ?>">Faculty</a></li>
+          <li><a href="<?= site_url('#'); ?>">Alumni</a></li>
+          <li><a href="<?= site_url('#'); ?>">Students</a></li>
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('info/service_to_society'); ?>">Service to Society</a>
+        <a href="<?= site_url('#'); ?>">Life@DCS</a>
         <ul>
-          <li><a href="<?= site_url('info/service_to_society#consultancy-to-lgus'); ?>">Consultancy to LGUs</a></li>
-          <li><a href="<?= site_url('info/service_to_society#trainings'); ?>">Trainings</a></li>
+          <li><a href="<?= site_url('#'); ?>">News and Events</a></li>
+          <li><a href="<?= site_url('#'); ?>">Lecture Series and Technical Talks</a></li>
+          <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li>
+          <li><a href="<?= site_url('#'); ?>">Developer Corner</a></li>
+          <li><a href="<?= site_url('#'); ?>">Campus Activities</a></li>
         </ul>
       </li>
-      <li><a href="<?= site_url('info/alumni_features'); ?>">Alumni Features</a></li>
-      <li><a href="<?= site_url('info/industry_partners'); ?>">Industry Partners</a></li>
+      <li>
+        <a href="<?= site_url('#'); ?>">Initiatives and Society</a>
+        <ul>
+          <li><a href="<?= site_url('#'); ?>">Summer Code Camp</a></li>
+          <li><a href="<?= site_url('#'); ?>">ICT Skills Enhancement Program</a></li>
+          <li><a href="<?= site_url('#'); ?>">Innovation Forum</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="<?= site_url('#'); ?>">Partners</a>
+        <ul>
+          <li><a href="<?= site_url('#'); ?>">Industry</a></li>
+          <li><a href="<?= site_url('#'); ?>">Government Agencies</a></li>
+          <li><a href="<?= site_url('#'); ?>">NGO</a></li>
+          <li><a href="<?= site_url('#'); ?>">Universities</a></li>
+        </ul>
+      </li>
     </ul>
 
     <aside>
