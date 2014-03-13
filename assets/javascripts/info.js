@@ -1,13 +1,13 @@
 $(document).ready(function() {
   if ($('body').hasClass('academic_programs')) {
     tabs.initialize();
-  }
-  if ($('body').hasClass('people')) {
+  } else if ($('body').hasClass('people')) {
     people.initialize();
-  }
-  if ($('body').hasClass('department')) {
+  } else if ($('body').hasClass('department')) {
     department.initialize();
-  } 
+  } else if ($('body').hasClass('why_upcdcs')) {
+    upcdcs.initialize();
+  }
 });
 
 var tabs = {
@@ -89,6 +89,19 @@ var department = {
         $("[data-item='"+attrib+"']").addClass('current');
       }
     });    
+  }
+}
+
+var upcdcs = {
+  initialize: function() {
+    var item = window.location.hash.substring(1);
+    upcdcs.highlight(item);
+  },
+  highlight: function(item) {
+    console.log(item);
+    if (item.length > 0) {
+      $('a[data-item="wupcdcs-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
+    }
   }
 }
 
