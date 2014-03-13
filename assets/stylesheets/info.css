@@ -19,7 +19,8 @@ body.info .faculty-container .faculty-group h1 {
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
-  background: #AA0000;
+  /*background: #AA0000;*/
+  background: #570E0E;
   padding: 1rem;    
   padding-left: 25px;
   /*border-radius: 2px;*/
@@ -109,7 +110,7 @@ body.info .academic_programs .program h1 {
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
-  background: #AA0000;
+  background: #570E0E;
   padding: 1rem;
   padding-left: 25px;
   border-radius: 0px 1000px 1000px 0px; 
@@ -125,7 +126,7 @@ body.info .academic_programs .program .field h2 {
   width: 97%;
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2rem;
-  border-bottom: 1px solid #AA0000;
+  border-bottom: 1px solid #570E0E;
   padding-bottom: 10px;
   color: #333333;
   font-weight: bold;
@@ -183,7 +184,7 @@ body.info .department .about-department h1{
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
-  background: #AA0000;
+  background: #570E0E;
   padding: 1rem;
   padding-left: 25px;
   border-radius: 0px 1000px 1000px 0px; 
@@ -210,7 +211,7 @@ body.info .department .about-department .content figure img {
   width: 100%; 
 }
 
-body.info .department .about-department .content figcaption{
+body.info .department .about-department .content figcaption {
   font-family: "open sans light";
   font-size: 1.3rem;  
   margin-top: 2px;
@@ -275,13 +276,19 @@ body.info .department .field {
 }
 
 body.info .department .field:hover {
-  background: #CCCCCC;
+  background: #014421;
   border-radius: 1px;
-  cursor: pointer;
+  cursor: default;
+  color: white;
 }
 body.info .department .field a {
   text-decoration: none;
-  color: black;
+  color: inherit;
+}
+
+body.info .department .field a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 body.info .department .heading {
