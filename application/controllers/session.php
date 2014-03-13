@@ -12,7 +12,9 @@
     }
 
     public function index() {
-      $this->load->view("session/index.php");
+      $data['page_title'] = "Department of Computer Science";
+      $data['main_content'] = $this->load->view("session/index.php", array(), true);
+      $this->parser->parse('layouts/profile', $data);
     }
   }
 
