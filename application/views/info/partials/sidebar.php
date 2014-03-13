@@ -1,10 +1,10 @@
 <ul class="expandable-menu">
   <li>
     <p>The Department</p>
-    <ul>
-      <li><?=anchor('/info/department#history','History', array('data-item'=>"td-history"))?></li>      
+    <ul>      
       <li><?=anchor('/info/department#vision','Vision', array('data-item'=>"td-vission"))?></li>
       <li><?=anchor('/info/department#mission','Mission', array('data-item'=>"td-mission"))?></li>
+      <li><?=anchor('/info/department#history','History', array('data-item'=>"td-history"))?></li>
       <li><?=anchor('/info/department#csg','Computer Science Guild', array('data-item'=>"td-csg"))?></li>            
       <li><?=anchor('/info/department#organizational-overview','Organizational Overview', array('data-item'=>"td-organizational-overview"))?></li>
       <li><?=anchor('/info/department#web-team','Web Team', array('data-item'=>"td-web-team"))?></li>

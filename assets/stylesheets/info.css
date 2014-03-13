@@ -174,6 +174,8 @@ body.info .department {
 
 body.info .department .about-department {
   width: 100%;    
+  clear: both;
+  margin-bottom: 10px;
 }
 
 body.info .department .about-department h1{
@@ -192,13 +194,27 @@ body.info .department .about-department .content {
   padding: 20px;
   padding-top: 0px;
   padding-left: 30px;
+  clear: both;
 }
 
-body.info .department .about-department .content img {
+body.info .department .about-department .content figure {
   width: 300px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
+  float:left;  
+  margin-right: 10px;
+  clear: both;  
+  background: #014421;
+  padding: 2px;
+  padding-bottom: 5px;
+}
+body.info .department .about-department .content figure img { 
+  width: 100%; 
+}
+
+body.info .department .about-department .content figcaption{
+  font-family: "open sans light";
+  font-size: 1.3rem;  
+  margin-top: 2px;
+  color: #FFFFFF;
 }
 
 body.info .department .about-department .content .beside-text {
@@ -217,11 +233,6 @@ body.info .department .about-department .content p {
   text-indent: 30px;
   padding-left: 15px;
   list-style: decimal;
-}
-
-body.info .department .about-department .content .beside-image {
-  width: 60%;  
-  display: inline-block;
 }
 
 body.info .department .about-department .content ul, body.info .department .about-department .content ol {
