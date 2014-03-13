@@ -7,6 +7,8 @@ $(document).ready(function() {
     department.initialize();
   } else if ($('body').hasClass('why_upcdcs')) {
     upcdcs.initialize();
+  } else if ($('body').hasClass('student_highlights')) {
+    studentHighlights.initialize();
   }
 });
 
@@ -95,17 +97,22 @@ var department = {
 var upcdcs = {
   initialize: function() {
     var item = window.location.hash.substring(1);
-    upcdcs.highlight(item);
+    $('a[data-item="wupcdcs-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
     $('.expandable-menu a[data-item^="wupcdcs-"]').on('click', function(e) {
       $('.expandable-menu a.current').removeClass('current');
       $(this).addClass('current');
     });
-  },
-  highlight: function(item) {
-    console.log(item);
-    if (item.length > 0) {
-      $('a[data-item="wupcdcs-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
-    }
+  }
+}
+
+var studentHighlights = {
+  initialize: function() {
+    var item = window.location.hash.substring(1);
+    $('a[data-item="sh-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
+    $('.expandable-menu a[data-item^="sh-"]').on('click', function(e) {
+      $('.expandable-menu a.current').removeClass('current');
+      $(this).addClass('current');
+    });
   }
 }
 
