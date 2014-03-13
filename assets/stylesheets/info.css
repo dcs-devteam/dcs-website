@@ -335,7 +335,7 @@ body.info h1 {
 }
 
 body.info section {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 body.info section h2 {
@@ -350,7 +350,8 @@ body.info section p {
   text-indent: 40px;
 }
 
-body.info.research section img {
+body.info.research section img,
+body.info.initiatives_and_society section img {
   float: left;
   width: 350px;
   margin-right: 15px;

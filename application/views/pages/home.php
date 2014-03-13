@@ -59,9 +59,9 @@
       <li>
         <a href="<?= site_url('#'); ?>">Initiatives and Society</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">Summer Code Camp</a></li>
-          <li><a href="<?= site_url('#'); ?>">ICT Skills Enhancement Program</a></li>
-          <li><a href="<?= site_url('#'); ?>">Innovation Forum</a></li>
+          <li><a href="<?= site_url('info/initiatives_and_society#summer-code-camp'); ?>">Summer Code Camp</a></li>
+          <li><a href="<?= site_url('info/initiatives_and_society#ict-skills-enhancement-program'); ?>">ICT Skills Enhancement Program</a></li>
+          <li><a href="<?= site_url('info/initiatives_and_society#innovation-forum'); ?>">Innovation Forum</a></li>
         </ul>
       </li>
       <li>

@@ -50,9 +50,9 @@
   <li class="expandable-item">
     <p>Initiatives and Society</p>
     <ul>
-      <li><a href="<?= site_url('#'); ?>" data-item="summer-code-camp">Summer Code Camp</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="ict-skills-enhancements-program">ICT Skills Enhancement Program</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="innovation-forum">Innovation Forum</a></li>
+      <li><a href="<?= site_url('info/initiatives_and_society#summer-code-camp'); ?>" data-item="summer-code-camp">Summer Code Camp</a></li>
+      <li><a href="<?= site_url('info/initiatives_and_society#ict-skills-enhancement-program'); ?>" data-item="ict-skills-enhancement-program">ICT Skills Enhancement Program</a></li>
+      <li><a href="<?= site_url('info/initiatives_and_society#innovation-forum'); ?>" data-item="innovation-forum">Innovation Forum</a></li>
     </ul>
   </li>
   <li class="expandable-item">
