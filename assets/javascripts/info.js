@@ -96,6 +96,10 @@ var upcdcs = {
   initialize: function() {
     var item = window.location.hash.substring(1);
     upcdcs.highlight(item);
+    $('.expandable-menu a[data-item^="wupcdcs-"]').on('click', function(e) {
+      $('.expandable-menu a.current').removeClass('current');
+      $(this).addClass('current');
+    });
   },
   highlight: function(item) {
     console.log(item);
