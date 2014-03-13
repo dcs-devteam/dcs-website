@@ -9,6 +9,8 @@ $(document).ready(function() {
     upcdcs.initialize();
   } else if ($('body').hasClass('student_highlights')) {
     studentHighlights.initialize();
+  } else if ($('body').hasClass('service_to_society')) {
+    serviceToSociety.initialize();
   }
 });
 
@@ -103,7 +105,7 @@ var upcdcs = {
       $(this).addClass('current');
     });
   }
-}
+};
 
 var studentHighlights = {
   initialize: function() {
@@ -114,7 +116,18 @@ var studentHighlights = {
       $(this).addClass('current');
     });
   }
-}
+};
+
+var serviceToSociety = {
+  initialize: function() {
+    var item = window.location.hash.substring(1);
+    $('a[data-item="sts-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
+    $('.expandable-menu a[data-item^="sts-"]').on('click', function(e) {
+      $('.expandable-menu a.current').removeClass('current');
+      $(this).addClass('current');
+    });
+  }
+};
 
 var link_id = {
   initialize: function() {
