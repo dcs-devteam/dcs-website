@@ -44,7 +44,7 @@
       <li><a href="<?= site_url('#'); ?>" data-item="news-and-events">News and Events</a></li>
       <li><a href="<?= site_url('#'); ?>" data-item="lecture-series-and-technical-talks">Lecture Series and Technical Talks</a></li>
       <li><a href="<?= site_url('#'); ?>" data-item="featured-student-projects">Featured Student Projects</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="developer-corner">Developer Corner</a></li>
+      <li><a href="<?= site_url('info/developer_corner#programming-contest'); ?>" data-item="developer-corner">Developer Corner</a></li>
       <li><a href="<?= site_url('#'); ?>" data-item="campus-activities">Campus Activities</a></li>
     </ul>
   </li>
