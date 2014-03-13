@@ -67,10 +67,10 @@
       <li>
         <a href="<?= site_url('#'); ?>">Partners</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">Industry</a></li>
-          <li><a href="<?= site_url('#'); ?>">Government Agencies</a></li>
-          <li><a href="<?= site_url('#'); ?>">NGO</a></li>
-          <li><a href="<?= site_url('#'); ?>">Universities</a></li>
+          <li><a href="<?= site_url('info/partners#industry'); ?>">Industry</a></li>
+          <li><a href="<?= site_url('info/partners#government-agencies'); ?>">Government Agencies</a></li>
+          <li><a href="<?= site_url('info/partners#ngo'); ?>">NGO</a></li>
+          <li><a href="<?= site_url('info/partners#universities'); ?>">Universities</a></li>
         </ul>
       </li>
     </ul>
