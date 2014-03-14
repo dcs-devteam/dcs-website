@@ -4,7 +4,7 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('department', 'admission', 'research', 'faculty', 'initiatives_and_society');
+      $this->request_methods['GET'] = array('department', 'admission', 'research', 'faculty', 'campus_activities', 'initiatives_and_society');
 
       $this->_check_request_method();
       $this->load->helper('application_helper');
@@ -38,12 +38,19 @@
       $this->parser->parse('layouts/default', $data);
     }
 
+    public function campus_activities() {
+      $data['page_title'] = 'Department of Computer Science';
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/campus_activities', array(), true);
+      $this->parser->parse('layouts/default', $data);
+    }
+
     public function initiatives_and_society() {
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
       $data['main_content'] = $this->load->view('info/initiatives_and_society', array(), true);
       $this->parser->parse('layouts/default', $data);
-    }          
+    }    
   }
 
 ?>
