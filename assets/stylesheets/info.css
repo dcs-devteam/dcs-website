@@ -340,6 +340,13 @@ body.info h1 {
   color: #570E0E;
 }
 
+body.info p.upcoming-content {
+  font: normal 1.4rem "Open Sans", "OpenSansRegular";
+  color: #333333;
+  background-color: #eeeeee;
+  padding: 7px 0;
+}
+
 body.info section {
   margin-top: 30px;
 }
