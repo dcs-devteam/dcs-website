@@ -1,13 +1,17 @@
 $(document).ready(function() {
   if ($('body').hasClass('academic_programs')) {
     tabs.initialize();
-  }
-  if ($('body').hasClass('people')) {
+  } else if ($('body').hasClass('people')) {
     people.initialize();
-  }
-  if ($('body').hasClass('department')) {
+  } else if ($('body').hasClass('department')) {
     department.initialize();
-  } 
+  } else if ($('body').hasClass('why_upcdcs')) {
+    upcdcs.initialize();
+  } else if ($('body').hasClass('student_highlights')) {
+    studentHighlights.initialize();
+  } else if ($('body').hasClass('service_to_society')) {
+    serviceToSociety.initialize();
+  }
 });
 
 var tabs = {
@@ -91,6 +95,39 @@ var department = {
     });    
   }
 }
+
+var upcdcs = {
+  initialize: function() {
+    var item = window.location.hash.substring(1);
+    $('a[data-item="wupcdcs-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
+    $('.expandable-menu a[data-item^="wupcdcs-"]').on('click', function(e) {
+      $('.expandable-menu a.current').removeClass('current');
+      $(this).addClass('current');
+    });
+  }
+};
+
+var studentHighlights = {
+  initialize: function() {
+    var item = window.location.hash.substring(1);
+    $('a[data-item="sh-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
+    $('.expandable-menu a[data-item^="sh-"]').on('click', function(e) {
+      $('.expandable-menu a.current').removeClass('current');
+      $(this).addClass('current');
+    });
+  }
+};
+
+var serviceToSociety = {
+  initialize: function() {
+    var item = window.location.hash.substring(1);
+    $('a[data-item="sts-' + item + '"]').addClass('current').parent().parent().show().parent().addClass('expanded');
+    $('.expandable-menu a[data-item^="sts-"]').on('click', function(e) {
+      $('.expandable-menu a.current').removeClass('current');
+      $(this).addClass('current');
+    });
+  }
+};
 
 var link_id = {
   initialize: function() {

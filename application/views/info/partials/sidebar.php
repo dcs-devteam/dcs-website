@@ -22,7 +22,7 @@
   <li>
     <p>Why UP Cebu DCS?</p>
     <ul>
-      <li><a href="<?= site_url('info/why_upcdcs#center-of-excellence-in-it'); ?>" data-item="wupcdcs-mission">Center of Excellence in I.T.</a></li>
+      <li><a href="<?= site_url('info/why_upcdcs#center-of-excellence-in-it'); ?>" data-item="wupcdcs-center-of-excellence-in-it">Center of Excellence in I.T.</a></li>
       <li><a href="<?= site_url('info/why_upcdcs#research'); ?>" data-item="wupcdcs-research">Research</a></li>
       <li><a href="<?= site_url('info/why_upcdcs#service-to-the-society'); ?>" data-item="wupcdcs-service-to-the-society">Service to the Society</a></li>
       <li><a href="<?= site_url('info/why_upcdcs#national-programming-rank'); ?>" data-item="wupcdcs-national-programming-rank">National Programming Rank</a></li>
