@@ -30,12 +30,12 @@
       <li>
         <a href="<?= site_url('#'); ?>">Research</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">Bioinformatics Research Interest Group</a></li>
-          <li><a href="<?= site_url('#'); ?>">Computer Vision Research Group</a></li>
-          <li><a href="<?= site_url('#'); ?>">Software Engineering Research Group</a></li>
-          <li><a href="<?= site_url('#'); ?>">Natural Language Processing Research Group</a></li>
-          <li><a href="<?= site_url('#'); ?>">Machine Learning Research Group</a></li>
-          <li><a href="<?= site_url('#'); ?>">Algorithms and Complexity Reseach Group</a></li>
+          <li><a href="<?= site_url('info/research#bioinformatics'); ?>">Bioinformatics Research Interest Group</a></li>
+          <li><a href="<?= site_url('info/research#computer-vision'); ?>">Computer Vision Research Group</a></li>
+          <li><a href="<?= site_url('info/research#software-engineering'); ?>">Software Engineering Research Group</a></li>
+          <li><a href="<?= site_url('info/research#natural-language-processing'); ?>">Natural Language Processing Research Group</a></li>
+          <li><a href="<?= site_url('info/research#machine-learning'); ?>">Machine Learning Research Group</a></li>
+          <li><a href="<?= site_url('info/research#algorithms-and-complexity'); ?>">Algorithms and Complexity Reseach Group</a></li>
         </ul>
       </li>
       <li>
@@ -59,9 +59,9 @@
       <li>
         <a href="<?= site_url('#'); ?>">Initiatives and Society</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">Summer Code Camp</a></li>
-          <li><a href="<?= site_url('#'); ?>">ICT Skills Enhancement Program</a></li>
-          <li><a href="<?= site_url('#'); ?>">Innovation Forum</a></li>
+          <li><a href="<?= site_url('info/initiatives_and_society#summer-code-camp'); ?>">Summer Code Camp</a></li>
+          <li><a href="<?= site_url('info/initiatives_and_society#ict-skills-enhancement-program'); ?>">ICT Skills Enhancement Program</a></li>
+          <li><a href="<?= site_url('info/initiatives_and_society#innovation-forum'); ?>">Innovation Forum</a></li>
         </ul>
       </li>
       <li>

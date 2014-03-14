@@ -22,12 +22,12 @@
   <li class="expandable-item">
     <p>Research</p>
     <ul>
-      <li><a href="<?= site_url('#'); ?>" data-item="bioinformatics">Bioinformatics Research Interest Group</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="computer-vision">Computer Vision Research Group</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="software-engineering">Software Engineering Research Group</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="natural-language-processing">Natural Language Processing Research Group</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="machine-learning">Machine Learning Research Group</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="algorithms-and-complexity">Algorithms and Complexity Reseach Group</a></li>
+      <li><a href="<?= site_url('info/research#bioinformatics'); ?>" data-item="bioinformatics">Bioinformatics Research Interest Group</a></li>
+      <li><a href="<?= site_url('info/research#computer-vision'); ?>" data-item="computer-vision">Computer Vision Research Group</a></li>
+      <li><a href="<?= site_url('info/research#software-engineering'); ?>" data-item="software-engineering">Software Engineering Research Group</a></li>
+      <li><a href="<?= site_url('info/research#natural-language-processing'); ?>" data-item="natural-language-processing">Natural Language Processing Research Group</a></li>
+      <li><a href="<?= site_url('info/research#machine-learning'); ?>" data-item="machine-learning">Machine Learning Research Group</a></li>
+      <li><a href="<?= site_url('info/research#algorithms-and-complexity'); ?>" data-item="algorithms-and-complexity">Algorithms and Complexity Reseach Group</a></li>
     </ul>
   </li>
   <li class="expandable-item">
@@ -51,9 +51,9 @@
   <li class="expandable-item">
     <p>Initiatives and Society</p>
     <ul>
-      <li><a href="<?= site_url('#'); ?>" data-item="summer-code-camp">Summer Code Camp</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="ict-skills-enhancements-program">ICT Skills Enhancement Program</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="innovation-forum">Innovation Forum</a></li>
+      <li><a href="<?= site_url('info/initiatives_and_society#summer-code-camp'); ?>" data-item="summer-code-camp">Summer Code Camp</a></li>
+      <li><a href="<?= site_url('info/initiatives_and_society#ict-skills-enhancement-program'); ?>" data-item="ict-skills-enhancement-program">ICT Skills Enhancement Program</a></li>
+      <li><a href="<?= site_url('info/initiatives_and_society#innovation-forum'); ?>" data-item="innovation-forum">Innovation Forum</a></li>
     </ul>
   </li>
   <li class="expandable-item">

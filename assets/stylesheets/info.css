@@ -340,122 +340,24 @@ body.info h1 {
 }
 
 body.info section {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 body.info section h2 {
   font: normal 2.2rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
+  margin-bottom: 15px;
 }
 
 body.info section p {
   font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
   color: #333333;
   text-indent: 40px;
-  margin-top: 10px;
 }
 
-body.info.research_lab_news .latest-news time {
-  font: normal 1.4rem "Open Sans", "OpenSansRegular";
-  color: #777777;
-}
-
-body.info.research_lab_news .latest-news p {
-  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
-  color: #333333;
-  text-indent: 40px;
-  margin-top: 10px;
-}
-
-body.info.research_lab_news .latest-news p:first-of-type {
-  margin-top: 25px;
-}
-
-body.info.research_lab_news .other-news {
-  margin-top: 25px;
-  background-color: #f7f7f7;
-}
-
-body.info.research_lab_news .other-news h2 {
-  font: normal 1.4rem/1 "Open Sans", "OpenSansRegular";
-  color: #333333;
-  text-transform: uppercase;
-  padding: 15px 25px;
-  background-color: #f3f3f3;
-  border-bottom: 1px solid #dadada;
-}
-
-body.info.research_lab_news .other-news a {
-  display: block;
-  margin: 0;
-  padding: 15px 25px 15px 22px;
-  text-decoration: none;
-  border-left: 3px solid transparent;
-  position: relative;
-}
-
-body.info.research_lab_news .other-news a:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-body.info.research_lab_news .other-news a:hover,
-body.info.research_lab_news .other-news a:focus {
-  border-left: 3px solid #014421;
-}
-
-body.info.research_lab_news .other-news a:hover:before,
-body.info.research_lab_news .other-news a:focus:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-left: 8px solid #014421;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  margin-top: -8px;
-}
-
-body.info.research_lab_news .other-news span {
-  display: block;
-  font: normal 1.6rem/1 "Open Sans Light", "OpenSansLight";
-  color: #111111;
-}
-
-body.info.research_lab_news .other-news time {
-  display: block;
-  font: normal 1.2rem/1 "Open Sans", "OpenSansRegular";
-  color: #555555;
-  margin-top: 3px;
-}
-
-body.info.alumni_features #main-content h1 {
-  margin-bottom: 28px;
-}
-
-body.info.alumni_features #main-content p {
-  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
-  color: #333333;
-  text-indent: 40px;
-  margin-top: 10px;
-}
-
-body.info.industry_partners #main-content ul {
-  margin-top: 30px;
-}
-
-body.info.industry_partners #main-content ul li {
-  display: inline-block;
-  width: 150px;
-  height: 75px;
-  background: center center no-repeat;
-  background-size: contain;
-  margin: 0 25px 25px 0;
-}
-
-body.info.industry_partners #main-content ul li[data-logo="google"] {
-  background-image: url("../images/google.png");
-}
-
-body.info.industry_partners #main-content ul li[data-logo="facebook"] {
-  background-image: url("../images/facebook.jpg");
+body.info.research section img,
+body.info.initiatives_and_society section img {
+  float: left;
+  width: 350px;
+  margin-right: 15px;
 }
