@@ -1,4 +1,27 @@
 <div class="department">
+
+  <div class="about-department" id="message">
+    <h1>Message from the Chair</h1>
+    <div class="content">      
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>            
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>      
+    </div>
+  </div>
+
+  <div class="about-department" id="history">
+    <h1>History</h1>
+    <div class="content">
+      <figure>
+        <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
+        <figcaption>Figure 1: Aldrin Navarro</figcaption>
+      </figure>
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>            
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>
+      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>      
+    </div>
+  </div>
+
   <div class="about-department">
     <div class="half" id="vision">
       <h1>Vision</h1>
@@ -16,20 +39,7 @@
         </ol>
       </div>
     </div>
-  </div>
-  
-  <div class="about-department" id="history">
-    <h1>History</h1>
-    <div class="content">
-      <figure>
-        <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
-        <figcaption>Figure 1: Aldrin Navarro</figcaption>
-      </figure>
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>            
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>      
-    </div>
-  </div>
+  </div>  
 
   <div class="about-department" id="organizational-overview">
     <h1>Organizational Overview</h1>
@@ -136,26 +146,52 @@
       <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
       <div class="heading">Team Members</div>      
       <div class="field">        
-        <div class="value">Arnelle Balane</div>
+        <div class="value"><a href="#">Arnelle Balane</a></div>
       </div>
       <div class="field">        
-        <div class="value">Aldrin Navarro</div>
+        <div class="value"><a href="#">Aldrin Navarro</a></div>
       </div>
       <div class="field">
-        <div class="value">Emmanuel Lodovice</div>
+        <div class="value"><a href="#">Emmanuel Lodovice</a></div>
       </div>
       <div class="field">        
-        <div class="value">Kevin Calingacion</div>
+        <div class="value"><a href="#">Kevin Calingacion</a></div>
       </div>
       <div class="field">        
-        <div class="value">Reynard Jan Rojas</div>
-      </div>      
+        <div class="value"><a href="#">Reynard Jan Rojas</a></div>
+      </div>
     </div>
 
     <div class="about-department" id="job-openings">
       <h1>Job Openings</h1>
       <div class="content">      
-        <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
+        <p>No openings yet!</p>        
+      </div>
+    </div>
+
+    <div class="about-department" id="job-openings">
+      <h1>Contact Us</h1>
+      <div class="content">
+        <div class="heading">Contact Information</div>      
+        <div class="field">
+          <div class="title">Email</div>
+          <div class="value">upcdcs@gmail.com</div>
+        </div>
+        <div class="field">
+          <div class="title">Telephone</div>
+          <div class="value">(63 32) 233 8203</div>
+        </div>
+        <div class="field">
+          <div class="title">Facebook</div>
+          <div class="value"><a href="https://www.facebook.com/upcebudcs">UP Cebu DCS</a></div>
+        </div>
+        <div class="field">
+          <div class="title">Address</div>
+          <div class="value">
+            3rd Floor Arts and Sciences Building, Gorordo Avenue, Lahug, Cebu City
+            <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
+          </div>
+        </div> 
       </div>
     </div>
   </div>
