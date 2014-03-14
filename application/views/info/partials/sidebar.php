@@ -34,16 +34,20 @@
     <p>People</p>
     <ul>
       <li><a href="<?= site_url('info/faculty#faculty'); ?>" data-item="faculty">Faculty</a></li>
-      <!-- <li><a href="<?= site_url('#'); ?>" data-item="alumni">Alumni</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="students">Students</a></li> -->
+      <!-- 
+      <li><a href="<?= site_url('#'); ?>" data-item="alumni">Alumni</a></li>
+      <li><a href="<?= site_url('#'); ?>" data-item="students">Students</a></li> 
+      -->
     </ul>
   </li>
   <li class="expandable-item">
     <p>Life@DCS</p>
     <ul>
+      <!--
       <li><a href="<?= site_url('#'); ?>" data-item="news-and-events">News and Events</a></li>
       <li><a href="<?= site_url('#'); ?>" data-item="lecture-series-and-technical-talks">Lecture Series and Technical Talks</a></li>
       <li><a href="<?= site_url('#'); ?>" data-item="featured-student-projects">Featured Student Projects</a></li>
+      -->
       <li><a href="<?= site_url('info/developer_corner#developer-corner'); ?>" data-item="developer-corner">Developer Corner</a></li>
       <li><a href="<?= site_url('info/campus_activities#campus-activities'); ?>" data-item="campus-activities">Campus Activities</a></li>      
     </ul>
