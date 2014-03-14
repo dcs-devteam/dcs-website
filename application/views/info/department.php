@@ -3,21 +3,16 @@
   <div class="about-department" id="message-from-the-chair">
     <h1>Message from the Chair</h1>
     <div class="content">      
-      <p><strong>Center of Excellence in IT</strong></p>
-      <p>Out of the numerous schools that offer the Bachelor of Science in Computer Science degree, only 9 schools in the entire nation have been named Centers of Excellence in IT Education by the Commission on Higher Education. And UP Cebu’s Department of Computer Science is one of them. </p>
+      <p>The Department of Computer Science (DCS) is one of only 9 Centers of Excellence in IT Education in the entire Philippines awarded by the Commission on Higher Education (CHED).  </p>
+      <p>It has almost two decades of history in nurturing young minds into being the most-sought computer science graduates in the ICT industry and in research and development companies.</p>
+      <p>The curriculum provides the students with a solid background on the theoretical foundations of computer science and its mathematical aspects and practitioner’s approach in the applied courses. The specialization courses in software engineering and intelligent systems give them extensive experience in research.</p>
     </div>
   </div>
 
   <div class="about-department" id="history">
     <h1>History</h1>
     <div class="content">
-      <figure>
-        <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
-        <figcaption>Figure 1: Aldrin Navarro</figcaption>
-      </figure>
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>            
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>      
+      <p>The department has been around for almost two decades. It started as a BS Computer Science program and in 2007 it became the first department in UP Cebu. The MS Computer Science started in 2009. The department continues to make history in teaching, research and extension activities.</p>
     </div>
   </div>
 
@@ -42,8 +37,7 @@
 
   <div class="about-department" id="organizational-overview">
     <h1>Organizational Overview</h1>
-    <div class="content">      
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
+    <div class="content">            
       <div class="heading">Department Structure</div>      
       <div class="field">
         <div class="title">Department Chair</div>
@@ -68,6 +62,14 @@
       <div class="field">
         <div class="title">Industry Partnerships Director</div>
         <div class="value"><a href="#">Maan Kyra Alegre</a></div>
+      </div>
+      <div class="field">
+        <div class="title">Administrative Assistant</div>
+        <div class="value">Maricris Camantang <br/> Matt Mondale Montecillos</div>
+      </div>
+      <div class="field">
+        <div class="title">Computer Laboratory Assistant</div>
+        <div class="value">Enrique Dy</div>
       </div>
     </div>
   </div>
@@ -140,8 +142,7 @@
 
   <div class="about-department" id="web-team">
     <h1>Web Team</h1>
-    <div class="content">      
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
+    <div class="content">            
       <div class="heading">Team Members</div>      
       <div class="field">        
         <div class="value"><a href="#">Arnelle Balane</a></div>
@@ -163,7 +164,7 @@
     <div class="about-department" id="job-openings">
       <h1>Job Openings</h1>
       <div class="content">      
-        <p>No openings yet!</p>        
+        <p>No job openings at the moment!</p>        
       </div>
     </div>
 
