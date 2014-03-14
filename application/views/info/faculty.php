@@ -1,6 +1,8 @@
 <div class="faculty-container clearfix">
   <div class="faculty-group" id="faculty">
     <h1>Faculty</h1>
+
+    <!--
     <div class="tile-wrapper clearfix">
 
       <div class="tile clearfix">
@@ -27,5 +29,8 @@
         </div>
       </div>    
     </div>      
+    -->
+    <br>
+    <p class="upcoming-content">Content to be provided soon.</p>
   </div>      
 </div>
