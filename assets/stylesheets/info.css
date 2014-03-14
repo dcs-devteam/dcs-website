@@ -397,13 +397,12 @@ body.info .campus_activities_contianer section h2 {
 }
 
 body.info .campus_activities_container section figure {
-  width: 350px;
-  float:left;  
-  margin-right: 10px;
-  clear: both;  
-  background: #014421;
-  padding: 2px;
-  padding-bottom: 5px;
+  float:left;
+  width: 200px;
+  height: 200px;
+  margin: 0 15px 15px 0;
+  background: transparent top center no-repeat;
+  background-size: cover;
 }
 
 body.info .campus_activities_container section .big {

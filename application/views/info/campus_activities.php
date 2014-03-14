@@ -1,30 +1,20 @@
 <div class="campus_activities_container">
   <h1>Campus Activities</h1>
-  <section>
+
+  <section class="clearfix">
     <h2>Computer Science Week</h2>
-    <figure>
-      <img src="<?=base_url().'assets/images/intrams.JPG'?>">
-      <figcaption>Scions Basketball Team</figcaption>
-    </figure>
-    <p>Lorem ipsum Aute culpa consequat labore anim do ut ea magna dolore veniam id occaecat nisi Excepteur consequat et elit ea aliquip do ad cupidatat in Duis Duis eiusmod et in quis tempor elit exercitation laborum deserunt dolor in laborum occaecat Excepteur.</p>
-    <p>Lorem ipsum Ad ea dolor Excepteur culpa sit tempor in dolor magna ea elit irure sit amet ad culpa Excepteur irure esse aliqua esse adipisicing ea nulla ut sed sint nisi dolor magna incididunt est aliquip in do minim in id amet sed do id fugiat est proident id laborum amet deserunt esse exercitation labore consequat do amet in cillum id labore esse do aliqua pariatur elit ullamco aliqua proident esse sit dolore enim est sit consequat occaecat ullamco esse dolor ea voluptate laborum do dolor anim in magna nulla aute in amet anim aliqua ut reprehenderit exercitation mollit nulla dolor nulla irure ea aute dolor ad adipisicing ex Duis in nostrud eiusmod fugiat veniam sit ex Excepteur proident amet dolore aliquip sint commodo ut ea voluptate nisi tempor in aliquip nulla deserunt cupidatat laboris deserunt laboris incididunt non dolore consectetur cillum nisi laborum cillum magna ut occaecat consequat est Duis ex enim pariatur ex ut dolor amet fugiat id est Excepteur in nisi qui sit adipisicing incididunt pariatur ut dolore consequat aute velit et laborum aute aliqua sunt aute eu et do aliquip consectetur anim Ut commodo aliquip sed ut anim ut dolore dolore qui voluptate adipisicing dolore proident reprehenderit in deserunt sint dolor culpa voluptate cillum ut laboris et proident officia quis deserunt incididunt non exercitation commodo qui commodo adipisicing dolore fugiat nulla sit ea in dolor do dolor exercitation sunt labore cupidatat sunt in.</p>
+    <figure style="background-image: url('<?=base_url() . 'assets/images/cs-week-1.jpg'?>')"></figure>
+    <figure style="background-image: url('<?=base_url() . 'assets/images/cs-week-2.jpg'?>')"></figure>
   </section>
-  <section>
+
+  <section class="clearfix">
     <h2>Intramurals</h2>
-    <figure class="big">
-      <img src="<?=base_url().'assets/images/intrams.JPG'?>">
-      <figcaption>Scions Basketball Team</figcaption>
-    </figure>
-    <p>Lorem ipsum Aute culpa consequat labore anim do ut ea magna dolore veniam id occaecat nisi Excepteur consequat et elit ea aliquip do ad cupidatat in Duis Duis eiusmod et in quis tempor elit exercitation laborum deserunt dolor in laborum occaecat Excepteur.</p>
-    <p>Lorem ipsum Ad ea dolor Excepteur culpa sit tempor in dolor magna ea elit irure sit amet ad culpa Excepteur irure esse aliqua esse adipisicing ea nulla ut sed sint nisi dolor magna incididunt est aliquip in do minim in id amet sed do id fugiat est proident id laborum amet deserunt esse exercitation labore consequat do amet in cillum id labore esse do aliqua pariatur elit ullamco aliqua proident esse sit dolore enim est sit consequat occaecat ullamco esse dolor ea voluptate laborum do dolor anim in magna nulla aute in amet anim aliqua ut reprehenderit exercitation mollit nulla dolor nulla irure ea aute dolor ad adipisicing ex Duis in nostrud eiusmod fugiat veniam sit ex Excepteur proident amet dolore aliquip sint commodo ut ea voluptate nisi tempor in aliquip nulla deserunt cupidatat laboris deserunt laboris incididunt non dolore consectetur cillum nisi laborum cillum magna ut occaecat consequat est Duis ex enim pariatur ex ut dolor amet fugiat id est Excepteur in nisi qui sit adipisicing incididunt pariatur ut dolore consequat aute velit et laborum aute aliqua sunt aute eu et do aliquip consectetur anim Ut commodo aliquip sed ut anim ut dolore dolore qui voluptate adipisicing dolore proident reprehenderit in deserunt sint dolor culpa voluptate cillum ut laboris et proident officia quis deserunt incididunt non exercitation commodo qui commodo adipisicing dolore fugiat nulla sit ea in dolor do dolor exercitation sunt labore cupidatat sunt in.</p>
+    <figure style="background-image: url('<?=base_url() . 'assets/images/intrams-1.jpg'?>')"></figure>
+    <figure style="background-image: url('<?=base_url() . 'assets/images/intrams-2.jpg'?>')"></figure>
+    <figure style="background-image: url('<?=base_url() . 'assets/images/intrams-3.jpg'?>')"></figure>
   </section>
   <section>
     <h2>Cookout</h2>
-    <figure>
-      <img src="<?=base_url().'assets/images/intrams.JPG'?>">
-      <figcaption>Scions Basketball Team</figcaption>
-    </figure>
-    <p>Lorem ipsum Aute culpa consequat labore anim do ut ea magna dolore veniam id occaecat nisi Excepteur consequat et elit ea aliquip do ad cupidatat in Duis Duis eiusmod et in quis tempor elit exercitation laborum deserunt dolor in laborum occaecat Excepteur.</p>
-    <p>Lorem ipsum Ad ea dolor Excepteur culpa sit tempor in dolor magna ea elit irure sit amet ad culpa Excepteur irure esse aliqua esse adipisicing ea nulla ut sed sint nisi dolor magna incididunt est aliquip in do minim in id amet sed do id fugiat est proident id laborum amet deserunt esse exercitation labore consequat do amet in cillum id labore esse do aliqua pariatur elit ullamco aliqua proident esse sit dolore enim est sit consequat occaecat ullamco esse dolor ea voluptate laborum do dolor anim in magna nulla aute in amet anim aliqua ut reprehenderit exercitation mollit nulla dolor nulla irure ea aute dolor ad adipisicing ex Duis in nostrud eiusmod fugiat veniam sit ex Excepteur proident amet dolore aliquip sint commodo ut ea voluptate nisi tempor in aliquip nulla deserunt cupidatat laboris deserunt laboris incididunt non dolore consectetur cillum nisi laborum cillum magna ut occaecat consequat est Duis ex enim pariatur ex ut dolor amet fugiat id est Excepteur in nisi qui sit adipisicing incididunt pariatur ut dolore consequat aute velit et laborum aute aliqua sunt aute eu et do aliquip consectetur anim Ut commodo aliquip sed ut anim ut dolore dolore qui voluptate adipisicing dolore proident reprehenderit in deserunt sint dolor culpa voluptate cillum ut laboris et proident officia quis deserunt incididunt non exercitation commodo qui commodo adipisicing dolore fugiat nulla sit ea in dolor do dolor exercitation sunt labore cupidatat sunt in.</p>
+    <figure style="background-image: url('<?=base_url() . 'assets/images/cookout-1.jpg'?>')"></figure>
   </section>
 </div>
