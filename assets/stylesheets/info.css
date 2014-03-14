@@ -368,7 +368,7 @@ body.info.developer_corner section figure,
 body.info.initiatives_and_society section figure {
   float: left;
   width: 350px;
-  margin-right: 15px;
+  margin: 0 15px 15px 0;
 }
 
 body.info.research section figure img,
