@@ -38,27 +38,27 @@
       <div class="heading">Department Structure</div>      
       <div class="field">
         <div class="title">Department Chair</div>
-        <div class="value">Kurt Junshean Espinosa</div>
+        <div class="value"><a href="#">Kurt Junshean Espinosa</a></div>
       </div>
       <div class="field">
         <div class="title">Undergraduate Director</div>
-        <div class="value">Ryan Ciriaco Dulaca</div>
+        <div class="value"><a href="#">Ryan Ciriaco Dulaca</a></div>
       </div>
       <div class="field">
         <div class="title">Graduate Director</div>
-        <div class="value">Sandra Famador</div>
+        <div class="value"><a href="#">Sandra Famador</a></div>
       </div>
       <div class="field">
         <div class="title">Infrastructure Director</div>
-        <div class="value">Fritzie Cantos</div>
+        <div class="value"><a href="#">Fritzie Cantos</a></div>
       </div>
       <div class="field">
         <div class="title">Academic Resources Director</div>
-        <div class="value">Paula Esplanada</div>
+        <div class="value"><a href="#">Paula Esplanada</a></div>
       </div>
       <div class="field">
         <div class="title">Industry Partnerships Director</div>
-        <div class="value">Maan Kyra Alegre</div>
+        <div class="value"><a href="#">Maan Kyra Alegre</a></div>
       </div>
     </div>
   </div>
@@ -77,54 +77,54 @@
       <div class="heading">Officers</div>      
       <div class="field">
         <div class="title">President</div>
-        <div class="value">Mary Louise B. Hermosa</div>
+        <div class="value"><a href="#">Mary Louise B. Hermosa</a></div>
       </div>      
       <div class="field">
         <div class="title">Vice-President</div>
-        <div class="value">Rembrandt L. Cenit</div>
+        <div class="value"><a href="#">Rembrandt L. Cenit</a></div>
       </div>                    
       <div class="field">
         <div class="title">Secretary</div>
-        <div class="value">John Vincent N. Pakson</div>
+        <div class="value"><a href="#">John Vincent N. Pakson</a></div>
       </div>          
       <div class="field">
         <div class="title">Treasurer</div>
-        <div class="value">Shairine M. Manlosa</div>
+        <div class="value"><a href="#">Shairine M. Manlosa</a></div>
       </div>                    
       <div class="field">
         <div class="title">Auditor</div>
-        <div class="value">Mohammad Solaiman L. Malicay</div>
+        <div class="value"><a href="#">Mohammad Solaiman L. Malicay</a></div>
       </div>      
       <div class="field">
         <div class="title">P.R.O.</div>
-        <div class="value">Anne Valerie Joyce V. German</div>
+        <div class="value"><a href="#">Anne Valerie Joyce V. German</a></div>
       </div>        
       <div class="field">
         <div class="title">4th Year Representatives</div>
         <div class="value">
-          Isabella Pauline L. Quijano <br>
-          Don E. R. Alcuizar
+          <a href="#">Isabella Pauline L. Quijano</a> <br>
+          <a href="#">Don E. R. Alcuizar</a>
         </div>
       </div>      
       <div class="field">
         <div class="title">3rd Year Representatives</div>
         <div class="value">
-          Regine Erika C. Nacua <br>
-          Julia Camille L. Menchavez
+          <a href="#">Regine Erika C. Nacua</a> <br>
+          <a href="#">Julia Camille L. Menchavez</a>
         </div>
       </div>          
       <div class="field">
         <div class="title">2nd Year Representatives</div>
         <div class="value">
-          Vanessa E. Chico <br>
-          Jem Mae T. Donato
+          <a href="#">Vanessa E. Chico</a> <br>
+          <a href="#">Jem Mae T. Donato</a>
         </div>
       </div>        
       <div class="field">
         <div class="title">1st Year Representatives</div>
         <div class="value">
-          Mark Lester R. Canubas <br>
-          Therese Rhoda C. Oporto
+          <a href="#">Mark Lester R. Canubas</a> <br>
+          <a href="#">Therese Rhoda C. Oporto</a>
         </div>
       </div>  
     </div>
