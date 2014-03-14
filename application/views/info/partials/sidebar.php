@@ -2,20 +2,21 @@
   <li class="expandable-item">
     <p>The Department</p>
     <ul>      
-      <li><a href="<?= site_url('#'); ?>" data-item="message-from-the-chair">Message from the Chair</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="history">History</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="vision-and-mission">Vision and Mission</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="organizational-overview">Organizational Overview</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="job-openings">Job Openings</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="contact-us">Contact Us</a></li>
+      <li><a href="<?= site_url('info/department#message-from-the-chair'); ?>" data-item="message-from-the-chair">Message from the Chair</a></li>
+      <li><a href="<?= site_url('info/department#history'); ?>" data-item="history">History</a></li>
+      <li><a href="<?= site_url('info/department#mission'); ?>" data-item="vision-and-mission">Vision and Mission</a></li>
+      <li><a href="<?= site_url('info/department#organizational-overview'); ?>" data-item="organizational-overview">Organizational Overview</a></li>
+      <li><a href="<?= site_url('info/department#csg'); ?>" data-item="csg">Computer Science Guild</a></li>
+      <li><a href="<?= site_url('info/department#job-openings'); ?>" data-item="job-openings">Job Openings</a></li>
+      <li><a href="<?= site_url('info/department#contact-us'); ?>" data-item="contact-us">Contact Us</a></li>
     </ul>
   </li>
   <li class="expandable-item">
     <p>Admissions</p>
     <ul>
-      <li><a href="<?= site_url('#'); ?>" data-item="bs-computer-science">BS Computer Science</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="ms-computer-science">MS Computer Science</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="continuing-professional-education">Continuing Professional Education</a></li>
+      <li><a href="<?= site_url('info/admission#bs-computer-science'); ?>" data-item="bs-computer-science">BS Computer Science</a></li>
+      <li><a href="<?= site_url('info/admission#ms-computer-science'); ?>" data-item="ms-computer-science">MS Computer Science</a></li>
+      <li><a href="<?= site_url('info/admission#continuing-professional-education'); ?>" data-item="continuing-professional-education">Continuing Professional Education</a></li>
     </ul>
   </li>
   <li class="expandable-item">
@@ -32,9 +33,9 @@
   <li class="expandable-item">
     <p>People</p>
     <ul>
-      <li><a href="<?= site_url('#'); ?>" data-item="faculty">Faculty</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="alumni">Alumni</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="students">Students</a></li>
+      <li><a href="<?= site_url('info/faculty#faculty'); ?>" data-item="faculty">Faculty</a></li>
+      <!-- <li><a href="<?= site_url('#'); ?>" data-item="alumni">Alumni</a></li>
+      <li><a href="<?= site_url('#'); ?>" data-item="students">Students</a></li> -->
     </ul>
   </li>
   <li class="expandable-item">

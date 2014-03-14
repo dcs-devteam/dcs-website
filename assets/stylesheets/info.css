@@ -173,6 +173,10 @@ body.info .department {
   width: 100%;
 }
 
+body.info .department strong {
+  font-weight: bold;
+}
+
 body.info .department .about-department {
   width: 100%;    
   clear: both;
@@ -298,6 +302,7 @@ body.info .department .heading {
   font-size: 1.5rem;
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
+  font-weight: bold;
 }
 
 

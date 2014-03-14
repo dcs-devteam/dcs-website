@@ -1,11 +1,10 @@
 <div class="department">
 
-  <div class="about-department" id="message">
+  <div class="about-department" id="message-from-the-chair">
     <h1>Message from the Chair</h1>
     <div class="content">      
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>            
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p>      
+      <p><strong>Center of Excellence in IT</strong></p>
+      <p>Out of the numerous schools that offer the Bachelor of Science in Computer Science degree, only 9 schools in the entire nation have been named Centers of Excellence in IT Education by the Commission on Higher Education. And UP Cebu’s Department of Computer Science is one of them. </p>
     </div>
   </div>
 
@@ -75,8 +74,7 @@
 
   <div class="about-department" id="csg">
     <h1>Computer Science Guild</h1>
-    <div class="content">      
-      <p>Lorem ipsum Est elit ad ullamco reprehenderit laboris nisi do eu qui tempor commodo et non enim non nulla non irure aliqua tempor nisi voluptate esse veniam consequat anim deserunt enim eu incididunt deserunt quis velit in pariatur nisi tempor proident culpa Duis elit non reprehenderit esse labore proident elit aliquip proident do amet magna est amet ullamco in proident culpa ad fugiat cillum voluptate laboris ea nisi consectetur ut ut consequat reprehenderit reprehenderit commodo pariatur proident eu veniam ad occaecat culpa voluptate et enim irure minim Ut in eiusmod elit consectetur in elit ea exercitation irure id veniam ad non deserunt in sit veniam amet quis culpa sint adipisicing ut dolore irure consequat qui labore aliqua sit aute reprehenderit mollit cupidatat dolore voluptate sit officia amet amet pariatur tempor irure aliquip do ad nulla ad in dolor aliquip dolor sit id cillum culpa occaecat deserunt nulla aute dolore mollit in ad ad Duis velit nisi velit laborum magna ad ut deserunt consequat sint sed eiusmod voluptate et qui et nostrud velit dolor officia sint reprehenderit mollit cillum proident elit pariatur sunt ex dolore pariatur eu irure.</p><br/>      
+    <div class="content">            
       <div class="heading">Information</div>      
       <div class="field">
         <div class="title">Facebook</div>
@@ -169,7 +167,7 @@
       </div>
     </div>
 
-    <div class="about-department" id="job-openings">
+    <div class="about-department" id="contact-us">
       <h1>Contact Us</h1>
       <div class="content">
         <div class="heading">Contact Information</div>      
