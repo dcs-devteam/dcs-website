@@ -28,7 +28,7 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Research</a>
+        <a href="<?= site_url('info/research'); ?>">Research</a>
         <ul>
           <li><a href="<?= site_url('info/research#bioinformatics'); ?>">Bioinformatics Research Interest Group</a></li>
           <li><a href="<?= site_url('info/research#computer-vision'); ?>">Computer Vision Research Group</a></li>
@@ -52,12 +52,12 @@
           <li><a href="<?= site_url('#'); ?>">News and Events</a></li>
           <li><a href="<?= site_url('#'); ?>">Lecture Series and Technical Talks</a></li>
           <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li>
-          <li><a href="<?= site_url('#'); ?>">Developer Corner</a></li>
+          <li><a href="<?= site_url('info/developer_corner#developer-corner'); ?>">Developer Corner</a></li>
           <li><a href="<?= site_url('#'); ?>">Campus Activities</a></li>
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Initiatives and Society</a>
+        <a href="<?= site_url('info/initiatives_and_society'); ?>">Initiatives and Society</a>
         <ul>
           <li><a href="<?= site_url('info/initiatives_and_society#summer-code-camp'); ?>">Summer Code Camp</a></li>
           <li><a href="<?= site_url('info/initiatives_and_society#ict-skills-enhancement-program'); ?>">ICT Skills Enhancement Program</a></li>
@@ -65,12 +65,12 @@
         </ul>
       </li>
       <li>
-        <a href="<?= site_url('#'); ?>">Partners</a>
+        <a href="<?= site_url('info/partners'); ?>">Partners</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">Industry</a></li>
-          <li><a href="<?= site_url('#'); ?>">Government Agencies</a></li>
-          <li><a href="<?= site_url('#'); ?>">NGO</a></li>
-          <li><a href="<?= site_url('#'); ?>">Universities</a></li>
+          <li><a href="<?= site_url('info/partners#industry'); ?>">Industry</a></li>
+          <li><a href="<?= site_url('info/partners#government-agencies'); ?>">Government Agencies</a></li>
+          <li><a href="<?= site_url('info/partners#ngo'); ?>">NGO</a></li>
+          <li><a href="<?= site_url('info/partners#universities'); ?>">Universities</a></li>
         </ul>
       </li>
     </ul>
@@ -78,12 +78,12 @@
     <aside>
       <section id="spotlight">
         <h1>Spotlight</h1>
-        <a href="#">
+        <a href="https://www.facebook.com/upcebudcs/posts/604998376245695?stream_ref=10" target="_blank">
           <figure class="clearfix">
-            <div class="image" style="background-image: url('<?= base_url() . 'assets/images/sample-project.jpg' ?>');"></div>
+            <div class="image" style="background-image: url('<?= base_url() . 'assets/images/spotlight.jpg' ?>');"></div>
             <figcaption>
-              <h2>Project Title</h2>
-              <p>Lorem ipsum Voluptate fugiat velit mollit incididunt fugiat velit occaecat enim dolore dolor commodo officia.</p>
+              <h2>10th NNLPRS</h2>
+              <p>Congratulations to the three 4th year students, Isabella Quijano, Harriet Gonzales and Lemuel Beduya, who presented their paper together with their adviser, Prof. Kurt Junshean Espinosa, at the 10th National Natural Language Processing Research Symposium at De La Salle University last Feb 21-22, 2014.</p>
             </figcaption>
           </figure>
         </a>

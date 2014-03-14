@@ -357,6 +357,7 @@ body.info section p {
 }
 
 body.info.research section img,
+body.info.developer_corner section img,
 body.info.initiatives_and_society section img {
   float: left;
   width: 350px;
@@ -396,4 +397,40 @@ body.info .campus_activities_container section figure figcaption {
   font-size: 1.3rem;  
   margin-top: 2px;
   color: #FFFFFF;
+}
+
+body.info.partners .partner {
+  float: left;
+  clear: left;
+  width: 480px;
+  padding-right: 25px;
+  margin-bottom: 25px;
+}
+
+body.info.partners .partner:nth-of-type(even) {
+  clear: none;
+  padding: 0 0 0 25px;
+}
+
+body.info.partners .partner .logo {
+  float: left;
+  width: 150px;
+  height: 100px;
+  background: transparent center center no-repeat;
+  background-size: contain;
+}
+
+body.info.partners .partner .content {
+  float: right;
+  width: 290px;
+}
+
+body.info.partners .partner h3 {
+  font: normal 2rem/1 "Open Sans Light", "OpenSansLight";
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+body.info.partners .partner p {
+  text-indent: 0;
 }

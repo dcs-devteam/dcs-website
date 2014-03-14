@@ -44,8 +44,8 @@
       <li><a href="<?= site_url('#'); ?>" data-item="news-and-events">News and Events</a></li>
       <li><a href="<?= site_url('#'); ?>" data-item="lecture-series-and-technical-talks">Lecture Series and Technical Talks</a></li>
       <li><a href="<?= site_url('#'); ?>" data-item="featured-student-projects">Featured Student Projects</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="developer-corner">Developer Corner</a></li>
-      <li><a href="<?= site_url('info/campus_activities#campus-activities'); ?>" data-item="campus-activities">Campus Activities</a></li>
+      <li><a href="<?= site_url('info/developer_corner#developer-corner'); ?>" data-item="developer-corner">Developer Corner</a></li>
+      <li><a href="<?= site_url('info/campus_activities#campus-activities'); ?>" data-item="campus-activities">Campus Activities</a></li>      
     </ul>
   </li>
   <li class="expandable-item">
@@ -59,10 +59,10 @@
   <li class="expandable-item">
     <p>Partners</p>
     <ul>
-      <li><a href="<?= site_url('#'); ?>" data-item="industry">Industry</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="government-agencies">Government Agencies</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="ngo">NGO</a></li>
-      <li><a href="<?= site_url('#'); ?>" data-item="universities">Universities</a></li>
+      <li><a href="<?= site_url('info/partners#industry'); ?>" data-item="industry">Industry</a></li>
+      <li><a href="<?= site_url('info/partners#government-agencies'); ?>" data-item="government-agencies">Government Agencies</a></li>
+      <li><a href="<?= site_url('info/partners#ngo'); ?>" data-item="ngo">NGO</a></li>
+      <li><a href="<?= site_url('info/partners#universities'); ?>" data-item="universities">Universities</a></li>
     </ul>
   </li>
 </ul>
