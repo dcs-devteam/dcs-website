@@ -54,5 +54,15 @@ var menus = {
         $('#main-sidebar .expandable-menu').removeClass('sticky');
       }
     });
+
+    var item = location.hash.substring(1);
+    if (item.length) {
+      item = $('.expandable-menu a[data-item="' + item + '"]');
+      item.addClass('current').parents('.expandable-item').addClass('expanded').find('> ul').show();
+    }
+    $('.expandable-menu a').on('click', function() {
+      $(this).closest('.expandable-menu').find('a.current').removeClass('current');
+      $(this).addClass('current');
+    });
   }
 };
