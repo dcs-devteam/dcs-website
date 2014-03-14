@@ -11,20 +11,21 @@
       <li>
         <a href="<?= site_url('#'); ?>">The Department</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">Message from the Chair</a></li>
-          <li><a href="<?= site_url('#'); ?>">History</a></li>
-          <li><a href="<?= site_url('#'); ?>">Vision and Mission</a></li>
-          <li><a href="<?= site_url('#'); ?>">Organizational Overview</a></li>
-          <li><a href="<?= site_url('#'); ?>">Job Openings</a></li>
-          <li><a href="<?= site_url('#'); ?>">Contact Us</a></li>
+          <li><a href="<?= site_url('info/department#message-from-the-chair'); ?>">Message from the Chair</a></li>
+          <li><a href="<?= site_url('info/department#history'); ?>">History</a></li>
+          <li><a href="<?= site_url('info/department#mission'); ?>">Vision and Mission</a></li>
+          <li><a href="<?= site_url('info/department#organizational-overview'); ?>">Organizational Overview</a></li>
+          <li><a href="<?= site_url('info/department#csg'); ?>">Computer Science Guild</a></li>
+          <li><a href="<?= site_url('info/department#job-openings'); ?>">Job Openings</a></li>
+          <li><a href="<?= site_url('info/department#contact-us'); ?>">Contact Us</a></li>
         </ul>
       </li>
       <li>
         <a href="<?= site_url('#'); ?>">Admissions</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">BS Computer Science</a></li>
-          <li><a href="<?= site_url('#'); ?>">MS Computer Science</a></li>
-          <li><a href="<?= site_url('#'); ?>">Continuing Professional Education</a></li>
+          <li><a href="<?= site_url('info/admission#bs-computer-science'); ?>">BS Computer Science</a></li>
+          <li><a href="<?= site_url('info/admission#ms-computer-science'); ?>">MS Computer Science</a></li>
+          <li><a href="<?= site_url('info/admission#continuing-professional-education'); ?>">Continuing Professional Education</a></li>
         </ul>
       </li>
       <li>
@@ -41,19 +42,19 @@
       <li>
         <a href="<?= site_url('#'); ?>">People</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">Faculty</a></li>
-          <li><a href="<?= site_url('#'); ?>">Alumni</a></li>
-          <li><a href="<?= site_url('#'); ?>">Students</a></li>
+          <li><a href="<?= site_url('info/faculty#faculty'); ?>">Faculty</a></li>
+          <!-- <li><a href="<?= site_url('#'); ?>">Alumni</a></li>
+          <li><a href="<?= site_url('#'); ?>">Students</a></li> -->
         </ul>
       </li>
       <li>
         <a href="<?= site_url('#'); ?>">Life@DCS</a>
         <ul>
-          <li><a href="<?= site_url('#'); ?>">News and Events</a></li>
+          <!-- <li><a href="<?= site_url('#'); ?>">News and Events</a></li>
           <li><a href="<?= site_url('#'); ?>">Lecture Series and Technical Talks</a></li>
-          <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li>
+          <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li> -->
           <li><a href="<?= site_url('info/developer_corner#developer-corner'); ?>">Developer Corner</a></li>
-          <li><a href="<?= site_url('#'); ?>">Campus Activities</a></li>
+          <li><a href="<?= site_url('info/campus_activities#campus-activities'); ?>">Campus Activities</a></li>
         </ul>
       </li>
       <li>
