@@ -339,6 +339,8 @@
 #spotlight figcaption {
   float: right;
   width: 60%;
+  height: 120px;
+  overflow: hidden;
 }
 
 #spotlight h2 {
@@ -349,10 +351,8 @@
 }
 
 #spotlight p {
-  height: 100px;
   font: normal 1.4rem/1.25 "Open Sans Light", "OpenSansLight";
   color: #222222;
-  overflow: hidden;
 }
 
 #recent-news .news-thread {
