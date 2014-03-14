@@ -9,13 +9,15 @@
       </div>    
       <div class="field">
         <h2>Learning Outcomes</h2>
-        <p></p>
+        <p class="upcoming-content">Content to be provided soon.</p>
       </div>
       <div class="field">
-        <h2>Curriculum</h2>        
+        <h2>Curriculum</h2>  
+        <p class="upcoming-content">Content to be provided soon.</p>      
       </div>
       <div class="field">
         <h2>Admission</h2>        
+        <p class="upcoming-content">Content to be provided soon.</p>
       </div>
       <div class="field">
         <h2>Scholarships</h2>
@@ -137,6 +139,7 @@
       </div>
       <div class="field">
         <h2>Career Opportunities</h2>
+        <p class="upcoming-content">Content to be provided soon.</p>
         <ul>
           <li></li>          
         </ul>
@@ -150,16 +153,19 @@
         <p>Graduates find careers as heads of other top-notch universities and as top-level managers of software companies.</p>
       </div>    
       <div class="field">
-        <h2>Learning Outcomes</h2>        
+        <h2>Learning Outcomes</h2>     
+        <p class="upcoming-content">Content to be provided soon.</p>   
       </div>
       <div class="field">
-        <h2>Curriculum</h2>        
+        <h2>Curriculum</h2>   
+        <p class="upcoming-content">Content to be provided soon.</p>     
         <ul>
           <li></li>          
         </ul>
       </div>
       <div class="field">
-        <h2>Admission</h2>        
+        <h2>Admission</h2>      
+        <p class="upcoming-content">Content to be provided soon.</p>  
       </div>
       <div class="field">
         <h2>Scholarships</h2>    
@@ -194,6 +200,7 @@
       </div>
       <div class="field">
         <h2>Career Opportunities</h2>
+        <p class="upcoming-content">Content to be provided soon.</p>
         <ul>
           <li></li>          
         </ul>
@@ -206,7 +213,8 @@
         <p>These are short courses which can be taken by anyone interested in the field of computer science. These courses also served as preparatory courses for non-CS or non-IT students if they want to enrol in the MS Computer Science program.</p>
       </div>    
       <div class="field">
-        <h2>Learning Outcomes</h2>        
+        <h2>Learning Outcomes</h2>     
+        <p class="upcoming-content">Content to be provided soon.</p>   
       </div>
       <div class="field">
         <h2>Curriculum</h2>
@@ -270,7 +278,8 @@
         </ul>
       </div>
       <div class="field">
-        <h2>Career Opportunities</h2>        
+        <h2>Career Opportunities</h2>      
+        <p class="upcoming-content">Content to be provided soon.</p>  
       </div>
     </div>
   </div>
