@@ -227,3 +227,11 @@
 #main-footer .social-networks a.twitter {
   background-image: url("../images/twitter.png");
 }
+
+#main-footer .social-networks a.google-plus {
+  background-image: url("../images/google-plus.png");
+}
+
+#main-footer .social-networks a.youtube {
+  background-image: url("../images/youtube.png");
+}
