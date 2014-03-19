@@ -5,10 +5,11 @@
     public function __construct() {
       parent::__construct();
       $this->request_methods['GET'] = array('profile', 'update_profile');
+      $this->request_methods['POST'] = array('edit_data');
       
       $this->_check_request_method();
       $this->load->helper('application_helper');
-      $this->load->helper('frontend_helper')
+      $this->load->helper('frontend_helper');
       $this->load->model('user_information_model', 'ui_model');
     }
 
@@ -60,8 +61,12 @@
       }
 
       if ($flag) {
-        
+        $this->session->set_flashdata('alert','Form Error');
+      } else {
+        $this->session->set_flashdata('Notice','Update Success');
       }
+
+      redirect('/users/update_profile','location');
 
     }
   }
