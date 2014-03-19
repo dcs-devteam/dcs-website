@@ -196,12 +196,11 @@
   text-decoration: underline;
 }
 
-#main-footer nav p {
-  float: left;
-  clear: both;
-  font: normal 1.1rem "Open Sans Light", "OpenSansLight";
-  color: #aaaaaa;
-  margin-top: -3px;
+#main-footer small {
+  display: inline-block;
+  font: normal 1.2rem/1 "Open Sans Light", "OpenSansLight";
+  color: #dddddd;
+  margin: 20px 0 0 50px;
 }
 
 #main-footer .social-networks {
