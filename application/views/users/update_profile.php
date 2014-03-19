@@ -1,12 +1,4 @@
-<div class="user-update-profile" style="background: #ffffff url('<?=base_url()?>assets/images/background.png') center center no-repeat fixed; background-size:cover;">
-  <?=form_open_multipart("#","POST");?>
-    <input type="file" name="background_image">
-    <button id="new-background-image" class="button green">CHANGE BACKGROUND IMAGE</button>    
-    <div id="background-button-container">
-      <input type="submit" id="saveBackground" class="button green" value="SAVE NEW BACKGROUND">
-      <button id="cancelBackground" class="button maroon">CANCEL</button>
-    </div>
-  <?=form_close();?>
+<div class="user-update-profile">  
   <section id="personal-info-container">
     <form action="#" method="POST">
       <h1>PERSONAL INFORMATION</h1>

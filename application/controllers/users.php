@@ -10,16 +10,18 @@
       $this->load->helper('application_helper');
     }
 
-    public function profile() {
-      $data['page_title'] = 'Department of Computer Science';
-      $data['main_content'] = $this->load->view("users/profile", array(), true);
-      $this->parser->parse('layouts/profile', $data);
+    public function profile() {                  
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view("users/profile", array(), true);      
+      $this->parser->parse('layouts/default', $data);
     }
 
     public function update_profile() {
-      $data['page_title'] = 'Department of Computer Science';
-      $data['main_content'] = $this->load->view("users/update_profile", array(), true);
-      $this->parser->parse('layouts/profile', $data);
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view("users/update_profile", array(), true);      
+      $this->parser->parse('layouts/default', $data);
     }
 
   }

@@ -1,4 +1,4 @@
-<div class="user-profile" style="background: #ffffff url('<?=base_url()?>assets/images/background.png') center center no-repeat fixed; background-size:cover;">
+<div class="user-profile">
   <section class="projects-container">
     <h1>PROJECTS</h1>
     <div class="project">
