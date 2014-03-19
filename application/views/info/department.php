@@ -5,7 +5,11 @@
     <div class="content">      
       <p>The Department of Computer Science (DCS) is one of only 9 Centers of Excellence in IT Education in the entire Philippines awarded by the Commission on Higher Education (CHED).  </p>
       <p>It has almost two decades of history in nurturing young minds into being the most-sought computer science graduates in the ICT industry and in research and development companies.</p>
-      <p>The curriculum provides the students with a solid background on the theoretical foundations of computer science and its mathematical aspects and practitioner’s approach in the applied courses. The specialization courses in software engineering and intelligent systems give them extensive experience in research.</p>
+      <!-- <figure>
+        <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
+        <figcaption>Test Caption</figcaption>
+      </figure> -->
+      <p>The curriculum provides the students with a solid background on the theoretical foundations of computer science and its mathematical aspects and practitioner’s approach in the applied courses. The specialization courses in software engineering and intelligent systems give them extensive experience in research.</p>      
     </div>
   </div>
 
@@ -187,10 +191,10 @@
         <div class="field">
           <div class="title">Address</div>
           <div class="value">
-            3rd Floor Arts and Sciences Building, Gorordo Avenue, Lahug, Cebu City
-            <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
-          </div>
+            3rd Floor Arts and Sciences Building, Gorordo Avenue, Lahug, Cebu City            
+          </div>          
         </div> 
+        <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
       </div>
     </div>
   </div>

@@ -25,15 +25,14 @@
       <div class="field">    
         <div class="title"><label>Student Number</label></div>
         <div class="value"><input type="text" name="student_number" placeholder="xxxx-xxxxx" value="<?=$info->studentnumber;?>"></div>
+
       </div>
       <div class="field">    
-        <div class="title"><label>Course</label></div>
-        <div class="value">
-          <select name="course" placeholder="Year">
-            <option value="1">BS Computer Science</option>
-            <option value="2">MS Computer Science</option>
-          </select>
-        </div>
+        <label>Course</label>        
+        <select name="course" placeholder="Year">
+          <option value="1">BS Computer Science</option>
+          <option value="2">MS Computer Science</option>
+        </select>
       </div>
       <div class="field">    
         <div class="title"><label>Year</label></div>
@@ -55,10 +54,10 @@
       <div class="field">    
         <div class="title"><label>Twitter</label></div>
         <div class="value"><input type="text" name="twitter" placeholder="Link to your twitter page" value="<?=$info->twitter;?> "></div>
+
       </div><br/>
-      <div class="field">    
-        <div class="title"></div>
-        <div class="value"><input type="submit" value="UPDATE" class="button green"></div>
+      <div class="field">            
+        <input type="submit" value="UPDATE" class="button green">
       </div>      
     <?= form_close(); ?>
   </section>
