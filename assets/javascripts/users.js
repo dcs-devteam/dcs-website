@@ -74,16 +74,11 @@ var profile = {
 var update = {
   prevBackground: null,
   prevProfpic: null,
-  initialize: function(e) {
-    $('#new-background-image').click(function(e) {
-      e.preventDefault();
-      $('[name="background_image"]').click();
-    });
+  initialize: function(e) {    
     $('#new-profile-picture').click(function(e) {
       e.preventDefault();
       $('[name="profile-picture"]').click();
-    });
-    $('[name="background_image"]').change(update.changeBackground);
+    });    
     $('[name="profile-picture"]').change(update.changeProfilePicture);
   },
   changeProfilePicture: function(e) {
@@ -103,23 +98,5 @@ var update = {
     $('#profile-picture').css({'background-image': update.prevProfpic});
     $('#new-profile-picture').show();
     $('#new-profpic-button-container').hide();
-  },
-  changeBackground: function(e) {
-    var reader = new FileReader();    
-    reader.onload = function(ee) {
-      update.prevBackground = $('.user-update-profile').css('background-image'); 
-      console.log(update.prevBackground);
-      $('.user-update-profile').css({'background-image': 'url("' + ee.target.result + '")'});
-      $('#new-background-image').hide();
-      $('#background-button-container').show();
-      $('#cancelBackground').click(update.cancelBackground);
-    }
-    reader.readAsDataURL(this.files[0]);
-  },
-  cancelBackground: function(e) {
-    e.preventDefault();
-    $('.user-update-profile').css({'background-image': update.prevBackground});
-    $('#background-button-container').hide();
-    $('#new-background-image').show();
   }
 };
