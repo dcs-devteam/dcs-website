@@ -1,8 +1,11 @@
 body.session #login {
   width: 500px;
   display: block;
-  margin: 0 auto;
   margin-top: 60px;
+  position: absolute;  
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  border: 
 }
 
 body.session #login form h1 {
