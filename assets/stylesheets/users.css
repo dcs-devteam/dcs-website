@@ -149,7 +149,8 @@ body.users .user-profile aside #contact-me input[type='submit'] {
   display: block;
 }
 
-body.users .user-profile aside #contact-me input[type='text'],textarea {
+body.users .user-profile aside #contact-me input[type='text'],
+body.users .user-profile aside #contact-me textarea {
   width: 100%;
 }
 
@@ -360,8 +361,12 @@ body.users .user-update-profile #personal-info-container label {
   font-size: 1.5rem;  
 }
 
-body.users .user-update-profile #personal-info-container .field .value input[type="text"], input[type="url"],
-input[type="email"],input[type="number"],input[type="date"],select {
+body.users.update_profile input[type="text"], 
+body.users.update_profile input[type="url"],
+body.users.update_profile input[type="email"],
+body.users.update_profile input[type="number"],
+body.users.update_profile input[type="date"],
+body.users.update_profile select {
   width: 90%;
 }
 
