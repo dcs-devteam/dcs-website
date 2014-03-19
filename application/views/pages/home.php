@@ -9,6 +9,9 @@
   <div id="main-wrapper" class="clearfix">
     <ul id="home-navigation">
       <li>
+        <img src="<?= base_url() . 'assets/images/up-logo.png'; ?>">
+      </li>
+      <li>
         <a href="<?= site_url('info/department'); ?>">The Department</a>
         <ul>
           <li><a href="<?= site_url('info/department#message-from-the-chair'); ?>">Message from the Chair</a></li>

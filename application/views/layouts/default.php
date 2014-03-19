@@ -6,7 +6,9 @@
 </head>
 
 <body class="<?= body_classes($controller, $action); ?>">
-  <div id="main-wrapper" class="default">
+  <div id="main-wrapper" class="default">    
+    <p class="notification notice">Success Message</p>        
+    <p class="notification alert">Error Message</p>    
     <?php $this->load->view('partials/header'); ?>
     <div class="wrapper clearfix">
       <aside id="main-sidebar">{sidebar_content}</aside>
