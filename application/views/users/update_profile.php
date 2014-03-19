@@ -1,4 +1,4 @@
-<div class="user-update-profile">  
+<div class="user-update-profile">   
   <section id="personal-info-container">
     <form action="#" method="POST">
       <h1>PERSONAL INFORMATION</h1>
@@ -64,7 +64,7 @@
   </section>
   <aside>
     <section id="profile-picture-container">  
-      <div id="profile-picture" style="background: #222222 url('<?=base_url()?>assets/images/eman.jpg') center center no-repeat; background-size:cover;"></div>
+      <div id="profile-picture" style="background: #222222 url('<?=base_url()?>assets/images/up-logo.png') center center no-repeat; background-size:cover;"></div>
         <?=form_open_multipart("#","POST");?>
           <input type="file" name="profile-picture">
           <button id="new-profile-picture" class="button green">CHANGE</button>
