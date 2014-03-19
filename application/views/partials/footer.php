@@ -15,9 +15,10 @@
 
     <div class="social-networks">
       <a href="https://www.facebook.com/upcebudcs" target="_blank" class="facebook">Facebook</a>
-      <a href="#" target="_blank" class="twitter">Facebook</a>
-      <a href="#" target="_blank" class="google-plus">Facebook</a>
-      <a href="#" target="_blank" class="youtube">Facebook</a>
+      <a href="#" target="_blank" class="twitter">Twitter</a>
+      <a href="#" target="_blank" class="google-plus">Google Plus</a>
+      <a href="#" target="_blank" class="youtube">Youtube</a>
     </div>
+    <a href="#" id="give-to-up">Give to UP</a>
   </div>
 </footer>
