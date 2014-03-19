@@ -155,7 +155,7 @@
 }
 
 #main-footer {
-  height: 60px;
+  min-height: 60px;
   margin-top: -60px;
   border-top: 1px solid #570E0E;
   background-color: #570E0E;
@@ -196,12 +196,11 @@
   text-decoration: underline;
 }
 
-#main-footer nav p {
-  float: left;
-  clear: both;
-  font: normal 1.1rem "Open Sans Light", "OpenSansLight";
-  color: #aaaaaa;
-  margin-top: -3px;
+#main-footer small {
+  display: inline-block;
+  font: normal 1.2rem/1 "Open Sans Light", "OpenSansLight";
+  color: #dddddd;
+  margin: 20px 0 0 50px;
 }
 
 #main-footer .social-networks {
@@ -226,4 +225,12 @@
 
 #main-footer .social-networks a.twitter {
   background-image: url("../images/twitter.png");
+}
+
+#main-footer .social-networks a.google-plus {
+  background-image: url("../images/google-plus.png");
+}
+
+#main-footer .social-networks a.youtube {
+  background-image: url("../images/youtube.png");
 }

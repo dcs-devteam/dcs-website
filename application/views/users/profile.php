@@ -120,7 +120,7 @@
   </section>
   <aside>  
     <section id="personal-info">  
-      <div id="profile-pic" style="background: #222222 url('<?=base_url()?>assets/images/eman.jpg') center center no-repeat; background-size:cover;">
+      <div id="profile-pic" style="background: #222222 url('<?=base_url().$info->profpic;?>') center center no-repeat; background-size:cover;">
         <span>
           <a href="#"><img src="<?=base_url()?>assets/images/facebook.png"></a>
           <a href="#"><img src="<?=base_url()?>assets/images/twitter.png"></a>
@@ -128,10 +128,10 @@
         </span>
       </div>
       <div id="profile-info">
-        <h1>EMMANUEL LODOVICE</h1>
+        <h1><?php echo fullName_helper($info->firstname,$info->middlename,$info->lastname,1);?></h1>
         <h2>2011-37567</h2>
-        <h2>BS Computer Science III</h2>
-        <p>Emmanuel is from Jampang Argao. He is 17 years of age and is currently working at Azeus Inc. You can email him at name3anad@gmail.com or give him a call 09229365294.</p>      
+        <h2><?php echo $info->course." ".$info->yearlevel;?></h2>
+        <p><?php echo $info->description;?></p>      
       </div>
     </section>
 
