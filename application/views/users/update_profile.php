@@ -8,7 +8,7 @@
     </div>
   <?=form_close();?>
   <section id="personal-info-container">
-    <form action="#" method="POST">
+    <?=form_open_multipart("","POST");?>
       <h1>PERSONAL INFORMATION</h1>
       <div class="field">    
         <div class="title"><label>First Name</label></div>
@@ -37,7 +37,7 @@
       <div class="field">    
         <div class="title"><label>Course</label></div>
         <div class="value">
-          <select name="year" placeholder="Year">
+          <select name="course" placeholder="Year">
             <option value="1">BS Computer Science</option>
             <option value="2">MS Computer Science</option>
           </select>
@@ -62,7 +62,7 @@
       </div>
       <div class="field">    
         <div class="title"><label>Twitter</label></div>
-        <div class="value"><input type="url" name="facebook" placeholder="Link to your twitter page" value="http://www.twitter.com/nameanad"></div>
+        <div class="value"><input type="url" name="twiiter" placeholder="Link to your twitter page" value="http://www.twitter.com/nameanad"></div>
       </div><br/>
       <div class="field">    
         <div class="title"></div>

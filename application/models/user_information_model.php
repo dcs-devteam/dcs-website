@@ -22,11 +22,12 @@
 			$this->db->where ('user.id', $id);
 
 			$result = $this->db->get();
-			return $result->row();
-
-			
+			return $result->row();	
 		}
 		
+		public function editUserInformation($info, $contact_num) {
+			$var 
+		}
 
 	}
 ?>

@@ -1,4 +1,3 @@
-<?php $this->load->helper('frontend_helper')?>
 <div class="user-profile" style="background: #ffffff url('<?=base_url().$info->backgroundimage;?>') center center no-repeat fixed; background-size:cover;">
   <section class="projects-container">
     <h1>PROJECTS</h1>
