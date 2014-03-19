@@ -17,6 +17,7 @@
       $info =  $this->ui_model->fetchUserInformation('1');
       $data['main_content'] = $this->load->view("users/profile", array('info'=>$info), true);
       $this->parser->parse('layouts/default', $data);    
+    }
 
     public function update_profile() {
       $data['page_title'] = 'Department Of Computer Science';
