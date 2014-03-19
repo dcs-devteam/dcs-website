@@ -339,6 +339,8 @@
 #spotlight figcaption {
   float: right;
   width: 60%;
+  height: 120px;
+  overflow: hidden;
 }
 
 #spotlight h2 {

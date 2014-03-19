@@ -2,7 +2,7 @@
 <div class="user-profile" style="background: #ffffff url('<?=base_url().$info->backgroundimage;?>') center center no-repeat fixed; background-size:cover;">
   <section class="projects-container">
     <h1>PROJECTS</h1>
-    <div class="project">      
+    <div class="project">
       <a href="#">
         <div class="project-pictures-container">
           <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');"></div>
@@ -16,17 +16,17 @@
         <span data-number="0" class="current"></span>            
       </div>
       <div class="project-description">
-        <a href="#"><h2>Project Name</h2></a>
-        <h3>By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a></h3>
+        <a href="#"><h2>Project Name</h2></a>        
         <details>
           <summary>
-          Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. 
+            By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a> 
           </summary>
-          Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.
+          Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis. Lorem ipsum Exercitation cillum non laborum velit id officia nulla ad nisi sunt occaecat culpa aliquip do dolore ut ut dolore est qui sed laboris ullamco cillum nulla.Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis. Lorem ipsum Exercitation cillum non laborum velit id officia nulla ad nisi sunt occaecat culpa aliquip do dolore ut ut dolore est qui sed laboris ullamco cillum nulla.
+          Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis. Lorem ipsum Exercitation cillum non laborum velit id officia nulla ad nisi sunt occaecat culpa aliquip do dolore ut ut dolore est qui sed laboris ullamco cillum nulla.Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis. Lorem ipsum Exercitation cillum non laborum velit id officia nulla ad nisi sunt occaecat culpa aliquip do dolore ut ut dolore est qui sed laboris ullamco cillum nulla.
         </details>
       </div>      
     </div>
-    <div class="project">      
+    <div class="project">
       <a href="#">
         <div class="project-pictures-container">
           <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');"></div>
@@ -40,35 +40,10 @@
         <span data-number="0" class="current"></span>            
       </div>
       <div class="project-description">
-        <a href="#"><h2>Project Name</h2></a>
-        <h3>By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a></h3>
+        <a href="#"><h2>Project Name</h2></a>        
         <details>
           <summary>
-          Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. 
-          </summary>
-          Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.
-        </details>
-      </div>      
-    </div>
-    <div class="project">      
-      <a href="#">
-        <div class="project-pictures-container">
-          <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');"></div>
-          <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project2.jpg');"></div>
-          <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project3.png');"></div>
-        </div>
-      </a>
-      <div class="circles-container">
-        <span data-number="2"></span>
-        <span data-number="1"></span>
-        <span data-number="0" class="current"></span>            
-      </div>
-      <div class="project-description">
-        <a href="#"><h2>Project Name</h2></a>
-        <h3>By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a></h3>
-        <details>
-          <summary>
-          Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. 
+            By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a>
           </summary>
           Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.
         </details>
@@ -88,17 +63,16 @@
         <span data-number="0" class="current"></span>            
       </div>
       <div class="project-description">
-        <a href="#"><h2>Project Name</h2></a>
-        <h3>By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a></h3>
+        <a href="#"><h2>Project Name</h2></a>        
         <details>
           <summary>
-          Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. 
+            By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a>
           </summary>
           Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.
         </details>
       </div>      
     </div>
-    <div class="project">      
+    <div class="project">
       <a href="#">
         <div class="project-pictures-container">
           <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');"></div>
@@ -112,16 +86,38 @@
         <span data-number="0" class="current"></span>            
       </div>
       <div class="project-description">
-        <a href="#"><h2>Project Name</h2></a>
-        <h3>By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a></h3>
+        <a href="#"><h2>Project Name</h2></a>        
         <details>
           <summary>
-          Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. 
+            By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a>
           </summary>
           Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.
         </details>
       </div>      
-    </div>    
+    </div>
+    <div class="project">
+      <a href="#">
+        <div class="project-pictures-container">
+          <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project1.jpg');"></div>
+          <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project2.jpg');"></div>
+          <div class="project-picture" style="background-image: url('<?=base_url()?>assets/images/project3.png');"></div>
+        </div>
+      </a>
+      <div class="circles-container">
+        <span data-number="2"></span>
+        <span data-number="1"></span>
+        <span data-number="0" class="current"></span>            
+      </div>
+      <div class="project-description">
+        <a href="#"><h2>Project Name</h2></a>        
+        <details>
+          <summary>
+            By <a href="#" class="underline">Emmanuel T. Lodovice</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a> | <a href="#" class="underline">Arnelle Balane</a>
+          </summary>
+          Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.
+        </details>
+      </div>      
+    </div>
   </section>
   <aside>  
     <section id="personal-info">  

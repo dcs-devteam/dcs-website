@@ -9,7 +9,7 @@
   <div id="main-wrapper" class="default">
     <?php $this->load->view('partials/header'); ?>
     <div class="wrapper clearfix">
-      <aside id="main-sidebar"><?php $this->load->view('partials/sidebar'); ?></aside>
+      <aside id="main-sidebar">{sidebar_content}</aside>
       <div id="main-content">{main_content}</div>
     </div>
   </div>

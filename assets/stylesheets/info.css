@@ -1,3 +1,7 @@
+body.info strong {
+  font-weight: bold;
+}
+
 body.info .faculty-container {
   background: white;
   margin: 0px;
@@ -19,7 +23,8 @@ body.info .faculty-container .faculty-group h1 {
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
-  background: #AA0000;
+  /*background: #AA0000;*/
+  background: #570E0E;
   padding: 1rem;    
   padding-left: 25px;
   /*border-radius: 2px;*/
@@ -89,7 +94,7 @@ body.info .faculty-container .tile-wrapper .tile .information-container .field p
 }
 
 body.info .faculty-container .tile-wrapper .tile .information-container .field li {
-  margin-bottom: 1px;
+  margin-bottom: 1px;  
 }
 
 /* academic_programs function*/
@@ -99,9 +104,24 @@ body.info .academic_programs {
   min-height: 637px;
 }
 
+body.info .academic_programs p {
+  width: 100%;
+  font-family: "open sans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #333333;
+  display: block;
+  text-indent: 20px;
+}
+
+body.info .academic_programs .program-container {
+  margin-top: 10px;
+}
+
 body.info .academic_programs .program {
   width: 100%;
   display: none;
+  color: #333333;
 }
 
 body.info .academic_programs .program h1 {
@@ -109,7 +129,7 @@ body.info .academic_programs .program h1 {
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
-  background: #AA0000;
+  background: #570E0E;
   padding: 1rem;
   padding-left: 25px;
   border-radius: 0px 1000px 1000px 0px; 
@@ -125,7 +145,7 @@ body.info .academic_programs .program .field h2 {
   width: 97%;
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2rem;
-  border-bottom: 1px solid #AA0000;
+  border-bottom: 1px solid #570E0E;
   padding-bottom: 10px;
   color: #333333;
   font-weight: bold;
@@ -134,8 +154,8 @@ body.info .academic_programs .program .field h2 {
 body.info .academic_programs .program .field p {
   width: 97%;
   font-family: "open sans";
-  font-size: 1.25rem;
-  line-height: 1.7rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-top: 20px;
   text-indent: 30px;
   padding-left: 15px;
@@ -172,8 +192,15 @@ body.info .department {
   width: 100%;
 }
 
+body.info .department strong {
+  font-weight: bold;
+}
+
 body.info .department .about-department {
   width: 100%;    
+  clear: both;
+  margin-bottom: 10px;
+  color: #333333;
 }
 
 body.info .department .about-department h1{
@@ -181,10 +208,11 @@ body.info .department .about-department h1{
   font-family: "Open Sans Light", "OpenSansLight";
   font-size: 2.5rem;
   color: white;
-  background: #AA0000;
+  background: #570E0E;
   padding: 1rem;
   padding-left: 25px;
-  border-radius: 0px 1000px 1000px 0px; 
+  border-radius: 0px 1000px 1000px 0px;
+  margin-bottom: 10px;
 }
 
 body.info .department .about-department .content {
@@ -192,43 +220,45 @@ body.info .department .about-department .content {
   padding: 20px;
   padding-top: 0px;
   padding-left: 30px;
+  clear: both;
 }
 
-body.info .department .about-department .content img {
+body.info .department .about-department .content figure {
   width: 300px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
+  float:left;  
+  margin-right: 10px;
+  clear: both;  
+  background: #014421;
+  padding: 2px;
+  padding-bottom: 5px;
+}
+body.info .department .about-department .content figure img { 
+  width: 100%; 
 }
 
-body.info .department .about-department .content .beside-text {
-  width: 35%;
-  display: inline;
-  margin-left: 18px;
-  vertical-align: top;
+body.info .department .about-department .content figcaption {
+  font-family: "open sans light";
+  font-size: 1.3rem;  
+  margin-top: 2px;
+  color: #FFFFFF;
 }
+
 
 body.info .department .about-department .content p {
   width: 97%;
   font-family: "open sans";
-  font-size: 1.25rem;
-  line-height: 1.7rem;
-  margin-top: 20px;
-  text-indent: 30px;
-  padding-left: 15px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 10px;
+  text-indent: 30px;  
   list-style: decimal;
-}
-
-body.info .department .about-department .content .beside-image {
-  width: 60%;  
-  display: inline-block;
 }
 
 body.info .department .about-department .content ul, body.info .department .about-department .content ol {
   width: 97%;
   font-family: "open sans";
-  font-size: 1.25rem;
-  line-height: 1.7rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   margin-top: 20px;
   margin-left: 50px;
   padding-left: 30px;
@@ -264,13 +294,19 @@ body.info .department .field {
 }
 
 body.info .department .field:hover {
-  background: #CCCCCC;
+  background: #014421;
   border-radius: 1px;
-  cursor: pointer;
+  cursor: default;
+  color: white;
 }
 body.info .department .field a {
   text-decoration: none;
-  color: black;
+  color: inherit;
+}
+
+body.info .department .field a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 body.info .department .heading {
@@ -285,6 +321,7 @@ body.info .department .heading {
   font-size: 1.5rem;
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
+  font-weight: bold;
 }
 
 
@@ -309,128 +346,130 @@ body.info .department .field .value {
   font-size: 1.5rem;
 }
 
+body.info .department .field img {
+  max-width: 100%;
+  width: 300px;
+  display: block;
+  margin-top: 5px;
+}
+
 body.info h1 {
   font: normal 2.8rem/1 "Open Sans Light", "OpenSansLight";
   color: #570E0E;
 }
 
+body.info p.upcoming-content {
+  font: normal 1.4rem "Open Sans", "OpenSansRegular";
+  color: #333333;
+  background-color: #eeeeee;
+  padding: 7px 0;
+}
+
 body.info section {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 body.info section h2 {
   font: normal 2.2rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
+  margin-bottom: 15px;
 }
 
 body.info section p {
   font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
   color: #333333;
   text-indent: 40px;
-  margin-top: 10px;
 }
 
-body.info.research_lab_news .latest-news time {
-  font: normal 1.4rem "Open Sans", "OpenSansRegular";
+body.info.research section figure,
+body.info.developer_corner section figure,
+body.info.initiatives_and_society section figure {
+  float: left;
+  width: 350px;
+  margin: 0 15px 15px 0;
+}
+
+body.info.research section figure img,
+body.info.developer_corner section figure img,
+body.info.initiatives_and_society section figure img {
+  display: block;
+  width: 100%;
+}
+
+body.info.research section figcaption,
+body.info.developer_corner section figcaption,
+body.info.initiatives_and_society section figcaption {
+  font: italic normal 1.4rem/1 "Open Sans", "OpenSansRegular";
   color: #777777;
+  margin: 10px 0 0 10px;
 }
 
-body.info.research_lab_news .latest-news p {
-  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
-  color: #333333;
-  text-indent: 40px;
-  margin-top: 10px;
+body.info .campus_activities_container section {  
+  width: 100%;
+  padding-top: 10px;
 }
 
-body.info.research_lab_news .latest-news p:first-of-type {
-  margin-top: 25px;
+body.info .campus_activities_contianer section h2 {
+  font-family: "Open Sans Light";
+  font-size: 2rem;
 }
 
-body.info.research_lab_news .other-news {
-  margin-top: 25px;
-  background-color: #f7f7f7;
+body.info .campus_activities_container section figure {
+  float:left;
+  width: 200px;
+  height: 200px;
+  margin: 0 15px 15px 0;
+  background: transparent top center no-repeat;
+  background-size: cover;
 }
 
-body.info.research_lab_news .other-news h2 {
-  font: normal 1.4rem/1 "Open Sans", "OpenSansRegular";
-  color: #333333;
-  text-transform: uppercase;
-  padding: 15px 25px;
-  background-color: #f3f3f3;
-  border-bottom: 1px solid #dadada;
+body.info .campus_activities_container section .big {
+  width: 400px;
 }
 
-body.info.research_lab_news .other-news a {
-  display: block;
-  margin: 0;
-  padding: 15px 25px 15px 22px;
-  text-decoration: none;
-  border-left: 3px solid transparent;
-  position: relative;
+body.info .campus_activities_container section figure img {
+  width: 100%;
 }
 
-body.info.research_lab_news .other-news a:nth-of-type(even) {
-  background-color: #f3f3f3;
+body.info .campus_activities_container section figure figcaption {
+  font-family: "open sans light";
+  font-size: 1.3rem;  
+  margin-top: 2px;
+  color: #FFFFFF;
 }
 
-body.info.research_lab_news .other-news a:hover,
-body.info.research_lab_news .other-news a:focus {
-  border-left: 3px solid #014421;
+body.info.partners .partner {
+  float: left;
+  clear: left;
+  width: 480px;
+  padding-right: 25px;
+  margin-bottom: 25px;
 }
 
-body.info.research_lab_news .other-news a:hover:before,
-body.info.research_lab_news .other-news a:focus:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-left: 8px solid #014421;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  margin-top: -8px;
+body.info.partners .partner:nth-of-type(even) {
+  clear: none;
+  padding: 0 0 0 25px;
 }
 
-body.info.research_lab_news .other-news span {
-  display: block;
-  font: normal 1.6rem/1 "Open Sans Light", "OpenSansLight";
-  color: #111111;
-}
-
-body.info.research_lab_news .other-news time {
-  display: block;
-  font: normal 1.2rem/1 "Open Sans", "OpenSansRegular";
-  color: #555555;
-  margin-top: 3px;
-}
-
-body.info.alumni_features #main-content h1 {
-  margin-bottom: 28px;
-}
-
-body.info.alumni_features #main-content p {
-  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
-  color: #333333;
-  text-indent: 40px;
-  margin-top: 10px;
-}
-
-body.info.industry_partners #main-content ul {
-  margin-top: 30px;
-}
-
-body.info.industry_partners #main-content ul li {
-  display: inline-block;
+body.info.partners .partner .logo {
+  float: left;
   width: 150px;
-  height: 75px;
-  background: center center no-repeat;
+  height: 100px;
+  background: transparent center center no-repeat;
   background-size: contain;
-  margin: 0 25px 25px 0;
 }
 
-body.info.industry_partners #main-content ul li[data-logo="google"] {
-  background-image: url("../images/google.png");
+body.info.partners .partner .content {
+  float: right;
+  width: 290px;
 }
 
-body.info.industry_partners #main-content ul li[data-logo="facebook"] {
-  background-image: url("../images/facebook.jpg");
+body.info.partners .partner h3 {
+  font: normal 2rem/1 "Open Sans Light", "OpenSansLight";
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+body.info.partners .partner p {
+  text-indent: 0;
 }

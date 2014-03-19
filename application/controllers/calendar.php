@@ -4,8 +4,9 @@
 
     public function __construct() {
       parent::__construct();
+      $this->request_methods['GET'] = array('index');
 
-      $this->_determine_route();
+      $this->_check_request_method();
       $this->load->helper('application_helper');
     }
 

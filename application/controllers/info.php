@@ -4,67 +4,66 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('department', 'academic_programs', 'why_upcdcs', 'research_lab_news', 
-        'student_highlights', 'people', 'service_to_society', 'alumni_features', 'industry_partners');
+      $this->request_methods['GET'] = array('department', 'admission', 'research', 'faculty', 'campus_activities',
+        'developer_corner', 'initiatives_and_society', 'partners');
 
       $this->_check_request_method();
-      // $this->load->model('meta_model', 'meta');
-      // $this->load->model('poll_model', 'poll');
-      // $this->load->model('secret_model', 'secret');
       $this->load->helper('application_helper');
     }
 
     public function department() {
       $data['page_title'] = 'Department Of Computer Science';
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
       $data['main_content'] = $this->load->view('info/department', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function academic_programs($program='ap-bachelor-of-science') {      
+    public function admission($program='ap-bachelor-of-science') {      
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/academic_programs', array('program'=>$program), true);
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/admission', array('program'=>$program), true);
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function why_upcdcs() {
+    public function research() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/why_upcdcs', array(), true);
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/research', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function research_lab_news() {
+    public function faculty() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/research_lab_news', array(), true);
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/faculty', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function student_highlights() {
-      $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/student_highlights', array(), true);
+    public function campus_activities() {
+      $data['page_title'] = 'Department of Computer Science';
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/campus_activities', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function people() {
+    public function developer_corner() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/people', array(), true);
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/developer_corner', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function service_to_society() {
+    public function initiatives_and_society() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/service_to_society', array(), true);
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/initiatives_and_society', array(), true);
       $this->parser->parse('layouts/default', $data);
-    }
+    }    
 
-    public function alumni_features() {
+    public function partners() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/alumni_features', array(), true);
-      $this->parser->parse('layouts/default', $data);
-    }
-
-    public function industry_partners() {
-      $data['page_title'] = 'Department Of Computer Science';
-      $data['main_content'] = $this->load->view('info/industry_partners', array(), true);
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
+      $data['main_content'] = $this->load->view('info/partners', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
   }
