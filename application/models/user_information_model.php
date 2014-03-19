@@ -19,6 +19,7 @@
 			$this->db->select('*');
 			$this->db->from('user');
 			$this->db->join('information', 'information.u_id = user.id');
+			$this->db->join('contact', 'contact.u_id = user.id');
 			$this->db->where ('user.id', $id);
 
 			$result = $this->db->get();

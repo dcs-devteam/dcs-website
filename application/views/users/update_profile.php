@@ -4,27 +4,27 @@
       <h1>PERSONAL INFORMATION</h1>
       <div class="field">    
         <div class="title"><label>First Name</label></div>
-        <div class="value"><input type="text" name="firstname" placeholder="First name" value="Emmanuel"></div>
+        <div class="value"><input type="text" name="firstname" placeholder="First name" value="<?=$info->firstname;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Last Name</label></div>
-        <div class="value"><input type="text" name="lastname" placeholder="Last name" value="Lodovice"></div>
+        <div class="value"><input type="text" name="lastname" placeholder="Last name" value="<?=$info->lastname;?>"></div>
       </div>      
       <div class="field">    
         <div class="title"><label>Address</label></div>
-        <div class="value"><input type="text" name="address" placeholder="Address" value="Jampang, Argao, Cebu"></div>
+        <div class="value"><input type="text" name="address" placeholder="Address" value="<?=$info->address;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Birthday</label></div>
-        <div class="value"><input type="date" name="birthday" value"2013-09-24 00:50:45"></div>
+        <div class="value"><input type="date" name="birthday" value="<?=$info->birthday;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Age</label></div>
-        <div class="value"><input type="number" name="age" min="0" max="100" placeholder="Age" value="18"></div>
+        <div class="value"><input type="number" name="age" min="0" max="100" placeholder="Age" value="<?=$info->age;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Student Number</label></div>
-        <div class="value"><input type="text" name="student_number" placeholder="xxxx-xxxxx" value="2011-37567"></div>
+        <div class="value"><input type="text" name="student_number" placeholder="xxxx-xxxxx" value="<?=$info->studentnumber;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Course</label></div>
@@ -37,24 +37,24 @@
       </div>
       <div class="field">    
         <div class="title"><label>Year</label></div>
-        <div class="value"><input type="number" name="year" min="1" max="6" placeholder="Year" value="3"></div>
+        <div class="value"><input type="text" name="year" min="1" max="6" placeholder="Year" value="<?=$info->yearlevel;?>"></div>
       </div><br/><br/>
       <h1>CONTACT DETAILS</h1>
       <div class="field">    
         <div class="title"><label>Email</label></div>
-        <div class="value"><input type="email" name="email" placeholder="Email address" value="name3anad@gmail.com"></div>
+        <div class="value"><input type="email" name="email" placeholder="Email address" value="<?=$info->email;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Contact #</label></div>
-        <div class="value"><input type="text" name="number" placeholder="Cellphone number" value="09229365294"></div>
+        <div class="value"><input type="text" name="number" placeholder="Cellphone number" value="<?=$info->contact_number;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Facebook</label></div>
-        <div class="value"><input type="url" name="facebook" placeholder="Link to your facebook page" value="http://www.facebook.com/nameANAD"></div>
+        <div class="value"><input type="text" name="facebook" placeholder="Link to your facebook page" value="<?=$info->facebook;?>"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Twitter</label></div>
-        <div class="value"><input type="url" name="twiiter" placeholder="Link to your twitter page" value="http://www.twitter.com/nameanad"></div>
+        <div class="value"><input type="text" name="twitter" placeholder="Link to your twitter page" value="<?=$info->twitter;?> "></div>
       </div><br/>
       <div class="field">    
         <div class="title"></div>

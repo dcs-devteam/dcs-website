@@ -24,7 +24,8 @@
     public function update_profile() {
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
-      $data['main_content'] = $this->load->view("users/update_profile", array(), true);      
+      $info =  $this->ui_model->fetchUserInformation('1');
+      $data['main_content'] = $this->load->view("users/update_profile", array('info'=>$info), true);      
       $this->parser->parse('layouts/default', $data);
     }
 
@@ -46,16 +47,19 @@
         'facebook' => $_POST['facebook'],
         'twitter' => $_POST['twitter']
       ); 
-      $flag = 0;
+
+      $flag = false;
       foreach ($info as $key => $value) {
-        if (isset($value)) {
-          $flag = 1;
+        if (!$value) {
+          print_r($value);
+          $flag = true;
           break;
         }
       }
       foreach ($contacts as $key => $value) {
-        if (isset($value)) {
-          $flag = 1;
+        if (!$value) {
+          print_r($value);
+          $flag = true;
           break;
         }
       }
@@ -63,7 +67,7 @@
       if ($flag) {
         $this->session->set_flashdata('alert','Form Error');
       } else {
-        $this->session->set_flashdata('Notice','Update Success');
+        $this->session->set_flashdata('notice','Update Success');
       }
 
       redirect('/users/update_profile','location');
