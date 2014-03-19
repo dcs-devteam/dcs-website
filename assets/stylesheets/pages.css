@@ -217,6 +217,16 @@
   position: relative;
 }
 
+#home-navigation > li:first-of-type {
+  top: 0;
+}
+
+#home-navigation img {
+  display: block;
+  width: 50px;
+  margin: -15px auto 15px auto;
+}
+
 #home-navigation ul {
   display: none;
   position: absolute;
