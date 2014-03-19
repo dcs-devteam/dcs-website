@@ -1,6 +1,6 @@
 <div class="user-update-profile">  
   <section id="personal-info-container">
-    <?=form_open_multipart("","POST");?>
+    <?=form_open("users/edit_data","POST");?>
       <h1>PERSONAL INFORMATION</h1>
       <div class="field">    
         <div class="title"><label>First Name</label></div>
@@ -46,7 +46,7 @@
       </div>
       <div class="field">    
         <div class="title"><label>Contact #</label></div>
-        <div class="value"><input type="url" name="number" placeholder="Cellphone number" value="09229365294"></div>
+        <div class="value"><input type="text" name="number" placeholder="Cellphone number" value="09229365294"></div>
       </div>
       <div class="field">    
         <div class="title"><label>Facebook</label></div>
@@ -60,7 +60,7 @@
         <div class="title"></div>
         <div class="value"><input type="submit" value="UPDATE" class="button green"></div>
       </div>      
-    </form>
+    <?= form_close(); ?>
   </section>
   <aside>
     <section id="profile-picture-container">  

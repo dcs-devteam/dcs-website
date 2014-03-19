@@ -26,7 +26,7 @@
 		}
 		
 		public function editUserInformation($info, $contact_num) {
-			$var 
+			
 		}
 
 	}
