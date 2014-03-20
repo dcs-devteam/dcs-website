@@ -343,26 +343,23 @@ body.users .user-update-profile #personal-info-container h1 {
 body.users .user-update-profile #personal-info-container .field {
   width: 100%;
   display: block;
-  margin-left: 20px;
+  margin: 0px auto;  
 }
 
-body.users .user-update-profile #personal-info-container .field .title {  
-  width: 30%;
-  display: inline-block;
-}
-body.users .user-update-profile #personal-info-container .field .value {  
-  width: 65%;
-  display: inline-block;
-}
 
 body.users .user-update-profile #personal-info-container label {
   font-family: 'open sans', "OpenSansRegular";
   font-size: 1.5rem;  
+  width: 30%;
 }
 
-body.users .user-update-profile #personal-info-container .field .value input[type="text"], input[type="url"],
-input[type="email"],input[type="number"],input[type="date"],select {
-  width: 90%;
+body.users .user-update-profile #personal-info-container input[type="text"],
+body.users .user-update-profile #personal-info-container input[type="url"],
+body.users .user-update-profile #personal-info-container input[type="email"],
+body.users .user-update-profile #personal-info-container input[type="number"],
+body.users .user-update-profile #personal-info-container input[type="date"],
+body.users .user-update-profile #personal-info-container select {
+  width: 68%;
 }
 
 body.users .user-update-profile aside {
