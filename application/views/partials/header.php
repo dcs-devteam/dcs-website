@@ -12,7 +12,7 @@
     </nav>
     -->
 
-    <a id="current-user">
+    <a href="#" id="current-user">
       <div class="image" style="background-image: url('<?= base_url() . 'assets/images/profile-picture.jpg'; ?>')"></div>
       <div class="content">
         <h2>Arnelle Balane</h2>
