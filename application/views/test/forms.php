@@ -66,7 +66,7 @@
     </div>
 
     <div class="field">
-      <label class="textarea">textarea</label>
+      <label class="vtop">textarea</label>
       <textarea></textarea>
     </div>
 
