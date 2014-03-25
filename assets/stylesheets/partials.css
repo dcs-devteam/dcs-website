@@ -4,7 +4,7 @@
   margin-bottom: 15px;
 }
 
-#main-header a {
+#logo {
   float: left;
   font: normal 2.4rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
@@ -14,7 +14,7 @@
   padding: 7px 0 3px 55px;
 }
 
-#main-header a span {
+#logo span {
   display: block;
   font-size: 1.6rem;
   margin-left: 1px;
