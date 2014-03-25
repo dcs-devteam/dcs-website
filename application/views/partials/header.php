@@ -11,9 +11,5 @@
       <a href="#" class="<?= current_header_item($controller, $action, 'contact'); ?>">Contact Us</a>
     </nav>
     -->
-
-    <div class="logos">
-      <img src="<?= base_url() . 'assets/images/up-logo.png'; ?>" />
-    </div>
   </div>
 </div>
