@@ -12,14 +12,14 @@
 
     public function index() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['sidebar_content'] = $this->load->view('news/partials/sidebar', array(), true);
+      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
       $data['main_content'] = $this->load->view('news/index', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
 
     public function show() {
       $data['page_title'] = 'Department Of Computer Science';
-      $data['sidebar_content'] = $this->load->view('news/partials/sidebar', array(), true);
+      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
       $data['main_content'] = $this->load->view('news/show', array(), true);
       $this->parser->parse('layouts/default', $data);
     }
