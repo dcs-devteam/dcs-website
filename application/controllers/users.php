@@ -4,7 +4,7 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('profile', 'update_profile');
+      $this->request_methods['GET'] = array('profile', 'update_profile', 'create');
       $this->request_methods['POST'] = array('edit_data');
       
       $this->_check_request_method();
@@ -72,6 +72,13 @@
 
       redirect('/users/update_profile','location');
 
+    }
+
+    public function create() {
+      $data['page_title'] = 'Department Of Computer Science';
+      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);      
+      $data['main_content'] = $this->load->view("users/create", array(), true);
+      $this->parser->parse('layouts/default', $data);
     }
   }
 

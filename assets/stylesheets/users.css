@@ -396,3 +396,46 @@ body.users .user-update-profile aside #new-profpic-button-container {
   margin: 3px auto;
   display: none;
 }
+
+body.users .create {
+  width: 500px;
+  margin: 0 auto;
+}
+
+body.users .create h1 {
+  width: 100%;
+  font-family: "Open Sans Light", "OpenSansLight";
+  font-size: 2rem;
+  color: #570E0E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body.users .create .check-list {
+  display: inline-block;
+  width: 250px;  
+}
+
+body.users .create .check-list .item {  
+  display: block;    
+  padding-top: 2px;
+  width: 100%;  
+}
+
+body.users .create .check-list .item label {  
+  width: 90%;
+  color: #555555;
+  font-family: "Open Sans", "OpenSansRegular";
+  font-size: 1.4rem;
+  display: inline;
+  vertical-align: top;
+  display: inline-block;    
+}
+
+body.users .create .check-list .item input[type="checkbox"] {
+  vertical-align: top;
+}
+
+body.users .create input[type="submit"] {
+  margin-left: 155px;
+}
