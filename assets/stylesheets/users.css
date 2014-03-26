@@ -1,3 +1,41 @@
+a#current-user {
+  float: right;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+a#current-user .image {
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  background: center center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+a#current-user .content {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 0 0 5px;
+}
+
+a#current-user h2 {
+  font: normal 1.6rem/1 "Open Sans Light", "OpenSansLight";
+  color: #333333;
+}
+
+a#current-user p {
+  font: normal 1.1rem/1 "Open Sans Light", "OpenSansLight";
+  color: #555555;
+  text-transform: uppercase;
+}
+
+a#current-user:hover h2,
+a#current-user:focus h2 {
+  color: #570E0E;
+}
+
 body.users .user-profile {
   margin: 0px;
   padding: 20px;

@@ -1,6 +1,6 @@
 <div id="main-header">
   <div class="wrapper clearfix">
-    <a href="<?= site_url('pages/home'); ?>"><span>Department of</span>Computer Science</a>
+    <a href="<?= site_url('pages/home'); ?>" id="logo"><span>Department of</span>Computer Science</a>
     <!--
     <nav>
       <a href="<?= site_url('info/department'); ?>" class="<?= current_header_item($controller, $action, 'info'); ?>">Info</a>
@@ -12,8 +12,12 @@
     </nav>
     -->
 
-    <div class="logos">
-      <img src="<?= base_url() . 'assets/images/up-logo.png'; ?>" />
-    </div>
+    <a href="#" id="current-user">
+      <div class="image" style="background-image: url('<?= base_url() . 'assets/images/profile-picture.jpg'; ?>')"></div>
+      <div class="content">
+        <h2>Arnelle Balane</h2>
+        <p>Student</p>
+      </div>
+    </a>
   </div>
 </div>

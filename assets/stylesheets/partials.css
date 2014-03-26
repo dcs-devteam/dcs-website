@@ -1,21 +1,23 @@
 /*** HEADER PARTIAL ***/
 #main-header {
-  padding: 25px 0;
+  padding: 20px 0;
   margin-bottom: 15px;
 }
 
-#main-header a {
+#logo {
   float: left;
-  width: 20%;
   font: normal 2.4rem/1 "Open Sans Light", "OpenSansLight";
   color: #333333;
   text-decoration: none;
+  background: url("../images/up-logo.png") left center no-repeat;
+  background-size: auto 100%;
+  padding: 7px 0 3px 55px;
 }
 
-#main-header a span {
+#logo span {
   display: block;
   font-size: 1.6rem;
-  margin-left: 16px;
+  margin-left: 1px;
 }
 
 #main-header nav {
