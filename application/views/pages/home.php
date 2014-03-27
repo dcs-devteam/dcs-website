@@ -95,7 +95,6 @@
         </a>
       </section>
 
-      <!--
       <section id="recent-news">
         <h1>
           Recent News
@@ -107,7 +106,6 @@
           <?php endfor; ?>
         </div>
       </section>
-        -->
 
       <section id="upcoming-events">
         <h1>
