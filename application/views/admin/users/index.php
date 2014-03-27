@@ -20,7 +20,7 @@
 
   <div class="listing">
     <?php for ($i = 0; $i < 10; $i++): ?>
-    <a href="#">
+    <a href="<?= site_url('admin/users/edit'); ?>">
       Arnelle Balane
       <small>Student</small>
       <div class="privileges">
