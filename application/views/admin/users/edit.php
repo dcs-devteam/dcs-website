@@ -18,6 +18,7 @@
     </div>
     <div class="field actions">
       <input type="submit" value="Save Changes" class="button green">
+      <a href="<?= site_url('admin/users/index'); ?>" class="button maroon">Cancel</a>
     </div>
   </form>
 </div>
