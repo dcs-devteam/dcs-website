@@ -13,10 +13,11 @@
       $this->load->model('user_information_model', 'ui_model');
     }
 
-    public function profile() {                  
+    public function profile($id) {                  
       $data['page_title'] = 'Department Of Computer Science';
-      $data['sidebar_content'] = $this->load->view('info/partials/sidebar', array(), true);
-      $info =  $this->ui_model->fetchUserInformation('2');      
+      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
+      $info =  $this->ui_model->fetchUserInformation($id);
+      print_r($info);
       $data['main_content'] = $this->load->view("users/profile", array('info'=>$info), true);
       $this->parser->parse('layouts/default', $data);    
     }
