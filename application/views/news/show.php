@@ -6,4 +6,5 @@
     <?php endif; ?>
     <?=$news->content?>
   </div>
+<?php else : ?>  
 <?php endif; ?>

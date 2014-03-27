@@ -83,11 +83,8 @@
       }
     }
 
-    private function generateSlug($title) {
-      $title = str_replace(" ", "-", trim($title));
-      $title = str_replace("'", "", trim($title));
-      $title = str_replace('"', "", trim($title));
-      $title = strtolower($title);
+    private function generateSlug($title) {      
+      $title = url_title($title);
       $ctr = 1;
       while(true) {
         if (!$this->model->getNewsBySlug($title)) {
