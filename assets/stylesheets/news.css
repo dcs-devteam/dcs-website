@@ -85,6 +85,26 @@ body.news .news p {
   margin-bottom: 25px;
 }
 
+.news.show header {
+  padding-bottom: 20px;
+}
+
+.news.show header h1 {
+  padding: 0;
+  margin-left: -2px;
+}
+
+.news.show header h2 {
+  font: normal 1.6rem/1 "Open Sans", "OpenSansRegular";
+  color: #333333;
+  margin-top: 10px;
+}
+
+.news.show header time {
+  font: normal 1.4rem/1 "Open Sans Light", "OpenSansLight";
+  color: #555555;
+}
+
 .news.show .news img {
   float: left;
   max-width: 40%;
