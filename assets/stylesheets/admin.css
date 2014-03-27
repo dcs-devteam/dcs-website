@@ -62,3 +62,31 @@
   background: url("../images/privileges/create-news.png") center center no-repeat;
   background-size: 110% auto;
 }
+
+.admin.users.index header h1 {
+  display: inline-block;
+}
+
+.admin.users.index header form {
+  float: right;
+  margin-top: -5px;
+}
+
+.admin.users.index header form input[type="text"] {
+  width: 180px;
+  margin: 0;
+}
+
+.admin.users.index header form select {
+  width: auto;
+  padding: 6px 7px;
+  margin: 0;
+}
+
+.admin.users.index header form .button {
+  margin: 0;
+}
+
+.admin.users.index header form.filter {
+  margin-left: 10px;
+}
