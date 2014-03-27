@@ -1,4 +1,4 @@
-<form action="#" method="POST" enctype="multipart/form-data" class="news">
+<form action="<?=site_url('news/add')?>" method="POST" enctype="multipart/form-data" class="news">
   <h1>Create News Article</h1>
 
   <div class="field">

@@ -119,7 +119,7 @@
     </div>
   </section>
   <aside>  
-    <section id="personal-info">  
+    <section id="personal-info">        
       <div id="profile-pic" style="background: #222222 url('<?=base_url().$info->profpic;?>') center center no-repeat; background-size:cover;">
         <span>
           <a href="#"><img src="<?=base_url()?>assets/images/facebook.png"></a>
