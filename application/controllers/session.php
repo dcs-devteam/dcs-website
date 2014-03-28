@@ -35,8 +35,8 @@
       if ($user) {        
         $user_info = $this->user_model->fetchUserInformation($user->id);
         $this->session->set_userdata('user_id', $user->id);
-        $this->session->set_userdata('firstname', ($user_info && $user_info->firstname != NULL) ? $user_info->firstname : "");
-        $this->session->set_userdata('lastname', ($user_info && $user_info->lastname != NULL) ? $user_info->lastname : "");
+        $this->session->set_userdata('role', $user->role_id);
+        $this->session->set_userdata('user_info', $user_info);
         redirect("users/profile");      
       } else {
         $this->session->set_flashdata("alert", "Wrong username or password!");

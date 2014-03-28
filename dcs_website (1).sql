@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2014 at 07:54 AM
+-- Generation Time: Mar 28, 2014 at 11:41 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -79,6 +79,25 @@ CREATE TABLE IF NOT EXISTS `contact` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `courses`
+--
+
+CREATE TABLE IF NOT EXISTS `courses` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`id`, `name`) VALUES
+(1, 'BS Computer Science');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `developers`
 --
 
@@ -141,39 +160,6 @@ CREATE TABLE IF NOT EXISTS `images` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `information`
---
-
-CREATE TABLE IF NOT EXISTS `information` (
-  `id` int(225) NOT NULL AUTO_INCREMENT,
-  `u_id` int(225) NOT NULL,
-  `firstname` varchar(225) NOT NULL,
-  `middlename` varchar(225) NOT NULL,
-  `lastname` varchar(225) NOT NULL,
-  `address` varchar(225) NOT NULL,
-  `age` varchar(255) NOT NULL,
-  `course` varchar(255) NOT NULL,
-  `birthday` date NOT NULL,
-  `studentnumber` varchar(255) NOT NULL,
-  `yearlevel` varchar(255) NOT NULL,
-  `description` text NOT NULL,
-  `profpic` varchar(255) NOT NULL,
-  `backgroundimage` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `information`
---
-
-INSERT INTO `information` (`id`, `u_id`, `firstname`, `middlename`, `lastname`, `address`, `age`, `course`, `birthday`, `studentnumber`, `yearlevel`, `description`, `profpic`, `backgroundimage`) VALUES
-(1, 1, 'Kevin', 'Eltagunde', 'Calingacion', 'Taloot, Argao, Cebu', '18', 'Bachelor of Science in Computer Science ', '1995-11-11', '2011-66721', '3rd Year', 'Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.', 'assets/images/profile-image/profile-id-1/prof-pic/p1.jpg', 'assets/images/profile-image/profile-id-1/bg-pic/b1.png'),
-(2, 2, 'Kev', 'Elta Gunde', 'Cal', 'Lahug, Cebu', '19', 'Bachelor of Science in Computer Science', '1994-03-20', '2011-44321', '3rd Year', 'Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.', '', ''),
-(3, 3, 'Keli', 'Dwarf', 'Oakenshield', 'Moria, Middle Earth', '17', 'Bachelor of Science in Computer Science', '1996-09-09', '2013-68972', '1st Year', 'Lorem ipsum Nulla non amet officia sunt dolore dolore magna nostrud ad sit aute ea ea. Lorem ipsum Esse occaecat amet quis ea deserunt exercitation in exercitation esse adipisicing elit in id fugiat fugiat proident pariatur ea id dolore eu voluptate mollit Excepteur incididunt in Duis.', '', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `metas`
 --
 
@@ -206,15 +192,12 @@ CREATE TABLE IF NOT EXISTS `news` (
   `u_id` int(225) NOT NULL,
   `slug` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id`, `title`, `date`, `content`, `u_id`, `slug`) VALUES
-(30, 'eman''s year', '2014-03-27 23:51:35', '<p>yeah</p>', 4, 'emans-year'),
-(31, 'Eman''s year', '2014-03-27 23:52:15', '<p>dasdasdas</p>', 4, 'Emans-year-1');
 
 -- --------------------------------------------------------
 
@@ -228,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `news_images` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `news_id` (`news_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `news_images`
@@ -401,6 +384,34 @@ INSERT INTO `user` (`id`, `password`, `username`, `role_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `user_information`
+--
+
+CREATE TABLE IF NOT EXISTS `user_information` (
+  `user_id` int(255) NOT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `middlename` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `course_id` int(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `age` int(255) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `studentnumber` varchar(255) DEFAULT NULL,
+  `yearlevel` int(255) DEFAULT NULL,
+  `description` text,
+  `profpic` text,
+  PRIMARY KEY (`user_id`),
+  KEY `course_id` (`course_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_information`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_privileges`
 --
 
@@ -415,6 +426,8 @@ CREATE TABLE IF NOT EXISTS `user_privileges` (
 -- Dumping data for table `user_privileges`
 --
 
+INSERT INTO `user_privileges` (`user_id`, `privilege_id`) VALUES
+(4, 1);
 
 --
 -- Constraints for dumped tables
@@ -449,6 +462,13 @@ ALTER TABLE `news_images`
 --
 ALTER TABLE `poll_answers`
   ADD CONSTRAINT `poll_answers_ibfk_1` FOREIGN KEY (`poll_id`) REFERENCES `polls` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user_information`
+--
+ALTER TABLE `user_information`
+  ADD CONSTRAINT `user_information_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_information_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `user_privileges`

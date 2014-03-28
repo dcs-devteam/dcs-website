@@ -389,7 +389,7 @@ body.users .user-update-profile #personal-info-container .field {
 body.users .user-update-profile #personal-info-container label {
   font-family: 'open sans', "OpenSansRegular";
   font-size: 1.5rem;  
-  width: 30%;
+  width: 30%;  
 }
 
 body.users.update_profile input[type="text"], 
@@ -398,7 +398,7 @@ body.users.update_profile input[type="email"],
 body.users.update_profile input[type="number"],
 body.users.update_profile input[type="date"],
 body.users.update_profile select {
-  width: 68%;
+  width: 68%;  
 }
 
 body.users .user-update-profile aside {

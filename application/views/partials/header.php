@@ -11,13 +11,15 @@
       <a href="#" class="<?= current_header_item($controller, $action, 'contact'); ?>">Contact Us</a>
     </nav>
     -->
-
-    <a href="#" id="current-user">
-      <div class="image" style="background-image: url('<?= base_url() . 'assets/images/profile-picture.jpg'; ?>')"></div>
-      <div class="content">
-        <h2>Arnelle Balane</h2>
-        <p>Student</p>
-      </div>
-    </a>
+    <?php $user_info = $this->session->userdata('user_info'); ?>    
+    <?php if ($this->session->userdata('user_id') && $user_info != null) : ?>
+      <a href="<?=site_url('users/profile')?>" id="current-user">
+        <div class="image" style="background-image: url('<?=base_url().$user_info->profpic?>')"></div>
+        <div class="content">
+          <h2><?=($user_info->firstname != null && $user_info->lastname != null) ? $user_info->firstname." ".$user_info->lastname : "ACSG";?></h2>
+          <p><?=($this->session->userdata('role') == 0) ? 'Student' : 'Faculty';?></p>
+        </div>
+      </a>
+    <?php endif; ?>
   </div>
 </div>

@@ -3,58 +3,61 @@
     <?=form_open("users/edit_data","POST");?>
       <h1>PERSONAL INFORMATION</h1>
       <div class="field">    
-        <div class="title"><label>First Name</label></div>
-        <div class="value"><input type="text" name="firstname" placeholder="First name" value="<?=$info->firstname;?>"></div>
+        <label>First Name</label>
+        <input type="text" name="info[firstname]" placeholder="First name" value="<?=$info->firstname;?>">
       </div>
       <div class="field">    
-        <div class="title"><label>Last Name</label></div>
-        <div class="value"><input type="text" name="lastname" placeholder="Last name" value="<?=$info->lastname;?>"></div>
-      </div>      
-      <div class="field">    
-        <div class="title"><label>Address</label></div>
-        <div class="value"><input type="text" name="address" placeholder="Address" value="<?=$info->address;?>"></div>
+        <label>Last Name</label>
+        <input type="text" name="info[lastname]" placeholder="Last name" value="<?=$info->lastname;?>">
       </div>
       <div class="field">    
-        <div class="title"><label>Birthday</label></div>
-        <div class="value"><input type="date" name="birthday" value="<?=$info->birthday;?>"></div>
+        <label>Middle Name</label>
+        <input type="text" name="info[middlename]" placeholder="Middle name" value="<?=$info->middlename;?>">
       </div>
       <div class="field">    
-        <div class="title"><label>Age</label></div>
-        <div class="value"><input type="number" name="age" min="0" max="100" placeholder="Age" value="<?=$info->age;?>"></div>
+        <label>Address</label>
+        <input type="text" name="info[address]" placeholder="Address" value="<?=$info->address;?>">
       </div>
       <div class="field">    
-        <div class="title"><label>Student Number</label></div>
-        <div class="value"><input type="text" name="student_number" placeholder="xxxx-xxxxx" value="<?=$info->studentnumber;?>"></div>
-
+        <label>Birthday</label>
+        <input type="date" name="info[birthday]" value="<?=$info->birthday;?>">
+      </div>
+      <div class="field">    
+        <label>Age</label>
+        <input type="number" name="info[age]" min="0" max="100" placeholder="Age" value="<?=$info->age;?>">
+      </div>
+      <div class="field">    
+        <label>Student Number</label>
+        <input type="text" name="info[studentnumber]" placeholder="xxxx-xxxxx" value="<?=$info->studentnumber;?>">
       </div>
       <div class="field">    
         <label>Course</label>        
-        <select name="course" placeholder="Year">
-          <option value="1">BS Computer Science</option>
-          <option value="2">MS Computer Science</option>
+        <select name="info[course]" placeholder="Year">
+          <?php foreach ($courses as $course) : ?>
+          <option value="<?=$course->id?>"><?=$course->name?></option>
+          <?php endforeach; ?>          
         </select>
       </div>
       <div class="field">    
-        <div class="title"><label>Year</label></div>
-        <div class="value"><input type="text" name="year" min="1" max="6" placeholder="Year" value="<?=$info->yearlevel;?>"></div>
+        <label>Year</label>
+        <input type="text" name="info[yearlevel]" min="1" max="6" placeholder="Year" value="<?=$info->yearlevel;?>">
       </div><br/><br/>
       <h1>CONTACT DETAILS</h1>
       <div class="field">    
-        <div class="title"><label>Email</label></div>
-        <div class="value"><input type="email" name="email" placeholder="Email address" value="<?=$info->email;?>"></div>
+        <label>Email</label>
+        <input type="email" name="contact[email]" placeholder="Email address" value="<?=$info->email;?>">
       </div>
       <div class="field">    
-        <div class="title"><label>Contact #</label></div>
-        <div class="value"><input type="text" name="number" placeholder="Cellphone number" value="<?=$info->contact_number;?>"></div>
+        <label>Contact #</label>
+        <input type="text" name="contact[number]" placeholder="Cellphone number" value="<?=$info->contact_number;?>">
       </div>
       <div class="field">    
-        <div class="title"><label>Facebook</label></div>
-        <div class="value"><input type="text" name="facebook" placeholder="Link to your facebook page" value="<?=$info->facebook;?>"></div>
+        <label>Facebook</label>
+        <input type="text" name="contact[facebook]" placeholder="Link to your facebook page" value="<?=$info->facebook;?>">
       </div>
       <div class="field">    
-        <div class="title"><label>Twitter</label></div>
-        <div class="value"><input type="text" name="twitter" placeholder="Link to your twitter page" value="<?=$info->twitter;?> "></div>
-
+        <label>Twitter</label>
+        <input type="text" name="contact[twitter]" placeholder="Link to your twitter page" value="<?=$info->twitter;?>">
       </div><br/>
       <div class="field">            
         <input type="submit" value="UPDATE" class="button green">
@@ -63,8 +66,8 @@
   </section>
   <aside>
     <section id="profile-picture-container">  
-      <div id="profile-picture" style="background: #222222 url('<?=base_url()?>assets/images/up-logo.png') center center no-repeat; background-size:cover;"></div>
-        <?=form_open_multipart("#","POST");?>
+      <div id="profile-picture" style="background: #222222 url('<?=base_url().$info->profpic?>') center center no-repeat; background-size:cover;"></div>
+        <?=form_open_multipart("users/update_picture","POST");?>
           <input type="file" name="profile-picture">
           <button id="new-profile-picture" class="button green">CHANGE</button>
           <div id="new-profpic-button-container">

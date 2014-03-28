@@ -6,5 +6,6 @@
     <?php endif; ?>
     <?=$news->content?>
   </div>
-<?php else : ?>  
+<?php else : ?>
+  <?php show_404();?>  
 <?php endif; ?>
