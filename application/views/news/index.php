@@ -1,10 +1,10 @@
 <section class="news-thread clearfix">
-  <?php for ($i = 0; $i < 8; $i++): ?>
-    <a href="<?= site_url('news/show'); ?>" class="news" style="background-image: url('<?= base_url() . 'assets/images/project1.jpg'; ?>');">
+  <?php foreach ($news as $item) : ?>
+    <a href="<?= site_url('news/show/'.$item->id); ?>" class="news" style="background-image: url('<?= ($item->name != NULL) ? base_url() . 'assets/images/news-images/' . $item->name : '';?>');">
       <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-        <time>March 6, 2014</time>
+        <p><?=$item->title?></p>
+        <time><?=strftime('%B %d, %Y', strtotime($item->date))?></time>
       </div>
     </a>
-  <?php endfor; ?>
+  <?php endforeach; ?>
 </section>
