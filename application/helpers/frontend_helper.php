@@ -9,6 +9,9 @@
 		}
 	}
 	function degree_helper($course,$yearlevel) {
-		return $course. + " " + $yearlevel;
+		return $course." ".$yearlevel;
+	}
+	function description($age,$address,$contact_num) {
+		return "Im ".$age." and i live in ".$address.". You can reach me by phone ".$contact_num." or shoot me an email below. (ill wait for ya call!)";  
 	}
 ?>

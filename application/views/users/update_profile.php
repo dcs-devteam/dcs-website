@@ -40,7 +40,7 @@
       </div>
       <div class="field">    
         <label>Year</label>
-        <input type="text" name="info[yearlevel]" min="1" max="6" placeholder="Year" value="<?=$info->yearlevel;?>">
+        <input type="number" name="info[yearlevel]" min="1" max="6" placeholder="Year" value="<?=$info->yearlevel;?>">
       </div><br/><br/>
       <h1>CONTACT DETAILS</h1>
       <div class="field">    
@@ -68,7 +68,7 @@
     <section id="profile-picture-container">  
       <div id="profile-picture" style="background: #222222 url('<?=base_url().$info->profpic?>') center center no-repeat; background-size:cover;"></div>
         <?=form_open_multipart("users/update_picture","POST");?>
-          <input type="file" name="profile-picture">
+          <input type="file" name="profile-picture" accept="image/*">
           <button id="new-profile-picture" class="button green">CHANGE</button>
           <div id="new-profpic-button-container">
             <input type="submit" value="SAVE" class="button green">

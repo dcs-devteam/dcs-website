@@ -67,7 +67,7 @@
       if ($_FILES['profile-picture']['size'] > 0) {        
         if  (!$this->upload->do_upload('profile-picture')) {
           $this->session->set_flashdata("alert", "The image is too big or it has an invalid format!");          
-          echo $this->update->error();
+          echo $this->upload->display_errors();
         } else {          
           $image_info = $this->upload->data();
           $prevPic = $this->ui_model->updateProfilePicture($user_id, 'assets/images/profile-images/'. $image_info['file_name']);  

@@ -135,7 +135,8 @@
         <h1><?php echo fullName_helper($info->firstname,$info->middlename,$info->lastname,1);?></h1>
         <h2><?=$info->studentnumber?></h2>
         <h2><?php echo $info->course_name." ".$info->yearlevel;?></h2>
-        <p><?php echo $info->description;?></p>      
+        <p><?php echo description($info->age,$info->address,$info->contact_number);?></p>      
+
       </div>
     </section>
 
