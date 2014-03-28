@@ -84,6 +84,15 @@
   right: 0;
 }
 
+#current-user > div ul:after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
 #current-user > div ul li a {
   display: block;
   font: normal 1.2rem "Open Sans Light", "OpenSansLight";
