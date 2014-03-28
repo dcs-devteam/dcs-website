@@ -1,7 +1,9 @@
 <section class="news-thread clearfix">
   <header>
     <h1>News Articles</h1>
-    <a href="<?= site_url('news/make'); ?>" class="button green">Add News Article</a>
+    <?php if ($canWrite) : ?>
+      <a href="<?= site_url('news/make#news-and-events'); ?>" class="button green">Add News Article</a>
+    <?php endif; ?>
   </header>
   <?php foreach ($news as $item) : ?>
     <?php $background = ($item->name != NULL) ? base_url() . $item->name : base_url() . 'assets/images/news-images/default.png'; ?>
