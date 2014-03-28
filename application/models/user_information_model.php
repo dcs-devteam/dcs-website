@@ -20,10 +20,10 @@
 			$this->db->from('user');
 			$this->db->join('information', 'information.u_id = user.id');
 			$this->db->join('contact', 'contact.u_id = user.id');
-			$this->db->where ('user.id', $id);
+			$this->db->where ('user.id', addslashes($id));
 
 			$result = $this->db->get();
-			return $result->row();	
+			return $result->row();
 		}
 		
 		public function editUserInformation($info, $contact_num) {
