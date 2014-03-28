@@ -107,3 +107,12 @@ body.news .news p {
 .news.make .news input[type="submit"] {
   margin: 0;
 }
+
+.news.make .news .field label {
+  width: auto;
+  margin-right: 5px;
+}
+
+.news.make .news .field label span {
+  color: #777777;
+}
