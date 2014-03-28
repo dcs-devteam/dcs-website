@@ -1,4 +1,4 @@
-<form action="#" method="POST" class="news">
+<form action="<?=site_url('news/add')?>" method="POST" class="news">
   <h1>Create News Article</h1>
 
   <div class="field">
