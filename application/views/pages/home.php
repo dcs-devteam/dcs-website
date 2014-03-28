@@ -53,9 +53,11 @@
       <li>
         <a href="<?= site_url('info/developer_corner#developer-corner'); ?>">Life@DCS</a>
         <ul>
-          <!-- <li><a href="<?= site_url('#'); ?>">News and Events</a></li>
+          <li><a href="<?= site_url('news/index'); ?>">News and Events</a></li>
+          <!--
           <li><a href="<?= site_url('#'); ?>">Lecture Series and Technical Talks</a></li>
-          <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li> -->
+          <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li> 
+          -->
           <li><a href="<?= site_url('info/developer_corner#campus-activities'); ?>">Developer Corner</a></li>
           <li><a href="<?= site_url('info/campus_activities#campus-activities'); ?>">Campus Activities</a></li>
         </ul>
@@ -93,7 +95,6 @@
         </a>
       </section>
 
-      <!--
       <section id="recent-news">
         <h1>
           Recent News
@@ -105,7 +106,6 @@
           <?php endfor; ?>
         </div>
       </section>
-        -->
 
       <section id="upcoming-events">
         <h1>

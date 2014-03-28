@@ -389,7 +389,7 @@ body.users .user-update-profile #personal-info-container .field {
 body.users .user-update-profile #personal-info-container label {
   font-family: 'open sans', "OpenSansRegular";
   font-size: 1.5rem;  
-  width: 30%;
+  width: 30%;  
 }
 
 body.users.update_profile input[type="text"], 
@@ -398,7 +398,7 @@ body.users.update_profile input[type="email"],
 body.users.update_profile input[type="number"],
 body.users.update_profile input[type="date"],
 body.users.update_profile select {
-  width: 68%;
+  width: 68%;  
 }
 
 body.users .user-update-profile aside {
@@ -433,4 +433,47 @@ body.users .user-update-profile aside #new-profpic-button-container {
   width: 145px;
   margin: 3px auto;
   display: none;
+}
+
+body.users .create {
+  width: 500px;
+  margin: 0 auto;
+}
+
+body.users .create h1 {
+  width: 100%;
+  font-family: "Open Sans Light", "OpenSansLight";
+  font-size: 2rem;
+  color: #570E0E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body.users .create .check-list {
+  display: inline-block;
+  width: 250px;  
+}
+
+body.users .create .check-list .item {  
+  display: block;    
+  padding-top: 2px;
+  width: 100%;  
+}
+
+body.users .create .check-list .item label {  
+  width: 90%;
+  color: #555555;
+  font-family: "Open Sans", "OpenSansRegular";
+  font-size: 1.4rem;
+  display: inline;
+  vertical-align: top;
+  display: inline-block;    
+}
+
+body.users .create .check-list .item input[type="checkbox"] {
+  vertical-align: top;
+}
+
+body.users .create input[type="submit"] {
+  margin-left: 155px;
 }

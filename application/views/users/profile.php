@@ -119,18 +119,22 @@
     </div>
   </section>
   <aside>  
-    <section id="personal-info">  
+    <section id="personal-info">        
       <div id="profile-pic" style="background: #222222 url('<?=base_url().$info->profpic;?>') center center no-repeat; background-size:cover;">
         <span>
-          <a href="#"><img src="<?=base_url()?>assets/images/facebook.png"></a>
-          <a href="#"><img src="<?=base_url()?>assets/images/twitter.png"></a>
+          <?php if ($info->facebook) : ?>
+            <a href="<?=$info->facebook?>"><img src="<?=base_url()?>assets/images/facebook.png"></a>
+          <?php endif; ?>
+          <?php if ($info->twitter) : ?>
+            <a href="<?=$info->twitter?>"><img src="<?=base_url()?>assets/images/twitter.png"></a>
+          <?php endif; ?>
           <a href="<?=site_url()?>/users/update_profile"><h3>UPDATE</h3></a>
         </span>
       </div>
       <div id="profile-info">
         <h1><?php echo fullName_helper($info->firstname,$info->middlename,$info->lastname,1);?></h1>
-        <h2>2011-37567</h2>
-        <h2><?php echo $info->course." ".$info->yearlevel;?></h2>
+        <h2><?=$info->studentnumber?></h2>
+        <h2><?php echo $info->course_name." ".$info->yearlevel;?></h2>
         <p><?php echo $info->description;?></p>      
       </div>
     </section>

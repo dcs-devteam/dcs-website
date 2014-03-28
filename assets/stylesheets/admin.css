@@ -1,0 +1,194 @@
+.admin h1 {
+  font: normal 2.8rem/1 "Open Sans Light", "OpenSansLight";
+  color: #570E0E;
+  padding-bottom: 20px;
+}
+
+.admin .listing a {
+  display: block;
+  font: normal 1.6rem/1 "Open Sans Light", "OpenSansLight";
+  color: #333333;
+  text-decoration: none;
+  padding: 10px 12px;
+  background-color: #f5f5f5;
+}
+
+.admin .listing a:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.admin .listing a:hover,
+.admin .listing a:focus {
+  color: #ffffff;
+  background-color: #014924;
+}
+
+.admin .listing a small {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.1rem;
+  color: #777777;
+  text-transform: uppercase;
+  margin: 2px 0 0 25px;
+}
+
+.admin .listing a:hover small,
+.admin .listing a:focus small {
+  color: #ffffff;
+}
+
+.admin .listing a .privileges {
+  display: inline-block;
+  vertical-align: top;
+  margin: -1px 0 -3px 25px;
+}
+
+.admin .listing a .privileges span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.admin .listing a:hover .privileges span,
+.admin .listing a:focus .privileges span {
+  -webkit-filter: brightness(10) contrast(10);
+  -moz-filter: brightness(10) contrast(10);
+  -o-filter: brightness(10) contrast(10);
+  -ms-filter: brightness(10) contrast(10);
+  filter: brightness(10) contrast(10);
+}
+
+.admin .listing a .privileges .create-news {
+  background: url("../images/privileges/create-news.png") center center no-repeat;
+  background-size: 110% auto;
+}
+
+
+
+/** ADMIN USERS PAGES **/
+.admin.users.index header h1 {
+  display: inline-block;
+}
+
+.admin.users.index header form {
+  float: right;
+  margin-top: -5px;
+}
+
+.admin.users.index header form input[type="text"] {
+  width: 180px;
+  margin: 0;
+}
+
+.admin.users.index header form select {
+  width: auto;
+  padding: 6px 7px;
+  margin: 0;
+}
+
+.admin.users.index header form .button {
+  margin: 0;
+}
+
+.admin.users.index header form.filter {
+  margin-left: 10px;
+}
+
+.admin.users.edit p {
+  display: inline-block;
+  font: normal 1.4rem "Open Sans", "OpenSansRegular";
+  color: #333333;
+}
+
+.admin.users.edit .choices {
+  display: inline-block;
+  margin: 11px 0;
+}
+
+.admin.users.edit .choices label {
+  display: block;
+  width: auto;
+  padding: 2px 0 3px 0;
+  vertical-align: top;
+}
+
+.admin.users.edit .choices label span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -3px 2px 0 5px;
+  background: center center no-repeat;
+  background-size: 130% auto;
+  opacity: 0.4;
+}
+
+.admin.users.edit .choices input[type="checkbox"]:checked + span {
+  opacity: 1.0;
+}
+
+.admin.users.edit .choices label span.create-news {
+  background-image: url("../images/privileges/create-news.png");
+}
+
+.admin.users.edit .choices label input {
+  margin-top: 1px;
+}
+
+
+
+/** ADMIN SPOTLIGHTS PAGES **/
+.admin.spotlights.index header h1 {
+  display: inline-block;
+}
+
+.admin.spotlights.index header .button {
+  float: right;
+}
+
+.admin.spotlights.index .item {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.admin.spotlights.index .item:nth-of-type(4n),
+.admin.spotlights.index .item:nth-of-type(4n+1) {
+  background-color: #ffffff;
+}
+
+.admin.spotlights.index .item .image {
+  float: left;
+  width: 20%;
+  height: 120px;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+.admin.spotlights.index .item .content {
+  float: right;
+  width: 77%;
+}
+
+.admin.spotlights.index .item h2 {
+  font: normal 2rem "Open Sans Light", "OpenSansRegular";
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.admin.spotlights.index .item p {
+  max-height: 60px;
+  font: normal 1.5rem/1 "Open Sans", "OpenSansRegular";
+  color: #333333;
+  overflow: hidden;
+}
+
+.admin.spotlights.make textarea {
+  width: 400px;
+  height: 150px;
+}
+
+.admin.spotlights.make input[type="file"],
+.admin.spotlights.make input[type="submit"] {
+  margin: 0;
+}

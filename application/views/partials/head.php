@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/session.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/news.css'; ?>" />
 <link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/calendar.css'; ?>" />
+<link rel="stylesheet" href="<?= base_url() . 'assets/stylesheets/admin.css'; ?>" />
 <script src="<?= base_url() . 'assets/javascripts/jquery.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/application.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/javascripts/pages.js'; ?>"></script>
