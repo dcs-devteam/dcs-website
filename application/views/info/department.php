@@ -2,39 +2,40 @@
 
   <div class="about-department" id="message-from-the-chair">
     <h1>Message from the Chair</h1>
-    <div class="content">      
-      <p>The Department of Computer Science (DCS) is one of only 9 Centers of Excellence in IT Education in the entire Philippines awarded by the Commission on Higher Education (CHED).  </p>
-      <p>It has almost two decades of history in nurturing young minds into being the most-sought computer science graduates in the ICT industry and in research and development companies.</p>
+    <div class="content">
+      <p><?php echo $message->body ?></p>
       <!-- <figure>
         <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
         <figcaption>Test Caption</figcaption>
-      </figure> -->
-      <p>The curriculum provides the students with a solid background on the theoretical foundations of computer science and its mathematical aspects and practitioner’s approach in the applied courses. The specialization courses in software engineering and intelligent systems give them extensive experience in research.</p>      
+      </figure> -->      
     </div>
   </div>
 
   <div class="about-department" id="history">
     <h1>History</h1>
     <div class="content">
-      <p>The department has been around for almost two decades. It started as a BS Computer Science program and in 2007 it became the first department in UP Cebu. The MS Computer Science started in 2009. The department continues to make history in teaching, research and extension activities.</p>
+      <?php echo $history->body ?>
+      <!-- <p>The department has been around for almost two decades. It started as a BS Computer Science program and in 2007 it became the first department in UP Cebu. The MS Computer Science started in 2009. The department continues to make history in teaching, research and extension activities.</p> -->
     </div>
   </div>
 
   <div class="about-department">
     <div class="half" id="vision">
       <h1>Vision</h1>
-      <div class="content">      
-        <p>A world-class institution in computer science research and education that shapes and transforms the region into a dynamic and technology-driven society</p>
+      <div class="content">
+        <?php echo $vision->body ?>      
+        <!-- <p>A world-class institution in computer science research and education that shapes and transforms the region into a dynamic and technology-driven society</p> -->
       </div>
     </div>
     <div class="half" id="mission">
       <h1>Mission</h1>
-      <div class="content">      
-        <ol>
+      <div class="content">
+      <?php echo $mission->body ?>      
+        <!-- <ol>
           <li>To advance knowledge in computer science through novel and innovative interdisciplinary research that improves the quality of life and society </li>
           <li>To produce graduates who are technically competent and socially responsible leaders in CS research and in the ICT industry </li>
           <li>To optimize the use of ICT by strengthening partnership with the different stakeholders</li>
-        </ol>
+        </ol> -->
       </div>
     </div>
   </div>  

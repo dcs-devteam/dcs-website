@@ -8,13 +8,18 @@
         'developer_corner', 'initiatives_and_society', 'partners');
 
       $this->_check_request_method();
+      $this->load->model('cockpit_model', 'cockpit');
       $this->load->helper('application_helper');
     }
 
     public function department() {
       $data['page_title'] = 'Department Of Computer Science';
+      $content['message'] = $this->cockpit->find('Message from the Chair');
+      $content['history'] = $this->cockpit->find('History');
+      $content['vision'] = $this->cockpit->find('Vision');
+      $content['mission'] = $this->cockpit->find('Mission');
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $data['main_content'] = $this->load->view('info/department', array(), true);
+      $data['main_content'] = $this->load->view('info/department', $content, true);
       $this->parser->parse('layouts/default', $data);
     }
 
