@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2014 at 07:07 AM
+-- Generation Time: Mar 28, 2014 at 07:54 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -204,15 +204,17 @@ CREATE TABLE IF NOT EXISTS `news` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `content` text NOT NULL,
   `u_id` int(225) NOT NULL,
+  `slug` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id`, `title`, `date`, `content`, `u_id`) VALUES
-(26, 'Nag Bangga', '2014-03-27 23:06:42', '<p>Mao lang.. yes yow..</p>', 1);
+INSERT INTO `news` (`id`, `title`, `date`, `content`, `u_id`, `slug`) VALUES
+(30, 'eman''s year', '2014-03-27 23:51:35', '<p>yeah</p>', 4, 'emans-year'),
+(31, 'Eman''s year', '2014-03-27 23:52:15', '<p>dasdasdas</p>', 4, 'Emans-year-1');
 
 -- --------------------------------------------------------
 
@@ -232,8 +234,6 @@ CREATE TABLE IF NOT EXISTS `news_images` (
 -- Dumping data for table `news_images`
 --
 
-INSERT INTO `news_images` (`id`, `news_id`, `name`) VALUES
-(2, 26, 'assets/images/news-images/7pd58vmfyf1e68l.png');
 
 -- --------------------------------------------------------
 
