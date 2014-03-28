@@ -11,4 +11,8 @@
       </div>
     </a>
   <?php endforeach; ?>
+
+  <?php if (empty($news)): ?>
+    <h2>There are currently no news articles.</h2>
+  <?php endif; ?>
 </section>
