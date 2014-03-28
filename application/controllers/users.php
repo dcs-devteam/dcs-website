@@ -66,8 +66,7 @@
       $this->load->library('upload', $config);
       if ($_FILES['profile-picture']['size'] > 0) {        
         if  (!$this->upload->do_upload('profile-picture')) {
-          $this->session->set_flashdata("alert", "The image is too big or it has an invalid format!");          
-          echo $this->upload->display_errors();
+          $this->session->set_flashdata("alert", "The image is too big or it has an invalid format!");                    
         } else {          
           $image_info = $this->upload->data();
           $prevPic = $this->ui_model->updateProfilePicture($user_id, 'assets/images/profile-images/'. $image_info['file_name']);  
@@ -76,14 +75,6 @@
           }
           $this->session->set_flashdata("notice", "Update Successful!");                
           $this->session->set_userdata('user_info', $this->ui_model->fetchUserInformation($user_id));        
-          // if ($prevPic) {                                    
-          //   unlink($prevPic->profpic);            
-          //   $this->session->set_flashdata("notice", "Update Successful!");                
-          //   $this->session->set_userdata('user_info', $this->ui_model->fetchUserInformation($user_id));
-          // } else {
-          //   unlink('assets/images/profile-images/'. $image_info['file_name']);
-          //   $this->session->set_flashdata("alert", "Please fill out the form before changing your picture!");
-          // }
         }
       }
       redirect('users/update_profile');

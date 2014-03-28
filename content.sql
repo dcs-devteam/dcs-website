@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2014 at 03:37 PM
+-- Generation Time: Mar 28, 2014 at 04:19 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `content` (
   `heading` varchar(255) NOT NULL,
   `body` varchar(2048) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `content`
@@ -50,7 +50,9 @@ INSERT INTO `content` (`id`, `heading`, `body`) VALUES
 (10, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Paulo Juan Cabral</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Lecturer II</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>AI, Modeling and Simulation</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
 (11, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Abigail Beryl Navaja Fuentes</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Lecturer</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Bachelors in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>Web Engineering</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
 (12, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Chito Patiño</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Faculty</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p></p>\r\n          </div>\r\n        </div>\r\n      </div>'),
-(13, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Van Owen Sesaldo</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Faculty</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p></p>\r\n          </div>\r\n        </div>\r\n      </div>');
+(13, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Van Owen Sesaldo</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Faculty</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p></p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(14, 'Programming Contest', '<ul>\r\n<li>CodeJam 2014</li>\r\n</ul>'),
+(15, 'Codetabai', '<ul>\n<li>Android 101 by Ruffy Heredia</li>\n<li>RoR by Heinrich Lee Yu</li>\n<li>Python Sessions by Daryl Yu</li>\n</ul>');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
