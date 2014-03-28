@@ -56,6 +56,16 @@
   transition: width 200ms ease;
 }
 
+#current-user > div:after {
+  content: "";
+  border-top: 1px solid #ffffff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 12;
+}
+
 #current-user > div:hover {
   border: 1px solid #777777 !important;
 }
@@ -73,15 +83,6 @@
 
 #current-user > div:hover ul {
   display: block;
-}
-
-#current-user > div ul:before {
-  content: "";
-  width: 23px;
-  border-top: 1px solid #ffffff;
-  position: absolute;
-  top: -1px;
-  right: 0;
 }
 
 #current-user > div ul:after {
