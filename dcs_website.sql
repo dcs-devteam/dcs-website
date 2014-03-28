@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9
+-- version 4.1.6
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 29, 2014 at 04:23 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Host: 127.0.0.1
+-- Generation Time: Mar 28, 2014 at 04:36 PM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.9
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -31,11 +32,6 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `category`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -49,11 +45,6 @@ CREATE TABLE IF NOT EXISTS `category_group` (
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `category_group`
---
-
 
 -- --------------------------------------------------------
 
@@ -89,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `content` (
   `heading` varchar(255) NOT NULL,
   `body` varchar(2048) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `content`
@@ -100,8 +91,17 @@ INSERT INTO `content` (`id`, `heading`, `body`) VALUES
 (2, 'History', '<p>The department has been around for almost two decades. It started as a BS Computer Science program and in 2007 it became the first department in UP Cebu. The MS Computer Science started in 2009. The department continues to make history in teaching, research and extension activities.</p>'),
 (3, 'Vision', '<p>A world-class institution in computer science research and education that shapes and transforms the region into a dynamic and technology-driven society</p>'),
 (4, 'Mission', '<ol>\r\n          <li>To advance knowledge in computer science through novel and innovative interdisciplinary research that improves the quality of life and society </li>\r\n          <li>To produce graduates who are technically competent and socially responsible leaders in CS research and in the ICT industry </li>\r\n          <li>To optimize the use of ICT by strengthening partnership with the different stakeholders</li>\r\n        </ol>'),
-(5, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Kurt Junshean Espinosa</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Department Chair</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>AI, Modeling and Simulation</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
-(6, 'Faculty', '');
+(5, 'Faculty', '<div class="tile clearfix">\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\n        <div class="information-container clearfix">\n          <div class="field">          \n            <p>Kurt Junshean Espinosa</p>\n          </div>\n          <div class="field">          \n            <p>Department Chair</p>\n          </div>\n          <div class="field">          \n            <p>name@mail.com</p>\n          </div>\n          <div class="field">          \n            <ul>\n              <li>Masters in Computer Science at The University of the Philippines</li>\n            </ul>\n          </div>\n          <div class="field">\n            <p>AI, Modeling and Simulation</p>\n          </div>\n        </div>\n      </div>'),
+(6, 'Faculty', '<div class="tile clearfix">\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\n        <div class="information-container clearfix">\n          <div class="field">          \n            <p>Ryan Ciriaco Dulaca</p>\n          </div>\n          <div class="field">          \n            <p>Undergraduate Director</p>\n          </div>\n          <div class="field">          \n            <p>name@mail.com</p>\n          </div>\n          <div class="field">          \n            <ul>\n              <li>Masters in Computer Science at The University of the Philippines</li>\n            </ul>\n          </div>\n          <div class="field">\n            <p>AI, Modeling and Simulation</p>\n          </div>\n        </div>\n      </div>'),
+(7, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Sandra Famador</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Graduate Director</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>AI, Modeling and Simulation</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(8, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Fritzie Cantos</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Infrastructure Director</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>AI, Modeling and Simulation</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(9, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Florian Miksch</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Visiting Professor</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>AI, Modeling and Simulation</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(10, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Paulo Juan Cabral</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Lecturer II</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>AI, Modeling and Simulation</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(11, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Abigail Beryl Navaja Fuentes</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Lecturer</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Bachelors in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p>Web Engineering</p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(12, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Chito Patiño</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Faculty</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p></p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(13, 'Faculty', '<div class="tile clearfix">\r\n        <div class="image" style="background-image: url(''<?= base_url() . ''assets/images/sample-project.jpg'' ?>'');"></div>\r\n        <div class="information-container clearfix">\r\n          <div class="field">          \r\n            <p>Van Owen Sesaldo</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>Faculty</p>\r\n          </div>\r\n          <div class="field">          \r\n            <p>name@mail.com</p>\r\n          </div>\r\n          <div class="field">          \r\n            <ul>\r\n              <li>Masters in Computer Science at The University of the Philippines</li>\r\n            </ul>\r\n          </div>\r\n          <div class="field">\r\n            <p></p>\r\n          </div>\r\n        </div>\r\n      </div>'),
+(14, 'Programming Contest', '<ul>\r\n<li>CodeJam 2014</li>\r\n</ul>'),
+(15, 'Codetabai', '<ul>\n<li>Android 101 by Ruffy Heredia</li>\n<li>RoR by Heinrich Lee Yu</li>\n<li>Python Sessions by Daryl Yu</li>\n</ul>');
 
 -- --------------------------------------------------------
 
@@ -159,11 +159,6 @@ CREATE TABLE IF NOT EXISTS `faculty` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `faculty`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -178,11 +173,6 @@ CREATE TABLE IF NOT EXISTS `images` (
   PRIMARY KEY (`id`),
   KEY `project_id` (`project_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `images`
---
-
 
 -- --------------------------------------------------------
 
@@ -202,8 +192,8 @@ CREATE TABLE IF NOT EXISTS `metas` (
 --
 
 INSERT INTO `metas` (`property`, `value`, `created_at`) VALUES
-('website completion', '1%', '2014-01-04 15:25:19'),
-('website status', 'Under Construction', '2014-01-04 15:24:55');
+('website completion', '1%', '2014-01-04 07:25:19'),
+('website status', 'Under Construction', '2014-01-04 07:24:55');
 
 -- --------------------------------------------------------
 
@@ -222,11 +212,6 @@ CREATE TABLE IF NOT EXISTS `news` (
   KEY `u_id` (`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `news`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -241,11 +226,6 @@ CREATE TABLE IF NOT EXISTS `news_images` (
   KEY `news_id` (`news_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `news_images`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -258,11 +238,6 @@ CREATE TABLE IF NOT EXISTS `polls` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `polls`
---
-
 
 -- --------------------------------------------------------
 
@@ -278,11 +253,6 @@ CREATE TABLE IF NOT EXISTS `poll_answers` (
   PRIMARY KEY (`id`),
   KEY `poll_id` (`poll_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `poll_answers`
---
-
 
 -- --------------------------------------------------------
 
@@ -319,11 +289,6 @@ CREATE TABLE IF NOT EXISTS `project` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `project`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -343,11 +308,11 @@ CREATE TABLE IF NOT EXISTS `secrets` (
 --
 
 INSERT INTO `secrets` (`command`, `script_path`, `enabled`, `created_at`) VALUES
-('chickens', 'http://localhost/dcs-website/assets/secrets/chickens/main.js', 1, '2014-01-04 18:48:24'),
-('nyancat', 'http://localhost/dcs-website/assets/secrets/nyancat/main.js', 1, '2014-01-11 18:38:01'),
-('today', 'http://localhost/dcs-website/assets/secrets/today/main.js', 1, '2014-01-05 11:54:15'),
-('unicorn', 'http://localhost/dcs-website/assets/secrets/unicorn/main.js', 1, '2014-01-04 18:48:18'),
-('yoda', 'http://localhost/dcs-website/assets/secrets/yoda/main.js', 1, '2014-01-04 20:42:46');
+('chickens', 'http://localhost/dcs-website/assets/secrets/chickens/main.js', 1, '2014-01-04 10:48:24'),
+('nyancat', 'http://localhost/dcs-website/assets/secrets/nyancat/main.js', 1, '2014-01-11 10:38:01'),
+('today', 'http://localhost/dcs-website/assets/secrets/today/main.js', 1, '2014-01-05 03:54:15'),
+('unicorn', 'http://localhost/dcs-website/assets/secrets/unicorn/main.js', 1, '2014-01-04 10:48:18'),
+('yoda', 'http://localhost/dcs-website/assets/secrets/yoda/main.js', 1, '2014-01-04 12:42:46');
 
 -- --------------------------------------------------------
 
@@ -362,11 +327,6 @@ CREATE TABLE IF NOT EXISTS `static_content` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `static_content`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -379,11 +339,6 @@ CREATE TABLE IF NOT EXISTS `tags` (
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `tags`
---
-
 
 -- --------------------------------------------------------
 
@@ -512,3 +467,7 @@ ALTER TABLE `user_information`
 ALTER TABLE `user_privileges`
   ADD CONSTRAINT `user_privileges_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `user_privileges_ibfk_2` FOREIGN KEY (`privilege_id`) REFERENCES `privileges` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
