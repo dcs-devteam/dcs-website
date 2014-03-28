@@ -19,6 +19,9 @@
       <a href="https://plus.google.com/u/0/100034757051877114372" target="_blank" class="google-plus">Google Plus</a>
       <a href="#" target="_blank" class="youtube">Youtube</a>
     </div>
-    <a href="#" id="give-to-up">Give to UP</a>
+    <!--
+    <a href="#" class="footer-button">Give to UP</a>
+    -->
+    <a href="<?= site_url('session/index'); ?>" class="footer-button">Login</a>
   </div>
 </footer>
