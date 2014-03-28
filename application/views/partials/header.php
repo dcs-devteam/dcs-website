@@ -13,20 +13,28 @@
     -->
     <?php $user_info = $this->session->userdata('user_info'); ?>    
     <?php if ($this->session->userdata('user_id') && $user_info != null) : ?>
-      <a href="<?=site_url('users/profile')?>" id="current-user">
-        <div class="image" style="background-image: url('<?=base_url().$user_info->profpic?>')"></div>
-        <div class="content">
-          <h2><?=($user_info->firstname != null && $user_info->lastname != null) ? $user_info->firstname." ".$user_info->lastname : "ACSG";?></h2>
-          <p><? if($this->session->userdata('role') == 1 || $this->session->userdata('role') == 0) :
-                  echo 'Student';
-                elseif($this->session->userdata('role') == 2) :
-                  echo 'Faculty';
-                else :
-                  echo 'Administrator';
-                endif;
-              ?></p>
+      <div id="current-user">
+        <a href="<?=site_url('users/profile')?>">
+          <div class="image" style="background-image: url('<?=base_url().$user_info->profpic?>')"></div>
+          <div class="content">
+            <h2><?=($user_info->firstname != null && $user_info->lastname != null) ? $user_info->firstname." ".$user_info->lastname : "ACSG";?></h2>
+            <p><? if($this->session->userdata('role') == 1 || $this->session->userdata('role') == 0) :
+                    echo 'Student';
+                  elseif($this->session->userdata('role') == 2) :
+                    echo 'Faculty';
+                  else :
+                    echo 'Administrator';
+                  endif;
+                ?></p>
+          </div>
+        </a>
+        <div>
+          <ul>
+            <li><a href="<?= site_url('users/profile'); ?>">View Profile</a></li>
+            <li><a href="<?= site_url('session/logout'); ?>">Logout</a></li>
+          </ul>
         </div>
-      </a>
+      </div>
     <?php endif; ?>
   </div>
 </div>
