@@ -1,3 +1,16 @@
+body.news .news h1 {
+  font: normal 2.8rem/1 "Open Sans Light", "OpenSansLight";
+  color: #570E0E;
+  padding-bottom: 20px;
+}
+
+body.news .news p {
+  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
+  color: #333333;
+  text-indent: 40px;
+  margin-top: 10px;
+}
+
 .news.index #main-header {
   margin-bottom: 0;
 }
@@ -72,21 +85,25 @@
   margin-bottom: 25px;
 }
 
-.news.show .news h1 {
-  font: normal 2.8rem/1 "Open Sans Light", "OpenSansLight";
-  color: #570E0E;
-  padding-bottom: 20px;
-}
-
-.news.show .news p {
-  font: normal 1.4rem/1.4 "Open Sans", "OpenSansRegular";
-  color: #333333;
-  text-indent: 40px;
-  margin-top: 10px;
-}
-
 .news.show .news img {
   float: left;
   max-width: 40%;
   margin: 10px 15px 0 0;
+}
+
+.news.make .news input[type="text"] {
+  width: 100%;
+}
+
+.news.make .news textarea {
+  width: 100%;
+  height: 300px;
+}
+
+.news.make .news .actions {
+  padding-left: 0;
+}
+
+.news.make .news input[type="submit"] {
+  margin: 0;
 }
