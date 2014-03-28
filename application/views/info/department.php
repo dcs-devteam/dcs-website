@@ -195,7 +195,7 @@
             3rd Floor Arts and Sciences Building, Gorordo Avenue, Lahug, Cebu City            
           </div>          
         </div> 
-        <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
+        <img src="<?=base_url().'assets/images/upcebu-map.PNG'?>"/>
       </div>
     </div>
   </div>
