@@ -19,10 +19,10 @@
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function show($id) {
+    public function show($slug) {
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $data['main_content'] = $this->load->view('news/show', array("news" => $this->model->getNewsById(trim($id))), true);
+      $data['main_content'] = $this->load->view('news/show', array("news" => $this->model->getNewsBySlug(trim($slug))), true);
       $this->parser->parse('layouts/default', $data);
     }
 
@@ -33,7 +33,12 @@
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function add() {      
+    public function add() {
+      $user_id = $this->session->userdata('user_id');
+      if (!$user_id) {
+        $this->session->set_flashdata("alert", "You are not logged in!");
+        redirect('session/index');
+      }
       $title = trim($_POST['title']);
       $content = trim($_POST['content']);
       if ($title == "" || $content == "") {
@@ -52,7 +57,7 @@
       $content = preg_replace('/\n{2,}/', "</p><p>", $content);
       $content = preg_replace('/\n/', '</p><p>',$content);
       $content = "<p>".$content."</p>";
-      $news_id = $this->model->add($title, $content, 1);
+      $news_id = $this->model->add($title, $content, $this->generateSlug($title), $user_id);
       if ($news_id) {
         $this->session->set_flashdata("notice", "News was added successfully!");
         $image_info = $this->upload->data();        
@@ -74,6 +79,26 @@
         }
         if (!$this->model->getImageByName($name)) {
           return $name;
+        }
+      }
+    }
+
+    private function generateSlug($title) {
+      $title = str_replace(" ", "-", trim($title));
+      $title = str_replace("'", "", trim($title));
+      $title = str_replace('"', "", trim($title));
+      $title = strtolower($title);
+      $ctr = 1;
+      while(true) {
+        if (!$this->model->getNewsBySlug($title)) {
+          return $title;
+        } else {
+          if ($ctr == 1) {
+            $title .= "-1";
+          } else {
+            $title .= $ctr;
+          }
+          $ctr++;
         }
       }
     }
