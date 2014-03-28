@@ -395,6 +395,12 @@ body.info.initiatives_and_society section figcaption {
   margin: 10px 0 0 10px;
 }
 
+body.info.developer_corner section ul li {
+  font: normal 1.4rem "Open Sans", "OpenSansRegular";
+  color: #333333;
+  padding: 7px 40px;
+}
+
 body.info .campus_activities_container section {  
   width: 100%;
   padding-top: 10px;
