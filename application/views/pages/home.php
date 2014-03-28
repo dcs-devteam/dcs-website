@@ -59,7 +59,7 @@
           <li><a href="<?= site_url('#'); ?>">Lecture Series and Technical Talks</a></li>
           <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li> 
           -->
-          <li><a href="<?= site_url('info/developer_corner#campus-activities'); ?>">Developer Corner</a></li>
+          <li><a href="<?= site_url('info/developer_corner#developer-corner'); ?>">Developer Corner</a></li>
           <li><a href="<?= site_url('info/campus_activities#campus-activities'); ?>">Campus Activities</a></li>
         </ul>
       </li>
