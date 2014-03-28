@@ -57,7 +57,7 @@
         $this->session->set_flashdata("notice", "News was added successfully!");
         $image_info = $this->upload->data();        
         if ($_FILES['news_image']['size'] > 0) {
-          $this->model->addNewsImage($news_id, $image_info['file_name']);
+          $this->model->addNewsImage($news_id, 'assets/images/news-images/'. $image_info['file_name']);
         }
       }  else {
         $this->session->set_flashdata("alert", "An error was encountered while adding the news!");

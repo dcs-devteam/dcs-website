@@ -12,18 +12,23 @@
 		}
 
 		public function authentication($username, $password) {
-			$this->db->where(array('username' => $username, 'password' => md5($password)));
+			$query = $this->db->query("SELECT * FROM user WHERE username = '".addslashes($username)."' AND password = '".md5(addslashes($password))."'");
+			return $query->row();
 		}
 
 		public function fetchUserInformation($id) {
 			$this->db->select('*');
 			$this->db->from('user');
-			$this->db->join('information', 'information.u_id = user.id');
-			$this->db->join('contact', 'contact.u_id = user.id');
+			$this->db->join('information', 'information.u_id = user.id', 'left');
+			$this->db->join('contact', 'contact.u_id = user.id', 'left');
 			$this->db->where ('user.id', addslashes($id));
 
 			$result = $this->db->get();
 			return $result->row();
+		}
+
+		public function getPrivileges($user_id) {
+
 		}
 		
 		public function editUserInformation($info, $contact_num) {
