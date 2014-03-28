@@ -219,25 +219,36 @@
   margin-left: 5px;
   background: center center no-repeat;
   background-size: contain;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#main-footer .social-networks a:first-of-type {
+  margin-left: 0;
+}
+
+#main-footer .social-networks a:active {
+  margin-top: 1px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
 }
 
 #main-footer .social-networks a.facebook {
-  background-image: url("../images/facebook.png");
+  background-image: url("../images/social-media-icons/facebook.png");
 }
 
 #main-footer .social-networks a.twitter {
-  background-image: url("../images/twitter.png");
+  background-image: url("../images/social-media-icons/twitter.png");
 }
 
 #main-footer .social-networks a.google-plus {
-  background-image: url("../images/google-plus.png");
+  background-image: url("../images/social-media-icons/google-plus.png");
 }
 
 #main-footer .social-networks a.youtube {
-  background-image: url("../images/youtube.png");
+  background-image: url("../images/social-media-icons/youtube.png");
 }
 
-#main-footer #give-to-up {
+#main-footer a.footer-button {
   float: right;
   font: normal 1.1rem/1 "Open Sans Light";
   text-transform: uppercase;
@@ -248,12 +259,12 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-#main-footer #give-to-up:hover,
-#main-footer #give-to-up:focus {
+#main-footer a.footer-button:hover,
+#main-footer a.footer-button:focus {
   background-color: #014924;
 }
 
-#main-footer #give-to-up:active {
+#main-footer a.footer-button:active {
   margin-top: 19px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
 }

@@ -13,7 +13,7 @@ body.news .news h1 {
   padding-bottom: 20px;
 }
 
-body.news h2 {
+body.news .empty-thread {
   font: normal 1.4rem "Open Sans", "OpenSansRegular";
   color: #333333;
   background-color: #eeeeee;
