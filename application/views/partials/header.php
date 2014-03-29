@@ -17,7 +17,14 @@
         <div class="image" style="background-image: url('<?=base_url().$user_info->profpic?>')"></div>
         <div class="content">
           <h2><?=($user_info->firstname != null && $user_info->lastname != null) ? $user_info->firstname." ".$user_info->lastname : "ACSG";?></h2>
-          <p><?=($this->session->userdata('role') == 0) ? 'Student' : 'Faculty';?></p>
+          <p><? if($this->session->userdata('role') == 1 || $this->session->userdata('role') == 0) :
+                  echo 'Student';
+                elseif($this->session->userdata('role') == 2) :
+                  echo 'Faculty';
+                else :
+                  echo 'Administrator';
+                endif;
+              ?></p>
         </div>
       </a>
     <?php endif; ?>
