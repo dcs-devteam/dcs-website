@@ -7,7 +7,7 @@
       <!-- <figure>
         <img src="<?=base_url().'assets/images/background-1.jpg'?>"/>
         <figcaption>Test Caption</figcaption>
-      </figure> -->      
+      </figure> -->
     </div>
   </div>
 

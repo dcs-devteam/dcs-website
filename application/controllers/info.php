@@ -14,10 +14,10 @@
 
     public function department() {
       $data['page_title'] = 'Department Of Computer Science';
-      $content['message'] = $this->cockpit->find('Message from the Chair');
-      $content['history'] = $this->cockpit->find('History');
-      $content['vision'] = $this->cockpit->find('Vision');
-      $content['mission'] = $this->cockpit->find('Mission');
+      $content['message'] = $this->cockpit->find('Message from the Chair', true);
+      $content['history'] = $this->cockpit->find('History', true);
+      $content['vision'] = $this->cockpit->find('Vision', true);
+      $content['mission'] = $this->cockpit->find('Mission', true);
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
       $data['main_content'] = $this->load->view('info/department', $content, true);
       $this->parser->parse('layouts/default', $data);
@@ -39,8 +39,9 @@
 
     public function faculty() {
       $data['page_title'] = 'Department Of Computer Science';
+      $content['faculty'] = $this->cockpit->find('Faculty', false);
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $data['main_content'] = $this->load->view('info/faculty', array(), true);
+      $data['main_content'] = $this->load->view('info/faculty', $content, true);
       $this->parser->parse('layouts/default', $data);
     }
 

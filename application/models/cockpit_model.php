@@ -13,10 +13,14 @@
       return $results->result();
     }
 
-    public function find($title) {
+    public function find($title, $single = true) {      
       $this->db->where('heading', $title);
       $result = $this->db->get('content');
-      return $result->row();
+      if ($single) {
+        return $result->row();
+      } else {
+        return $result->result();
+      }
     }
 
     public function create($meta) {
