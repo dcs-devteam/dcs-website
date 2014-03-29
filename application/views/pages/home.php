@@ -53,7 +53,7 @@
       <li>
         <a href="<?= site_url('info/developer_corner#developer-corner'); ?>">Life@DCS</a>
         <ul>
-          <li><a href="<?= site_url('news/index'); ?>">News and Events</a></li>
+          <li><a href="<?= site_url('news/index#news-and-events'); ?>">News and Events</a></li>
           <!--
           <li><a href="<?= site_url('#'); ?>">Lecture Series and Technical Talks</a></li>
           <li><a href="<?= site_url('#'); ?>">Featured Student Projects</a></li> 

@@ -14,9 +14,11 @@
     }
 
     public function index() {
+      $user_id = $this->session->userdata('user_id');
+      $canWrite = ($user_id && $this->user_model->hasPrivilege("create news", $user_id));
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $data['main_content'] = $this->load->view('news/index', array("news"=>$this->model->getAll()), true);
+      $data['main_content'] = $this->load->view('news/index', array("news"=>$this->model->getAll(), "canWrite"=>$canWrite), true);
       $this->parser->parse('layouts/default', $data);
     }
 
