@@ -3,7 +3,7 @@
     <h1>SIGN IN</h1>
     <div class="field">
       <label>Username</label>
-      <input type="text" name="username">
+      <input type="text" name="username" autofocus>
     </div>
     <div class="field">
       <label>Password</label>
