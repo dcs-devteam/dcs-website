@@ -22,6 +22,8 @@
     <!--
     <a href="#" class="footer-button">Give to UP</a>
     -->
-    <a href="<?= site_url('session/index'); ?>" class="footer-button">Login</a>
+    <?php if (!$this->session->userdata('user_id')) : ?>
+      <a href="<?= site_url('session/index'); ?>" class="footer-button">Login</a>        
+    <?php endif; ?>
   </div>
 </footer>
