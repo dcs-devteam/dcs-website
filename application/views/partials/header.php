@@ -30,8 +30,8 @@
         </a>
         <div>
           <ul>
-            <li><a href="#">View Profile</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="<?= site_url('users/profile'); ?>">View Profile</a></li>
+            <li><a href="<?= site_url('session/logout'); ?>">Logout</a></li>
           </ul>
         </div>
       </div>
