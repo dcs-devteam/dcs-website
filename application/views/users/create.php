@@ -8,8 +8,8 @@
     <div class="field">
       <label>Type</label>
       <select name="type">
-        <option value="student">Student</option>
-        <option value="faculty">Faculty</option>
+        <option value="1">Student</option>
+        <option value="2">Faculty</option>
       </select>
     </div>
     <div class="field">

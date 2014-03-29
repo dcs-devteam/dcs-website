@@ -436,8 +436,13 @@ body.users .user-update-profile aside #new-profpic-button-container {
 }
 
 body.users .create {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;  
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+
 }
 
 body.users .create h1 {

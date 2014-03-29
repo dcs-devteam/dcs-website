@@ -125,6 +125,11 @@
     }
 
     public function create() {
+      $user_id = $this->session->userdata('user_id');
+      if (!$user_id || $this->session->userdata('role') != 404) {
+        $this->session->set_flashdata("alert", "You are note allowed to create users!");
+        redirect('session/index');
+      }
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);      
       $data['main_content'] = $this->load->view("users/create", array(), true);

@@ -10,6 +10,7 @@
       $this->load->model('meta_model', 'meta');
       $this->load->model('poll_model', 'poll');
       $this->load->model('secret_model', 'secret');
+      $this->load->model("news_model", "news");
       $this->load->helper('application_helper');
     }
 
@@ -22,8 +23,8 @@
       $this->load->view('pages/parking', $data);
     }
 
-    public function home() {
-      $this->load->view('pages/home');
+    public function home() {      
+      $this->load->view('pages/home', array("news"=>$this->news->getRecentNews()));
     }    
 
   }

@@ -5,6 +5,8 @@ body.session #login {
   position: absolute;  
   left: 50%;
   -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   border: 
 }
 

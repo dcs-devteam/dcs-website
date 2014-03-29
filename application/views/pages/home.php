@@ -98,12 +98,16 @@
       <section id="recent-news">
         <h1>
           Recent News
-          <a href="<?= site_url('news/index'); ?>">View All</a>
+          <a href="<?= site_url('news/index#news-and-events'); ?>">View All</a>
         </h1>
         <div class="news-thread custom-scrollbar">
-          <?php for ($i = 0; $i < 12; $i++): ?>
-            <a href="#" data-date="jan 21">here goes the news title</a>
-          <?php endfor; ?>
+          <?php if ($news) : ?>
+            <?php foreach ($news as $n) : ?>          
+              <a href="<?=site_url('news/show/'.$n->slug.'#news-and-events')?>" data-date="<?=strftime("%b %d", strtotime($n->date))?>"><?=$n->title?></a>
+            <?php endforeach; ?>
+          <?php else: ?>
+            <a href="#" data-date="NA">No Recent News</a>
+          <?php endif; ?>
         </div>
       </section>
 

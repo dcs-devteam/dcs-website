@@ -23,7 +23,6 @@
       $data['main_content'] = $this->load->view('admin/spotlights/' . $page, array(), true);
       $this->parser->parse('layouts/default', $data);
     }
-
   }
 
 ?>
