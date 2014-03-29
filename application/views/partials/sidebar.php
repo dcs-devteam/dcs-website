@@ -43,6 +43,7 @@
   <li class="expandable-item">
     <p>Life@DCS</p>
     <ul>
+      <li><a href="<?= site_url('calendar/index'); ?>" data-item="calendar">Calendar</a></li>
       <li><a href="<?= site_url('news/index#news-and-events'); ?>" data-item="news-and-events">News and Events</a></li>
       <!--
       <li><a href="<?= site_url('#'); ?>" data-item="lecture-series-and-technical-talks">Lecture Series and Technical Talks</a></li>
