@@ -54,8 +54,10 @@
 
     public function developer_corner() {
       $data['page_title'] = 'Department Of Computer Science';
+      $content['programming_contest'] = $this->cockpit->find('Programming Contest', true);
+      $content['codetabai'] = $this->cockpit->find('Codetabai', true);
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $data['main_content'] = $this->load->view('info/developer_corner', array(), true);
+      $data['main_content'] = $this->load->view('info/developer_corner', $content, true);
       $this->parser->parse('layouts/default', $data);
     }
 

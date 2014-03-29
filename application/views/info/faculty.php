@@ -29,8 +29,8 @@
             <p>AI, Modeling and Simulation</p>
           </div>
         </div>
-      </div>    
-      
+      </div>
+
     </div>      
     
     <br>
