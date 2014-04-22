@@ -24,5 +24,7 @@
 
 <!-- PLUGINS -->
 <link rel="stylesheet" href="<?= base_url() . 'assets/plugins/custom-scrollbar/jquery.mCustomScrollbar.css'; ?>" />
+<link rel="stylesheet" href="<?= base_url() . 'assets/plugins/redactor/redactor.css'; ?>" />
 <script src="<?= base_url() . 'assets/plugins/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/plugins/autosize/jquery.autosize.js'; ?>"></script>
+<script src="<?= base_url() . 'assets/plugins/redactor/redactor.js'; ?>"></script>

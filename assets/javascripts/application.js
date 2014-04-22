@@ -3,6 +3,7 @@ $(document).ready(function() {
   textareas.initialize();
   scrollbars.initialize();
   menus.initialize();
+  redactor.initialize();
 });
 
 var notifications = {
@@ -64,5 +65,11 @@ var menus = {
       $(this).closest('.expandable-menu').find('a.current').removeClass('current');
       $(this).addClass('current');
     });
+  }
+};
+
+var redactor = {
+  initialize: function() {
+    $('.redactor').redactor();
   }
 };

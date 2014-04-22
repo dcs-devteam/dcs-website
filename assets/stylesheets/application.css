@@ -76,3 +76,15 @@ p.notification.alert {
 .mCSB_container {
   margin-right: 10px !important;
 }
+
+.redactor_box p {
+  text-indent: 0 !important;
+}
+
+.redactor_box ol {
+  list-style: decimal;
+}
+
+.redactor_box ul {
+  list-style: disc;
+}
