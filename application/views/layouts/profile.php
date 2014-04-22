@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <?php $this->load->view('partials/head'); ?>
+  <script>
+
+    var DCS = { BASE_URL: '<?= base_url(); ?>' };
+
+  </script>
   <title>{page_title}</title>
 </head>
 

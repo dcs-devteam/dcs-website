@@ -70,6 +70,10 @@ var menus = {
 
 var redactor = {
   initialize: function() {
-    $('.redactor').redactor();
+    var uploadPath = DCS.BASE_URL + 'index.php/news/upload';
+    $('.redactor').redactor({
+      minHeight: 200,
+      imageUpload: uploadPath
+    });
   }
 };

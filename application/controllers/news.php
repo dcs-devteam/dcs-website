@@ -88,6 +88,15 @@
       redirect('news/make');
     }
 
+    public function upload() {
+      // TODO
+      // assigned: eman
+      // @file retrieve from $_FILES['file']
+      // @return JSON object in this format: { "fileLink": url/to/uploaded/image }
+      // @notes
+      //  -- if naay error like 404, maybe i-set pa sa request_methods sa taas nga POST/GET ang pag-access ani nga function
+    }
+
     private function generateImageName($length, $type) {
       $characters = "1234567890qwertyuiopasdfghjklzxcvbnm";      
       while(true) {
