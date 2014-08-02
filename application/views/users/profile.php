@@ -128,7 +128,9 @@
           <?php if ($info->twitter) : ?>
             <a href="<?=$info->twitter?>"><img src="<?=base_url()?>assets/images/twitter.png"></a>
           <?php endif; ?>
-          <a href="<?=site_url()?>users/update_profile"><h3>UPDATE</h3></a>
+          <?php if ($info->user_id == $this->session->userdata('user_id')) : ?>
+            <a href="<?=site_url()?>users/update_profile"><h3>UPDATE</h3></a>
+          <?php endif; ?>
         </span>
       </div>
       <div id="profile-info">

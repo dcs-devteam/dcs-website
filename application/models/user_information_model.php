@@ -5,8 +5,8 @@
 			$this->load->database();
 		}
 
-		public function getUserCredential($id) {
-			$this->db->where ('id', $id);
+		public function getUserCredential($username) {
+			$this->db->where ('username', $username);
 			$result = $this->db->get ('user');
 			return $result->row();			
 		}
@@ -16,13 +16,13 @@
 			return $query->row();
 		}
 
-		public function fetchUserInformation($id) {
+		public function fetchUserInformation($username) {
 			$this->db->select('user_information.*, contact.*, courses.name as "course_name"');
 			$this->db->from('user');
 			$this->db->join('user_information', 'user_information.user_id = user.id', 'left');
 			$this->db->join('courses', 'courses.id = user_information.course_id', 'left');
 			$this->db->join('contact', 'contact.u_id = user.id', 'left');
-			$this->db->where ('user.id', addslashes($id));
+			$this->db->where ('user.username', addslashes($username));
 
 			$result = $this->db->get();
 			return $result->row();

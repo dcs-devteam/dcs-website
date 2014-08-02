@@ -33,8 +33,9 @@
 
       $user = $this->user_model->authentication($username, $password);
       if ($user) {        
-        $user_info = $this->user_model->fetchUserInformation($user->id);
+        $user_info = $this->user_model->fetchUserInformation($username);
         $this->session->set_userdata('user_id', $user->id);
+        $this->session->set_userdata('username', $username);
         $this->session->set_userdata('role', $user->role_id);
         $this->session->set_userdata('user_info', $user_info);
         redirect("users/profile");      

@@ -4,7 +4,7 @@
 
     public function __construct() {
       parent::__construct();
-      $this->request_methods['GET'] = array('profile', 'update_profile', 'create');
+      $this->request_methods['GET'] = array('profile', 'update_profile', 'create', 'test');
       $this->request_methods['POST'] = array('edit_data', 'update_picture');
       
       $this->_check_request_method();
@@ -14,22 +14,23 @@
       $this->load->model('values_model');
     }
 
-    public function profile($id = 0) {
-      if ($id == 0) {
-        $id = $this->session->userdata('user_id');
-        if (!$id) {
+    public function profile($username = null) {
+      // If username is not given, check if user is logged in.
+      if ($username == null) {
+        $username = $this->session->userdata('username');
+        if (!$username) {
           show_404();
         }
       }
-      $user = $this->ui_model->getUserCredential($id);
-      if (!$user) {
+      $user = $this->ui_model->getUserCredential($username);
+      if (!$user) {        
         show_404();
       }
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $info =  $this->ui_model->fetchUserInformation($id);      
+      $info =  $this->ui_model->fetchUserInformation($username);      
       if (!$info->user_id) {
-        if ($id == $this->session->userdata('user_id')) {
+        if ($username == $this->session->userdata('username')) {
           redirect('users/update_profile');
         } else {
           show_404();
@@ -40,21 +41,22 @@
     }
 
     public function update_profile() {
-      $user_id = $this->session->userdata('user_id');
-      if (!$user_id) {
+      $username = $this->session->userdata('username');
+      if (!$username) {
         $this->session->set_flashdata("alert", "You are not logged in!");
         redirect('session/index');
       }
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $info =  $this->ui_model->fetchUserInformation($user_id);
+      $info =  $this->ui_model->fetchUserInformation($username);
       $data['main_content'] = $this->load->view("users/update_profile", array('info'=>$info, 'courses'=>$this->values_model->getAllCourses()), true);      
       $this->parser->parse('layouts/default', $data);
     }
 
     public function update_picture() {
+      $username = $this->session->userdata('username');
       $user_id = $this->session->userdata('user_id');
-      if (!$user_id) {
+      if (!$username) {
         $this->session->set_flashdata("alert", "You are not logged in!");
         redirect('session/index');
       }
@@ -75,7 +77,7 @@
             unlink($prevPic->profpic);
           }
           $this->session->set_flashdata("notice", "Update Successful!");                
-          $this->session->set_userdata('user_info', $this->ui_model->fetchUserInformation($user_id));        
+          $this->session->set_userdata('user_info', $this->ui_model->fetchUserInformation($username));        
         }
       }
       redirect('users/update_profile');
@@ -83,6 +85,7 @@
 
     public function edit_data() {
       $user_id = $this->session->userdata('user_id');
+      $username = $this->session->userdata('username');
       if (!$user_id) {
         $this->session->set_flashdata("alert", "You are not logged in!");
         redirect('session/index');
@@ -108,7 +111,7 @@
         $this->session->set_flashdata('alert','Form Error');
       } else {
         $this->ui_model->editUserInformation($info, $contacts, $user_id);
-        $this->session->set_userdata('user_info', $this->ui_model->fetchUserInformation($user_id));
+        $this->session->set_userdata('user_info', $this->ui_model->fetchUserInformation($username));
         $this->session->set_flashdata('notice','Update Success');
       }
 

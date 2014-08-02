@@ -8,3 +8,6 @@
 [ ] provide way for anyone to upload file for background image
 [ ] google maps dynamic based on address (centered)
 [ ] add linkedin and researchgate accounts in user profile
+
+# can be done laaattteeerrr
+[ ] conbine resource images to a single sprite

@@ -12,6 +12,17 @@
 		return $course." ".$yearlevel;
 	}
 	function description($age,$address,$contact_num) {
-		return "Im ".$age." and i live in ".$address.". You can reach me by phone ".$contact_num." or shoot me an email below. (ill wait for ya call!)";  
+		$desc = "";
+		if ($age) {
+			$desc = $desc . "Im " . $age . " years of age. ";
+		}
+		if ($address) {
+			$desc = $desc . "I live in " . $address.". ";
+		}
+		if ($contact_num) {
+			$desc = $desc . "You can reach me by phone " . $contact_num . ". ";			
+		}
+		$desc = $desc . " You can shoot me an email below.";		
+		return $desc;
 	}
 ?>
