@@ -8,29 +8,20 @@
     <div class="field">
       <label>Type</label>
       <select name="type">
-        <option value="1">Student</option>
-        <option value="2">Faculty</option>
+        <?php foreach ($role_list as $role) : ?>
+          <option value="<?=$role->id?>"><?=humanize($role->name)?></option>
+        <?php endforeach; ?>
       </select>
-    </div>
+    </div>    
     <div class="field">
       <label class="vtop">Privilege</label>      
       <div class="check-list">
+        <?php foreach ($privilege_list as $privilege) : ?>
         <span class="item">
-          <input type="checkbox" name="privilege[]" value="1" id="1">
-          <label for="1">Create Event/News</label>
+          <input type="checkbox" name="privilege[<?=$privilege->id?>]" value="<?=$privilege->id?>" id="privilege<?=$privilege->id?>">
+          <label for="privilege<?=$privilege->id?> "><?=humanize($privilege->name)?></label>
         </span>
-        <span class="item">
-          <input type="checkbox" name="privilege[]" value="2" id="2">
-          <label for="2">Manage Project</label>
-        </span>
-        <span class="item">
-          <input type="checkbox" name="privilege[]" value="2" id="3">
-          <label for="3">Manage Project</label>
-        </span>
-        <span class="item">
-          <input type="checkbox" name="privilege[]" value="2" id="4">
-          <label for="4">Manage Style</label>
-        </span>
+        <?php endforeach; ?>
       </div>
     </div>
     <div class="field">

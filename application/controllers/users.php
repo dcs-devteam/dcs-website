@@ -12,6 +12,8 @@
       $this->load->helper('frontend_helper');
       $this->load->model('user_information_model', 'ui_model');
       $this->load->model('values_model');
+      $this->load->model('privilege_model');
+      $this->load->model('role_model');
     }
 
     public function profile($username = null) {
@@ -41,11 +43,8 @@
     }
 
     public function update_profile() {
-      $username = $this->session->userdata('username');
-      if (!$username) {
-        $this->session->set_flashdata("alert", "You are not logged in!");
-        redirect('session/index');
-      }
+      $this->verifySession();
+      $username = $this->session->userdata('username');      
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
       $info =  $this->ui_model->fetchUserInformation($username);
@@ -53,13 +52,9 @@
       $this->parser->parse('layouts/default', $data);
     }
 
-    public function update_picture() {
+    public function update_picture() {      
+      $user_id = $this->verifySession();      
       $username = $this->session->userdata('username');
-      $user_id = $this->session->userdata('user_id');
-      if (!$username) {
-        $this->session->set_flashdata("alert", "You are not logged in!");
-        redirect('session/index');
-      }
       $config['upload_path'] = 'assets/images/profile-images/';
       $config['allowed_types'] = 'gif|jpg|png|jpeg|GIF|JPG|PNG|JPEG';
       $fileformat = end(explode(".", $_FILES['profile-picture']['name']));
@@ -120,15 +115,30 @@
     }
 
     public function create() {
-      $user_id = $this->session->userdata('user_id');
-      if (!$user_id || $this->session->userdata('role') != 404) {
-        $this->session->set_flashdata("alert", "You are note allowed to create users!");
-        redirect('session/index');
-      }
+      $this->verifyPrivilege('create user');
+
       $data['page_title'] = 'Department Of Computer Science';
-      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);      
-      $data['main_content'] = $this->load->view("users/create", array(), true);
+      $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
+
+      // Data passed on view.
+      $privileges = $this->privilege_model->getAllPrivileges();
+      $roles = $this->role_model->getAllRoles();
+      $this->load->helper('inflector');
+
+      $data['main_content'] = $this->load->view("users/create", array('privilege_list' => $privileges, 'role_list' => $roles), true);
+      
       $this->parser->parse('layouts/default', $data);
+    }
+
+    public function addUser() {
+      $this->verifyUserPrivilege('create user');
+      $_POST['email'] = trim($_POST['email']);      
+      if ($_POST['email'] != "") {
+        
+      } else {
+        $this->session->set_flashdata("alert", "Email is required!");
+        redirect('users/create');
+      }
     }
 
     private function generateImageName($length, $type) {
@@ -142,6 +152,24 @@
           return $name;
         }
       }
+    }
+
+    private function verifyPrivilege($privilege_name) {
+      $user_id = $this->verifySession();      
+      if (!$this->privilege_model->verifyUserPrivilege($user_id, $privilege_name)) {
+        $this->session->set_flashdata("alert", "You are not allowed to create users!");
+        redirect('users/profile');
+      }
+      return $user_id;
+    }
+
+    private function verifySession() {
+      $user_id = $this->session->userdata('user_id');    
+      if (!$user_id) {        
+        $this->session->set_flashdata("alert", "You are not logged in!");
+        redirect('session/index');
+      }
+      return $user_id;
     }
   }
 

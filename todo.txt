@@ -9,5 +9,9 @@
 [ ] google maps dynamic based on address (centered)
 [ ] add linkedin and researchgate accounts in user profile
 
+[ ] Backend "Leave me a message" feature -> send email
+[ ] Refactor "contact" database table
+
+
 # can be done laaattteeerrr
 [ ] conbine resource images to a single sprite
