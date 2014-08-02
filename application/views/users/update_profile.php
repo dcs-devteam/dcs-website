@@ -40,7 +40,7 @@
       </div>
       <div class="field">    
         <label>Year</label>
-        <input type="number" name="info[yearlevel]" min="1" max="6" placeholder="Year" value="<?=$info->yearlevel;?>">
+        <input type="number" name="info[yearlevel]" min="1" max="4" placeholder="Year" value="<?=$info->yearlevel;?>">
       </div><br/><br/>
       <h1>CONTACT DETAILS</h1>
       <div class="field">    

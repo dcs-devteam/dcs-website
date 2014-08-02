@@ -62,12 +62,13 @@
       $config['allowed_types'] = 'gif|jpg|png|jpeg|GIF|JPG|PNG|JPEG';
       $fileformat = end(explode(".", $_FILES['profile-picture']['name']));
       $config['file_name'] = $this->generateImageName(15, $fileformat).'.'.$fileformat;
-      $config['max_size'] = '1024';
+      $config['max_size'] = '2048';
       $this->load->library('upload', $config);
       if ($_FILES['profile-picture']['size'] > 0) {        
         if  (!$this->upload->do_upload('profile-picture')) {
-          $this->session->set_flashdata("alert", "The image is too big or it has an invalid format!");                    
-        } else {          
+          print_r($this->upload->display_errors());
+          $this->session->set_flashdata("alert", "The image is too big or it has an invalid format!");
+        } else {
           $image_info = $this->upload->data();
           $prevPic = $this->ui_model->updateProfilePicture($user_id, 'assets/images/profile-images/'. $image_info['file_name']);  
           if ($prevPic) {

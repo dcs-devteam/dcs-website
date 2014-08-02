@@ -6,3 +6,6 @@ deploy.sh
 
 # ignore vi swp files
 *.swp
+
+# ignore uploaded profile pictures
+assets/images/profile-images/
