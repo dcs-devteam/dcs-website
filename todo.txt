@@ -1,0 +1,10 @@
+[ ] Make the contents editable
+[ ] Change label "admissions" to academic programs
+[ ] calendar only on the side
+[ ] background image (randomize per visit) or set by admin
+[ ] faculty page (fulltime faculty, lecturer, visiting professor, affiliate professor)
+[ ] Add under people: student, alumni
+[ ] provide moderator account for content
+[ ] provide way for anyone to upload file for background image
+[ ] google maps dynamic based on address (centered)
+[ ] add linkedin and researchgate accounts in user profile
