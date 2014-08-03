@@ -119,15 +119,18 @@
     </div>
   </section>
   <aside>  
-    <section id="personal-info">        
+    <section id="personal-info">
       <div id="profile-pic" style="background: #222222 url('<?=base_url().$info->profpic;?>') center center no-repeat; background-size:cover;">
         <span>
-          <?php if ($info->facebook) : ?>
-            <a href="<?=$info->facebook?>"><img src="<?=base_url()?>assets/images/facebook.png"></a>
-          <?php endif; ?>
-          <?php if ($info->twitter) : ?>
-            <a href="<?=$info->twitter?>"><img src="<?=base_url()?>assets/images/twitter.png"></a>
-          <?php endif; ?>
+          <?php foreach ($socials as $social) : ?>      
+              <a href="<?=$social->value?>">
+                <?php if ($social->icon != NULL) : ?>
+                  <img src="<?=base_url().$social->icon?>">
+                <?php else : ?>
+                  <?=$social->name[0]?>
+                <?php endif; ?>
+              </a>
+          <?php endforeach; ?>          
           <?php if ($info->user_id == $this->session->userdata('user_id')) : ?>
             <a href="<?=site_url()?>users/update_profile"><h3>UPDATE</h3></a>
           <?php endif; ?>
@@ -137,7 +140,8 @@
         <h1><?php echo fullName_helper($info->firstname,$info->middlename,$info->lastname,1);?></h1>
         <h2><?=$info->studentnumber?></h2>
         <h2><?php echo $info->course_name." ".$info->yearlevel;?></h2>
-        <p><?php echo description($info->age,$info->address,$info->contact_number);?></p>      
+        <p>"<?=$info->description?>"</p>
+        <p><?php echo description($info->birthday, $info->age,$info->address,$info->phone_number);?></p>      
 
       </div>
     </section>

@@ -49,7 +49,7 @@
       </div>
       <div class="field">    
         <label>Contact #</label>
-        <input type="text" name="contact[number]" placeholder="Cellphone number" value="<?=$info->contact_number;?>">
+        <input type="text" name="contact[number]" placeholder="Cellphone number" value="<?=$info->phone_number;?>">
       </div>
       <div class="field">    
         <label>Facebook</label>

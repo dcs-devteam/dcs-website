@@ -17,16 +17,23 @@
 		}
 
 		public function fetchUserInformation($username) {
-			$this->db->select('user_information.*, contact.*, courses.name as "course_name"');
+			$this->db->select('user_information.*, contact_information.*, courses.name as "course_name"');
 			$this->db->from('user');
 			$this->db->join('user_information', 'user_information.user_id = user.id', 'left');
+			$this->db->join('contact_information', 'contact_information.user_id = user.id', 'left');
 			$this->db->join('courses', 'courses.id = user_information.course_id', 'left');
-			$this->db->join('contact', 'contact.u_id = user.id', 'left');
 			$this->db->where ('user.username', addslashes($username));
 
 			$result = $this->db->get();
 			return $result->row();
 		}
+
+		public function getUserSocialAccounts($user_id) {			
+			$query = "SELECT social_media.*, user_social_media.value FROM social_media JOIN user_social_media ON user_social_media.social_media_id = social_media.id WHERE user_social_media.user_id='". addslashes($user_id) ."'";
+			$res = $this->db->query($query);
+			return $res->result();
+		}
+
 
 		public function hasPrivilege($privilege_name, $user_id) {
 			$query = $this->db->query("SELECT * FROM user_privileges JOIN privileges ON user_privileges.privilege_id = privileges.id 

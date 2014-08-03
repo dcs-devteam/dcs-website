@@ -30,15 +30,19 @@
       }
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $info =  $this->ui_model->fetchUserInformation($username);      
+
+      $info =  $this->ui_model->fetchUserInformation($username);
+      $social_media_info = $this->ui_model->getUserSocialAccounts($user->id);
+
       if (!$info->user_id) {
         if ($username == $this->session->userdata('username')) {
           redirect('users/update_profile');
         } else {
           show_404();
         }
-      } 
-      $data['main_content'] = $this->load->view("users/profile", array('info'=>$info), true);
+      }
+
+      $data['main_content'] = $this->load->view("users/profile", array('info'=>$info, 'socials'=>$social_media_info), true);
       $this->parser->parse('layouts/default', $data);    
     }
 
@@ -156,7 +160,7 @@
 
     private function verifyPrivilege($privilege_name) {
       $user_id = $this->verifySession();      
-      if (!$this->privilege_model->verifyUserPrivilege($user_id, $privilege_name)) {
+      if (!$this->ui_model->hasPrivilege($privilege_name, $user_id)) {
         $this->session->set_flashdata("alert", "You are not allowed to create users!");
         redirect('users/profile');
       }

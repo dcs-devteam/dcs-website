@@ -11,10 +11,13 @@
 	function degree_helper($course,$yearlevel) {
 		return $course." ".$yearlevel;
 	}
-	function description($age,$address,$contact_num) {
+	function description($bday, $age, $address, $contact_num) {
 		$desc = "";
+		if ($bday) {
+			$desc = $desc . "I was born on " . strftime("%B %e, %g", strtotime($bday)) . ". ";
+		}
 		if ($age) {
-			$desc = $desc . "Im " . $age . " years of age. ";
+			$desc = $desc . "I'm " . $age . " years of age. ";
 		}
 		if ($address) {
 			$desc = $desc . "I live in " . $address.". ";
