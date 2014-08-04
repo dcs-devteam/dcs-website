@@ -12,5 +12,17 @@
       return $query->result();
     }
 
+    public function getAllSocialMedia() {
+      $query = "SELECT * FROM social_media";
+      $res = $this->db->query($query);
+      return $res->result();
+    }
+
+    public function getAllPrivileges() {
+      $query = "SELECT * FROM privileges";
+      $res = $this->db->query($query);
+      return $res->result();
+    }
+
   }
 ?>

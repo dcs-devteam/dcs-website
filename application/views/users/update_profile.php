@@ -51,14 +51,18 @@
         <label>Contact #</label>
         <input type="text" name="contact[number]" placeholder="Cellphone number" value="<?=$info->phone_number;?>">
       </div>
-      <div class="field">    
-        <label>Facebook</label>
-        <input type="text" name="contact[facebook]" placeholder="Link to your facebook page" value="<?=$info->facebook;?>">
-      </div>
-      <div class="field">    
-        <label>Twitter</label>
-        <input type="text" name="contact[twitter]" placeholder="Link to your twitter page" value="<?=$info->twitter;?>">
-      </div><br/>
+      <?php foreach ($social_media as $social) : ?>
+        <div class="field">    
+          <label><?=humanize($social->name)?></label>
+          <input type="text" name="social[<?=$social->id?>]" placeholder="Link to your <?=$social->name?> page" value="<?=$social->value?>">
+        </div>
+      <?php endforeach; ?>
+      <?php foreach ($unset_social_media as $social) : ?>
+        <div class="field">    
+          <label><?=humanize($social->name)?></label>
+          <input type="text" name="social[<?=$social->id?>]" placeholder="Link to your <?=$social->name?> page" >
+        </div>
+      <?php endforeach; ?>   
       <div class="field">            
         <input type="submit" value="UPDATE" class="button green">
       </div>      

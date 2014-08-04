@@ -12,7 +12,6 @@
       $this->load->helper('frontend_helper');
       $this->load->model('user_information_model', 'ui_model');
       $this->load->model('values_model');
-      $this->load->model('privilege_model');
       $this->load->model('role_model');
     }
 
@@ -47,12 +46,18 @@
     }
 
     public function update_profile() {
-      $this->verifySession();
-      $username = $this->session->userdata('username');      
+      $user_id = $this->verifySession();      
+      $username = $this->session->userdata('username');
       $data['page_title'] = 'Department Of Computer Science';
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
-      $info =  $this->ui_model->fetchUserInformation($username);
-      $data['main_content'] = $this->load->view("users/update_profile", array('info'=>$info, 'courses'=>$this->values_model->getAllCourses()), true);      
+
+      $info = $this->ui_model->fetchUserInformation($username);
+      $social_media_info = $this->ui_model->getUserSocialAccounts($user_id);
+      $unset_social_media = $this->ui_model->getUnsetUserSocialAccounts($user_id);
+      $courses = $this->values_model->getAllCourses();
+
+      $this->load->helper('inflector');
+      $data['main_content'] = $this->load->view("users/update_profile", array('info'=>$info, 'courses'=>$courses, 'social_media'=>$social_media_info, 'unset_social_media'=>$unset_social_media), true);
       $this->parser->parse('layouts/default', $data);
     }
 
@@ -83,12 +88,8 @@
     }
 
     public function edit_data() {
-      $user_id = $this->session->userdata('user_id');
-      $username = $this->session->userdata('username');
-      if (!$user_id) {
-        $this->session->set_flashdata("alert", "You are not logged in!");
-        redirect('session/index');
-      }
+      $user_id = $this->verifySession();
+      $username = $this->session->userdata('username');      
       $info = $_POST['info'];
       $flag = false;
       foreach ($info as $key => $value) {
@@ -100,16 +101,19 @@
       $contacts = $_POST['contact'];
       if (!$flag) {        
         foreach ($contacts as $key => $value) {
-          if (!$value) {          
+          if (!$value && $key != 'number') {
             $flag = true;
             break;
           }
         }
       }
+      $socials = $_POST['social'];
       if ($flag) {
         $this->session->set_flashdata('alert','Form Error');
       } else {
-        $this->ui_model->editUserInformation($info, $contacts, $user_id);
+        $this->ui_model->editUserInformation($info, $user_id);
+        $this->ui_model->editUserContacts($contacts, $user_id);
+        $this->ui_model->editUserSocialMediaAccounts($socials, $user_id);
         $this->session->set_userdata('user_info', $this->ui_model->fetchUserInformation($username));
         $this->session->set_flashdata('notice','Update Success');
       }
@@ -125,7 +129,7 @@
       $data['sidebar_content'] = $this->load->view('partials/sidebar', array(), true);
 
       // Data passed on view.
-      $privileges = $this->privilege_model->getAllPrivileges();
+      $privileges = $this->values_model->getAllPrivileges();
       $roles = $this->role_model->getAllRoles();
       $this->load->helper('inflector');
 

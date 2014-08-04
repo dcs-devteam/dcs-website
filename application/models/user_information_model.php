@@ -29,10 +29,16 @@
 		}
 
 		public function getUserSocialAccounts($user_id) {			
-			$query = "SELECT social_media.*, user_social_media.value FROM social_media JOIN user_social_media ON user_social_media.social_media_id = social_media.id WHERE user_social_media.user_id='". addslashes($user_id) ."'";
+			$query = "SELECT social_media.*, user_social_media.value FROM social_media LEFT JOIN user_social_media ON user_social_media.social_media_id = social_media.id WHERE user_social_media.user_id='". addslashes($user_id) ."'";
 			$res = $this->db->query($query);
 			return $res->result();
 		}
+
+		public function getUnsetUserSocialAccounts($user_id) {
+            $query = "SELECT social_media.* FROM social_media WHERE social_media.id NOT IN (SELECT user_social_media.social_media_id FROM user_social_media WHERE user_id = '". $user_id ."')";
+            $res = $this->db->query($query);
+            return $res->result();
+        }
 
 
 		public function hasPrivilege($privilege_name, $user_id) {
@@ -44,7 +50,7 @@
 			return false;
 		}
 		
-		public function editUserInformation($info, $contact, $user_id) {
+		public function editUserInformation($info, $user_id) {
 			$user_info = $this->db->query("SELECT * FROM user_information WHERE user_id = '".addslashes($user_id)."'");
 			if (!$user_info->result()) {
 				$this->db->query("INSERT INTO user_information (user_id, firstname, middlename, lastname, course_id, address, age, birthday, studentnumber, yearlevel)
@@ -57,13 +63,29 @@
 					                birthday = '".addslashes($info['birthday'])."', studentnumber = '".addslashes(trim($info['studentnumber']))."', yearlevel = '".addslashes(trim($info['yearlevel']))."'
 					                WHERE user_id = '".addslashes($user_id)."'");
 			}
-			$contact_info = $this->db->query("SELECT * FROM contact WHERE u_id = '".addslashes($user_id)."'");
+		}
+
+		public function editUserContacts($contact, $user_id) {
+			$contact_info = $this->db->query("SELECT * FROM contact_information WHERE user_id = '".addslashes($user_id)."'");
 			if (!$contact_info->result()) {
-				$this->db->query("INSERT INTO contact (contact_number, facebook, twitter, email, u_id) VALUES ('".addslashes(trim($contact['number']))."', '".addslashes(($contact['facebook']))."', 
-					               '".addslashes(trim($contact['twitter']))."', '".addslashes(trim($contact['email']))."', '".addslashes($user_id)."')");
+				$this->db->query("INSERT INTO contact_information VALUES ('".addslashes($user_id)."', '".addslashes(trim(($contact['number'])))."', 
+					               '".addslashes(trim($contact['email']))."')");
 			}	else {
-				$this->db->query("UPDATE contact SET contact_number = '".addslashes(trim($contact['number']))."', facebook = '".addslashes(trim($contact['facebook']))."', twitter = '".addslashes(trim($contact['twitter']))."',
-					               email = '".addslashes(trim($contact['email']))."' WHERE u_id = '".addslashes($user_id)."'");
+				$this->db->query("UPDATE contact_information SET phone_number = '".addslashes(trim($contact['number']))."', email = '".addslashes(trim($contact['email']))."' WHERE user_id = '".addslashes($user_id)."'");
+			}
+		}
+
+		public function editUserSocialMediaAccounts($socials, $user_id) {
+			foreach ($socials as $key => $value) {
+				$check_query = "SELECT * FROM user_social_media WHERE user_id='". addslashes($user_id) ."' AND social_media_id='". addslashes($key) ."'";
+				$social = $this->db->query($check_query);
+				if (!$social->result()) {
+					$add_query = "INSERT INTO user_social_media values ('". addslashes($user_id) ."', '". addslashes($key) ."', '". addslashes(trim($value)) ."')";
+					$this->db->query($add_query);
+				}	else {
+					$update_query = "UPDATE user_social_media SET value='". addslashes(trim($value)) ."' WHERE user_id='". addslashes($user_id) ."' AND social_media_id='". addslashes($key) ."'";
+					$this->db->query($update_query);
+				}
 			}
 		}
 
