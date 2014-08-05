@@ -12,6 +12,7 @@
 [ ] Backend "Leave me a message" feature -> send email
 [ ] Refactor "contact" database table
 [ ] Make 404 page
+[ ] Add autofocus on first textbox in a form
 
 
 # can be done laaattteeerrr

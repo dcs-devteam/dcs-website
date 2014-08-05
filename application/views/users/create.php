@@ -1,5 +1,5 @@
 <div class="create">  
-  <form action="#" method="POST">
+  <?=form_open("users/addUser","POST");?>
     <h1>Create Account</h1>
     <div class="field"> 
       <label>Email</label>
@@ -27,5 +27,5 @@
     <div class="field">
       <input type="submit" value="Create" class="button green">
     </div>
-  </form>
+  <?=form_close();?>
 </div>

@@ -5,6 +5,22 @@
 			$this->load->database();
 		}
 
+		public function addUser($username, $password, $role, $email) {
+			$query = "";
+			$add_user_query = "INSERT INTO user (password, username, role_id) VALUES ('". md5(addslashes($password)) ."', '". addslashes(trim($username)) ."', '". addslashes($role) ."')";
+			$this->db->query($add_user_query);
+			$user_id = mysql_insert_id();
+			$add_contact_query = "INSERT INTO contact_information (user_id, email) VALUES ('". $user_id ."', '". addslashes(trim($email)) ."')";
+			$this->db->query($add_contact_query);
+			return $user_id;
+		}
+
+		public function addUserPrivilege($user_id, $privilege_id) {
+			$query = "INSERT INTO user_privileges VALUES ('". addslashes($user_id) ."', '". addslashes($privilege_id) ."')";
+			$this->db->query($query);
+
+		}
+
 		public function getUserCredential($username) {
 			$this->db->where ('username', $username);
 			$result = $this->db->get ('user');
@@ -14,6 +30,18 @@
 		public function authentication($username, $password) {
 			$query = $this->db->query("SELECT * FROM user WHERE username = '".addslashes($username)."' AND password = '".md5(addslashes($password))."'");
 			return $query->row();
+		}
+
+		public function isUsernameAvailable($username, $user_id=0) {
+			$query = "SELECT * FROM user WHERE username='".addslashes(trim($username))."'";
+			if ($user_id != 0) {
+				$query = $query . " AND id!='". addslashes($user_id) ."'";
+			}
+			$res = $this->db->query($query);
+			if ($res->result()) {
+				return false;
+			}
+			return true;
 		}
 
 		public function fetchUserInformation($username) {
@@ -28,7 +56,7 @@
 			return $result->row();
 		}
 
-		public function getUserSocialAccounts($user_id) {			
+		public function getUserSocialAccounts($user_id) {
 			$query = "SELECT social_media.*, user_social_media.value FROM social_media LEFT JOIN user_social_media ON user_social_media.social_media_id = social_media.id WHERE user_social_media.user_id='". addslashes($user_id) ."'";
 			$res = $this->db->query($query);
 			return $res->result();

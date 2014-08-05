@@ -5,7 +5,7 @@
     public function __construct() {
       parent::__construct();
       $this->request_methods['GET'] = array('profile', 'update_profile', 'create', 'test');
-      $this->request_methods['POST'] = array('edit_data', 'update_picture');
+      $this->request_methods['POST'] = array('edit_data', 'update_picture', 'addUser');
       
       $this->_check_request_method();
       $this->load->helper('application_helper');
@@ -13,6 +13,7 @@
       $this->load->model('user_information_model', 'ui_model');
       $this->load->model('values_model');
       $this->load->model('role_model');
+      $this->load->model('contact_model');
     }
 
     public function profile($username = null) {
@@ -139,23 +140,44 @@
     }
 
     public function addUser() {
-      $this->verifyUserPrivilege('create user');
+      $this->verifyPrivilege('create user');
       $_POST['email'] = trim($_POST['email']);      
       if ($_POST['email'] != "") {
-        
-      } else {
+        if ($this->contact_model->isEmailAvailable($_POST['email'])) {
+          echo "saving";
+          $ctr = 1;
+          $username = $_POST['email'];
+          while (!$this->ui_model->isUsernameAvailable($username)) {
+            $username = $_POST['email'] . $ctr;
+            $ctr++;
+          }
+          $password = $this->generateRandomString(6);
+          $user_id = $this->ui_model->addUser($username, $password, $_POST['type'], $_POST['email']);
+          if (isset($_POST['privilege'])) {
+            foreach ($_POST['privilege'] as $key => $value) {
+              $this->ui_model->addUserPrivilege($user_id, $key);
+            }
+          }
+        }        
+      } else {        
         $this->session->set_flashdata("alert", "Email is required!");
         redirect('users/create');
       }
     }
 
+    private function generateRandomString($length){
+      $characters = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+      $string = "";
+      for ($i = 0; $i < $length; $i++) {
+        $string .= $characters[rand(0, strlen($characters) - 1)];
+      }
+      return $string;
+    }
+
     private function generateImageName($length, $type) {
-      $characters = "1234567890qwertyuiopasdfghjklzxcvbnm";      
+      $characters = "1234567890qwertyuiopasdfghjklzxcvbnm";
       while(true) {
-        $name = "";
-        for ($i = 0; $i < $length; $i++) {
-          $name .= $characters[rand(0, strlen($characters) - 1)];
-        }
+        $name = $this->generateRandomString($length);
         if (!$this->ui_model->getImageByName('assets/images/profile-images/'.$name.$type)) {
           return $name;
         }
